@@ -154,7 +154,7 @@ public final class UicProto {
      *uic_id
      * </pre>
      *
-     * <code>optional int32 id = 1;</code>
+     * <code>int32 id = 1;</code>
      */
     int getId();
 
@@ -163,7 +163,7 @@ public final class UicProto {
      *uic
      * </pre>
      *
-     * <code>optional string uic = 2;</code>
+     * <code>string uic = 2;</code>
      */
     java.lang.String getUic();
     /**
@@ -171,7 +171,7 @@ public final class UicProto {
      *uic
      * </pre>
      *
-     * <code>optional string uic = 2;</code>
+     * <code>string uic = 2;</code>
      */
     com.google.protobuf.ByteString
         getUicBytes();
@@ -181,7 +181,7 @@ public final class UicProto {
      *用户id
      * </pre>
      *
-     * <code>optional string site_user_id = 3;</code>
+     * <code>string site_user_id = 3;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -189,7 +189,7 @@ public final class UicProto {
      *用户id
      * </pre>
      *
-     * <code>optional string site_user_id = 3;</code>
+     * <code>string site_user_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -199,7 +199,7 @@ public final class UicProto {
      *用户名称
      * </pre>
      *
-     * <code>optional string user_name = 4;</code>
+     * <code>string user_name = 4;</code>
      */
     java.lang.String getUserName();
     /**
@@ -207,7 +207,7 @@ public final class UicProto {
      *用户名称
      * </pre>
      *
-     * <code>optional string user_name = 4;</code>
+     * <code>string user_name = 4;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -217,7 +217,7 @@ public final class UicProto {
      *是否可用的状态
      * </pre>
      *
-     * <code>optional .core.UicStatus status = 5;</code>
+     * <code>.core.UicStatus status = 5;</code>
      */
     int getStatusValue();
     /**
@@ -225,7 +225,7 @@ public final class UicProto {
      *是否可用的状态
      * </pre>
      *
-     * <code>optional .core.UicStatus status = 5;</code>
+     * <code>.core.UicStatus status = 5;</code>
      */
     com.akaxin.proto.core.UicProto.UicStatus getStatus();
 
@@ -234,7 +234,7 @@ public final class UicProto {
      *生成的时间
      * </pre>
      *
-     * <code>optional int64 create_time = 6;</code>
+     * <code>int64 create_time = 6;</code>
      */
     long getCreateTime();
 
@@ -243,7 +243,7 @@ public final class UicProto {
      *使用的时间
      * </pre>
      *
-     * <code>optional int64 use_time = 7;</code>
+     * <code>int64 use_time = 7;</code>
      */
     long getUseTime();
   }
@@ -258,6 +258,7 @@ public final class UicProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.UicInfo)
       UicInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use UicInfo.newBuilder() to construct.
     private UicInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -275,7 +276,7 @@ public final class UicProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private UicInfo(
         com.google.protobuf.CodedInputStream input,
@@ -283,6 +284,8 @@ public final class UicProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -292,7 +295,8 @@ public final class UicProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -344,6 +348,7 @@ public final class UicProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -366,7 +371,7 @@ public final class UicProto {
      *uic_id
      * </pre>
      *
-     * <code>optional int32 id = 1;</code>
+     * <code>int32 id = 1;</code>
      */
     public int getId() {
       return id_;
@@ -379,7 +384,7 @@ public final class UicProto {
      *uic
      * </pre>
      *
-     * <code>optional string uic = 2;</code>
+     * <code>string uic = 2;</code>
      */
     public java.lang.String getUic() {
       java.lang.Object ref = uic_;
@@ -398,7 +403,7 @@ public final class UicProto {
      *uic
      * </pre>
      *
-     * <code>optional string uic = 2;</code>
+     * <code>string uic = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUicBytes() {
@@ -421,7 +426,7 @@ public final class UicProto {
      *用户id
      * </pre>
      *
-     * <code>optional string site_user_id = 3;</code>
+     * <code>string site_user_id = 3;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -440,7 +445,7 @@ public final class UicProto {
      *用户id
      * </pre>
      *
-     * <code>optional string site_user_id = 3;</code>
+     * <code>string site_user_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -463,7 +468,7 @@ public final class UicProto {
      *用户名称
      * </pre>
      *
-     * <code>optional string user_name = 4;</code>
+     * <code>string user_name = 4;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -482,7 +487,7 @@ public final class UicProto {
      *用户名称
      * </pre>
      *
-     * <code>optional string user_name = 4;</code>
+     * <code>string user_name = 4;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -505,7 +510,7 @@ public final class UicProto {
      *是否可用的状态
      * </pre>
      *
-     * <code>optional .core.UicStatus status = 5;</code>
+     * <code>.core.UicStatus status = 5;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -515,7 +520,7 @@ public final class UicProto {
      *是否可用的状态
      * </pre>
      *
-     * <code>optional .core.UicStatus status = 5;</code>
+     * <code>.core.UicStatus status = 5;</code>
      */
     public com.akaxin.proto.core.UicProto.UicStatus getStatus() {
       com.akaxin.proto.core.UicProto.UicStatus result = com.akaxin.proto.core.UicProto.UicStatus.valueOf(status_);
@@ -529,7 +534,7 @@ public final class UicProto {
      *生成的时间
      * </pre>
      *
-     * <code>optional int64 create_time = 6;</code>
+     * <code>int64 create_time = 6;</code>
      */
     public long getCreateTime() {
       return createTime_;
@@ -542,7 +547,7 @@ public final class UicProto {
      *使用的时间
      * </pre>
      *
-     * <code>optional int64 use_time = 7;</code>
+     * <code>int64 use_time = 7;</code>
      */
     public long getUseTime() {
       return useTime_;
@@ -581,6 +586,7 @@ public final class UicProto {
       if (useTime_ != 0L) {
         output.writeInt64(7, useTime_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -613,11 +619,11 @@ public final class UicProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, useTime_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -642,6 +648,7 @@ public final class UicProto {
           == other.getCreateTime());
       result = result && (getUseTime()
           == other.getUseTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -651,7 +658,7 @@ public final class UicProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId();
       hash = (37 * hash) + UIC_FIELD_NUMBER;
@@ -673,6 +680,17 @@ public final class UicProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.UicProto.UicInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.UicProto.UicInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.UicProto.UicInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -842,7 +860,7 @@ public final class UicProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -855,12 +873,12 @@ public final class UicProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -898,6 +916,7 @@ public final class UicProto {
         if (other.getUseTime() != 0L) {
           setUseTime(other.getUseTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -930,7 +949,7 @@ public final class UicProto {
        *uic_id
        * </pre>
        *
-       * <code>optional int32 id = 1;</code>
+       * <code>int32 id = 1;</code>
        */
       public int getId() {
         return id_;
@@ -940,7 +959,7 @@ public final class UicProto {
        *uic_id
        * </pre>
        *
-       * <code>optional int32 id = 1;</code>
+       * <code>int32 id = 1;</code>
        */
       public Builder setId(int value) {
         
@@ -953,7 +972,7 @@ public final class UicProto {
        *uic_id
        * </pre>
        *
-       * <code>optional int32 id = 1;</code>
+       * <code>int32 id = 1;</code>
        */
       public Builder clearId() {
         
@@ -968,7 +987,7 @@ public final class UicProto {
        *uic
        * </pre>
        *
-       * <code>optional string uic = 2;</code>
+       * <code>string uic = 2;</code>
        */
       public java.lang.String getUic() {
         java.lang.Object ref = uic_;
@@ -987,7 +1006,7 @@ public final class UicProto {
        *uic
        * </pre>
        *
-       * <code>optional string uic = 2;</code>
+       * <code>string uic = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUicBytes() {
@@ -1007,7 +1026,7 @@ public final class UicProto {
        *uic
        * </pre>
        *
-       * <code>optional string uic = 2;</code>
+       * <code>string uic = 2;</code>
        */
       public Builder setUic(
           java.lang.String value) {
@@ -1024,7 +1043,7 @@ public final class UicProto {
        *uic
        * </pre>
        *
-       * <code>optional string uic = 2;</code>
+       * <code>string uic = 2;</code>
        */
       public Builder clearUic() {
         
@@ -1037,7 +1056,7 @@ public final class UicProto {
        *uic
        * </pre>
        *
-       * <code>optional string uic = 2;</code>
+       * <code>string uic = 2;</code>
        */
       public Builder setUicBytes(
           com.google.protobuf.ByteString value) {
@@ -1057,7 +1076,7 @@ public final class UicProto {
        *用户id
        * </pre>
        *
-       * <code>optional string site_user_id = 3;</code>
+       * <code>string site_user_id = 3;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -1076,7 +1095,7 @@ public final class UicProto {
        *用户id
        * </pre>
        *
-       * <code>optional string site_user_id = 3;</code>
+       * <code>string site_user_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -1096,7 +1115,7 @@ public final class UicProto {
        *用户id
        * </pre>
        *
-       * <code>optional string site_user_id = 3;</code>
+       * <code>string site_user_id = 3;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -1113,7 +1132,7 @@ public final class UicProto {
        *用户id
        * </pre>
        *
-       * <code>optional string site_user_id = 3;</code>
+       * <code>string site_user_id = 3;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -1126,7 +1145,7 @@ public final class UicProto {
        *用户id
        * </pre>
        *
-       * <code>optional string site_user_id = 3;</code>
+       * <code>string site_user_id = 3;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1146,7 +1165,7 @@ public final class UicProto {
        *用户名称
        * </pre>
        *
-       * <code>optional string user_name = 4;</code>
+       * <code>string user_name = 4;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -1165,7 +1184,7 @@ public final class UicProto {
        *用户名称
        * </pre>
        *
-       * <code>optional string user_name = 4;</code>
+       * <code>string user_name = 4;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -1185,7 +1204,7 @@ public final class UicProto {
        *用户名称
        * </pre>
        *
-       * <code>optional string user_name = 4;</code>
+       * <code>string user_name = 4;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -1202,7 +1221,7 @@ public final class UicProto {
        *用户名称
        * </pre>
        *
-       * <code>optional string user_name = 4;</code>
+       * <code>string user_name = 4;</code>
        */
       public Builder clearUserName() {
         
@@ -1215,7 +1234,7 @@ public final class UicProto {
        *用户名称
        * </pre>
        *
-       * <code>optional string user_name = 4;</code>
+       * <code>string user_name = 4;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1235,7 +1254,7 @@ public final class UicProto {
        *是否可用的状态
        * </pre>
        *
-       * <code>optional .core.UicStatus status = 5;</code>
+       * <code>.core.UicStatus status = 5;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -1245,7 +1264,7 @@ public final class UicProto {
        *是否可用的状态
        * </pre>
        *
-       * <code>optional .core.UicStatus status = 5;</code>
+       * <code>.core.UicStatus status = 5;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -1257,7 +1276,7 @@ public final class UicProto {
        *是否可用的状态
        * </pre>
        *
-       * <code>optional .core.UicStatus status = 5;</code>
+       * <code>.core.UicStatus status = 5;</code>
        */
       public com.akaxin.proto.core.UicProto.UicStatus getStatus() {
         com.akaxin.proto.core.UicProto.UicStatus result = com.akaxin.proto.core.UicProto.UicStatus.valueOf(status_);
@@ -1268,7 +1287,7 @@ public final class UicProto {
        *是否可用的状态
        * </pre>
        *
-       * <code>optional .core.UicStatus status = 5;</code>
+       * <code>.core.UicStatus status = 5;</code>
        */
       public Builder setStatus(com.akaxin.proto.core.UicProto.UicStatus value) {
         if (value == null) {
@@ -1284,7 +1303,7 @@ public final class UicProto {
        *是否可用的状态
        * </pre>
        *
-       * <code>optional .core.UicStatus status = 5;</code>
+       * <code>.core.UicStatus status = 5;</code>
        */
       public Builder clearStatus() {
         
@@ -1299,7 +1318,7 @@ public final class UicProto {
        *生成的时间
        * </pre>
        *
-       * <code>optional int64 create_time = 6;</code>
+       * <code>int64 create_time = 6;</code>
        */
       public long getCreateTime() {
         return createTime_;
@@ -1309,7 +1328,7 @@ public final class UicProto {
        *生成的时间
        * </pre>
        *
-       * <code>optional int64 create_time = 6;</code>
+       * <code>int64 create_time = 6;</code>
        */
       public Builder setCreateTime(long value) {
         
@@ -1322,7 +1341,7 @@ public final class UicProto {
        *生成的时间
        * </pre>
        *
-       * <code>optional int64 create_time = 6;</code>
+       * <code>int64 create_time = 6;</code>
        */
       public Builder clearCreateTime() {
         
@@ -1337,7 +1356,7 @@ public final class UicProto {
        *使用的时间
        * </pre>
        *
-       * <code>optional int64 use_time = 7;</code>
+       * <code>int64 use_time = 7;</code>
        */
       public long getUseTime() {
         return useTime_;
@@ -1347,7 +1366,7 @@ public final class UicProto {
        *使用的时间
        * </pre>
        *
-       * <code>optional int64 use_time = 7;</code>
+       * <code>int64 use_time = 7;</code>
        */
       public Builder setUseTime(long value) {
         
@@ -1360,7 +1379,7 @@ public final class UicProto {
        *使用的时间
        * </pre>
        *
-       * <code>optional int64 use_time = 7;</code>
+       * <code>int64 use_time = 7;</code>
        */
       public Builder clearUseTime() {
         
@@ -1370,12 +1389,12 @@ public final class UicProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

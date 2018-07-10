@@ -23,7 +23,7 @@ public final class HaiUserAvatarProto {
      *用户的siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -31,7 +31,7 @@ public final class HaiUserAvatarProto {
      *用户的siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -56,6 +56,7 @@ public final class HaiUserAvatarProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserAvatarRequest)
       HaiUserAvatarRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserAvatarRequest.newBuilder() to construct.
     private HaiUserAvatarRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -67,7 +68,7 @@ public final class HaiUserAvatarProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserAvatarRequest(
         com.google.protobuf.CodedInputStream input,
@@ -75,6 +76,8 @@ public final class HaiUserAvatarProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -84,7 +87,8 @@ public final class HaiUserAvatarProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -103,6 +107,7 @@ public final class HaiUserAvatarProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -125,7 +130,7 @@ public final class HaiUserAvatarProto {
      *用户的siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -144,7 +149,7 @@ public final class HaiUserAvatarProto {
      *用户的siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -175,6 +180,7 @@ public final class HaiUserAvatarProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteUserId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -185,11 +191,11 @@ public final class HaiUserAvatarProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteUserId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -203,6 +209,7 @@ public final class HaiUserAvatarProto {
       boolean result = true;
       result = result && getSiteUserId()
           .equals(other.getSiteUserId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -212,7 +219,7 @@ public final class HaiUserAvatarProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -220,6 +227,17 @@ public final class HaiUserAvatarProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserAvatarProto.HaiUserAvatarRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserAvatarProto.HaiUserAvatarRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserAvatarProto.HaiUserAvatarRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,7 +398,7 @@ public final class HaiUserAvatarProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -393,12 +411,12 @@ public final class HaiUserAvatarProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -416,6 +434,7 @@ public final class HaiUserAvatarProto {
           siteUserId_ = other.siteUserId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -448,7 +467,7 @@ public final class HaiUserAvatarProto {
        *用户的siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -467,7 +486,7 @@ public final class HaiUserAvatarProto {
        *用户的siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -487,7 +506,7 @@ public final class HaiUserAvatarProto {
        *用户的siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -504,7 +523,7 @@ public final class HaiUserAvatarProto {
        *用户的siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -517,7 +536,7 @@ public final class HaiUserAvatarProto {
        *用户的siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -532,12 +551,12 @@ public final class HaiUserAvatarProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -588,7 +607,7 @@ public final class HaiUserAvatarProto {
      *头像图片的ID
      * </pre>
      *
-     * <code>optional string photo_id = 1;</code>
+     * <code>string photo_id = 1;</code>
      */
     java.lang.String getPhotoId();
     /**
@@ -596,7 +615,7 @@ public final class HaiUserAvatarProto {
      *头像图片的ID
      * </pre>
      *
-     * <code>optional string photo_id = 1;</code>
+     * <code>string photo_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getPhotoIdBytes();
@@ -606,7 +625,7 @@ public final class HaiUserAvatarProto {
      *图片二进制内容
      * </pre>
      *
-     * <code>optional bytes photo_content = 2;</code>
+     * <code>bytes photo_content = 2;</code>
      */
     com.google.protobuf.ByteString getPhotoContent();
   }
@@ -617,6 +636,7 @@ public final class HaiUserAvatarProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserAvatarResponse)
       HaiUserAvatarResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserAvatarResponse.newBuilder() to construct.
     private HaiUserAvatarResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -629,7 +649,7 @@ public final class HaiUserAvatarProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserAvatarResponse(
         com.google.protobuf.CodedInputStream input,
@@ -637,6 +657,8 @@ public final class HaiUserAvatarProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -646,7 +668,8 @@ public final class HaiUserAvatarProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -670,6 +693,7 @@ public final class HaiUserAvatarProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -692,7 +716,7 @@ public final class HaiUserAvatarProto {
      *头像图片的ID
      * </pre>
      *
-     * <code>optional string photo_id = 1;</code>
+     * <code>string photo_id = 1;</code>
      */
     public java.lang.String getPhotoId() {
       java.lang.Object ref = photoId_;
@@ -711,7 +735,7 @@ public final class HaiUserAvatarProto {
      *头像图片的ID
      * </pre>
      *
-     * <code>optional string photo_id = 1;</code>
+     * <code>string photo_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getPhotoIdBytes() {
@@ -734,7 +758,7 @@ public final class HaiUserAvatarProto {
      *图片二进制内容
      * </pre>
      *
-     * <code>optional bytes photo_content = 2;</code>
+     * <code>bytes photo_content = 2;</code>
      */
     public com.google.protobuf.ByteString getPhotoContent() {
       return photoContent_;
@@ -758,6 +782,7 @@ public final class HaiUserAvatarProto {
       if (!photoContent_.isEmpty()) {
         output.writeBytes(2, photoContent_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -772,11 +797,11 @@ public final class HaiUserAvatarProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, photoContent_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -792,6 +817,7 @@ public final class HaiUserAvatarProto {
           .equals(other.getPhotoId());
       result = result && getPhotoContent()
           .equals(other.getPhotoContent());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -801,7 +827,7 @@ public final class HaiUserAvatarProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PHOTO_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPhotoId().hashCode();
       hash = (37 * hash) + PHOTO_CONTENT_FIELD_NUMBER;
@@ -811,6 +837,17 @@ public final class HaiUserAvatarProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserAvatarProto.HaiUserAvatarResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserAvatarProto.HaiUserAvatarResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserAvatarProto.HaiUserAvatarResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -961,7 +998,7 @@ public final class HaiUserAvatarProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -974,12 +1011,12 @@ public final class HaiUserAvatarProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1000,6 +1037,7 @@ public final class HaiUserAvatarProto {
         if (other.getPhotoContent() != com.google.protobuf.ByteString.EMPTY) {
           setPhotoContent(other.getPhotoContent());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1032,7 +1070,7 @@ public final class HaiUserAvatarProto {
        *头像图片的ID
        * </pre>
        *
-       * <code>optional string photo_id = 1;</code>
+       * <code>string photo_id = 1;</code>
        */
       public java.lang.String getPhotoId() {
         java.lang.Object ref = photoId_;
@@ -1051,7 +1089,7 @@ public final class HaiUserAvatarProto {
        *头像图片的ID
        * </pre>
        *
-       * <code>optional string photo_id = 1;</code>
+       * <code>string photo_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getPhotoIdBytes() {
@@ -1071,7 +1109,7 @@ public final class HaiUserAvatarProto {
        *头像图片的ID
        * </pre>
        *
-       * <code>optional string photo_id = 1;</code>
+       * <code>string photo_id = 1;</code>
        */
       public Builder setPhotoId(
           java.lang.String value) {
@@ -1088,7 +1126,7 @@ public final class HaiUserAvatarProto {
        *头像图片的ID
        * </pre>
        *
-       * <code>optional string photo_id = 1;</code>
+       * <code>string photo_id = 1;</code>
        */
       public Builder clearPhotoId() {
         
@@ -1101,7 +1139,7 @@ public final class HaiUserAvatarProto {
        *头像图片的ID
        * </pre>
        *
-       * <code>optional string photo_id = 1;</code>
+       * <code>string photo_id = 1;</code>
        */
       public Builder setPhotoIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1121,7 +1159,7 @@ public final class HaiUserAvatarProto {
        *图片二进制内容
        * </pre>
        *
-       * <code>optional bytes photo_content = 2;</code>
+       * <code>bytes photo_content = 2;</code>
        */
       public com.google.protobuf.ByteString getPhotoContent() {
         return photoContent_;
@@ -1131,7 +1169,7 @@ public final class HaiUserAvatarProto {
        *图片二进制内容
        * </pre>
        *
-       * <code>optional bytes photo_content = 2;</code>
+       * <code>bytes photo_content = 2;</code>
        */
       public Builder setPhotoContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -1147,7 +1185,7 @@ public final class HaiUserAvatarProto {
        *图片二进制内容
        * </pre>
        *
-       * <code>optional bytes photo_content = 2;</code>
+       * <code>bytes photo_content = 2;</code>
        */
       public Builder clearPhotoContent() {
         
@@ -1157,12 +1195,12 @@ public final class HaiUserAvatarProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

@@ -23,7 +23,7 @@ public final class HaiUserUpdateProto {
      *需要更新的用户信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     boolean hasUserProfile();
     /**
@@ -31,7 +31,7 @@ public final class HaiUserUpdateProto {
      *需要更新的用户信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfile getUserProfile();
     /**
@@ -39,7 +39,7 @@ public final class HaiUserUpdateProto {
      *需要更新的用户信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfileOrBuilder getUserProfileOrBuilder();
   }
@@ -63,6 +63,7 @@ public final class HaiUserUpdateProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserUpdateRequest)
       HaiUserUpdateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserUpdateRequest.newBuilder() to construct.
     private HaiUserUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -73,7 +74,7 @@ public final class HaiUserUpdateProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserUpdateRequest(
         com.google.protobuf.CodedInputStream input,
@@ -81,6 +82,8 @@ public final class HaiUserUpdateProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -90,7 +93,8 @@ public final class HaiUserUpdateProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -116,6 +120,7 @@ public final class HaiUserUpdateProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -138,7 +143,7 @@ public final class HaiUserUpdateProto {
      *需要更新的用户信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     public boolean hasUserProfile() {
       return userProfile_ != null;
@@ -148,7 +153,7 @@ public final class HaiUserUpdateProto {
      *需要更新的用户信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfile getUserProfile() {
       return userProfile_ == null ? com.akaxin.proto.core.UserProto.UserProfile.getDefaultInstance() : userProfile_;
@@ -158,7 +163,7 @@ public final class HaiUserUpdateProto {
      *需要更新的用户信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getUserProfileOrBuilder() {
       return getUserProfile();
@@ -179,6 +184,7 @@ public final class HaiUserUpdateProto {
       if (userProfile_ != null) {
         output.writeMessage(1, getUserProfile());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -190,11 +196,11 @@ public final class HaiUserUpdateProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUserProfile());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -211,6 +217,7 @@ public final class HaiUserUpdateProto {
         result = result && getUserProfile()
             .equals(other.getUserProfile());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -220,7 +227,7 @@ public final class HaiUserUpdateProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasUserProfile()) {
         hash = (37 * hash) + USER_PROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getUserProfile().hashCode();
@@ -230,6 +237,17 @@ public final class HaiUserUpdateProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -398,7 +416,7 @@ public final class HaiUserUpdateProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -411,12 +429,12 @@ public final class HaiUserUpdateProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -433,6 +451,7 @@ public final class HaiUserUpdateProto {
         if (other.hasUserProfile()) {
           mergeUserProfile(other.getUserProfile());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -467,7 +486,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public boolean hasUserProfile() {
         return userProfileBuilder_ != null || userProfile_ != null;
@@ -477,7 +496,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile getUserProfile() {
         if (userProfileBuilder_ == null) {
@@ -491,7 +510,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder setUserProfile(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (userProfileBuilder_ == null) {
@@ -511,7 +530,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder setUserProfile(
           com.akaxin.proto.core.UserProto.UserProfile.Builder builderForValue) {
@@ -529,7 +548,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder mergeUserProfile(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (userProfileBuilder_ == null) {
@@ -551,7 +570,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder clearUserProfile() {
         if (userProfileBuilder_ == null) {
@@ -569,7 +588,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile.Builder getUserProfileBuilder() {
         
@@ -581,7 +600,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getUserProfileOrBuilder() {
         if (userProfileBuilder_ != null) {
@@ -596,7 +615,7 @@ public final class HaiUserUpdateProto {
        *需要更新的用户信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.UserProto.UserProfile, com.akaxin.proto.core.UserProto.UserProfile.Builder, com.akaxin.proto.core.UserProto.UserProfileOrBuilder> 
@@ -613,12 +632,12 @@ public final class HaiUserUpdateProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -671,6 +690,7 @@ public final class HaiUserUpdateProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserUpdateResponse)
       HaiUserUpdateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserUpdateResponse.newBuilder() to construct.
     private HaiUserUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -681,13 +701,15 @@ public final class HaiUserUpdateProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserUpdateResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -697,7 +719,8 @@ public final class HaiUserUpdateProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -710,6 +733,7 @@ public final class HaiUserUpdateProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -737,6 +761,7 @@ public final class HaiUserUpdateProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -744,11 +769,11 @@ public final class HaiUserUpdateProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -760,6 +785,7 @@ public final class HaiUserUpdateProto {
       com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse other = (com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -769,12 +795,23 @@ public final class HaiUserUpdateProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -919,7 +956,7 @@ public final class HaiUserUpdateProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -932,12 +969,12 @@ public final class HaiUserUpdateProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -951,6 +988,7 @@ public final class HaiUserUpdateProto {
 
       public Builder mergeFrom(com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse other) {
         if (other == com.akaxin.proto.plugin.HaiUserUpdateProto.HaiUserUpdateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -978,12 +1016,12 @@ public final class HaiUserUpdateProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

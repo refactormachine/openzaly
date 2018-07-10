@@ -25,6 +25,7 @@ public final class ApiSiteConfigProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteConfigRequest)
       ApiSiteConfigRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteConfigRequest.newBuilder() to construct.
     private ApiSiteConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -35,13 +36,18 @@ public final class ApiSiteConfigProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteConfigRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -51,7 +57,8 @@ public final class ApiSiteConfigProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -64,6 +71,7 @@ public final class ApiSiteConfigProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -91,6 +99,7 @@ public final class ApiSiteConfigProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -98,11 +107,11 @@ public final class ApiSiteConfigProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -114,6 +123,7 @@ public final class ApiSiteConfigProto {
       com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest other = (com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -123,12 +133,23 @@ public final class ApiSiteConfigProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -273,7 +294,7 @@ public final class ApiSiteConfigProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -286,12 +307,12 @@ public final class ApiSiteConfigProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -305,6 +326,7 @@ public final class ApiSiteConfigProto {
 
       public Builder mergeFrom(com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest other) {
         if (other == com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -332,12 +354,12 @@ public final class ApiSiteConfigProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -360,7 +382,7 @@ public final class ApiSiteConfigProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteConfigRequest(input, extensionRegistry);
+        return new ApiSiteConfigRequest(input, extensionRegistry);
       }
     };
 
@@ -388,7 +410,7 @@ public final class ApiSiteConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteConfig site_config = 1;</code>
+     * <code>.core.SiteConfig site_config = 1;</code>
      */
     boolean hasSiteConfig();
     /**
@@ -396,7 +418,7 @@ public final class ApiSiteConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteConfig site_config = 1;</code>
+     * <code>.core.SiteConfig site_config = 1;</code>
      */
     com.akaxin.proto.core.ConfigProto.SiteConfig getSiteConfig();
     /**
@@ -404,7 +426,7 @@ public final class ApiSiteConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteConfig site_config = 1;</code>
+     * <code>.core.SiteConfig site_config = 1;</code>
      */
     com.akaxin.proto.core.ConfigProto.SiteConfigOrBuilder getSiteConfigOrBuilder();
   }
@@ -415,6 +437,7 @@ public final class ApiSiteConfigProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteConfigResponse)
       ApiSiteConfigResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteConfigResponse.newBuilder() to construct.
     private ApiSiteConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -425,14 +448,19 @@ public final class ApiSiteConfigProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteConfigResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -442,7 +470,8 @@ public final class ApiSiteConfigProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -468,6 +497,7 @@ public final class ApiSiteConfigProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -490,7 +520,7 @@ public final class ApiSiteConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteConfig site_config = 1;</code>
+     * <code>.core.SiteConfig site_config = 1;</code>
      */
     public boolean hasSiteConfig() {
       return siteConfig_ != null;
@@ -500,7 +530,7 @@ public final class ApiSiteConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteConfig site_config = 1;</code>
+     * <code>.core.SiteConfig site_config = 1;</code>
      */
     public com.akaxin.proto.core.ConfigProto.SiteConfig getSiteConfig() {
       return siteConfig_ == null ? com.akaxin.proto.core.ConfigProto.SiteConfig.getDefaultInstance() : siteConfig_;
@@ -510,7 +540,7 @@ public final class ApiSiteConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteConfig site_config = 1;</code>
+     * <code>.core.SiteConfig site_config = 1;</code>
      */
     public com.akaxin.proto.core.ConfigProto.SiteConfigOrBuilder getSiteConfigOrBuilder() {
       return getSiteConfig();
@@ -531,6 +561,7 @@ public final class ApiSiteConfigProto {
       if (siteConfig_ != null) {
         output.writeMessage(1, getSiteConfig());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -542,11 +573,11 @@ public final class ApiSiteConfigProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSiteConfig());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -563,6 +594,7 @@ public final class ApiSiteConfigProto {
         result = result && getSiteConfig()
             .equals(other.getSiteConfig());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -572,7 +604,7 @@ public final class ApiSiteConfigProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasSiteConfig()) {
         hash = (37 * hash) + SITE_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getSiteConfig().hashCode();
@@ -582,6 +614,17 @@ public final class ApiSiteConfigProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteConfigProto.ApiSiteConfigResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -737,7 +780,7 @@ public final class ApiSiteConfigProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -750,12 +793,12 @@ public final class ApiSiteConfigProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -772,6 +815,7 @@ public final class ApiSiteConfigProto {
         if (other.hasSiteConfig()) {
           mergeSiteConfig(other.getSiteConfig());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -806,7 +850,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public boolean hasSiteConfig() {
         return siteConfigBuilder_ != null || siteConfig_ != null;
@@ -816,7 +860,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteConfig getSiteConfig() {
         if (siteConfigBuilder_ == null) {
@@ -830,7 +874,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public Builder setSiteConfig(com.akaxin.proto.core.ConfigProto.SiteConfig value) {
         if (siteConfigBuilder_ == null) {
@@ -850,7 +894,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public Builder setSiteConfig(
           com.akaxin.proto.core.ConfigProto.SiteConfig.Builder builderForValue) {
@@ -868,7 +912,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public Builder mergeSiteConfig(com.akaxin.proto.core.ConfigProto.SiteConfig value) {
         if (siteConfigBuilder_ == null) {
@@ -890,7 +934,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public Builder clearSiteConfig() {
         if (siteConfigBuilder_ == null) {
@@ -908,7 +952,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteConfig.Builder getSiteConfigBuilder() {
         
@@ -920,7 +964,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteConfigOrBuilder getSiteConfigOrBuilder() {
         if (siteConfigBuilder_ != null) {
@@ -935,7 +979,7 @@ public final class ApiSiteConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteConfig site_config = 1;</code>
+       * <code>.core.SiteConfig site_config = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.ConfigProto.SiteConfig, com.akaxin.proto.core.ConfigProto.SiteConfig.Builder, com.akaxin.proto.core.ConfigProto.SiteConfigOrBuilder> 
@@ -952,12 +996,12 @@ public final class ApiSiteConfigProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -980,7 +1024,7 @@ public final class ApiSiteConfigProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteConfigResponse(input, extensionRegistry);
+        return new ApiSiteConfigResponse(input, extensionRegistry);
       }
     };
 

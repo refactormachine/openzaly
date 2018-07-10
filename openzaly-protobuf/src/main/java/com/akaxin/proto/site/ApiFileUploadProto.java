@@ -23,7 +23,7 @@ public final class ApiFileUploadProto {
      *上传文件资源&lt;图片，语音，视频&gt;
      * </pre>
      *
-     * <code>optional .core.File file = 1;</code>
+     * <code>.core.File file = 1;</code>
      */
     boolean hasFile();
     /**
@@ -31,7 +31,7 @@ public final class ApiFileUploadProto {
      *上传文件资源&lt;图片，语音，视频&gt;
      * </pre>
      *
-     * <code>optional .core.File file = 1;</code>
+     * <code>.core.File file = 1;</code>
      */
     com.akaxin.proto.core.FileProto.File getFile();
     /**
@@ -39,7 +39,7 @@ public final class ApiFileUploadProto {
      *上传文件资源&lt;图片，语音，视频&gt;
      * </pre>
      *
-     * <code>optional .core.File file = 1;</code>
+     * <code>.core.File file = 1;</code>
      */
     com.akaxin.proto.core.FileProto.FileOrBuilder getFileOrBuilder();
 
@@ -48,7 +48,7 @@ public final class ApiFileUploadProto {
      *文件资源的描述
      * </pre>
      *
-     * <code>optional .core.FileDesc fileDesc = 2;</code>
+     * <code>.core.FileDesc fileDesc = 2;</code>
      */
     boolean hasFileDesc();
     /**
@@ -56,7 +56,7 @@ public final class ApiFileUploadProto {
      *文件资源的描述
      * </pre>
      *
-     * <code>optional .core.FileDesc fileDesc = 2;</code>
+     * <code>.core.FileDesc fileDesc = 2;</code>
      */
     com.akaxin.proto.core.FileProto.FileDesc getFileDesc();
     /**
@@ -64,7 +64,7 @@ public final class ApiFileUploadProto {
      *文件资源的描述
      * </pre>
      *
-     * <code>optional .core.FileDesc fileDesc = 2;</code>
+     * <code>.core.FileDesc fileDesc = 2;</code>
      */
     com.akaxin.proto.core.FileProto.FileDescOrBuilder getFileDescOrBuilder();
   }
@@ -75,6 +75,7 @@ public final class ApiFileUploadProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFileUploadRequest)
       ApiFileUploadRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFileUploadRequest.newBuilder() to construct.
     private ApiFileUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -85,14 +86,19 @@ public final class ApiFileUploadProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFileUploadRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -102,7 +108,8 @@ public final class ApiFileUploadProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -141,6 +148,7 @@ public final class ApiFileUploadProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -163,7 +171,7 @@ public final class ApiFileUploadProto {
      *上传文件资源&lt;图片，语音，视频&gt;
      * </pre>
      *
-     * <code>optional .core.File file = 1;</code>
+     * <code>.core.File file = 1;</code>
      */
     public boolean hasFile() {
       return file_ != null;
@@ -173,7 +181,7 @@ public final class ApiFileUploadProto {
      *上传文件资源&lt;图片，语音，视频&gt;
      * </pre>
      *
-     * <code>optional .core.File file = 1;</code>
+     * <code>.core.File file = 1;</code>
      */
     public com.akaxin.proto.core.FileProto.File getFile() {
       return file_ == null ? com.akaxin.proto.core.FileProto.File.getDefaultInstance() : file_;
@@ -183,7 +191,7 @@ public final class ApiFileUploadProto {
      *上传文件资源&lt;图片，语音，视频&gt;
      * </pre>
      *
-     * <code>optional .core.File file = 1;</code>
+     * <code>.core.File file = 1;</code>
      */
     public com.akaxin.proto.core.FileProto.FileOrBuilder getFileOrBuilder() {
       return getFile();
@@ -196,7 +204,7 @@ public final class ApiFileUploadProto {
      *文件资源的描述
      * </pre>
      *
-     * <code>optional .core.FileDesc fileDesc = 2;</code>
+     * <code>.core.FileDesc fileDesc = 2;</code>
      */
     public boolean hasFileDesc() {
       return fileDesc_ != null;
@@ -206,7 +214,7 @@ public final class ApiFileUploadProto {
      *文件资源的描述
      * </pre>
      *
-     * <code>optional .core.FileDesc fileDesc = 2;</code>
+     * <code>.core.FileDesc fileDesc = 2;</code>
      */
     public com.akaxin.proto.core.FileProto.FileDesc getFileDesc() {
       return fileDesc_ == null ? com.akaxin.proto.core.FileProto.FileDesc.getDefaultInstance() : fileDesc_;
@@ -216,7 +224,7 @@ public final class ApiFileUploadProto {
      *文件资源的描述
      * </pre>
      *
-     * <code>optional .core.FileDesc fileDesc = 2;</code>
+     * <code>.core.FileDesc fileDesc = 2;</code>
      */
     public com.akaxin.proto.core.FileProto.FileDescOrBuilder getFileDescOrBuilder() {
       return getFileDesc();
@@ -240,6 +248,7 @@ public final class ApiFileUploadProto {
       if (fileDesc_ != null) {
         output.writeMessage(2, getFileDesc());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -255,11 +264,11 @@ public final class ApiFileUploadProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFileDesc());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -281,6 +290,7 @@ public final class ApiFileUploadProto {
         result = result && getFileDesc()
             .equals(other.getFileDesc());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -290,7 +300,7 @@ public final class ApiFileUploadProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasFile()) {
         hash = (37 * hash) + FILE_FIELD_NUMBER;
         hash = (53 * hash) + getFile().hashCode();
@@ -304,6 +314,17 @@ public final class ApiFileUploadProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFileUploadProto.ApiFileUploadRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFileUploadProto.ApiFileUploadRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFileUploadProto.ApiFileUploadRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -470,7 +491,7 @@ public final class ApiFileUploadProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -483,12 +504,12 @@ public final class ApiFileUploadProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -508,6 +529,7 @@ public final class ApiFileUploadProto {
         if (other.hasFileDesc()) {
           mergeFileDesc(other.getFileDesc());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -542,7 +564,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public boolean hasFile() {
         return fileBuilder_ != null || file_ != null;
@@ -552,7 +574,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public com.akaxin.proto.core.FileProto.File getFile() {
         if (fileBuilder_ == null) {
@@ -566,7 +588,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public Builder setFile(com.akaxin.proto.core.FileProto.File value) {
         if (fileBuilder_ == null) {
@@ -586,7 +608,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public Builder setFile(
           com.akaxin.proto.core.FileProto.File.Builder builderForValue) {
@@ -604,7 +626,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public Builder mergeFile(com.akaxin.proto.core.FileProto.File value) {
         if (fileBuilder_ == null) {
@@ -626,7 +648,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public Builder clearFile() {
         if (fileBuilder_ == null) {
@@ -644,7 +666,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public com.akaxin.proto.core.FileProto.File.Builder getFileBuilder() {
         
@@ -656,7 +678,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       public com.akaxin.proto.core.FileProto.FileOrBuilder getFileOrBuilder() {
         if (fileBuilder_ != null) {
@@ -671,7 +693,7 @@ public final class ApiFileUploadProto {
        *上传文件资源&lt;图片，语音，视频&gt;
        * </pre>
        *
-       * <code>optional .core.File file = 1;</code>
+       * <code>.core.File file = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.FileProto.File, com.akaxin.proto.core.FileProto.File.Builder, com.akaxin.proto.core.FileProto.FileOrBuilder> 
@@ -695,7 +717,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public boolean hasFileDesc() {
         return fileDescBuilder_ != null || fileDesc_ != null;
@@ -705,7 +727,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public com.akaxin.proto.core.FileProto.FileDesc getFileDesc() {
         if (fileDescBuilder_ == null) {
@@ -719,7 +741,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public Builder setFileDesc(com.akaxin.proto.core.FileProto.FileDesc value) {
         if (fileDescBuilder_ == null) {
@@ -739,7 +761,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public Builder setFileDesc(
           com.akaxin.proto.core.FileProto.FileDesc.Builder builderForValue) {
@@ -757,7 +779,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public Builder mergeFileDesc(com.akaxin.proto.core.FileProto.FileDesc value) {
         if (fileDescBuilder_ == null) {
@@ -779,7 +801,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public Builder clearFileDesc() {
         if (fileDescBuilder_ == null) {
@@ -797,7 +819,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public com.akaxin.proto.core.FileProto.FileDesc.Builder getFileDescBuilder() {
         
@@ -809,7 +831,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       public com.akaxin.proto.core.FileProto.FileDescOrBuilder getFileDescOrBuilder() {
         if (fileDescBuilder_ != null) {
@@ -824,7 +846,7 @@ public final class ApiFileUploadProto {
        *文件资源的描述
        * </pre>
        *
-       * <code>optional .core.FileDesc fileDesc = 2;</code>
+       * <code>.core.FileDesc fileDesc = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.FileProto.FileDesc, com.akaxin.proto.core.FileProto.FileDesc.Builder, com.akaxin.proto.core.FileProto.FileDescOrBuilder> 
@@ -841,12 +863,12 @@ public final class ApiFileUploadProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -869,7 +891,7 @@ public final class ApiFileUploadProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFileUploadRequest(input, extensionRegistry);
+        return new ApiFileUploadRequest(input, extensionRegistry);
       }
     };
 
@@ -897,7 +919,7 @@ public final class ApiFileUploadProto {
      *上传资源标识ID
      * </pre>
      *
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     java.lang.String getFileId();
     /**
@@ -905,7 +927,7 @@ public final class ApiFileUploadProto {
      *上传资源标识ID
      * </pre>
      *
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getFileIdBytes();
@@ -917,6 +939,7 @@ public final class ApiFileUploadProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFileUploadResponse)
       ApiFileUploadResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFileUploadResponse.newBuilder() to construct.
     private ApiFileUploadResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -928,14 +951,19 @@ public final class ApiFileUploadProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFileUploadResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -945,7 +973,8 @@ public final class ApiFileUploadProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -964,6 +993,7 @@ public final class ApiFileUploadProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -986,7 +1016,7 @@ public final class ApiFileUploadProto {
      *上传资源标识ID
      * </pre>
      *
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     public java.lang.String getFileId() {
       java.lang.Object ref = fileId_;
@@ -1005,7 +1035,7 @@ public final class ApiFileUploadProto {
      *上传资源标识ID
      * </pre>
      *
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getFileIdBytes() {
@@ -1036,6 +1066,7 @@ public final class ApiFileUploadProto {
       if (!getFileIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fileId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1046,11 +1077,11 @@ public final class ApiFileUploadProto {
       if (!getFileIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fileId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1064,6 +1095,7 @@ public final class ApiFileUploadProto {
       boolean result = true;
       result = result && getFileId()
           .equals(other.getFileId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1073,7 +1105,7 @@ public final class ApiFileUploadProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FILE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFileId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -1081,6 +1113,17 @@ public final class ApiFileUploadProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFileUploadProto.ApiFileUploadResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFileUploadProto.ApiFileUploadResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFileUploadProto.ApiFileUploadResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1228,7 +1271,7 @@ public final class ApiFileUploadProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1241,12 +1284,12 @@ public final class ApiFileUploadProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1264,6 +1307,7 @@ public final class ApiFileUploadProto {
           fileId_ = other.fileId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1296,7 +1340,7 @@ public final class ApiFileUploadProto {
        *上传资源标识ID
        * </pre>
        *
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public java.lang.String getFileId() {
         java.lang.Object ref = fileId_;
@@ -1315,7 +1359,7 @@ public final class ApiFileUploadProto {
        *上传资源标识ID
        * </pre>
        *
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getFileIdBytes() {
@@ -1335,7 +1379,7 @@ public final class ApiFileUploadProto {
        *上传资源标识ID
        * </pre>
        *
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public Builder setFileId(
           java.lang.String value) {
@@ -1352,7 +1396,7 @@ public final class ApiFileUploadProto {
        *上传资源标识ID
        * </pre>
        *
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public Builder clearFileId() {
         
@@ -1365,7 +1409,7 @@ public final class ApiFileUploadProto {
        *上传资源标识ID
        * </pre>
        *
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1380,12 +1424,12 @@ public final class ApiFileUploadProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1408,7 +1452,7 @@ public final class ApiFileUploadProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFileUploadResponse(input, extensionRegistry);
+        return new ApiFileUploadResponse(input, extensionRegistry);
       }
     };
 

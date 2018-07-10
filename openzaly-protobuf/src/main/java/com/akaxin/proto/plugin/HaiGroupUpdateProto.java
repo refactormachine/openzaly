@@ -23,7 +23,7 @@ public final class HaiGroupUpdateProto {
      * 显示的设置群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     java.lang.String getGroupId();
     /**
@@ -31,7 +31,7 @@ public final class HaiGroupUpdateProto {
      * 显示的设置群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getGroupIdBytes();
@@ -41,7 +41,7 @@ public final class HaiGroupUpdateProto {
      *需要更新的群组资料
      * </pre>
      *
-     * <code>optional .core.GroupProfile profile = 2;</code>
+     * <code>.core.GroupProfile profile = 2;</code>
      */
     boolean hasProfile();
     /**
@@ -49,7 +49,7 @@ public final class HaiGroupUpdateProto {
      *需要更新的群组资料
      * </pre>
      *
-     * <code>optional .core.GroupProfile profile = 2;</code>
+     * <code>.core.GroupProfile profile = 2;</code>
      */
     com.akaxin.proto.core.GroupProto.GroupProfile getProfile();
     /**
@@ -57,7 +57,7 @@ public final class HaiGroupUpdateProto {
      *需要更新的群组资料
      * </pre>
      *
-     * <code>optional .core.GroupProfile profile = 2;</code>
+     * <code>.core.GroupProfile profile = 2;</code>
      */
     com.akaxin.proto.core.GroupProto.GroupProfileOrBuilder getProfileOrBuilder();
   }
@@ -81,6 +81,7 @@ public final class HaiGroupUpdateProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiGroupUpdateRequest)
       HaiGroupUpdateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiGroupUpdateRequest.newBuilder() to construct.
     private HaiGroupUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -92,7 +93,7 @@ public final class HaiGroupUpdateProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiGroupUpdateRequest(
         com.google.protobuf.CodedInputStream input,
@@ -100,6 +101,8 @@ public final class HaiGroupUpdateProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -109,7 +112,8 @@ public final class HaiGroupUpdateProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -141,6 +145,7 @@ public final class HaiGroupUpdateProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -163,7 +168,7 @@ public final class HaiGroupUpdateProto {
      * 显示的设置群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public java.lang.String getGroupId() {
       java.lang.Object ref = groupId_;
@@ -182,7 +187,7 @@ public final class HaiGroupUpdateProto {
      * 显示的设置群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getGroupIdBytes() {
@@ -205,7 +210,7 @@ public final class HaiGroupUpdateProto {
      *需要更新的群组资料
      * </pre>
      *
-     * <code>optional .core.GroupProfile profile = 2;</code>
+     * <code>.core.GroupProfile profile = 2;</code>
      */
     public boolean hasProfile() {
       return profile_ != null;
@@ -215,7 +220,7 @@ public final class HaiGroupUpdateProto {
      *需要更新的群组资料
      * </pre>
      *
-     * <code>optional .core.GroupProfile profile = 2;</code>
+     * <code>.core.GroupProfile profile = 2;</code>
      */
     public com.akaxin.proto.core.GroupProto.GroupProfile getProfile() {
       return profile_ == null ? com.akaxin.proto.core.GroupProto.GroupProfile.getDefaultInstance() : profile_;
@@ -225,7 +230,7 @@ public final class HaiGroupUpdateProto {
      *需要更新的群组资料
      * </pre>
      *
-     * <code>optional .core.GroupProfile profile = 2;</code>
+     * <code>.core.GroupProfile profile = 2;</code>
      */
     public com.akaxin.proto.core.GroupProto.GroupProfileOrBuilder getProfileOrBuilder() {
       return getProfile();
@@ -249,6 +254,7 @@ public final class HaiGroupUpdateProto {
       if (profile_ != null) {
         output.writeMessage(2, getProfile());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -263,11 +269,11 @@ public final class HaiGroupUpdateProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getProfile());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -286,6 +292,7 @@ public final class HaiGroupUpdateProto {
         result = result && getProfile()
             .equals(other.getProfile());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -295,7 +302,7 @@ public final class HaiGroupUpdateProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGroupId().hashCode();
       if (hasProfile()) {
@@ -307,6 +314,17 @@ public final class HaiGroupUpdateProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -478,7 +496,7 @@ public final class HaiGroupUpdateProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -491,12 +509,12 @@ public final class HaiGroupUpdateProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -517,6 +535,7 @@ public final class HaiGroupUpdateProto {
         if (other.hasProfile()) {
           mergeProfile(other.getProfile());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -549,7 +568,7 @@ public final class HaiGroupUpdateProto {
        * 显示的设置群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public java.lang.String getGroupId() {
         java.lang.Object ref = groupId_;
@@ -568,7 +587,7 @@ public final class HaiGroupUpdateProto {
        * 显示的设置群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getGroupIdBytes() {
@@ -588,7 +607,7 @@ public final class HaiGroupUpdateProto {
        * 显示的设置群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder setGroupId(
           java.lang.String value) {
@@ -605,7 +624,7 @@ public final class HaiGroupUpdateProto {
        * 显示的设置群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder clearGroupId() {
         
@@ -618,7 +637,7 @@ public final class HaiGroupUpdateProto {
        * 显示的设置群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder setGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -640,7 +659,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public boolean hasProfile() {
         return profileBuilder_ != null || profile_ != null;
@@ -650,7 +669,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public com.akaxin.proto.core.GroupProto.GroupProfile getProfile() {
         if (profileBuilder_ == null) {
@@ -664,7 +683,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public Builder setProfile(com.akaxin.proto.core.GroupProto.GroupProfile value) {
         if (profileBuilder_ == null) {
@@ -684,7 +703,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public Builder setProfile(
           com.akaxin.proto.core.GroupProto.GroupProfile.Builder builderForValue) {
@@ -702,7 +721,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public Builder mergeProfile(com.akaxin.proto.core.GroupProto.GroupProfile value) {
         if (profileBuilder_ == null) {
@@ -724,7 +743,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
@@ -742,7 +761,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public com.akaxin.proto.core.GroupProto.GroupProfile.Builder getProfileBuilder() {
         
@@ -754,7 +773,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       public com.akaxin.proto.core.GroupProto.GroupProfileOrBuilder getProfileOrBuilder() {
         if (profileBuilder_ != null) {
@@ -769,7 +788,7 @@ public final class HaiGroupUpdateProto {
        *需要更新的群组资料
        * </pre>
        *
-       * <code>optional .core.GroupProfile profile = 2;</code>
+       * <code>.core.GroupProfile profile = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.GroupProto.GroupProfile, com.akaxin.proto.core.GroupProto.GroupProfile.Builder, com.akaxin.proto.core.GroupProto.GroupProfileOrBuilder> 
@@ -786,12 +805,12 @@ public final class HaiGroupUpdateProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -844,6 +863,7 @@ public final class HaiGroupUpdateProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiGroupUpdateResponse)
       HaiGroupUpdateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiGroupUpdateResponse.newBuilder() to construct.
     private HaiGroupUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -854,13 +874,15 @@ public final class HaiGroupUpdateProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiGroupUpdateResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -870,7 +892,8 @@ public final class HaiGroupUpdateProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -883,6 +906,7 @@ public final class HaiGroupUpdateProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -910,6 +934,7 @@ public final class HaiGroupUpdateProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -917,11 +942,11 @@ public final class HaiGroupUpdateProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -933,6 +958,7 @@ public final class HaiGroupUpdateProto {
       com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse other = (com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -942,12 +968,23 @@ public final class HaiGroupUpdateProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1092,7 +1129,7 @@ public final class HaiGroupUpdateProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1105,12 +1142,12 @@ public final class HaiGroupUpdateProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1124,6 +1161,7 @@ public final class HaiGroupUpdateProto {
 
       public Builder mergeFrom(com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse other) {
         if (other == com.akaxin.proto.plugin.HaiGroupUpdateProto.HaiGroupUpdateResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1151,12 +1189,12 @@ public final class HaiGroupUpdateProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

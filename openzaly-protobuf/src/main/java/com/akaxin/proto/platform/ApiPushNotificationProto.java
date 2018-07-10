@@ -19,11 +19,11 @@ public final class ApiPushNotificationProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .core.PushType push_type = 1;</code>
+     * <code>.core.PushType push_type = 1;</code>
      */
     int getPushTypeValue();
     /**
-     * <code>optional .core.PushType push_type = 1;</code>
+     * <code>.core.PushType push_type = 1;</code>
      */
     com.akaxin.proto.core.PushProto.PushType getPushType();
 
@@ -32,7 +32,7 @@ public final class ApiPushNotificationProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.Notification notification = 2;</code>
+     * <code>.core.Notification notification = 2;</code>
      */
     boolean hasNotification();
     /**
@@ -40,7 +40,7 @@ public final class ApiPushNotificationProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.Notification notification = 2;</code>
+     * <code>.core.Notification notification = 2;</code>
      */
     com.akaxin.proto.core.PushProto.Notification getNotification();
     /**
@@ -48,7 +48,7 @@ public final class ApiPushNotificationProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.Notification notification = 2;</code>
+     * <code>.core.Notification notification = 2;</code>
      */
     com.akaxin.proto.core.PushProto.NotificationOrBuilder getNotificationOrBuilder();
   }
@@ -59,6 +59,7 @@ public final class ApiPushNotificationProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:platform.ApiPushNotificationRequest)
       ApiPushNotificationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPushNotificationRequest.newBuilder() to construct.
     private ApiPushNotificationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -70,7 +71,7 @@ public final class ApiPushNotificationProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPushNotificationRequest(
         com.google.protobuf.CodedInputStream input,
@@ -78,6 +79,8 @@ public final class ApiPushNotificationProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -87,7 +90,8 @@ public final class ApiPushNotificationProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -119,6 +123,7 @@ public final class ApiPushNotificationProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -137,13 +142,13 @@ public final class ApiPushNotificationProto {
     public static final int PUSH_TYPE_FIELD_NUMBER = 1;
     private int pushType_;
     /**
-     * <code>optional .core.PushType push_type = 1;</code>
+     * <code>.core.PushType push_type = 1;</code>
      */
     public int getPushTypeValue() {
       return pushType_;
     }
     /**
-     * <code>optional .core.PushType push_type = 1;</code>
+     * <code>.core.PushType push_type = 1;</code>
      */
     public com.akaxin.proto.core.PushProto.PushType getPushType() {
       com.akaxin.proto.core.PushProto.PushType result = com.akaxin.proto.core.PushProto.PushType.valueOf(pushType_);
@@ -157,7 +162,7 @@ public final class ApiPushNotificationProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.Notification notification = 2;</code>
+     * <code>.core.Notification notification = 2;</code>
      */
     public boolean hasNotification() {
       return notification_ != null;
@@ -167,7 +172,7 @@ public final class ApiPushNotificationProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.Notification notification = 2;</code>
+     * <code>.core.Notification notification = 2;</code>
      */
     public com.akaxin.proto.core.PushProto.Notification getNotification() {
       return notification_ == null ? com.akaxin.proto.core.PushProto.Notification.getDefaultInstance() : notification_;
@@ -177,7 +182,7 @@ public final class ApiPushNotificationProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.Notification notification = 2;</code>
+     * <code>.core.Notification notification = 2;</code>
      */
     public com.akaxin.proto.core.PushProto.NotificationOrBuilder getNotificationOrBuilder() {
       return getNotification();
@@ -201,6 +206,7 @@ public final class ApiPushNotificationProto {
       if (notification_ != null) {
         output.writeMessage(2, getNotification());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -216,11 +222,11 @@ public final class ApiPushNotificationProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNotification());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -238,6 +244,7 @@ public final class ApiPushNotificationProto {
         result = result && getNotification()
             .equals(other.getNotification());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -247,7 +254,7 @@ public final class ApiPushNotificationProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PUSH_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + pushType_;
       if (hasNotification()) {
@@ -259,6 +266,17 @@ public final class ApiPushNotificationProto {
       return hash;
     }
 
+    public static com.akaxin.proto.platform.ApiPushNotificationProto.ApiPushNotificationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.platform.ApiPushNotificationProto.ApiPushNotificationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.platform.ApiPushNotificationProto.ApiPushNotificationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -417,7 +435,7 @@ public final class ApiPushNotificationProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -430,12 +448,12 @@ public final class ApiPushNotificationProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -455,6 +473,7 @@ public final class ApiPushNotificationProto {
         if (other.hasNotification()) {
           mergeNotification(other.getNotification());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -483,13 +502,13 @@ public final class ApiPushNotificationProto {
 
       private int pushType_ = 0;
       /**
-       * <code>optional .core.PushType push_type = 1;</code>
+       * <code>.core.PushType push_type = 1;</code>
        */
       public int getPushTypeValue() {
         return pushType_;
       }
       /**
-       * <code>optional .core.PushType push_type = 1;</code>
+       * <code>.core.PushType push_type = 1;</code>
        */
       public Builder setPushTypeValue(int value) {
         pushType_ = value;
@@ -497,14 +516,14 @@ public final class ApiPushNotificationProto {
         return this;
       }
       /**
-       * <code>optional .core.PushType push_type = 1;</code>
+       * <code>.core.PushType push_type = 1;</code>
        */
       public com.akaxin.proto.core.PushProto.PushType getPushType() {
         com.akaxin.proto.core.PushProto.PushType result = com.akaxin.proto.core.PushProto.PushType.valueOf(pushType_);
         return result == null ? com.akaxin.proto.core.PushProto.PushType.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .core.PushType push_type = 1;</code>
+       * <code>.core.PushType push_type = 1;</code>
        */
       public Builder setPushType(com.akaxin.proto.core.PushProto.PushType value) {
         if (value == null) {
@@ -516,7 +535,7 @@ public final class ApiPushNotificationProto {
         return this;
       }
       /**
-       * <code>optional .core.PushType push_type = 1;</code>
+       * <code>.core.PushType push_type = 1;</code>
        */
       public Builder clearPushType() {
         
@@ -533,7 +552,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public boolean hasNotification() {
         return notificationBuilder_ != null || notification_ != null;
@@ -543,7 +562,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public com.akaxin.proto.core.PushProto.Notification getNotification() {
         if (notificationBuilder_ == null) {
@@ -557,7 +576,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public Builder setNotification(com.akaxin.proto.core.PushProto.Notification value) {
         if (notificationBuilder_ == null) {
@@ -577,7 +596,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public Builder setNotification(
           com.akaxin.proto.core.PushProto.Notification.Builder builderForValue) {
@@ -595,7 +614,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public Builder mergeNotification(com.akaxin.proto.core.PushProto.Notification value) {
         if (notificationBuilder_ == null) {
@@ -617,7 +636,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public Builder clearNotification() {
         if (notificationBuilder_ == null) {
@@ -635,7 +654,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public com.akaxin.proto.core.PushProto.Notification.Builder getNotificationBuilder() {
         
@@ -647,7 +666,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       public com.akaxin.proto.core.PushProto.NotificationOrBuilder getNotificationOrBuilder() {
         if (notificationBuilder_ != null) {
@@ -662,7 +681,7 @@ public final class ApiPushNotificationProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.Notification notification = 2;</code>
+       * <code>.core.Notification notification = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.PushProto.Notification, com.akaxin.proto.core.PushProto.Notification.Builder, com.akaxin.proto.core.PushProto.NotificationOrBuilder> 
@@ -679,12 +698,12 @@ public final class ApiPushNotificationProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

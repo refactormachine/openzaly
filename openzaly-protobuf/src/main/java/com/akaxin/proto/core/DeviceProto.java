@@ -19,37 +19,37 @@ public final class DeviceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     java.lang.String getDeviceName();
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getDeviceNameBytes();
 
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     java.lang.String getUserDevicePubk();
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserDevicePubkBytes();
 
     /**
-     * <code>optional int64 last_login_time = 4;</code>
+     * <code>int64 last_login_time = 4;</code>
      */
     long getLastLoginTime();
   }
@@ -64,6 +64,7 @@ public final class DeviceProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.DeviceProfile)
       DeviceProfileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use DeviceProfile.newBuilder() to construct.
     private DeviceProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -78,7 +79,7 @@ public final class DeviceProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private DeviceProfile(
         com.google.protobuf.CodedInputStream input,
@@ -86,6 +87,8 @@ public final class DeviceProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -95,7 +98,8 @@ public final class DeviceProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -131,6 +135,7 @@ public final class DeviceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -149,7 +154,7 @@ public final class DeviceProto {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
@@ -164,7 +169,7 @@ public final class DeviceProto {
       }
     }
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
@@ -183,7 +188,7 @@ public final class DeviceProto {
     public static final int DEVICE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object deviceName_;
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     public java.lang.String getDeviceName() {
       java.lang.Object ref = deviceName_;
@@ -198,7 +203,7 @@ public final class DeviceProto {
       }
     }
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getDeviceNameBytes() {
@@ -217,7 +222,7 @@ public final class DeviceProto {
     public static final int USER_DEVICE_PUBK_FIELD_NUMBER = 3;
     private volatile java.lang.Object userDevicePubk_;
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     public java.lang.String getUserDevicePubk() {
       java.lang.Object ref = userDevicePubk_;
@@ -232,7 +237,7 @@ public final class DeviceProto {
       }
     }
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserDevicePubkBytes() {
@@ -251,7 +256,7 @@ public final class DeviceProto {
     public static final int LAST_LOGIN_TIME_FIELD_NUMBER = 4;
     private long lastLoginTime_;
     /**
-     * <code>optional int64 last_login_time = 4;</code>
+     * <code>int64 last_login_time = 4;</code>
      */
     public long getLastLoginTime() {
       return lastLoginTime_;
@@ -281,6 +286,7 @@ public final class DeviceProto {
       if (lastLoginTime_ != 0L) {
         output.writeInt64(4, lastLoginTime_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -301,11 +307,11 @@ public final class DeviceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, lastLoginTime_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -325,6 +331,7 @@ public final class DeviceProto {
           .equals(other.getUserDevicePubk());
       result = result && (getLastLoginTime()
           == other.getLastLoginTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -334,7 +341,7 @@ public final class DeviceProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceId().hashCode();
       hash = (37 * hash) + DEVICE_NAME_FIELD_NUMBER;
@@ -349,6 +356,17 @@ public final class DeviceProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.DeviceProto.DeviceProfile parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.DeviceProto.DeviceProfile parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.DeviceProto.DeviceProfile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -509,7 +527,7 @@ public final class DeviceProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -522,12 +540,12 @@ public final class DeviceProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -556,6 +574,7 @@ public final class DeviceProto {
         if (other.getLastLoginTime() != 0L) {
           setLastLoginTime(other.getLastLoginTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -584,7 +603,7 @@ public final class DeviceProto {
 
       private java.lang.Object deviceId_ = "";
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -599,7 +618,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -615,7 +634,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -628,7 +647,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
         
@@ -637,7 +656,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -653,7 +672,7 @@ public final class DeviceProto {
 
       private java.lang.Object deviceName_ = "";
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public java.lang.String getDeviceName() {
         java.lang.Object ref = deviceName_;
@@ -668,7 +687,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getDeviceNameBytes() {
@@ -684,7 +703,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public Builder setDeviceName(
           java.lang.String value) {
@@ -697,7 +716,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public Builder clearDeviceName() {
         
@@ -706,7 +725,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public Builder setDeviceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -722,7 +741,7 @@ public final class DeviceProto {
 
       private java.lang.Object userDevicePubk_ = "";
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public java.lang.String getUserDevicePubk() {
         java.lang.Object ref = userDevicePubk_;
@@ -737,7 +756,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserDevicePubkBytes() {
@@ -753,7 +772,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public Builder setUserDevicePubk(
           java.lang.String value) {
@@ -766,7 +785,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public Builder clearUserDevicePubk() {
         
@@ -775,7 +794,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public Builder setUserDevicePubkBytes(
           com.google.protobuf.ByteString value) {
@@ -791,13 +810,13 @@ public final class DeviceProto {
 
       private long lastLoginTime_ ;
       /**
-       * <code>optional int64 last_login_time = 4;</code>
+       * <code>int64 last_login_time = 4;</code>
        */
       public long getLastLoginTime() {
         return lastLoginTime_;
       }
       /**
-       * <code>optional int64 last_login_time = 4;</code>
+       * <code>int64 last_login_time = 4;</code>
        */
       public Builder setLastLoginTime(long value) {
         
@@ -806,7 +825,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional int64 last_login_time = 4;</code>
+       * <code>int64 last_login_time = 4;</code>
        */
       public Builder clearLastLoginTime() {
         
@@ -816,12 +835,12 @@ public final class DeviceProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -868,37 +887,37 @@ public final class DeviceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     java.lang.String getDeviceName();
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getDeviceNameBytes();
 
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     java.lang.String getUserDevicePubk();
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserDevicePubkBytes();
 
     /**
-     * <code>optional int64 last_login_time = 4;</code>
+     * <code>int64 last_login_time = 4;</code>
      */
     long getLastLoginTime();
   }
@@ -913,6 +932,7 @@ public final class DeviceProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.SimpleDeviceProfile)
       SimpleDeviceProfileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SimpleDeviceProfile.newBuilder() to construct.
     private SimpleDeviceProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -927,7 +947,7 @@ public final class DeviceProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private SimpleDeviceProfile(
         com.google.protobuf.CodedInputStream input,
@@ -935,6 +955,8 @@ public final class DeviceProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -944,7 +966,8 @@ public final class DeviceProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -980,6 +1003,7 @@ public final class DeviceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -998,7 +1022,7 @@ public final class DeviceProto {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
@@ -1013,7 +1037,7 @@ public final class DeviceProto {
       }
     }
     /**
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
@@ -1032,7 +1056,7 @@ public final class DeviceProto {
     public static final int DEVICE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object deviceName_;
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     public java.lang.String getDeviceName() {
       java.lang.Object ref = deviceName_;
@@ -1047,7 +1071,7 @@ public final class DeviceProto {
       }
     }
     /**
-     * <code>optional string device_name = 2;</code>
+     * <code>string device_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getDeviceNameBytes() {
@@ -1066,7 +1090,7 @@ public final class DeviceProto {
     public static final int USER_DEVICE_PUBK_FIELD_NUMBER = 3;
     private volatile java.lang.Object userDevicePubk_;
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     public java.lang.String getUserDevicePubk() {
       java.lang.Object ref = userDevicePubk_;
@@ -1081,7 +1105,7 @@ public final class DeviceProto {
       }
     }
     /**
-     * <code>optional string user_device_pubk = 3;</code>
+     * <code>string user_device_pubk = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserDevicePubkBytes() {
@@ -1100,7 +1124,7 @@ public final class DeviceProto {
     public static final int LAST_LOGIN_TIME_FIELD_NUMBER = 4;
     private long lastLoginTime_;
     /**
-     * <code>optional int64 last_login_time = 4;</code>
+     * <code>int64 last_login_time = 4;</code>
      */
     public long getLastLoginTime() {
       return lastLoginTime_;
@@ -1130,6 +1154,7 @@ public final class DeviceProto {
       if (lastLoginTime_ != 0L) {
         output.writeInt64(4, lastLoginTime_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1150,11 +1175,11 @@ public final class DeviceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, lastLoginTime_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1174,6 +1199,7 @@ public final class DeviceProto {
           .equals(other.getUserDevicePubk());
       result = result && (getLastLoginTime()
           == other.getLastLoginTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1183,7 +1209,7 @@ public final class DeviceProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceId().hashCode();
       hash = (37 * hash) + DEVICE_NAME_FIELD_NUMBER;
@@ -1198,6 +1224,17 @@ public final class DeviceProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1358,7 +1395,7 @@ public final class DeviceProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1371,12 +1408,12 @@ public final class DeviceProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1405,6 +1442,7 @@ public final class DeviceProto {
         if (other.getLastLoginTime() != 0L) {
           setLastLoginTime(other.getLastLoginTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1433,7 +1471,7 @@ public final class DeviceProto {
 
       private java.lang.Object deviceId_ = "";
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -1448,7 +1486,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -1464,7 +1502,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -1477,7 +1515,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
         
@@ -1486,7 +1524,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1502,7 +1540,7 @@ public final class DeviceProto {
 
       private java.lang.Object deviceName_ = "";
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public java.lang.String getDeviceName() {
         java.lang.Object ref = deviceName_;
@@ -1517,7 +1555,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getDeviceNameBytes() {
@@ -1533,7 +1571,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public Builder setDeviceName(
           java.lang.String value) {
@@ -1546,7 +1584,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public Builder clearDeviceName() {
         
@@ -1555,7 +1593,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string device_name = 2;</code>
+       * <code>string device_name = 2;</code>
        */
       public Builder setDeviceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1571,7 +1609,7 @@ public final class DeviceProto {
 
       private java.lang.Object userDevicePubk_ = "";
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public java.lang.String getUserDevicePubk() {
         java.lang.Object ref = userDevicePubk_;
@@ -1586,7 +1624,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserDevicePubkBytes() {
@@ -1602,7 +1640,7 @@ public final class DeviceProto {
         }
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public Builder setUserDevicePubk(
           java.lang.String value) {
@@ -1615,7 +1653,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public Builder clearUserDevicePubk() {
         
@@ -1624,7 +1662,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional string user_device_pubk = 3;</code>
+       * <code>string user_device_pubk = 3;</code>
        */
       public Builder setUserDevicePubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1640,13 +1678,13 @@ public final class DeviceProto {
 
       private long lastLoginTime_ ;
       /**
-       * <code>optional int64 last_login_time = 4;</code>
+       * <code>int64 last_login_time = 4;</code>
        */
       public long getLastLoginTime() {
         return lastLoginTime_;
       }
       /**
-       * <code>optional int64 last_login_time = 4;</code>
+       * <code>int64 last_login_time = 4;</code>
        */
       public Builder setLastLoginTime(long value) {
         
@@ -1655,7 +1693,7 @@ public final class DeviceProto {
         return this;
       }
       /**
-       * <code>optional int64 last_login_time = 4;</code>
+       * <code>int64 last_login_time = 4;</code>
        */
       public Builder clearLastLoginTime() {
         
@@ -1665,12 +1703,12 @@ public final class DeviceProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

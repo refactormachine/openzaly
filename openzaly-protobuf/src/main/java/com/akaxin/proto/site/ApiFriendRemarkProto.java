@@ -23,7 +23,7 @@ public final class ApiFriendRemarkProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -31,7 +31,7 @@ public final class ApiFriendRemarkProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -41,7 +41,7 @@ public final class ApiFriendRemarkProto {
      *设置好友的别名
      * </pre>
      *
-     * <code>optional string alias_name = 2;</code>
+     * <code>string alias_name = 2;</code>
      */
     java.lang.String getAliasName();
     /**
@@ -49,7 +49,7 @@ public final class ApiFriendRemarkProto {
      *设置好友的别名
      * </pre>
      *
-     * <code>optional string alias_name = 2;</code>
+     * <code>string alias_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getAliasNameBytes();
@@ -61,6 +61,7 @@ public final class ApiFriendRemarkProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFriendRemarkRequest)
       ApiFriendRemarkRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFriendRemarkRequest.newBuilder() to construct.
     private ApiFriendRemarkRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -73,14 +74,19 @@ public final class ApiFriendRemarkProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFriendRemarkRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -90,7 +96,8 @@ public final class ApiFriendRemarkProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -115,6 +122,7 @@ public final class ApiFriendRemarkProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -137,7 +145,7 @@ public final class ApiFriendRemarkProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -156,7 +164,7 @@ public final class ApiFriendRemarkProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -179,7 +187,7 @@ public final class ApiFriendRemarkProto {
      *设置好友的别名
      * </pre>
      *
-     * <code>optional string alias_name = 2;</code>
+     * <code>string alias_name = 2;</code>
      */
     public java.lang.String getAliasName() {
       java.lang.Object ref = aliasName_;
@@ -198,7 +206,7 @@ public final class ApiFriendRemarkProto {
      *设置好友的别名
      * </pre>
      *
-     * <code>optional string alias_name = 2;</code>
+     * <code>string alias_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getAliasNameBytes() {
@@ -232,6 +240,7 @@ public final class ApiFriendRemarkProto {
       if (!getAliasNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, aliasName_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -245,11 +254,11 @@ public final class ApiFriendRemarkProto {
       if (!getAliasNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, aliasName_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -265,6 +274,7 @@ public final class ApiFriendRemarkProto {
           .equals(other.getSiteFriendId());
       result = result && getAliasName()
           .equals(other.getAliasName());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -274,7 +284,7 @@ public final class ApiFriendRemarkProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_FRIEND_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteFriendId().hashCode();
       hash = (37 * hash) + ALIAS_NAME_FIELD_NUMBER;
@@ -284,6 +294,17 @@ public final class ApiFriendRemarkProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -434,7 +455,7 @@ public final class ApiFriendRemarkProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -447,12 +468,12 @@ public final class ApiFriendRemarkProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -474,6 +495,7 @@ public final class ApiFriendRemarkProto {
           aliasName_ = other.aliasName_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -506,7 +528,7 @@ public final class ApiFriendRemarkProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -525,7 +547,7 @@ public final class ApiFriendRemarkProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -545,7 +567,7 @@ public final class ApiFriendRemarkProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -562,7 +584,7 @@ public final class ApiFriendRemarkProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -575,7 +597,7 @@ public final class ApiFriendRemarkProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -595,7 +617,7 @@ public final class ApiFriendRemarkProto {
        *设置好友的别名
        * </pre>
        *
-       * <code>optional string alias_name = 2;</code>
+       * <code>string alias_name = 2;</code>
        */
       public java.lang.String getAliasName() {
         java.lang.Object ref = aliasName_;
@@ -614,7 +636,7 @@ public final class ApiFriendRemarkProto {
        *设置好友的别名
        * </pre>
        *
-       * <code>optional string alias_name = 2;</code>
+       * <code>string alias_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getAliasNameBytes() {
@@ -634,7 +656,7 @@ public final class ApiFriendRemarkProto {
        *设置好友的别名
        * </pre>
        *
-       * <code>optional string alias_name = 2;</code>
+       * <code>string alias_name = 2;</code>
        */
       public Builder setAliasName(
           java.lang.String value) {
@@ -651,7 +673,7 @@ public final class ApiFriendRemarkProto {
        *设置好友的别名
        * </pre>
        *
-       * <code>optional string alias_name = 2;</code>
+       * <code>string alias_name = 2;</code>
        */
       public Builder clearAliasName() {
         
@@ -664,7 +686,7 @@ public final class ApiFriendRemarkProto {
        *设置好友的别名
        * </pre>
        *
-       * <code>optional string alias_name = 2;</code>
+       * <code>string alias_name = 2;</code>
        */
       public Builder setAliasNameBytes(
           com.google.protobuf.ByteString value) {
@@ -679,12 +701,12 @@ public final class ApiFriendRemarkProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -707,7 +729,7 @@ public final class ApiFriendRemarkProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFriendRemarkRequest(input, extensionRegistry);
+        return new ApiFriendRemarkRequest(input, extensionRegistry);
       }
     };
 
@@ -737,6 +759,7 @@ public final class ApiFriendRemarkProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFriendRemarkResponse)
       ApiFriendRemarkResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFriendRemarkResponse.newBuilder() to construct.
     private ApiFriendRemarkResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -747,13 +770,18 @@ public final class ApiFriendRemarkProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFriendRemarkResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -763,7 +791,8 @@ public final class ApiFriendRemarkProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -776,6 +805,7 @@ public final class ApiFriendRemarkProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -803,6 +833,7 @@ public final class ApiFriendRemarkProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -810,11 +841,11 @@ public final class ApiFriendRemarkProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -826,6 +857,7 @@ public final class ApiFriendRemarkProto {
       com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse other = (com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -835,12 +867,23 @@ public final class ApiFriendRemarkProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -985,7 +1028,7 @@ public final class ApiFriendRemarkProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -998,12 +1041,12 @@ public final class ApiFriendRemarkProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1017,6 +1060,7 @@ public final class ApiFriendRemarkProto {
 
       public Builder mergeFrom(com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse other) {
         if (other == com.akaxin.proto.site.ApiFriendRemarkProto.ApiFriendRemarkResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1044,12 +1088,12 @@ public final class ApiFriendRemarkProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1072,7 +1116,7 @@ public final class ApiFriendRemarkProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFriendRemarkResponse(input, extensionRegistry);
+        return new ApiFriendRemarkResponse(input, extensionRegistry);
       }
     };
 

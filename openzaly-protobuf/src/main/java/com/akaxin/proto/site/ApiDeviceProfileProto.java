@@ -23,7 +23,7 @@ public final class ApiDeviceProfileProto {
      *设备ID
      * </pre>
      *
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
@@ -31,7 +31,7 @@ public final class ApiDeviceProfileProto {
      *设备ID
      * </pre>
      *
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
@@ -43,6 +43,7 @@ public final class ApiDeviceProfileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiDeviceProfileRequest)
       ApiDeviceProfileRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiDeviceProfileRequest.newBuilder() to construct.
     private ApiDeviceProfileRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiDeviceProfileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiDeviceProfileRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiDeviceProfileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiDeviceProfileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiDeviceProfileProto {
      *设备ID
      * </pre>
      *
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
       java.lang.Object ref = deviceId_;
@@ -131,7 +139,7 @@ public final class ApiDeviceProfileProto {
      *设备ID
      * </pre>
      *
-     * <code>optional string device_id = 1;</code>
+     * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getDeviceIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiDeviceProfileProto {
       if (!getDeviceIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deviceId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiDeviceProfileProto {
       if (!getDeviceIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, deviceId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiDeviceProfileProto {
       boolean result = true;
       result = result && getDeviceId()
           .equals(other.getDeviceId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiDeviceProfileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiDeviceProfileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiDeviceProfileProto.ApiDeviceProfileRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiDeviceProfileProto.ApiDeviceProfileRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiDeviceProfileProto.ApiDeviceProfileRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiDeviceProfileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiDeviceProfileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiDeviceProfileProto {
           deviceId_ = other.deviceId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiDeviceProfileProto {
        *设备ID
        * </pre>
        *
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
         java.lang.Object ref = deviceId_;
@@ -441,7 +463,7 @@ public final class ApiDeviceProfileProto {
        *设备ID
        * </pre>
        *
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getDeviceIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiDeviceProfileProto {
        *设备ID
        * </pre>
        *
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiDeviceProfileProto {
        *设备ID
        * </pre>
        *
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
         
@@ -491,7 +513,7 @@ public final class ApiDeviceProfileProto {
        *设备ID
        * </pre>
        *
-       * <code>optional string device_id = 1;</code>
+       * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiDeviceProfileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiDeviceProfileProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiDeviceProfileRequest(input, extensionRegistry);
+        return new ApiDeviceProfileRequest(input, extensionRegistry);
       }
     };
 
@@ -562,7 +584,7 @@ public final class ApiDeviceProfileProto {
      *设备资料
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     boolean hasDeviceProfile();
     /**
@@ -570,7 +592,7 @@ public final class ApiDeviceProfileProto {
      *设备资料
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile getDeviceProfile();
     /**
@@ -578,7 +600,7 @@ public final class ApiDeviceProfileProto {
      *设备资料
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder getDeviceProfileOrBuilder();
 
@@ -587,7 +609,7 @@ public final class ApiDeviceProfileProto {
      *客户端登陆的IP
      * </pre>
      *
-     * <code>optional string login_ip = 2;</code>
+     * <code>string login_ip = 2;</code>
      */
     java.lang.String getLoginIp();
     /**
@@ -595,7 +617,7 @@ public final class ApiDeviceProfileProto {
      *客户端登陆的IP
      * </pre>
      *
-     * <code>optional string login_ip = 2;</code>
+     * <code>string login_ip = 2;</code>
      */
     com.google.protobuf.ByteString
         getLoginIpBytes();
@@ -605,7 +627,7 @@ public final class ApiDeviceProfileProto {
      *客户端上次登陆时间
      * </pre>
      *
-     * <code>optional int64 last_active_time = 3;</code>
+     * <code>int64 last_active_time = 3;</code>
      */
     long getLastActiveTime();
   }
@@ -616,6 +638,7 @@ public final class ApiDeviceProfileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiDeviceProfileResponse)
       ApiDeviceProfileResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiDeviceProfileResponse.newBuilder() to construct.
     private ApiDeviceProfileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -628,14 +651,19 @@ public final class ApiDeviceProfileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiDeviceProfileResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -645,7 +673,8 @@ public final class ApiDeviceProfileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -682,6 +711,7 @@ public final class ApiDeviceProfileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -704,7 +734,7 @@ public final class ApiDeviceProfileProto {
      *设备资料
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     public boolean hasDeviceProfile() {
       return deviceProfile_ != null;
@@ -714,7 +744,7 @@ public final class ApiDeviceProfileProto {
      *设备资料
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile getDeviceProfile() {
       return deviceProfile_ == null ? com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.getDefaultInstance() : deviceProfile_;
@@ -724,7 +754,7 @@ public final class ApiDeviceProfileProto {
      *设备资料
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder getDeviceProfileOrBuilder() {
       return getDeviceProfile();
@@ -737,7 +767,7 @@ public final class ApiDeviceProfileProto {
      *客户端登陆的IP
      * </pre>
      *
-     * <code>optional string login_ip = 2;</code>
+     * <code>string login_ip = 2;</code>
      */
     public java.lang.String getLoginIp() {
       java.lang.Object ref = loginIp_;
@@ -756,7 +786,7 @@ public final class ApiDeviceProfileProto {
      *客户端登陆的IP
      * </pre>
      *
-     * <code>optional string login_ip = 2;</code>
+     * <code>string login_ip = 2;</code>
      */
     public com.google.protobuf.ByteString
         getLoginIpBytes() {
@@ -779,7 +809,7 @@ public final class ApiDeviceProfileProto {
      *客户端上次登陆时间
      * </pre>
      *
-     * <code>optional int64 last_active_time = 3;</code>
+     * <code>int64 last_active_time = 3;</code>
      */
     public long getLastActiveTime() {
       return lastActiveTime_;
@@ -806,6 +836,7 @@ public final class ApiDeviceProfileProto {
       if (lastActiveTime_ != 0L) {
         output.writeInt64(3, lastActiveTime_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -824,11 +855,11 @@ public final class ApiDeviceProfileProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, lastActiveTime_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -849,6 +880,7 @@ public final class ApiDeviceProfileProto {
           .equals(other.getLoginIp());
       result = result && (getLastActiveTime()
           == other.getLastActiveTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -858,7 +890,7 @@ public final class ApiDeviceProfileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDeviceProfile()) {
         hash = (37 * hash) + DEVICEPROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceProfile().hashCode();
@@ -873,6 +905,17 @@ public final class ApiDeviceProfileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiDeviceProfileProto.ApiDeviceProfileResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiDeviceProfileProto.ApiDeviceProfileResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiDeviceProfileProto.ApiDeviceProfileResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1034,7 +1077,7 @@ public final class ApiDeviceProfileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1047,12 +1090,12 @@ public final class ApiDeviceProfileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1076,6 +1119,7 @@ public final class ApiDeviceProfileProto {
         if (other.getLastActiveTime() != 0L) {
           setLastActiveTime(other.getLastActiveTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1110,7 +1154,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public boolean hasDeviceProfile() {
         return deviceProfileBuilder_ != null || deviceProfile_ != null;
@@ -1120,7 +1164,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile getDeviceProfile() {
         if (deviceProfileBuilder_ == null) {
@@ -1134,7 +1178,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder setDeviceProfile(com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile value) {
         if (deviceProfileBuilder_ == null) {
@@ -1154,7 +1198,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder setDeviceProfile(
           com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.Builder builderForValue) {
@@ -1172,7 +1216,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder mergeDeviceProfile(com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile value) {
         if (deviceProfileBuilder_ == null) {
@@ -1194,7 +1238,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder clearDeviceProfile() {
         if (deviceProfileBuilder_ == null) {
@@ -1212,7 +1256,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.Builder getDeviceProfileBuilder() {
         
@@ -1224,7 +1268,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder getDeviceProfileOrBuilder() {
         if (deviceProfileBuilder_ != null) {
@@ -1239,7 +1283,7 @@ public final class ApiDeviceProfileProto {
        *设备资料
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile, com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.Builder, com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder> 
@@ -1261,7 +1305,7 @@ public final class ApiDeviceProfileProto {
        *客户端登陆的IP
        * </pre>
        *
-       * <code>optional string login_ip = 2;</code>
+       * <code>string login_ip = 2;</code>
        */
       public java.lang.String getLoginIp() {
         java.lang.Object ref = loginIp_;
@@ -1280,7 +1324,7 @@ public final class ApiDeviceProfileProto {
        *客户端登陆的IP
        * </pre>
        *
-       * <code>optional string login_ip = 2;</code>
+       * <code>string login_ip = 2;</code>
        */
       public com.google.protobuf.ByteString
           getLoginIpBytes() {
@@ -1300,7 +1344,7 @@ public final class ApiDeviceProfileProto {
        *客户端登陆的IP
        * </pre>
        *
-       * <code>optional string login_ip = 2;</code>
+       * <code>string login_ip = 2;</code>
        */
       public Builder setLoginIp(
           java.lang.String value) {
@@ -1317,7 +1361,7 @@ public final class ApiDeviceProfileProto {
        *客户端登陆的IP
        * </pre>
        *
-       * <code>optional string login_ip = 2;</code>
+       * <code>string login_ip = 2;</code>
        */
       public Builder clearLoginIp() {
         
@@ -1330,7 +1374,7 @@ public final class ApiDeviceProfileProto {
        *客户端登陆的IP
        * </pre>
        *
-       * <code>optional string login_ip = 2;</code>
+       * <code>string login_ip = 2;</code>
        */
       public Builder setLoginIpBytes(
           com.google.protobuf.ByteString value) {
@@ -1350,7 +1394,7 @@ public final class ApiDeviceProfileProto {
        *客户端上次登陆时间
        * </pre>
        *
-       * <code>optional int64 last_active_time = 3;</code>
+       * <code>int64 last_active_time = 3;</code>
        */
       public long getLastActiveTime() {
         return lastActiveTime_;
@@ -1360,7 +1404,7 @@ public final class ApiDeviceProfileProto {
        *客户端上次登陆时间
        * </pre>
        *
-       * <code>optional int64 last_active_time = 3;</code>
+       * <code>int64 last_active_time = 3;</code>
        */
       public Builder setLastActiveTime(long value) {
         
@@ -1373,7 +1417,7 @@ public final class ApiDeviceProfileProto {
        *客户端上次登陆时间
        * </pre>
        *
-       * <code>optional int64 last_active_time = 3;</code>
+       * <code>int64 last_active_time = 3;</code>
        */
       public Builder clearLastActiveTime() {
         
@@ -1383,12 +1427,12 @@ public final class ApiDeviceProfileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1411,7 +1455,7 @@ public final class ApiDeviceProfileProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiDeviceProfileResponse(input, extensionRegistry);
+        return new ApiDeviceProfileResponse(input, extensionRegistry);
       }
     };
 

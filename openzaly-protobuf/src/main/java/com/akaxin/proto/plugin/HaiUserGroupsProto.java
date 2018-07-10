@@ -23,7 +23,7 @@ public final class HaiUserGroupsProto {
      *需要查找的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -31,7 +31,7 @@ public final class HaiUserGroupsProto {
      *需要查找的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -41,7 +41,7 @@ public final class HaiUserGroupsProto {
      * 默认0
      * </pre>
      *
-     * <code>optional int32 page_number = 3;</code>
+     * <code>int32 page_number = 3;</code>
      */
     int getPageNumber();
 
@@ -50,7 +50,7 @@ public final class HaiUserGroupsProto {
      * 默认100
      * </pre>
      *
-     * <code>optional int32 page_size = 4;</code>
+     * <code>int32 page_size = 4;</code>
      */
     int getPageSize();
   }
@@ -74,6 +74,7 @@ public final class HaiUserGroupsProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserGroupsRequest)
       HaiUserGroupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserGroupsRequest.newBuilder() to construct.
     private HaiUserGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -87,7 +88,7 @@ public final class HaiUserGroupsProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserGroupsRequest(
         com.google.protobuf.CodedInputStream input,
@@ -95,6 +96,8 @@ public final class HaiUserGroupsProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -104,7 +107,8 @@ public final class HaiUserGroupsProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -133,6 +137,7 @@ public final class HaiUserGroupsProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -155,7 +160,7 @@ public final class HaiUserGroupsProto {
      *需要查找的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -174,7 +179,7 @@ public final class HaiUserGroupsProto {
      *需要查找的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -197,7 +202,7 @@ public final class HaiUserGroupsProto {
      * 默认0
      * </pre>
      *
-     * <code>optional int32 page_number = 3;</code>
+     * <code>int32 page_number = 3;</code>
      */
     public int getPageNumber() {
       return pageNumber_;
@@ -210,7 +215,7 @@ public final class HaiUserGroupsProto {
      * 默认100
      * </pre>
      *
-     * <code>optional int32 page_size = 4;</code>
+     * <code>int32 page_size = 4;</code>
      */
     public int getPageSize() {
       return pageSize_;
@@ -237,6 +242,7 @@ public final class HaiUserGroupsProto {
       if (pageSize_ != 0) {
         output.writeInt32(4, pageSize_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -255,11 +261,11 @@ public final class HaiUserGroupsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, pageSize_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -277,6 +283,7 @@ public final class HaiUserGroupsProto {
           == other.getPageNumber());
       result = result && (getPageSize()
           == other.getPageSize());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -286,7 +293,7 @@ public final class HaiUserGroupsProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + PAGE_NUMBER_FIELD_NUMBER;
@@ -298,6 +305,17 @@ public final class HaiUserGroupsProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserGroupsProto.HaiUserGroupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserGroupsProto.HaiUserGroupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserGroupsProto.HaiUserGroupsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -464,7 +482,7 @@ public final class HaiUserGroupsProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -477,12 +495,12 @@ public final class HaiUserGroupsProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -506,6 +524,7 @@ public final class HaiUserGroupsProto {
         if (other.getPageSize() != 0) {
           setPageSize(other.getPageSize());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -538,7 +557,7 @@ public final class HaiUserGroupsProto {
        *需要查找的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -557,7 +576,7 @@ public final class HaiUserGroupsProto {
        *需要查找的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -577,7 +596,7 @@ public final class HaiUserGroupsProto {
        *需要查找的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -594,7 +613,7 @@ public final class HaiUserGroupsProto {
        *需要查找的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -607,7 +626,7 @@ public final class HaiUserGroupsProto {
        *需要查找的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -627,7 +646,7 @@ public final class HaiUserGroupsProto {
        * 默认0
        * </pre>
        *
-       * <code>optional int32 page_number = 3;</code>
+       * <code>int32 page_number = 3;</code>
        */
       public int getPageNumber() {
         return pageNumber_;
@@ -637,7 +656,7 @@ public final class HaiUserGroupsProto {
        * 默认0
        * </pre>
        *
-       * <code>optional int32 page_number = 3;</code>
+       * <code>int32 page_number = 3;</code>
        */
       public Builder setPageNumber(int value) {
         
@@ -650,7 +669,7 @@ public final class HaiUserGroupsProto {
        * 默认0
        * </pre>
        *
-       * <code>optional int32 page_number = 3;</code>
+       * <code>int32 page_number = 3;</code>
        */
       public Builder clearPageNumber() {
         
@@ -665,7 +684,7 @@ public final class HaiUserGroupsProto {
        * 默认100
        * </pre>
        *
-       * <code>optional int32 page_size = 4;</code>
+       * <code>int32 page_size = 4;</code>
        */
       public int getPageSize() {
         return pageSize_;
@@ -675,7 +694,7 @@ public final class HaiUserGroupsProto {
        * 默认100
        * </pre>
        *
-       * <code>optional int32 page_size = 4;</code>
+       * <code>int32 page_size = 4;</code>
        */
       public Builder setPageSize(int value) {
         
@@ -688,7 +707,7 @@ public final class HaiUserGroupsProto {
        * 默认100
        * </pre>
        *
-       * <code>optional int32 page_size = 4;</code>
+       * <code>int32 page_size = 4;</code>
        */
       public Builder clearPageSize() {
         
@@ -698,12 +717,12 @@ public final class HaiUserGroupsProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -798,7 +817,7 @@ public final class HaiUserGroupsProto {
      *总页数
      * </pre>
      *
-     * <code>optional int32 page_total_num = 2;</code>
+     * <code>int32 page_total_num = 2;</code>
      */
     int getPageTotalNum();
   }
@@ -809,6 +828,7 @@ public final class HaiUserGroupsProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserGroupsResponse)
       HaiUserGroupsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserGroupsResponse.newBuilder() to construct.
     private HaiUserGroupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -821,7 +841,7 @@ public final class HaiUserGroupsProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserGroupsResponse(
         com.google.protobuf.CodedInputStream input,
@@ -829,6 +849,8 @@ public final class HaiUserGroupsProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -838,7 +860,8 @@ public final class HaiUserGroupsProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -868,6 +891,7 @@ public final class HaiUserGroupsProto {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           profile_ = java.util.Collections.unmodifiableList(profile_);
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -946,7 +970,7 @@ public final class HaiUserGroupsProto {
      *总页数
      * </pre>
      *
-     * <code>optional int32 page_total_num = 2;</code>
+     * <code>int32 page_total_num = 2;</code>
      */
     public int getPageTotalNum() {
       return pageTotalNum_;
@@ -970,6 +994,7 @@ public final class HaiUserGroupsProto {
       if (pageTotalNum_ != 0) {
         output.writeInt32(2, pageTotalNum_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -985,11 +1010,11 @@ public final class HaiUserGroupsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, pageTotalNum_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1005,6 +1030,7 @@ public final class HaiUserGroupsProto {
           .equals(other.getProfileList());
       result = result && (getPageTotalNum()
           == other.getPageTotalNum());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1014,7 +1040,7 @@ public final class HaiUserGroupsProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getProfileCount() > 0) {
         hash = (37 * hash) + PROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getProfileList().hashCode();
@@ -1026,6 +1052,17 @@ public final class HaiUserGroupsProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserGroupsProto.HaiUserGroupsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserGroupsProto.HaiUserGroupsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserGroupsProto.HaiUserGroupsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1192,7 +1229,7 @@ public final class HaiUserGroupsProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1205,12 +1242,12 @@ public final class HaiUserGroupsProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1253,6 +1290,7 @@ public final class HaiUserGroupsProto {
         if (other.getPageTotalNum() != 0) {
           setPageTotalNum(other.getPageTotalNum());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1598,7 +1636,7 @@ public final class HaiUserGroupsProto {
        *总页数
        * </pre>
        *
-       * <code>optional int32 page_total_num = 2;</code>
+       * <code>int32 page_total_num = 2;</code>
        */
       public int getPageTotalNum() {
         return pageTotalNum_;
@@ -1608,7 +1646,7 @@ public final class HaiUserGroupsProto {
        *总页数
        * </pre>
        *
-       * <code>optional int32 page_total_num = 2;</code>
+       * <code>int32 page_total_num = 2;</code>
        */
       public Builder setPageTotalNum(int value) {
         
@@ -1621,7 +1659,7 @@ public final class HaiUserGroupsProto {
        *总页数
        * </pre>
        *
-       * <code>optional int32 page_total_num = 2;</code>
+       * <code>int32 page_total_num = 2;</code>
        */
       public Builder clearPageTotalNum() {
         
@@ -1631,12 +1669,12 @@ public final class HaiUserGroupsProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

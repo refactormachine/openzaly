@@ -23,7 +23,7 @@ public final class ApiGroupApplyTokenProto {
      *群组id
      * </pre>
      *
-     * <code>optional string site_group_id = 1;</code>
+     * <code>string site_group_id = 1;</code>
      */
     java.lang.String getSiteGroupId();
     /**
@@ -31,7 +31,7 @@ public final class ApiGroupApplyTokenProto {
      *群组id
      * </pre>
      *
-     * <code>optional string site_group_id = 1;</code>
+     * <code>string site_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -43,6 +43,7 @@ public final class ApiGroupApplyTokenProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiGroupApplyTokenRequest)
       ApiGroupApplyTokenRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiGroupApplyTokenRequest.newBuilder() to construct.
     private ApiGroupApplyTokenRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiGroupApplyTokenProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiGroupApplyTokenRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiGroupApplyTokenProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiGroupApplyTokenProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiGroupApplyTokenProto {
      *群组id
      * </pre>
      *
-     * <code>optional string site_group_id = 1;</code>
+     * <code>string site_group_id = 1;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -131,7 +139,7 @@ public final class ApiGroupApplyTokenProto {
      *群组id
      * </pre>
      *
-     * <code>optional string site_group_id = 1;</code>
+     * <code>string site_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiGroupApplyTokenProto {
       if (!getSiteGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteGroupId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiGroupApplyTokenProto {
       if (!getSiteGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteGroupId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiGroupApplyTokenProto {
       boolean result = true;
       result = result && getSiteGroupId()
           .equals(other.getSiteGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiGroupApplyTokenProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteGroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiGroupApplyTokenProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiGroupApplyTokenProto.ApiGroupApplyTokenRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiGroupApplyTokenProto.ApiGroupApplyTokenRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiGroupApplyTokenProto.ApiGroupApplyTokenRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiGroupApplyTokenProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiGroupApplyTokenProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiGroupApplyTokenProto {
           siteGroupId_ = other.siteGroupId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiGroupApplyTokenProto {
        *群组id
        * </pre>
        *
-       * <code>optional string site_group_id = 1;</code>
+       * <code>string site_group_id = 1;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -441,7 +463,7 @@ public final class ApiGroupApplyTokenProto {
        *群组id
        * </pre>
        *
-       * <code>optional string site_group_id = 1;</code>
+       * <code>string site_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiGroupApplyTokenProto {
        *群组id
        * </pre>
        *
-       * <code>optional string site_group_id = 1;</code>
+       * <code>string site_group_id = 1;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiGroupApplyTokenProto {
        *群组id
        * </pre>
        *
-       * <code>optional string site_group_id = 1;</code>
+       * <code>string site_group_id = 1;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -491,7 +513,7 @@ public final class ApiGroupApplyTokenProto {
        *群组id
        * </pre>
        *
-       * <code>optional string site_group_id = 1;</code>
+       * <code>string site_group_id = 1;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiGroupApplyTokenProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiGroupApplyTokenProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiGroupApplyTokenRequest(input, extensionRegistry);
+        return new ApiGroupApplyTokenRequest(input, extensionRegistry);
       }
     };
 
@@ -562,7 +584,7 @@ public final class ApiGroupApplyTokenProto {
      *申请显示二维码使用的token
      * </pre>
      *
-     * <code>optional string token = 1;</code>
+     * <code>string token = 1;</code>
      */
     java.lang.String getToken();
     /**
@@ -570,7 +592,7 @@ public final class ApiGroupApplyTokenProto {
      *申请显示二维码使用的token
      * </pre>
      *
-     * <code>optional string token = 1;</code>
+     * <code>string token = 1;</code>
      */
     com.google.protobuf.ByteString
         getTokenBytes();
@@ -580,7 +602,7 @@ public final class ApiGroupApplyTokenProto {
      *单位毫秒
      * </pre>
      *
-     * <code>optional int64 expire_time = 2;</code>
+     * <code>int64 expire_time = 2;</code>
      */
     long getExpireTime();
   }
@@ -591,6 +613,7 @@ public final class ApiGroupApplyTokenProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiGroupApplyTokenResponse)
       ApiGroupApplyTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiGroupApplyTokenResponse.newBuilder() to construct.
     private ApiGroupApplyTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -603,14 +626,19 @@ public final class ApiGroupApplyTokenProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiGroupApplyTokenResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -620,7 +648,8 @@ public final class ApiGroupApplyTokenProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -644,6 +673,7 @@ public final class ApiGroupApplyTokenProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -666,7 +696,7 @@ public final class ApiGroupApplyTokenProto {
      *申请显示二维码使用的token
      * </pre>
      *
-     * <code>optional string token = 1;</code>
+     * <code>string token = 1;</code>
      */
     public java.lang.String getToken() {
       java.lang.Object ref = token_;
@@ -685,7 +715,7 @@ public final class ApiGroupApplyTokenProto {
      *申请显示二维码使用的token
      * </pre>
      *
-     * <code>optional string token = 1;</code>
+     * <code>string token = 1;</code>
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
@@ -708,7 +738,7 @@ public final class ApiGroupApplyTokenProto {
      *单位毫秒
      * </pre>
      *
-     * <code>optional int64 expire_time = 2;</code>
+     * <code>int64 expire_time = 2;</code>
      */
     public long getExpireTime() {
       return expireTime_;
@@ -732,6 +762,7 @@ public final class ApiGroupApplyTokenProto {
       if (expireTime_ != 0L) {
         output.writeInt64(2, expireTime_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -746,11 +777,11 @@ public final class ApiGroupApplyTokenProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, expireTime_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -766,6 +797,7 @@ public final class ApiGroupApplyTokenProto {
           .equals(other.getToken());
       result = result && (getExpireTime()
           == other.getExpireTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -775,7 +807,7 @@ public final class ApiGroupApplyTokenProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
       hash = (37 * hash) + EXPIRE_TIME_FIELD_NUMBER;
@@ -786,6 +818,17 @@ public final class ApiGroupApplyTokenProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiGroupApplyTokenProto.ApiGroupApplyTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiGroupApplyTokenProto.ApiGroupApplyTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiGroupApplyTokenProto.ApiGroupApplyTokenResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -936,7 +979,7 @@ public final class ApiGroupApplyTokenProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -949,12 +992,12 @@ public final class ApiGroupApplyTokenProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -975,6 +1018,7 @@ public final class ApiGroupApplyTokenProto {
         if (other.getExpireTime() != 0L) {
           setExpireTime(other.getExpireTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1007,7 +1051,7 @@ public final class ApiGroupApplyTokenProto {
        *申请显示二维码使用的token
        * </pre>
        *
-       * <code>optional string token = 1;</code>
+       * <code>string token = 1;</code>
        */
       public java.lang.String getToken() {
         java.lang.Object ref = token_;
@@ -1026,7 +1070,7 @@ public final class ApiGroupApplyTokenProto {
        *申请显示二维码使用的token
        * </pre>
        *
-       * <code>optional string token = 1;</code>
+       * <code>string token = 1;</code>
        */
       public com.google.protobuf.ByteString
           getTokenBytes() {
@@ -1046,7 +1090,7 @@ public final class ApiGroupApplyTokenProto {
        *申请显示二维码使用的token
        * </pre>
        *
-       * <code>optional string token = 1;</code>
+       * <code>string token = 1;</code>
        */
       public Builder setToken(
           java.lang.String value) {
@@ -1063,7 +1107,7 @@ public final class ApiGroupApplyTokenProto {
        *申请显示二维码使用的token
        * </pre>
        *
-       * <code>optional string token = 1;</code>
+       * <code>string token = 1;</code>
        */
       public Builder clearToken() {
         
@@ -1076,7 +1120,7 @@ public final class ApiGroupApplyTokenProto {
        *申请显示二维码使用的token
        * </pre>
        *
-       * <code>optional string token = 1;</code>
+       * <code>string token = 1;</code>
        */
       public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1096,7 +1140,7 @@ public final class ApiGroupApplyTokenProto {
        *单位毫秒
        * </pre>
        *
-       * <code>optional int64 expire_time = 2;</code>
+       * <code>int64 expire_time = 2;</code>
        */
       public long getExpireTime() {
         return expireTime_;
@@ -1106,7 +1150,7 @@ public final class ApiGroupApplyTokenProto {
        *单位毫秒
        * </pre>
        *
-       * <code>optional int64 expire_time = 2;</code>
+       * <code>int64 expire_time = 2;</code>
        */
       public Builder setExpireTime(long value) {
         
@@ -1119,7 +1163,7 @@ public final class ApiGroupApplyTokenProto {
        *单位毫秒
        * </pre>
        *
-       * <code>optional int64 expire_time = 2;</code>
+       * <code>int64 expire_time = 2;</code>
        */
       public Builder clearExpireTime() {
         
@@ -1129,12 +1173,12 @@ public final class ApiGroupApplyTokenProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1157,7 +1201,7 @@ public final class ApiGroupApplyTokenProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiGroupApplyTokenResponse(input, extensionRegistry);
+        return new ApiGroupApplyTokenResponse(input, extensionRegistry);
       }
     };
 

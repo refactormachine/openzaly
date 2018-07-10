@@ -23,7 +23,7 @@ public final class ApiSiteLoginProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -31,7 +31,7 @@ public final class ApiSiteLoginProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -41,7 +41,7 @@ public final class ApiSiteLoginProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     java.lang.String getUserDeviceIdPubk();
     /**
@@ -49,7 +49,7 @@ public final class ApiSiteLoginProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserDeviceIdPubkBytes();
@@ -59,7 +59,7 @@ public final class ApiSiteLoginProto {
      *手机号授权token
      * </pre>
      *
-     * <code>optional string phone_token = 3;</code>
+     * <code>string phone_token = 3;</code>
      */
     java.lang.String getPhoneToken();
     /**
@@ -67,7 +67,7 @@ public final class ApiSiteLoginProto {
      *手机号授权token
      * </pre>
      *
-     * <code>optional string phone_token = 3;</code>
+     * <code>string phone_token = 3;</code>
      */
     com.google.protobuf.ByteString
         getPhoneTokenBytes();
@@ -77,7 +77,7 @@ public final class ApiSiteLoginProto {
      *用户设备名称
      * </pre>
      *
-     * <code>optional string user_device_name = 4;</code>
+     * <code>string user_device_name = 4;</code>
      */
     java.lang.String getUserDeviceName();
     /**
@@ -85,7 +85,7 @@ public final class ApiSiteLoginProto {
      *用户设备名称
      * </pre>
      *
-     * <code>optional string user_device_name = 4;</code>
+     * <code>string user_device_name = 4;</code>
      */
     com.google.protobuf.ByteString
         getUserDeviceNameBytes();
@@ -95,7 +95,7 @@ public final class ApiSiteLoginProto {
      *akaxin认证token
      * </pre>
      *
-     * <code>optional string user_token = 5;</code>
+     * <code>string user_token = 5;</code>
      */
     java.lang.String getUserToken();
     /**
@@ -103,7 +103,7 @@ public final class ApiSiteLoginProto {
      *akaxin认证token
      * </pre>
      *
-     * <code>optional string user_token = 5;</code>
+     * <code>string user_token = 5;</code>
      */
     com.google.protobuf.ByteString
         getUserTokenBytes();
@@ -113,7 +113,7 @@ public final class ApiSiteLoginProto {
      *用户身份公钥签名，证明公钥所属权，需要base64encode。
      * </pre>
      *
-     * <code>optional string user_id_sign_base64 = 6;</code>
+     * <code>string user_id_sign_base64 = 6;</code>
      */
     java.lang.String getUserIdSignBase64();
     /**
@@ -121,7 +121,7 @@ public final class ApiSiteLoginProto {
      *用户身份公钥签名，证明公钥所属权，需要base64encode。
      * </pre>
      *
-     * <code>optional string user_id_sign_base64 = 6;</code>
+     * <code>string user_id_sign_base64 = 6;</code>
      */
     com.google.protobuf.ByteString
         getUserIdSignBase64Bytes();
@@ -131,7 +131,7 @@ public final class ApiSiteLoginProto {
      *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
      * </pre>
      *
-     * <code>optional string user_device_id_sign_base64 = 7;</code>
+     * <code>string user_device_id_sign_base64 = 7;</code>
      */
     java.lang.String getUserDeviceIdSignBase64();
     /**
@@ -139,7 +139,7 @@ public final class ApiSiteLoginProto {
      *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
      * </pre>
      *
-     * <code>optional string user_device_id_sign_base64 = 7;</code>
+     * <code>string user_device_id_sign_base64 = 7;</code>
      */
     com.google.protobuf.ByteString
         getUserDeviceIdSignBase64Bytes();
@@ -151,6 +151,7 @@ public final class ApiSiteLoginProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteLoginRequest)
       ApiSiteLoginRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteLoginRequest.newBuilder() to construct.
     private ApiSiteLoginRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -168,14 +169,19 @@ public final class ApiSiteLoginProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteLoginRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -185,7 +191,8 @@ public final class ApiSiteLoginProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -240,6 +247,7 @@ public final class ApiSiteLoginProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -262,7 +270,7 @@ public final class ApiSiteLoginProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -281,7 +289,7 @@ public final class ApiSiteLoginProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -304,7 +312,7 @@ public final class ApiSiteLoginProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     public java.lang.String getUserDeviceIdPubk() {
       java.lang.Object ref = userDeviceIdPubk_;
@@ -323,7 +331,7 @@ public final class ApiSiteLoginProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserDeviceIdPubkBytes() {
@@ -346,7 +354,7 @@ public final class ApiSiteLoginProto {
      *手机号授权token
      * </pre>
      *
-     * <code>optional string phone_token = 3;</code>
+     * <code>string phone_token = 3;</code>
      */
     public java.lang.String getPhoneToken() {
       java.lang.Object ref = phoneToken_;
@@ -365,7 +373,7 @@ public final class ApiSiteLoginProto {
      *手机号授权token
      * </pre>
      *
-     * <code>optional string phone_token = 3;</code>
+     * <code>string phone_token = 3;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneTokenBytes() {
@@ -388,7 +396,7 @@ public final class ApiSiteLoginProto {
      *用户设备名称
      * </pre>
      *
-     * <code>optional string user_device_name = 4;</code>
+     * <code>string user_device_name = 4;</code>
      */
     public java.lang.String getUserDeviceName() {
       java.lang.Object ref = userDeviceName_;
@@ -407,7 +415,7 @@ public final class ApiSiteLoginProto {
      *用户设备名称
      * </pre>
      *
-     * <code>optional string user_device_name = 4;</code>
+     * <code>string user_device_name = 4;</code>
      */
     public com.google.protobuf.ByteString
         getUserDeviceNameBytes() {
@@ -430,7 +438,7 @@ public final class ApiSiteLoginProto {
      *akaxin认证token
      * </pre>
      *
-     * <code>optional string user_token = 5;</code>
+     * <code>string user_token = 5;</code>
      */
     public java.lang.String getUserToken() {
       java.lang.Object ref = userToken_;
@@ -449,7 +457,7 @@ public final class ApiSiteLoginProto {
      *akaxin认证token
      * </pre>
      *
-     * <code>optional string user_token = 5;</code>
+     * <code>string user_token = 5;</code>
      */
     public com.google.protobuf.ByteString
         getUserTokenBytes() {
@@ -472,7 +480,7 @@ public final class ApiSiteLoginProto {
      *用户身份公钥签名，证明公钥所属权，需要base64encode。
      * </pre>
      *
-     * <code>optional string user_id_sign_base64 = 6;</code>
+     * <code>string user_id_sign_base64 = 6;</code>
      */
     public java.lang.String getUserIdSignBase64() {
       java.lang.Object ref = userIdSignBase64_;
@@ -491,7 +499,7 @@ public final class ApiSiteLoginProto {
      *用户身份公钥签名，证明公钥所属权，需要base64encode。
      * </pre>
      *
-     * <code>optional string user_id_sign_base64 = 6;</code>
+     * <code>string user_id_sign_base64 = 6;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdSignBase64Bytes() {
@@ -514,7 +522,7 @@ public final class ApiSiteLoginProto {
      *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
      * </pre>
      *
-     * <code>optional string user_device_id_sign_base64 = 7;</code>
+     * <code>string user_device_id_sign_base64 = 7;</code>
      */
     public java.lang.String getUserDeviceIdSignBase64() {
       java.lang.Object ref = userDeviceIdSignBase64_;
@@ -533,7 +541,7 @@ public final class ApiSiteLoginProto {
      *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
      * </pre>
      *
-     * <code>optional string user_device_id_sign_base64 = 7;</code>
+     * <code>string user_device_id_sign_base64 = 7;</code>
      */
     public com.google.protobuf.ByteString
         getUserDeviceIdSignBase64Bytes() {
@@ -582,6 +590,7 @@ public final class ApiSiteLoginProto {
       if (!getUserDeviceIdSignBase64Bytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, userDeviceIdSignBase64_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -610,11 +619,11 @@ public final class ApiSiteLoginProto {
       if (!getUserDeviceIdSignBase64Bytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, userDeviceIdSignBase64_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -640,6 +649,7 @@ public final class ApiSiteLoginProto {
           .equals(other.getUserIdSignBase64());
       result = result && getUserDeviceIdSignBase64()
           .equals(other.getUserDeviceIdSignBase64());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -649,7 +659,7 @@ public final class ApiSiteLoginProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_PUBK_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdPubk().hashCode();
       hash = (37 * hash) + USER_DEVICE_ID_PUBK_FIELD_NUMBER;
@@ -669,6 +679,17 @@ public final class ApiSiteLoginProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteLoginProto.ApiSiteLoginRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteLoginProto.ApiSiteLoginRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteLoginProto.ApiSiteLoginRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -834,7 +855,7 @@ public final class ApiSiteLoginProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -847,12 +868,12 @@ public final class ApiSiteLoginProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -894,6 +915,7 @@ public final class ApiSiteLoginProto {
           userDeviceIdSignBase64_ = other.userDeviceIdSignBase64_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -926,7 +948,7 @@ public final class ApiSiteLoginProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -945,7 +967,7 @@ public final class ApiSiteLoginProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -965,7 +987,7 @@ public final class ApiSiteLoginProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -982,7 +1004,7 @@ public final class ApiSiteLoginProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -995,7 +1017,7 @@ public final class ApiSiteLoginProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1015,7 +1037,7 @@ public final class ApiSiteLoginProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public java.lang.String getUserDeviceIdPubk() {
         java.lang.Object ref = userDeviceIdPubk_;
@@ -1034,7 +1056,7 @@ public final class ApiSiteLoginProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserDeviceIdPubkBytes() {
@@ -1054,7 +1076,7 @@ public final class ApiSiteLoginProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public Builder setUserDeviceIdPubk(
           java.lang.String value) {
@@ -1071,7 +1093,7 @@ public final class ApiSiteLoginProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public Builder clearUserDeviceIdPubk() {
         
@@ -1084,7 +1106,7 @@ public final class ApiSiteLoginProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public Builder setUserDeviceIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1104,7 +1126,7 @@ public final class ApiSiteLoginProto {
        *手机号授权token
        * </pre>
        *
-       * <code>optional string phone_token = 3;</code>
+       * <code>string phone_token = 3;</code>
        */
       public java.lang.String getPhoneToken() {
         java.lang.Object ref = phoneToken_;
@@ -1123,7 +1145,7 @@ public final class ApiSiteLoginProto {
        *手机号授权token
        * </pre>
        *
-       * <code>optional string phone_token = 3;</code>
+       * <code>string phone_token = 3;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneTokenBytes() {
@@ -1143,7 +1165,7 @@ public final class ApiSiteLoginProto {
        *手机号授权token
        * </pre>
        *
-       * <code>optional string phone_token = 3;</code>
+       * <code>string phone_token = 3;</code>
        */
       public Builder setPhoneToken(
           java.lang.String value) {
@@ -1160,7 +1182,7 @@ public final class ApiSiteLoginProto {
        *手机号授权token
        * </pre>
        *
-       * <code>optional string phone_token = 3;</code>
+       * <code>string phone_token = 3;</code>
        */
       public Builder clearPhoneToken() {
         
@@ -1173,7 +1195,7 @@ public final class ApiSiteLoginProto {
        *手机号授权token
        * </pre>
        *
-       * <code>optional string phone_token = 3;</code>
+       * <code>string phone_token = 3;</code>
        */
       public Builder setPhoneTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1193,7 +1215,7 @@ public final class ApiSiteLoginProto {
        *用户设备名称
        * </pre>
        *
-       * <code>optional string user_device_name = 4;</code>
+       * <code>string user_device_name = 4;</code>
        */
       public java.lang.String getUserDeviceName() {
         java.lang.Object ref = userDeviceName_;
@@ -1212,7 +1234,7 @@ public final class ApiSiteLoginProto {
        *用户设备名称
        * </pre>
        *
-       * <code>optional string user_device_name = 4;</code>
+       * <code>string user_device_name = 4;</code>
        */
       public com.google.protobuf.ByteString
           getUserDeviceNameBytes() {
@@ -1232,7 +1254,7 @@ public final class ApiSiteLoginProto {
        *用户设备名称
        * </pre>
        *
-       * <code>optional string user_device_name = 4;</code>
+       * <code>string user_device_name = 4;</code>
        */
       public Builder setUserDeviceName(
           java.lang.String value) {
@@ -1249,7 +1271,7 @@ public final class ApiSiteLoginProto {
        *用户设备名称
        * </pre>
        *
-       * <code>optional string user_device_name = 4;</code>
+       * <code>string user_device_name = 4;</code>
        */
       public Builder clearUserDeviceName() {
         
@@ -1262,7 +1284,7 @@ public final class ApiSiteLoginProto {
        *用户设备名称
        * </pre>
        *
-       * <code>optional string user_device_name = 4;</code>
+       * <code>string user_device_name = 4;</code>
        */
       public Builder setUserDeviceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1282,7 +1304,7 @@ public final class ApiSiteLoginProto {
        *akaxin认证token
        * </pre>
        *
-       * <code>optional string user_token = 5;</code>
+       * <code>string user_token = 5;</code>
        */
       public java.lang.String getUserToken() {
         java.lang.Object ref = userToken_;
@@ -1301,7 +1323,7 @@ public final class ApiSiteLoginProto {
        *akaxin认证token
        * </pre>
        *
-       * <code>optional string user_token = 5;</code>
+       * <code>string user_token = 5;</code>
        */
       public com.google.protobuf.ByteString
           getUserTokenBytes() {
@@ -1321,7 +1343,7 @@ public final class ApiSiteLoginProto {
        *akaxin认证token
        * </pre>
        *
-       * <code>optional string user_token = 5;</code>
+       * <code>string user_token = 5;</code>
        */
       public Builder setUserToken(
           java.lang.String value) {
@@ -1338,7 +1360,7 @@ public final class ApiSiteLoginProto {
        *akaxin认证token
        * </pre>
        *
-       * <code>optional string user_token = 5;</code>
+       * <code>string user_token = 5;</code>
        */
       public Builder clearUserToken() {
         
@@ -1351,7 +1373,7 @@ public final class ApiSiteLoginProto {
        *akaxin认证token
        * </pre>
        *
-       * <code>optional string user_token = 5;</code>
+       * <code>string user_token = 5;</code>
        */
       public Builder setUserTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1371,7 +1393,7 @@ public final class ApiSiteLoginProto {
        *用户身份公钥签名，证明公钥所属权，需要base64encode。
        * </pre>
        *
-       * <code>optional string user_id_sign_base64 = 6;</code>
+       * <code>string user_id_sign_base64 = 6;</code>
        */
       public java.lang.String getUserIdSignBase64() {
         java.lang.Object ref = userIdSignBase64_;
@@ -1390,7 +1412,7 @@ public final class ApiSiteLoginProto {
        *用户身份公钥签名，证明公钥所属权，需要base64encode。
        * </pre>
        *
-       * <code>optional string user_id_sign_base64 = 6;</code>
+       * <code>string user_id_sign_base64 = 6;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdSignBase64Bytes() {
@@ -1410,7 +1432,7 @@ public final class ApiSiteLoginProto {
        *用户身份公钥签名，证明公钥所属权，需要base64encode。
        * </pre>
        *
-       * <code>optional string user_id_sign_base64 = 6;</code>
+       * <code>string user_id_sign_base64 = 6;</code>
        */
       public Builder setUserIdSignBase64(
           java.lang.String value) {
@@ -1427,7 +1449,7 @@ public final class ApiSiteLoginProto {
        *用户身份公钥签名，证明公钥所属权，需要base64encode。
        * </pre>
        *
-       * <code>optional string user_id_sign_base64 = 6;</code>
+       * <code>string user_id_sign_base64 = 6;</code>
        */
       public Builder clearUserIdSignBase64() {
         
@@ -1440,7 +1462,7 @@ public final class ApiSiteLoginProto {
        *用户身份公钥签名，证明公钥所属权，需要base64encode。
        * </pre>
        *
-       * <code>optional string user_id_sign_base64 = 6;</code>
+       * <code>string user_id_sign_base64 = 6;</code>
        */
       public Builder setUserIdSignBase64Bytes(
           com.google.protobuf.ByteString value) {
@@ -1460,7 +1482,7 @@ public final class ApiSiteLoginProto {
        *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
        * </pre>
        *
-       * <code>optional string user_device_id_sign_base64 = 7;</code>
+       * <code>string user_device_id_sign_base64 = 7;</code>
        */
       public java.lang.String getUserDeviceIdSignBase64() {
         java.lang.Object ref = userDeviceIdSignBase64_;
@@ -1479,7 +1501,7 @@ public final class ApiSiteLoginProto {
        *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
        * </pre>
        *
-       * <code>optional string user_device_id_sign_base64 = 7;</code>
+       * <code>string user_device_id_sign_base64 = 7;</code>
        */
       public com.google.protobuf.ByteString
           getUserDeviceIdSignBase64Bytes() {
@@ -1499,7 +1521,7 @@ public final class ApiSiteLoginProto {
        *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
        * </pre>
        *
-       * <code>optional string user_device_id_sign_base64 = 7;</code>
+       * <code>string user_device_id_sign_base64 = 7;</code>
        */
       public Builder setUserDeviceIdSignBase64(
           java.lang.String value) {
@@ -1516,7 +1538,7 @@ public final class ApiSiteLoginProto {
        *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
        * </pre>
        *
-       * <code>optional string user_device_id_sign_base64 = 7;</code>
+       * <code>string user_device_id_sign_base64 = 7;</code>
        */
       public Builder clearUserDeviceIdSignBase64() {
         
@@ -1529,7 +1551,7 @@ public final class ApiSiteLoginProto {
        *使用user_id_prik对用户的user_device_id_pubk签名，证明这个设备是这个用户的。
        * </pre>
        *
-       * <code>optional string user_device_id_sign_base64 = 7;</code>
+       * <code>string user_device_id_sign_base64 = 7;</code>
        */
       public Builder setUserDeviceIdSignBase64Bytes(
           com.google.protobuf.ByteString value) {
@@ -1544,12 +1566,12 @@ public final class ApiSiteLoginProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1572,7 +1594,7 @@ public final class ApiSiteLoginProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteLoginRequest(input, extensionRegistry);
+        return new ApiSiteLoginRequest(input, extensionRegistry);
       }
     };
 
@@ -1600,7 +1622,7 @@ public final class ApiSiteLoginProto {
      *用户个人sessionId
      * </pre>
      *
-     * <code>optional string user_session_id = 1;</code>
+     * <code>string user_session_id = 1;</code>
      */
     java.lang.String getUserSessionId();
     /**
@@ -1608,7 +1630,7 @@ public final class ApiSiteLoginProto {
      *用户个人sessionId
      * </pre>
      *
-     * <code>optional string user_session_id = 1;</code>
+     * <code>string user_session_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserSessionIdBytes();
@@ -1618,7 +1640,7 @@ public final class ApiSiteLoginProto {
      *返回站点用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -1626,7 +1648,7 @@ public final class ApiSiteLoginProto {
      *返回站点用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -1636,7 +1658,7 @@ public final class ApiSiteLoginProto {
      *返回站点的设备ID
      * </pre>
      *
-     * <code>optional string site_device_id = 3;</code>
+     * <code>string site_device_id = 3;</code>
      */
     java.lang.String getSiteDeviceId();
     /**
@@ -1644,7 +1666,7 @@ public final class ApiSiteLoginProto {
      *返回站点的设备ID
      * </pre>
      *
-     * <code>optional string site_device_id = 3;</code>
+     * <code>string site_device_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteDeviceIdBytes();
@@ -1656,6 +1678,7 @@ public final class ApiSiteLoginProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteLoginResponse)
       ApiSiteLoginResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteLoginResponse.newBuilder() to construct.
     private ApiSiteLoginResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1669,14 +1692,19 @@ public final class ApiSiteLoginProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteLoginResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1686,7 +1714,8 @@ public final class ApiSiteLoginProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1717,6 +1746,7 @@ public final class ApiSiteLoginProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1739,7 +1769,7 @@ public final class ApiSiteLoginProto {
      *用户个人sessionId
      * </pre>
      *
-     * <code>optional string user_session_id = 1;</code>
+     * <code>string user_session_id = 1;</code>
      */
     public java.lang.String getUserSessionId() {
       java.lang.Object ref = userSessionId_;
@@ -1758,7 +1788,7 @@ public final class ApiSiteLoginProto {
      *用户个人sessionId
      * </pre>
      *
-     * <code>optional string user_session_id = 1;</code>
+     * <code>string user_session_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserSessionIdBytes() {
@@ -1781,7 +1811,7 @@ public final class ApiSiteLoginProto {
      *返回站点用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -1800,7 +1830,7 @@ public final class ApiSiteLoginProto {
      *返回站点用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -1823,7 +1853,7 @@ public final class ApiSiteLoginProto {
      *返回站点的设备ID
      * </pre>
      *
-     * <code>optional string site_device_id = 3;</code>
+     * <code>string site_device_id = 3;</code>
      */
     public java.lang.String getSiteDeviceId() {
       java.lang.Object ref = siteDeviceId_;
@@ -1842,7 +1872,7 @@ public final class ApiSiteLoginProto {
      *返回站点的设备ID
      * </pre>
      *
-     * <code>optional string site_device_id = 3;</code>
+     * <code>string site_device_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteDeviceIdBytes() {
@@ -1879,6 +1909,7 @@ public final class ApiSiteLoginProto {
       if (!getSiteDeviceIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, siteDeviceId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1895,11 +1926,11 @@ public final class ApiSiteLoginProto {
       if (!getSiteDeviceIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, siteDeviceId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1917,6 +1948,7 @@ public final class ApiSiteLoginProto {
           .equals(other.getSiteUserId());
       result = result && getSiteDeviceId()
           .equals(other.getSiteDeviceId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1926,7 +1958,7 @@ public final class ApiSiteLoginProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_SESSION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserSessionId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -1938,6 +1970,17 @@ public final class ApiSiteLoginProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteLoginProto.ApiSiteLoginResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteLoginProto.ApiSiteLoginResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteLoginProto.ApiSiteLoginResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2091,7 +2134,7 @@ public final class ApiSiteLoginProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2104,12 +2147,12 @@ public final class ApiSiteLoginProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2135,6 +2178,7 @@ public final class ApiSiteLoginProto {
           siteDeviceId_ = other.siteDeviceId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2167,7 +2211,7 @@ public final class ApiSiteLoginProto {
        *用户个人sessionId
        * </pre>
        *
-       * <code>optional string user_session_id = 1;</code>
+       * <code>string user_session_id = 1;</code>
        */
       public java.lang.String getUserSessionId() {
         java.lang.Object ref = userSessionId_;
@@ -2186,7 +2230,7 @@ public final class ApiSiteLoginProto {
        *用户个人sessionId
        * </pre>
        *
-       * <code>optional string user_session_id = 1;</code>
+       * <code>string user_session_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserSessionIdBytes() {
@@ -2206,7 +2250,7 @@ public final class ApiSiteLoginProto {
        *用户个人sessionId
        * </pre>
        *
-       * <code>optional string user_session_id = 1;</code>
+       * <code>string user_session_id = 1;</code>
        */
       public Builder setUserSessionId(
           java.lang.String value) {
@@ -2223,7 +2267,7 @@ public final class ApiSiteLoginProto {
        *用户个人sessionId
        * </pre>
        *
-       * <code>optional string user_session_id = 1;</code>
+       * <code>string user_session_id = 1;</code>
        */
       public Builder clearUserSessionId() {
         
@@ -2236,7 +2280,7 @@ public final class ApiSiteLoginProto {
        *用户个人sessionId
        * </pre>
        *
-       * <code>optional string user_session_id = 1;</code>
+       * <code>string user_session_id = 1;</code>
        */
       public Builder setUserSessionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2256,7 +2300,7 @@ public final class ApiSiteLoginProto {
        *返回站点用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -2275,7 +2319,7 @@ public final class ApiSiteLoginProto {
        *返回站点用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -2295,7 +2339,7 @@ public final class ApiSiteLoginProto {
        *返回站点用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -2312,7 +2356,7 @@ public final class ApiSiteLoginProto {
        *返回站点用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -2325,7 +2369,7 @@ public final class ApiSiteLoginProto {
        *返回站点用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2345,7 +2389,7 @@ public final class ApiSiteLoginProto {
        *返回站点的设备ID
        * </pre>
        *
-       * <code>optional string site_device_id = 3;</code>
+       * <code>string site_device_id = 3;</code>
        */
       public java.lang.String getSiteDeviceId() {
         java.lang.Object ref = siteDeviceId_;
@@ -2364,7 +2408,7 @@ public final class ApiSiteLoginProto {
        *返回站点的设备ID
        * </pre>
        *
-       * <code>optional string site_device_id = 3;</code>
+       * <code>string site_device_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteDeviceIdBytes() {
@@ -2384,7 +2428,7 @@ public final class ApiSiteLoginProto {
        *返回站点的设备ID
        * </pre>
        *
-       * <code>optional string site_device_id = 3;</code>
+       * <code>string site_device_id = 3;</code>
        */
       public Builder setSiteDeviceId(
           java.lang.String value) {
@@ -2401,7 +2445,7 @@ public final class ApiSiteLoginProto {
        *返回站点的设备ID
        * </pre>
        *
-       * <code>optional string site_device_id = 3;</code>
+       * <code>string site_device_id = 3;</code>
        */
       public Builder clearSiteDeviceId() {
         
@@ -2414,7 +2458,7 @@ public final class ApiSiteLoginProto {
        *返回站点的设备ID
        * </pre>
        *
-       * <code>optional string site_device_id = 3;</code>
+       * <code>string site_device_id = 3;</code>
        */
       public Builder setSiteDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2429,12 +2473,12 @@ public final class ApiSiteLoginProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2457,7 +2501,7 @@ public final class ApiSiteLoginProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteLoginResponse(input, extensionRegistry);
+        return new ApiSiteLoginResponse(input, extensionRegistry);
       }
     };
 
@@ -2504,7 +2548,7 @@ public final class ApiSiteLoginProto {
       "\"]\n\024ApiSiteLoginResponse\022\027\n\017user_session" +
       "_id\030\001 \001(\t\022\024\n\014site_user_id\030\002 \001(\t\022\026\n\016site_" +
       "device_id\030\003 \001(\t2U\n\023ApiSiteLoginService\022>" +
-      "\n\005login\022\031.site.ApiSiteLoginRequest\032\032.sit",
+      "\n\005login\022\031.site.ApiSiteLoginRequest\032\032.sit" +
       "e.ApiSiteLoginResponseB*\n\025com.akaxin.pro" +
       "to.siteB\021ApiSiteLoginProtob\006proto3"
     };

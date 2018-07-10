@@ -23,7 +23,7 @@ public final class ApiUserUpdateProfileProto {
      *更新的用户详细信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     boolean hasUserProfile();
     /**
@@ -31,7 +31,7 @@ public final class ApiUserUpdateProfileProto {
      *更新的用户详细信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfile getUserProfile();
     /**
@@ -39,7 +39,7 @@ public final class ApiUserUpdateProfileProto {
      *更新的用户详细信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfileOrBuilder getUserProfileOrBuilder();
   }
@@ -50,6 +50,7 @@ public final class ApiUserUpdateProfileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiUserUpdateProfileRequest)
       ApiUserUpdateProfileRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiUserUpdateProfileRequest.newBuilder() to construct.
     private ApiUserUpdateProfileRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -60,14 +61,19 @@ public final class ApiUserUpdateProfileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiUserUpdateProfileRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -77,7 +83,8 @@ public final class ApiUserUpdateProfileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -103,6 +110,7 @@ public final class ApiUserUpdateProfileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -125,7 +133,7 @@ public final class ApiUserUpdateProfileProto {
      *更新的用户详细信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     public boolean hasUserProfile() {
       return userProfile_ != null;
@@ -135,7 +143,7 @@ public final class ApiUserUpdateProfileProto {
      *更新的用户详细信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfile getUserProfile() {
       return userProfile_ == null ? com.akaxin.proto.core.UserProto.UserProfile.getDefaultInstance() : userProfile_;
@@ -145,7 +153,7 @@ public final class ApiUserUpdateProfileProto {
      *更新的用户详细信息
      * </pre>
      *
-     * <code>optional .core.UserProfile user_profile = 1;</code>
+     * <code>.core.UserProfile user_profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getUserProfileOrBuilder() {
       return getUserProfile();
@@ -166,6 +174,7 @@ public final class ApiUserUpdateProfileProto {
       if (userProfile_ != null) {
         output.writeMessage(1, getUserProfile());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -177,11 +186,11 @@ public final class ApiUserUpdateProfileProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUserProfile());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -198,6 +207,7 @@ public final class ApiUserUpdateProfileProto {
         result = result && getUserProfile()
             .equals(other.getUserProfile());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -207,7 +217,7 @@ public final class ApiUserUpdateProfileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasUserProfile()) {
         hash = (37 * hash) + USER_PROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getUserProfile().hashCode();
@@ -217,6 +227,17 @@ public final class ApiUserUpdateProfileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -372,7 +393,7 @@ public final class ApiUserUpdateProfileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -385,12 +406,12 @@ public final class ApiUserUpdateProfileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -407,6 +428,7 @@ public final class ApiUserUpdateProfileProto {
         if (other.hasUserProfile()) {
           mergeUserProfile(other.getUserProfile());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -441,7 +463,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public boolean hasUserProfile() {
         return userProfileBuilder_ != null || userProfile_ != null;
@@ -451,7 +473,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile getUserProfile() {
         if (userProfileBuilder_ == null) {
@@ -465,7 +487,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder setUserProfile(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (userProfileBuilder_ == null) {
@@ -485,7 +507,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder setUserProfile(
           com.akaxin.proto.core.UserProto.UserProfile.Builder builderForValue) {
@@ -503,7 +525,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder mergeUserProfile(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (userProfileBuilder_ == null) {
@@ -525,7 +547,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public Builder clearUserProfile() {
         if (userProfileBuilder_ == null) {
@@ -543,7 +565,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile.Builder getUserProfileBuilder() {
         
@@ -555,7 +577,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getUserProfileOrBuilder() {
         if (userProfileBuilder_ != null) {
@@ -570,7 +592,7 @@ public final class ApiUserUpdateProfileProto {
        *更新的用户详细信息
        * </pre>
        *
-       * <code>optional .core.UserProfile user_profile = 1;</code>
+       * <code>.core.UserProfile user_profile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.UserProto.UserProfile, com.akaxin.proto.core.UserProto.UserProfile.Builder, com.akaxin.proto.core.UserProto.UserProfileOrBuilder> 
@@ -587,12 +609,12 @@ public final class ApiUserUpdateProfileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -615,7 +637,7 @@ public final class ApiUserUpdateProfileProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiUserUpdateProfileRequest(input, extensionRegistry);
+        return new ApiUserUpdateProfileRequest(input, extensionRegistry);
       }
     };
 
@@ -645,6 +667,7 @@ public final class ApiUserUpdateProfileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiUserUpdateProfileResponse)
       ApiUserUpdateProfileResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiUserUpdateProfileResponse.newBuilder() to construct.
     private ApiUserUpdateProfileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -655,13 +678,18 @@ public final class ApiUserUpdateProfileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiUserUpdateProfileResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -671,7 +699,8 @@ public final class ApiUserUpdateProfileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -684,6 +713,7 @@ public final class ApiUserUpdateProfileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -711,6 +741,7 @@ public final class ApiUserUpdateProfileProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -718,11 +749,11 @@ public final class ApiUserUpdateProfileProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -734,6 +765,7 @@ public final class ApiUserUpdateProfileProto {
       com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse other = (com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -743,12 +775,23 @@ public final class ApiUserUpdateProfileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -893,7 +936,7 @@ public final class ApiUserUpdateProfileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -906,12 +949,12 @@ public final class ApiUserUpdateProfileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -925,6 +968,7 @@ public final class ApiUserUpdateProfileProto {
 
       public Builder mergeFrom(com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse other) {
         if (other == com.akaxin.proto.site.ApiUserUpdateProfileProto.ApiUserUpdateProfileResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -952,12 +996,12 @@ public final class ApiUserUpdateProfileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -980,7 +1024,7 @@ public final class ApiUserUpdateProfileProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiUserUpdateProfileResponse(input, extensionRegistry);
+        return new ApiUserUpdateProfileResponse(input, extensionRegistry);
       }
     };
 

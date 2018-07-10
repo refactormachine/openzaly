@@ -23,7 +23,7 @@ public final class ApiPluginListProto {
      *分页：第几页
      * </pre>
      *
-     * <code>optional int32 page_number = 1;</code>
+     * <code>int32 page_number = 1;</code>
      */
     int getPageNumber();
 
@@ -32,7 +32,7 @@ public final class ApiPluginListProto {
      *分页：每页条数
      * </pre>
      *
-     * <code>optional int32 page_size = 2;</code>
+     * <code>int32 page_size = 2;</code>
      */
     int getPageSize();
 
@@ -41,7 +41,7 @@ public final class ApiPluginListProto {
      *查询扩展的状态
      * </pre>
      *
-     * <code>optional .core.PluginPosition position = 3;</code>
+     * <code>.core.PluginPosition position = 3;</code>
      */
     int getPositionValue();
     /**
@@ -49,7 +49,7 @@ public final class ApiPluginListProto {
      *查询扩展的状态
      * </pre>
      *
-     * <code>optional .core.PluginPosition position = 3;</code>
+     * <code>.core.PluginPosition position = 3;</code>
      */
     com.akaxin.proto.core.PluginProto.PluginPosition getPosition();
   }
@@ -60,6 +60,7 @@ public final class ApiPluginListProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPluginListRequest)
       ApiPluginListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPluginListRequest.newBuilder() to construct.
     private ApiPluginListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -73,14 +74,19 @@ public final class ApiPluginListProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPluginListRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -90,7 +96,8 @@ public final class ApiPluginListProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -119,6 +126,7 @@ public final class ApiPluginListProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -141,7 +149,7 @@ public final class ApiPluginListProto {
      *分页：第几页
      * </pre>
      *
-     * <code>optional int32 page_number = 1;</code>
+     * <code>int32 page_number = 1;</code>
      */
     public int getPageNumber() {
       return pageNumber_;
@@ -154,7 +162,7 @@ public final class ApiPluginListProto {
      *分页：每页条数
      * </pre>
      *
-     * <code>optional int32 page_size = 2;</code>
+     * <code>int32 page_size = 2;</code>
      */
     public int getPageSize() {
       return pageSize_;
@@ -167,7 +175,7 @@ public final class ApiPluginListProto {
      *查询扩展的状态
      * </pre>
      *
-     * <code>optional .core.PluginPosition position = 3;</code>
+     * <code>.core.PluginPosition position = 3;</code>
      */
     public int getPositionValue() {
       return position_;
@@ -177,7 +185,7 @@ public final class ApiPluginListProto {
      *查询扩展的状态
      * </pre>
      *
-     * <code>optional .core.PluginPosition position = 3;</code>
+     * <code>.core.PluginPosition position = 3;</code>
      */
     public com.akaxin.proto.core.PluginProto.PluginPosition getPosition() {
       com.akaxin.proto.core.PluginProto.PluginPosition result = com.akaxin.proto.core.PluginProto.PluginPosition.valueOf(position_);
@@ -205,6 +213,7 @@ public final class ApiPluginListProto {
       if (position_ != com.akaxin.proto.core.PluginProto.PluginPosition.HOME_PAGE.getNumber()) {
         output.writeEnum(3, position_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -224,11 +233,11 @@ public final class ApiPluginListProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, position_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -245,6 +254,7 @@ public final class ApiPluginListProto {
       result = result && (getPageSize()
           == other.getPageSize());
       result = result && position_ == other.position_;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -254,7 +264,7 @@ public final class ApiPluginListProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PAGE_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getPageNumber();
       hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
@@ -266,6 +276,17 @@ public final class ApiPluginListProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPluginListProto.ApiPluginListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPluginListProto.ApiPluginListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPluginListProto.ApiPluginListRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -419,7 +440,7 @@ public final class ApiPluginListProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -432,12 +453,12 @@ public final class ApiPluginListProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -460,6 +481,7 @@ public final class ApiPluginListProto {
         if (other.position_ != 0) {
           setPositionValue(other.getPositionValue());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -492,7 +514,7 @@ public final class ApiPluginListProto {
        *分页：第几页
        * </pre>
        *
-       * <code>optional int32 page_number = 1;</code>
+       * <code>int32 page_number = 1;</code>
        */
       public int getPageNumber() {
         return pageNumber_;
@@ -502,7 +524,7 @@ public final class ApiPluginListProto {
        *分页：第几页
        * </pre>
        *
-       * <code>optional int32 page_number = 1;</code>
+       * <code>int32 page_number = 1;</code>
        */
       public Builder setPageNumber(int value) {
         
@@ -515,7 +537,7 @@ public final class ApiPluginListProto {
        *分页：第几页
        * </pre>
        *
-       * <code>optional int32 page_number = 1;</code>
+       * <code>int32 page_number = 1;</code>
        */
       public Builder clearPageNumber() {
         
@@ -530,7 +552,7 @@ public final class ApiPluginListProto {
        *分页：每页条数
        * </pre>
        *
-       * <code>optional int32 page_size = 2;</code>
+       * <code>int32 page_size = 2;</code>
        */
       public int getPageSize() {
         return pageSize_;
@@ -540,7 +562,7 @@ public final class ApiPluginListProto {
        *分页：每页条数
        * </pre>
        *
-       * <code>optional int32 page_size = 2;</code>
+       * <code>int32 page_size = 2;</code>
        */
       public Builder setPageSize(int value) {
         
@@ -553,7 +575,7 @@ public final class ApiPluginListProto {
        *分页：每页条数
        * </pre>
        *
-       * <code>optional int32 page_size = 2;</code>
+       * <code>int32 page_size = 2;</code>
        */
       public Builder clearPageSize() {
         
@@ -568,7 +590,7 @@ public final class ApiPluginListProto {
        *查询扩展的状态
        * </pre>
        *
-       * <code>optional .core.PluginPosition position = 3;</code>
+       * <code>.core.PluginPosition position = 3;</code>
        */
       public int getPositionValue() {
         return position_;
@@ -578,7 +600,7 @@ public final class ApiPluginListProto {
        *查询扩展的状态
        * </pre>
        *
-       * <code>optional .core.PluginPosition position = 3;</code>
+       * <code>.core.PluginPosition position = 3;</code>
        */
       public Builder setPositionValue(int value) {
         position_ = value;
@@ -590,7 +612,7 @@ public final class ApiPluginListProto {
        *查询扩展的状态
        * </pre>
        *
-       * <code>optional .core.PluginPosition position = 3;</code>
+       * <code>.core.PluginPosition position = 3;</code>
        */
       public com.akaxin.proto.core.PluginProto.PluginPosition getPosition() {
         com.akaxin.proto.core.PluginProto.PluginPosition result = com.akaxin.proto.core.PluginProto.PluginPosition.valueOf(position_);
@@ -601,7 +623,7 @@ public final class ApiPluginListProto {
        *查询扩展的状态
        * </pre>
        *
-       * <code>optional .core.PluginPosition position = 3;</code>
+       * <code>.core.PluginPosition position = 3;</code>
        */
       public Builder setPosition(com.akaxin.proto.core.PluginProto.PluginPosition value) {
         if (value == null) {
@@ -617,7 +639,7 @@ public final class ApiPluginListProto {
        *查询扩展的状态
        * </pre>
        *
-       * <code>optional .core.PluginPosition position = 3;</code>
+       * <code>.core.PluginPosition position = 3;</code>
        */
       public Builder clearPosition() {
         
@@ -627,12 +649,12 @@ public final class ApiPluginListProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -655,7 +677,7 @@ public final class ApiPluginListProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPluginListRequest(input, extensionRegistry);
+        return new ApiPluginListRequest(input, extensionRegistry);
       }
     };
 
@@ -729,6 +751,7 @@ public final class ApiPluginListProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPluginListResponse)
       ApiPluginListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPluginListResponse.newBuilder() to construct.
     private ApiPluginListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -740,14 +763,19 @@ public final class ApiPluginListProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPluginListResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -757,7 +785,8 @@ public final class ApiPluginListProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -782,6 +811,7 @@ public final class ApiPluginListProto {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           plugin_ = java.util.Collections.unmodifiableList(plugin_);
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -867,6 +897,7 @@ public final class ApiPluginListProto {
       for (int i = 0; i < plugin_.size(); i++) {
         output.writeMessage(1, plugin_.get(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -878,11 +909,11 @@ public final class ApiPluginListProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, plugin_.get(i));
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -896,6 +927,7 @@ public final class ApiPluginListProto {
       boolean result = true;
       result = result && getPluginList()
           .equals(other.getPluginList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -905,7 +937,7 @@ public final class ApiPluginListProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getPluginCount() > 0) {
         hash = (37 * hash) + PLUGIN_FIELD_NUMBER;
         hash = (53 * hash) + getPluginList().hashCode();
@@ -915,6 +947,17 @@ public final class ApiPluginListProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPluginListProto.ApiPluginListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPluginListProto.ApiPluginListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPluginListProto.ApiPluginListResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1076,7 +1119,7 @@ public final class ApiPluginListProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1089,12 +1132,12 @@ public final class ApiPluginListProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1134,6 +1177,7 @@ public final class ApiPluginListProto {
             }
           }
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1474,12 +1518,12 @@ public final class ApiPluginListProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1502,7 +1546,7 @@ public final class ApiPluginListProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPluginListResponse(input, extensionRegistry);
+        return new ApiPluginListResponse(input, extensionRegistry);
       }
     };
 

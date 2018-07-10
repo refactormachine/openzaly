@@ -23,7 +23,7 @@ public final class HaiMessageProxyProto {
      *代理发送的消息请求
      * </pre>
      *
-     * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+     * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
      */
     boolean hasProxyMsg();
     /**
@@ -31,7 +31,7 @@ public final class HaiMessageProxyProto {
      *代理发送的消息请求
      * </pre>
      *
-     * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+     * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
      */
     com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest getProxyMsg();
     /**
@@ -39,7 +39,7 @@ public final class HaiMessageProxyProto {
      *代理发送的消息请求
      * </pre>
      *
-     * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+     * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
      */
     com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequestOrBuilder getProxyMsgOrBuilder();
   }
@@ -63,6 +63,7 @@ public final class HaiMessageProxyProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiMessageProxyRequest)
       HaiMessageProxyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiMessageProxyRequest.newBuilder() to construct.
     private HaiMessageProxyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -73,7 +74,7 @@ public final class HaiMessageProxyProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiMessageProxyRequest(
         com.google.protobuf.CodedInputStream input,
@@ -81,6 +82,8 @@ public final class HaiMessageProxyProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -90,7 +93,8 @@ public final class HaiMessageProxyProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -116,6 +120,7 @@ public final class HaiMessageProxyProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -138,7 +143,7 @@ public final class HaiMessageProxyProto {
      *代理发送的消息请求
      * </pre>
      *
-     * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+     * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
      */
     public boolean hasProxyMsg() {
       return proxyMsg_ != null;
@@ -148,7 +153,7 @@ public final class HaiMessageProxyProto {
      *代理发送的消息请求
      * </pre>
      *
-     * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+     * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
      */
     public com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest getProxyMsg() {
       return proxyMsg_ == null ? com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest.getDefaultInstance() : proxyMsg_;
@@ -158,7 +163,7 @@ public final class HaiMessageProxyProto {
      *代理发送的消息请求
      * </pre>
      *
-     * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+     * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
      */
     public com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequestOrBuilder getProxyMsgOrBuilder() {
       return getProxyMsg();
@@ -179,6 +184,7 @@ public final class HaiMessageProxyProto {
       if (proxyMsg_ != null) {
         output.writeMessage(1, getProxyMsg());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -190,11 +196,11 @@ public final class HaiMessageProxyProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getProxyMsg());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -211,6 +217,7 @@ public final class HaiMessageProxyProto {
         result = result && getProxyMsg()
             .equals(other.getProxyMsg());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -220,7 +227,7 @@ public final class HaiMessageProxyProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasProxyMsg()) {
         hash = (37 * hash) + PROXY_MSG_FIELD_NUMBER;
         hash = (53 * hash) + getProxyMsg().hashCode();
@@ -230,6 +237,17 @@ public final class HaiMessageProxyProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -398,7 +416,7 @@ public final class HaiMessageProxyProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -411,12 +429,12 @@ public final class HaiMessageProxyProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -433,6 +451,7 @@ public final class HaiMessageProxyProto {
         if (other.hasProxyMsg()) {
           mergeProxyMsg(other.getProxyMsg());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -467,7 +486,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public boolean hasProxyMsg() {
         return proxyMsgBuilder_ != null || proxyMsg_ != null;
@@ -477,7 +496,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest getProxyMsg() {
         if (proxyMsgBuilder_ == null) {
@@ -491,7 +510,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public Builder setProxyMsg(com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest value) {
         if (proxyMsgBuilder_ == null) {
@@ -511,7 +530,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public Builder setProxyMsg(
           com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest.Builder builderForValue) {
@@ -529,7 +548,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public Builder mergeProxyMsg(com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest value) {
         if (proxyMsgBuilder_ == null) {
@@ -551,7 +570,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public Builder clearProxyMsg() {
         if (proxyMsgBuilder_ == null) {
@@ -569,7 +588,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest.Builder getProxyMsgBuilder() {
         
@@ -581,7 +600,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       public com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequestOrBuilder getProxyMsgOrBuilder() {
         if (proxyMsgBuilder_ != null) {
@@ -596,7 +615,7 @@ public final class HaiMessageProxyProto {
        *代理发送的消息请求
        * </pre>
        *
-       * <code>optional .site.ImCtsMessageRequest proxy_msg = 1;</code>
+       * <code>.site.ImCtsMessageRequest proxy_msg = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest, com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest.Builder, com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequestOrBuilder> 
@@ -613,12 +632,12 @@ public final class HaiMessageProxyProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -671,6 +690,7 @@ public final class HaiMessageProxyProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiMessageProxyResponse)
       HaiMessageProxyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiMessageProxyResponse.newBuilder() to construct.
     private HaiMessageProxyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -681,13 +701,15 @@ public final class HaiMessageProxyProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiMessageProxyResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -697,7 +719,8 @@ public final class HaiMessageProxyProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -710,6 +733,7 @@ public final class HaiMessageProxyProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -737,6 +761,7 @@ public final class HaiMessageProxyProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -744,11 +769,11 @@ public final class HaiMessageProxyProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -760,6 +785,7 @@ public final class HaiMessageProxyProto {
       com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse other = (com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -769,12 +795,23 @@ public final class HaiMessageProxyProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -919,7 +956,7 @@ public final class HaiMessageProxyProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -932,12 +969,12 @@ public final class HaiMessageProxyProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -951,6 +988,7 @@ public final class HaiMessageProxyProto {
 
       public Builder mergeFrom(com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse other) {
         if (other == com.akaxin.proto.plugin.HaiMessageProxyProto.HaiMessageProxyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -978,12 +1016,12 @@ public final class HaiMessageProxyProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

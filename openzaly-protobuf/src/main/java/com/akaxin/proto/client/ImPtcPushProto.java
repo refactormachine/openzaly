@@ -23,7 +23,7 @@ public final class ImPtcPushProto {
      *站点服务demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     java.lang.String getSiteServer();
     /**
@@ -31,7 +31,7 @@ public final class ImPtcPushProto {
      *站点服务demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteServerBytes();
@@ -41,7 +41,7 @@ public final class ImPtcPushProto {
      *展示的title
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     java.lang.String getPushTitle();
     /**
@@ -49,7 +49,7 @@ public final class ImPtcPushProto {
      *展示的title
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     com.google.protobuf.ByteString
         getPushTitleBytes();
@@ -59,7 +59,7 @@ public final class ImPtcPushProto {
      *展示的文案
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     java.lang.String getPushAlert();
     /**
@@ -67,7 +67,7 @@ public final class ImPtcPushProto {
      *展示的文案
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     com.google.protobuf.ByteString
         getPushAlertBytes();
@@ -77,7 +77,7 @@ public final class ImPtcPushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_jump = 4;</code>
+     * <code>string push_jump = 4;</code>
      */
     java.lang.String getPushJump();
     /**
@@ -85,7 +85,7 @@ public final class ImPtcPushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_jump = 4;</code>
+     * <code>string push_jump = 4;</code>
      */
     com.google.protobuf.ByteString
         getPushJumpBytes();
@@ -95,7 +95,7 @@ public final class ImPtcPushProto {
      *气泡展示个数
      * </pre>
      *
-     * <code>optional int32 push_badge = 5;</code>
+     * <code>int32 push_badge = 5;</code>
      */
     int getPushBadge();
 
@@ -104,7 +104,7 @@ public final class ImPtcPushProto {
      *气泡声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     java.lang.String getPushSound();
     /**
@@ -112,7 +112,7 @@ public final class ImPtcPushProto {
      *气泡声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     com.google.protobuf.ByteString
         getPushSoundBytes();
@@ -124,6 +124,7 @@ public final class ImPtcPushProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:platform.ImPtcPushRequest)
       ImPtcPushRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ImPtcPushRequest.newBuilder() to construct.
     private ImPtcPushRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -140,7 +141,7 @@ public final class ImPtcPushProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ImPtcPushRequest(
         com.google.protobuf.CodedInputStream input,
@@ -148,6 +149,8 @@ public final class ImPtcPushProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -157,7 +160,8 @@ public final class ImPtcPushProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -205,6 +209,7 @@ public final class ImPtcPushProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -227,7 +232,7 @@ public final class ImPtcPushProto {
      *站点服务demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     public java.lang.String getSiteServer() {
       java.lang.Object ref = siteServer_;
@@ -246,7 +251,7 @@ public final class ImPtcPushProto {
      *站点服务demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteServerBytes() {
@@ -269,7 +274,7 @@ public final class ImPtcPushProto {
      *展示的title
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     public java.lang.String getPushTitle() {
       java.lang.Object ref = pushTitle_;
@@ -288,7 +293,7 @@ public final class ImPtcPushProto {
      *展示的title
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     public com.google.protobuf.ByteString
         getPushTitleBytes() {
@@ -311,7 +316,7 @@ public final class ImPtcPushProto {
      *展示的文案
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     public java.lang.String getPushAlert() {
       java.lang.Object ref = pushAlert_;
@@ -330,7 +335,7 @@ public final class ImPtcPushProto {
      *展示的文案
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     public com.google.protobuf.ByteString
         getPushAlertBytes() {
@@ -353,7 +358,7 @@ public final class ImPtcPushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_jump = 4;</code>
+     * <code>string push_jump = 4;</code>
      */
     public java.lang.String getPushJump() {
       java.lang.Object ref = pushJump_;
@@ -372,7 +377,7 @@ public final class ImPtcPushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_jump = 4;</code>
+     * <code>string push_jump = 4;</code>
      */
     public com.google.protobuf.ByteString
         getPushJumpBytes() {
@@ -395,7 +400,7 @@ public final class ImPtcPushProto {
      *气泡展示个数
      * </pre>
      *
-     * <code>optional int32 push_badge = 5;</code>
+     * <code>int32 push_badge = 5;</code>
      */
     public int getPushBadge() {
       return pushBadge_;
@@ -408,7 +413,7 @@ public final class ImPtcPushProto {
      *气泡声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     public java.lang.String getPushSound() {
       java.lang.Object ref = pushSound_;
@@ -427,7 +432,7 @@ public final class ImPtcPushProto {
      *气泡声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     public com.google.protobuf.ByteString
         getPushSoundBytes() {
@@ -473,6 +478,7 @@ public final class ImPtcPushProto {
       if (!getPushSoundBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pushSound_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -499,11 +505,11 @@ public final class ImPtcPushProto {
       if (!getPushSoundBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pushSound_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -527,6 +533,7 @@ public final class ImPtcPushProto {
           == other.getPushBadge());
       result = result && getPushSound()
           .equals(other.getPushSound());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -536,7 +543,7 @@ public final class ImPtcPushProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_SERVER_FIELD_NUMBER;
       hash = (53 * hash) + getSiteServer().hashCode();
       hash = (37 * hash) + PUSH_TITLE_FIELD_NUMBER;
@@ -554,6 +561,17 @@ public final class ImPtcPushProto {
       return hash;
     }
 
+    public static com.akaxin.proto.client.ImPtcPushProto.ImPtcPushRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.client.ImPtcPushProto.ImPtcPushRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.client.ImPtcPushProto.ImPtcPushRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -716,7 +734,7 @@ public final class ImPtcPushProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -729,12 +747,12 @@ public final class ImPtcPushProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -771,6 +789,7 @@ public final class ImPtcPushProto {
           pushSound_ = other.pushSound_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -803,7 +822,7 @@ public final class ImPtcPushProto {
        *站点服务demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public java.lang.String getSiteServer() {
         java.lang.Object ref = siteServer_;
@@ -822,7 +841,7 @@ public final class ImPtcPushProto {
        *站点服务demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteServerBytes() {
@@ -842,7 +861,7 @@ public final class ImPtcPushProto {
        *站点服务demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder setSiteServer(
           java.lang.String value) {
@@ -859,7 +878,7 @@ public final class ImPtcPushProto {
        *站点服务demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder clearSiteServer() {
         
@@ -872,7 +891,7 @@ public final class ImPtcPushProto {
        *站点服务demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder setSiteServerBytes(
           com.google.protobuf.ByteString value) {
@@ -892,7 +911,7 @@ public final class ImPtcPushProto {
        *展示的title
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public java.lang.String getPushTitle() {
         java.lang.Object ref = pushTitle_;
@@ -911,7 +930,7 @@ public final class ImPtcPushProto {
        *展示的title
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPushTitleBytes() {
@@ -931,7 +950,7 @@ public final class ImPtcPushProto {
        *展示的title
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder setPushTitle(
           java.lang.String value) {
@@ -948,7 +967,7 @@ public final class ImPtcPushProto {
        *展示的title
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder clearPushTitle() {
         
@@ -961,7 +980,7 @@ public final class ImPtcPushProto {
        *展示的title
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder setPushTitleBytes(
           com.google.protobuf.ByteString value) {
@@ -981,7 +1000,7 @@ public final class ImPtcPushProto {
        *展示的文案
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public java.lang.String getPushAlert() {
         java.lang.Object ref = pushAlert_;
@@ -1000,7 +1019,7 @@ public final class ImPtcPushProto {
        *展示的文案
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public com.google.protobuf.ByteString
           getPushAlertBytes() {
@@ -1020,7 +1039,7 @@ public final class ImPtcPushProto {
        *展示的文案
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public Builder setPushAlert(
           java.lang.String value) {
@@ -1037,7 +1056,7 @@ public final class ImPtcPushProto {
        *展示的文案
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public Builder clearPushAlert() {
         
@@ -1050,7 +1069,7 @@ public final class ImPtcPushProto {
        *展示的文案
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public Builder setPushAlertBytes(
           com.google.protobuf.ByteString value) {
@@ -1070,7 +1089,7 @@ public final class ImPtcPushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_jump = 4;</code>
+       * <code>string push_jump = 4;</code>
        */
       public java.lang.String getPushJump() {
         java.lang.Object ref = pushJump_;
@@ -1089,7 +1108,7 @@ public final class ImPtcPushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_jump = 4;</code>
+       * <code>string push_jump = 4;</code>
        */
       public com.google.protobuf.ByteString
           getPushJumpBytes() {
@@ -1109,7 +1128,7 @@ public final class ImPtcPushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_jump = 4;</code>
+       * <code>string push_jump = 4;</code>
        */
       public Builder setPushJump(
           java.lang.String value) {
@@ -1126,7 +1145,7 @@ public final class ImPtcPushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_jump = 4;</code>
+       * <code>string push_jump = 4;</code>
        */
       public Builder clearPushJump() {
         
@@ -1139,7 +1158,7 @@ public final class ImPtcPushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_jump = 4;</code>
+       * <code>string push_jump = 4;</code>
        */
       public Builder setPushJumpBytes(
           com.google.protobuf.ByteString value) {
@@ -1159,7 +1178,7 @@ public final class ImPtcPushProto {
        *气泡展示个数
        * </pre>
        *
-       * <code>optional int32 push_badge = 5;</code>
+       * <code>int32 push_badge = 5;</code>
        */
       public int getPushBadge() {
         return pushBadge_;
@@ -1169,7 +1188,7 @@ public final class ImPtcPushProto {
        *气泡展示个数
        * </pre>
        *
-       * <code>optional int32 push_badge = 5;</code>
+       * <code>int32 push_badge = 5;</code>
        */
       public Builder setPushBadge(int value) {
         
@@ -1182,7 +1201,7 @@ public final class ImPtcPushProto {
        *气泡展示个数
        * </pre>
        *
-       * <code>optional int32 push_badge = 5;</code>
+       * <code>int32 push_badge = 5;</code>
        */
       public Builder clearPushBadge() {
         
@@ -1197,7 +1216,7 @@ public final class ImPtcPushProto {
        *气泡声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public java.lang.String getPushSound() {
         java.lang.Object ref = pushSound_;
@@ -1216,7 +1235,7 @@ public final class ImPtcPushProto {
        *气泡声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public com.google.protobuf.ByteString
           getPushSoundBytes() {
@@ -1236,7 +1255,7 @@ public final class ImPtcPushProto {
        *气泡声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public Builder setPushSound(
           java.lang.String value) {
@@ -1253,7 +1272,7 @@ public final class ImPtcPushProto {
        *气泡声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public Builder clearPushSound() {
         
@@ -1266,7 +1285,7 @@ public final class ImPtcPushProto {
        *气泡声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public Builder setPushSoundBytes(
           com.google.protobuf.ByteString value) {
@@ -1281,12 +1300,12 @@ public final class ImPtcPushProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

@@ -23,7 +23,7 @@ public final class HaiPushNoticesProto {
      *push通知的title(副标题)，客户端主标题展示站点名称
      * </pre>
      *
-     * <code>optional string subtitle = 1;</code>
+     * <code>string subtitle = 1;</code>
      */
     java.lang.String getSubtitle();
     /**
@@ -31,7 +31,7 @@ public final class HaiPushNoticesProto {
      *push通知的title(副标题)，客户端主标题展示站点名称
      * </pre>
      *
-     * <code>optional string subtitle = 1;</code>
+     * <code>string subtitle = 1;</code>
      */
     com.google.protobuf.ByteString
         getSubtitleBytes();
@@ -41,7 +41,7 @@ public final class HaiPushNoticesProto {
      *通知的内容
      * </pre>
      *
-     * <code>optional string content = 2;</code>
+     * <code>string content = 2;</code>
      */
     java.lang.String getContent();
     /**
@@ -49,7 +49,7 @@ public final class HaiPushNoticesProto {
      *通知的内容
      * </pre>
      *
-     * <code>optional string content = 2;</code>
+     * <code>string content = 2;</code>
      */
     com.google.protobuf.ByteString
         getContentBytes();
@@ -59,7 +59,7 @@ public final class HaiPushNoticesProto {
      *通知的跳转，可以为空。
      * </pre>
      *
-     * <code>optional string push_goto = 3;</code>
+     * <code>string push_goto = 3;</code>
      */
     java.lang.String getPushGoto();
     /**
@@ -67,7 +67,7 @@ public final class HaiPushNoticesProto {
      *通知的跳转，可以为空。
      * </pre>
      *
-     * <code>optional string push_goto = 3;</code>
+     * <code>string push_goto = 3;</code>
      */
     com.google.protobuf.ByteString
         getPushGotoBytes();
@@ -92,6 +92,7 @@ public final class HaiPushNoticesProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiPushNoticesRequest)
       HaiPushNoticesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiPushNoticesRequest.newBuilder() to construct.
     private HaiPushNoticesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -105,7 +106,7 @@ public final class HaiPushNoticesProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiPushNoticesRequest(
         com.google.protobuf.CodedInputStream input,
@@ -113,6 +114,8 @@ public final class HaiPushNoticesProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -122,7 +125,8 @@ public final class HaiPushNoticesProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -153,6 +157,7 @@ public final class HaiPushNoticesProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -175,7 +180,7 @@ public final class HaiPushNoticesProto {
      *push通知的title(副标题)，客户端主标题展示站点名称
      * </pre>
      *
-     * <code>optional string subtitle = 1;</code>
+     * <code>string subtitle = 1;</code>
      */
     public java.lang.String getSubtitle() {
       java.lang.Object ref = subtitle_;
@@ -194,7 +199,7 @@ public final class HaiPushNoticesProto {
      *push通知的title(副标题)，客户端主标题展示站点名称
      * </pre>
      *
-     * <code>optional string subtitle = 1;</code>
+     * <code>string subtitle = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSubtitleBytes() {
@@ -217,7 +222,7 @@ public final class HaiPushNoticesProto {
      *通知的内容
      * </pre>
      *
-     * <code>optional string content = 2;</code>
+     * <code>string content = 2;</code>
      */
     public java.lang.String getContent() {
       java.lang.Object ref = content_;
@@ -236,7 +241,7 @@ public final class HaiPushNoticesProto {
      *通知的内容
      * </pre>
      *
-     * <code>optional string content = 2;</code>
+     * <code>string content = 2;</code>
      */
     public com.google.protobuf.ByteString
         getContentBytes() {
@@ -259,7 +264,7 @@ public final class HaiPushNoticesProto {
      *通知的跳转，可以为空。
      * </pre>
      *
-     * <code>optional string push_goto = 3;</code>
+     * <code>string push_goto = 3;</code>
      */
     public java.lang.String getPushGoto() {
       java.lang.Object ref = pushGoto_;
@@ -278,7 +283,7 @@ public final class HaiPushNoticesProto {
      *通知的跳转，可以为空。
      * </pre>
      *
-     * <code>optional string push_goto = 3;</code>
+     * <code>string push_goto = 3;</code>
      */
     public com.google.protobuf.ByteString
         getPushGotoBytes() {
@@ -315,6 +320,7 @@ public final class HaiPushNoticesProto {
       if (!getPushGotoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pushGoto_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -331,11 +337,11 @@ public final class HaiPushNoticesProto {
       if (!getPushGotoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pushGoto_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -353,6 +359,7 @@ public final class HaiPushNoticesProto {
           .equals(other.getContent());
       result = result && getPushGoto()
           .equals(other.getPushGoto());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -362,7 +369,7 @@ public final class HaiPushNoticesProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SUBTITLE_FIELD_NUMBER;
       hash = (53 * hash) + getSubtitle().hashCode();
       hash = (37 * hash) + CONTENT_FIELD_NUMBER;
@@ -374,6 +381,17 @@ public final class HaiPushNoticesProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -540,7 +558,7 @@ public final class HaiPushNoticesProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -553,12 +571,12 @@ public final class HaiPushNoticesProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -584,6 +602,7 @@ public final class HaiPushNoticesProto {
           pushGoto_ = other.pushGoto_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -616,7 +635,7 @@ public final class HaiPushNoticesProto {
        *push通知的title(副标题)，客户端主标题展示站点名称
        * </pre>
        *
-       * <code>optional string subtitle = 1;</code>
+       * <code>string subtitle = 1;</code>
        */
       public java.lang.String getSubtitle() {
         java.lang.Object ref = subtitle_;
@@ -635,7 +654,7 @@ public final class HaiPushNoticesProto {
        *push通知的title(副标题)，客户端主标题展示站点名称
        * </pre>
        *
-       * <code>optional string subtitle = 1;</code>
+       * <code>string subtitle = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSubtitleBytes() {
@@ -655,7 +674,7 @@ public final class HaiPushNoticesProto {
        *push通知的title(副标题)，客户端主标题展示站点名称
        * </pre>
        *
-       * <code>optional string subtitle = 1;</code>
+       * <code>string subtitle = 1;</code>
        */
       public Builder setSubtitle(
           java.lang.String value) {
@@ -672,7 +691,7 @@ public final class HaiPushNoticesProto {
        *push通知的title(副标题)，客户端主标题展示站点名称
        * </pre>
        *
-       * <code>optional string subtitle = 1;</code>
+       * <code>string subtitle = 1;</code>
        */
       public Builder clearSubtitle() {
         
@@ -685,7 +704,7 @@ public final class HaiPushNoticesProto {
        *push通知的title(副标题)，客户端主标题展示站点名称
        * </pre>
        *
-       * <code>optional string subtitle = 1;</code>
+       * <code>string subtitle = 1;</code>
        */
       public Builder setSubtitleBytes(
           com.google.protobuf.ByteString value) {
@@ -705,7 +724,7 @@ public final class HaiPushNoticesProto {
        *通知的内容
        * </pre>
        *
-       * <code>optional string content = 2;</code>
+       * <code>string content = 2;</code>
        */
       public java.lang.String getContent() {
         java.lang.Object ref = content_;
@@ -724,7 +743,7 @@ public final class HaiPushNoticesProto {
        *通知的内容
        * </pre>
        *
-       * <code>optional string content = 2;</code>
+       * <code>string content = 2;</code>
        */
       public com.google.protobuf.ByteString
           getContentBytes() {
@@ -744,7 +763,7 @@ public final class HaiPushNoticesProto {
        *通知的内容
        * </pre>
        *
-       * <code>optional string content = 2;</code>
+       * <code>string content = 2;</code>
        */
       public Builder setContent(
           java.lang.String value) {
@@ -761,7 +780,7 @@ public final class HaiPushNoticesProto {
        *通知的内容
        * </pre>
        *
-       * <code>optional string content = 2;</code>
+       * <code>string content = 2;</code>
        */
       public Builder clearContent() {
         
@@ -774,7 +793,7 @@ public final class HaiPushNoticesProto {
        *通知的内容
        * </pre>
        *
-       * <code>optional string content = 2;</code>
+       * <code>string content = 2;</code>
        */
       public Builder setContentBytes(
           com.google.protobuf.ByteString value) {
@@ -794,7 +813,7 @@ public final class HaiPushNoticesProto {
        *通知的跳转，可以为空。
        * </pre>
        *
-       * <code>optional string push_goto = 3;</code>
+       * <code>string push_goto = 3;</code>
        */
       public java.lang.String getPushGoto() {
         java.lang.Object ref = pushGoto_;
@@ -813,7 +832,7 @@ public final class HaiPushNoticesProto {
        *通知的跳转，可以为空。
        * </pre>
        *
-       * <code>optional string push_goto = 3;</code>
+       * <code>string push_goto = 3;</code>
        */
       public com.google.protobuf.ByteString
           getPushGotoBytes() {
@@ -833,7 +852,7 @@ public final class HaiPushNoticesProto {
        *通知的跳转，可以为空。
        * </pre>
        *
-       * <code>optional string push_goto = 3;</code>
+       * <code>string push_goto = 3;</code>
        */
       public Builder setPushGoto(
           java.lang.String value) {
@@ -850,7 +869,7 @@ public final class HaiPushNoticesProto {
        *通知的跳转，可以为空。
        * </pre>
        *
-       * <code>optional string push_goto = 3;</code>
+       * <code>string push_goto = 3;</code>
        */
       public Builder clearPushGoto() {
         
@@ -863,7 +882,7 @@ public final class HaiPushNoticesProto {
        *通知的跳转，可以为空。
        * </pre>
        *
-       * <code>optional string push_goto = 3;</code>
+       * <code>string push_goto = 3;</code>
        */
       public Builder setPushGotoBytes(
           com.google.protobuf.ByteString value) {
@@ -878,12 +897,12 @@ public final class HaiPushNoticesProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -936,6 +955,7 @@ public final class HaiPushNoticesProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiPushNoticesResponse)
       HaiPushNoticesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiPushNoticesResponse.newBuilder() to construct.
     private HaiPushNoticesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -946,13 +966,15 @@ public final class HaiPushNoticesProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiPushNoticesResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -962,7 +984,8 @@ public final class HaiPushNoticesProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -975,6 +998,7 @@ public final class HaiPushNoticesProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1002,6 +1026,7 @@ public final class HaiPushNoticesProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1009,11 +1034,11 @@ public final class HaiPushNoticesProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1025,6 +1050,7 @@ public final class HaiPushNoticesProto {
       com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse other = (com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1034,12 +1060,23 @@ public final class HaiPushNoticesProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1184,7 +1221,7 @@ public final class HaiPushNoticesProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1197,12 +1234,12 @@ public final class HaiPushNoticesProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1216,6 +1253,7 @@ public final class HaiPushNoticesProto {
 
       public Builder mergeFrom(com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse other) {
         if (other == com.akaxin.proto.plugin.HaiPushNoticesProto.HaiPushNoticesResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1243,12 +1281,12 @@ public final class HaiPushNoticesProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

@@ -23,7 +23,7 @@ public final class ApiSecretChatApplyU2Proto {
      *申请绝密聊天的好友ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -31,7 +31,7 @@ public final class ApiSecretChatApplyU2Proto {
      *申请绝密聊天的好友ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -43,6 +43,7 @@ public final class ApiSecretChatApplyU2Proto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSecretChatApplyU2Request)
       ApiSecretChatApplyU2RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSecretChatApplyU2Request.newBuilder() to construct.
     private ApiSecretChatApplyU2Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiSecretChatApplyU2Proto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSecretChatApplyU2Request(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiSecretChatApplyU2Proto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiSecretChatApplyU2Proto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiSecretChatApplyU2Proto {
      *申请绝密聊天的好友ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -131,7 +139,7 @@ public final class ApiSecretChatApplyU2Proto {
      *申请绝密聊天的好友ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiSecretChatApplyU2Proto {
       if (!getSiteFriendIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteFriendId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiSecretChatApplyU2Proto {
       if (!getSiteFriendIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteFriendId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiSecretChatApplyU2Proto {
       boolean result = true;
       result = result && getSiteFriendId()
           .equals(other.getSiteFriendId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiSecretChatApplyU2Proto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_FRIEND_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteFriendId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiSecretChatApplyU2Proto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSecretChatApplyU2Proto.ApiSecretChatApplyU2Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSecretChatApplyU2Proto.ApiSecretChatApplyU2Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSecretChatApplyU2Proto.ApiSecretChatApplyU2Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiSecretChatApplyU2Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiSecretChatApplyU2Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiSecretChatApplyU2Proto {
           siteFriendId_ = other.siteFriendId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiSecretChatApplyU2Proto {
        *申请绝密聊天的好友ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -441,7 +463,7 @@ public final class ApiSecretChatApplyU2Proto {
        *申请绝密聊天的好友ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiSecretChatApplyU2Proto {
        *申请绝密聊天的好友ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiSecretChatApplyU2Proto {
        *申请绝密聊天的好友ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -491,7 +513,7 @@ public final class ApiSecretChatApplyU2Proto {
        *申请绝密聊天的好友ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiSecretChatApplyU2Proto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiSecretChatApplyU2Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSecretChatApplyU2Request(input, extensionRegistry);
+        return new ApiSecretChatApplyU2Request(input, extensionRegistry);
       }
     };
 
@@ -562,7 +584,7 @@ public final class ApiSecretChatApplyU2Proto {
      *好友的默认设备信息
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     boolean hasDeviceProfile();
     /**
@@ -570,7 +592,7 @@ public final class ApiSecretChatApplyU2Proto {
      *好友的默认设备信息
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile getDeviceProfile();
     /**
@@ -578,7 +600,7 @@ public final class ApiSecretChatApplyU2Proto {
      *好友的默认设备信息
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder getDeviceProfileOrBuilder();
   }
@@ -589,6 +611,7 @@ public final class ApiSecretChatApplyU2Proto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSecretChatApplyU2Response)
       ApiSecretChatApplyU2ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSecretChatApplyU2Response.newBuilder() to construct.
     private ApiSecretChatApplyU2Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -599,14 +622,19 @@ public final class ApiSecretChatApplyU2Proto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSecretChatApplyU2Response(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -616,7 +644,8 @@ public final class ApiSecretChatApplyU2Proto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -642,6 +671,7 @@ public final class ApiSecretChatApplyU2Proto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -664,7 +694,7 @@ public final class ApiSecretChatApplyU2Proto {
      *好友的默认设备信息
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     public boolean hasDeviceProfile() {
       return deviceProfile_ != null;
@@ -674,7 +704,7 @@ public final class ApiSecretChatApplyU2Proto {
      *好友的默认设备信息
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile getDeviceProfile() {
       return deviceProfile_ == null ? com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.getDefaultInstance() : deviceProfile_;
@@ -684,7 +714,7 @@ public final class ApiSecretChatApplyU2Proto {
      *好友的默认设备信息
      * </pre>
      *
-     * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+     * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
      */
     public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder getDeviceProfileOrBuilder() {
       return getDeviceProfile();
@@ -705,6 +735,7 @@ public final class ApiSecretChatApplyU2Proto {
       if (deviceProfile_ != null) {
         output.writeMessage(1, getDeviceProfile());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -716,11 +747,11 @@ public final class ApiSecretChatApplyU2Proto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDeviceProfile());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -737,6 +768,7 @@ public final class ApiSecretChatApplyU2Proto {
         result = result && getDeviceProfile()
             .equals(other.getDeviceProfile());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -746,7 +778,7 @@ public final class ApiSecretChatApplyU2Proto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDeviceProfile()) {
         hash = (37 * hash) + DEVICEPROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceProfile().hashCode();
@@ -756,6 +788,17 @@ public final class ApiSecretChatApplyU2Proto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSecretChatApplyU2Proto.ApiSecretChatApplyU2Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSecretChatApplyU2Proto.ApiSecretChatApplyU2Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSecretChatApplyU2Proto.ApiSecretChatApplyU2Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -911,7 +954,7 @@ public final class ApiSecretChatApplyU2Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -924,12 +967,12 @@ public final class ApiSecretChatApplyU2Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -946,6 +989,7 @@ public final class ApiSecretChatApplyU2Proto {
         if (other.hasDeviceProfile()) {
           mergeDeviceProfile(other.getDeviceProfile());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -980,7 +1024,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public boolean hasDeviceProfile() {
         return deviceProfileBuilder_ != null || deviceProfile_ != null;
@@ -990,7 +1034,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile getDeviceProfile() {
         if (deviceProfileBuilder_ == null) {
@@ -1004,7 +1048,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder setDeviceProfile(com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile value) {
         if (deviceProfileBuilder_ == null) {
@@ -1024,7 +1068,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder setDeviceProfile(
           com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.Builder builderForValue) {
@@ -1042,7 +1086,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder mergeDeviceProfile(com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile value) {
         if (deviceProfileBuilder_ == null) {
@@ -1064,7 +1108,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public Builder clearDeviceProfile() {
         if (deviceProfileBuilder_ == null) {
@@ -1082,7 +1126,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.Builder getDeviceProfileBuilder() {
         
@@ -1094,7 +1138,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       public com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder getDeviceProfileOrBuilder() {
         if (deviceProfileBuilder_ != null) {
@@ -1109,7 +1153,7 @@ public final class ApiSecretChatApplyU2Proto {
        *好友的默认设备信息
        * </pre>
        *
-       * <code>optional .core.SimpleDeviceProfile deviceProfile = 1;</code>
+       * <code>.core.SimpleDeviceProfile deviceProfile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile, com.akaxin.proto.core.DeviceProto.SimpleDeviceProfile.Builder, com.akaxin.proto.core.DeviceProto.SimpleDeviceProfileOrBuilder> 
@@ -1126,12 +1170,12 @@ public final class ApiSecretChatApplyU2Proto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1154,7 +1198,7 @@ public final class ApiSecretChatApplyU2Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSecretChatApplyU2Response(input, extensionRegistry);
+        return new ApiSecretChatApplyU2Response(input, extensionRegistry);
       }
     };
 
