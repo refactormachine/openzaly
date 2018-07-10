@@ -74,13 +74,19 @@
 
     //页面加载，执行
     $(function () {
+     	$('#group-lists').html("");
         loadGroupList();
     });
 
-
+    //定义全局变量
+    var page = 0;//
+    var loading = false;
     //定义选择器，滚动使用
     $(document.body).infinite().on("infinite", function () {
-        loadGroupList()
+    	   if(page == 0){
+    		   $('#group-lists').html("");
+    	   }
+       loadGroupList()
     });
 
 
@@ -165,11 +171,6 @@
         reqHtml(reqUri, JSON.stringify(params));
     });
 
-
-    //定义全局变量
-    var page = 0;//
-    var loading = false;
-
     //加载群聊列表
     function loadGroupList() {
         if (loading) {
@@ -196,7 +197,7 @@
         });
         loading = results.loading;
         if (loading == true) {
-            $(".weui-loadmore__tips").html("到底啦");
+            $(".weui-loadmore__tips").html("没有更多数据了");
         } else {
             $(".weui-loadmore__tips").html("加载更多");
         }

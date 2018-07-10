@@ -81,6 +81,7 @@ public class UserSquareController extends AbstractController {
 			List<SimpleUserBean> userList = userService.getUserList(pageNum, pageSize);
 			List<Map<String, String>> data = new ArrayList<Map<String, String>>();
 			if (userList != null && userList.size() > 0) {
+				nodata = false;
 				for (SimpleUserBean bean : userList) {
 					Map<String, String> memberMap = new HashMap<String, String>();
 					if (siteUserId != bean.getUserId()) {
@@ -93,7 +94,6 @@ public class UserSquareController extends AbstractController {
 					}
 					data.add(memberMap);
 				}
-				nodata = false;
 			} 
 			results.put("Data", data);
 

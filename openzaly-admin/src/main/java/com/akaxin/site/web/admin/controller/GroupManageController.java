@@ -312,6 +312,7 @@ public class GroupManageController extends AbstractController {
 			List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
 			List<SimpleGroupBean> groupList = groupService.getGroupList(pageNum, PAGE_SIZE);
 			if (groupList != null && groupList.size() > 0) {
+				nodata = false;
 				List<String> defaultGroupList = configService.getUserDefaultGroupList();
 				for (SimpleGroupBean bean : groupList) {
 					if (defaultGroupList != null && defaultGroupList.size() > 0) {
@@ -319,18 +320,13 @@ public class GroupManageController extends AbstractController {
 						if (contains) {
 							continue;
 						}
-						Map<String, Object> groupMap = new HashMap<String, Object>();
-						groupMap.put("siteGroupId", bean.getGroupId());
-						groupMap.put("groupName", bean.getGroupName());
-						groupMap.put("groupPhoto", bean.getGroupPhoto());
-						data.add(groupMap);
-					} else {
-						Map<String, Object> groupMap = new HashMap<String, Object>();
-						groupMap.put("siteGroupId", bean.getGroupId());
-						groupMap.put("groupName", bean.getGroupName());
-						groupMap.put("groupPhoto", bean.getGroupPhoto());
-						data.add(groupMap);
 					}
+
+					Map<String, Object> groupMap = new HashMap<String, Object>();
+					groupMap.put("siteGroupId", bean.getGroupId());
+					groupMap.put("groupName", bean.getGroupName());
+					groupMap.put("groupPhoto", bean.getGroupPhoto());
+					data.add(groupMap);
 				}
 
 			}

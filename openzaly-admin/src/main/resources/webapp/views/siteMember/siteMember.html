@@ -129,6 +129,9 @@
     
     // 下拉加载更多数据
     $(document.body).infinite().on("infinite", function () {
+    	   if(page == 0){
+    		   $('#member-lists').html("");
+    	   }
         loadSiteMember();
     });
 
@@ -242,12 +245,6 @@
             "pageNum": page.toString()
         };
         reqUrl(reqUri, JSON.stringify(params), 'addMemberToList');
-        /* loading = true;
-        if (loading == true) {
-            $(".weui-loadmore__tips").html("到底啦");
-        } else {
-            $(".weui-loadmore__tips").html("加载更多");
-        } */
     }
 
     function addMemberToList(results) {
@@ -276,6 +273,11 @@
             }
         });
         loading = results.loading;
+        if (loading == true) {
+            $(".weui-loadmore__tips").html("没有更多数据了");
+        } else {
+            $(".weui-loadmore__tips").html("加载更多");
+        }
     }
     
     function reloadUserPhoto(success, imageid, imageLocalPath) {

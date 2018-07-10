@@ -298,9 +298,8 @@ public class UserManageController extends AbstractController {
 			List<Map<String, Object>> data = new ArrayList<Map<String, Object>>();
 			List<SimpleUserBean> userList = userService.getUserList(pageNum, PAGE_SIZE);
 			if (userList != null && userList.size() > 0) {
-				if (PAGE_SIZE == userList.size()) {
-					nodata = false;
-				}
+				nodata = false;
+
 				List<String> defaultFriendList = configService.getUserDefaultFriendList();
 				if (defaultFriendList != null && defaultFriendList.size() > 0) {
 					for (SimpleUserBean bean : userList) {
