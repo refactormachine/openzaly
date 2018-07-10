@@ -55,7 +55,7 @@ public class SiteGroupProfileDao {
 	public List<SimpleGroupBean> queryGroupList(int pageNum, int pageSize) throws SQLException {
 		long startTime = System.currentTimeMillis();
 		String sql = "SELECT site_group_id,group_name,group_photo FROM " + GROUP_PROFILE_TABLE
-				+ " WHERE group_status>0 LIMIT ?,?;";
+				+ " WHERE group_status>0 ORDER BY id DESC LIMIT ?,?;";
 		List<SimpleGroupBean> beanList = new ArrayList<SimpleGroupBean>();
 
 		int startNum = (pageNum - 1) * pageSize;
