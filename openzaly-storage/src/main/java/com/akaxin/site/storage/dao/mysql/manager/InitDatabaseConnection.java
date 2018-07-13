@@ -45,7 +45,7 @@ public class InitDatabaseConnection extends AbstractPoolManager {
 
 	private static Connection initConnection(Properties pro) throws Exception {
 		// "com.mysql.cj.jdbc.Driver"
-		String jdbcUrl = getDBUrlWithoutDBName(pro);
+		String jdbcUrl = getJdbcUrlWithoutDBName(pro);
 		String userName = trimToNull(pro, JdbcConst.MYSQL_USER_NAME);
 		String password = trimToNull(pro, JdbcConst.MYSQL_PASSWORD);
 		Class.forName(MYSQL_JDBC_DRIVER);
@@ -57,7 +57,7 @@ public class InitDatabaseConnection extends AbstractPoolManager {
 	// 获取单独一个连接，迁移数据库使用
 	public static Connection getConnection(Properties pro) throws Exception {
 		// "com.mysql.cj.jdbc.Driver"
-		String jdbcUrl = getDBUrl(pro);
+		String jdbcUrl = getJdbcUrl(pro);
 		String userName = trimToNull(pro, JdbcConst.MYSQL_USER_NAME);
 		String password = trimToNull(pro, JdbcConst.MYSQL_PASSWORD);
 		Class.forName(MYSQL_JDBC_DRIVER);

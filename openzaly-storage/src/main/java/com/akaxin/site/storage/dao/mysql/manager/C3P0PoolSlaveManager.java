@@ -22,7 +22,7 @@ public class C3P0PoolSlaveManager extends AbstractPoolManager {
 	private static List<ComboPooledDataSource> cpdsList;
 
 	public static void initPool(Properties pro) throws Exception {
-		List<String> jdbcUrlList = getSlaveDBUrl(pro);
+		List<String> jdbcUrlList = getSlaveJdbcUrl(pro);
 
 		String userName = trimToNull(pro, JdbcConst.MYSQL_SLAVE_USER_NAME);
 		String password = trimToNull(pro, JdbcConst.MYSQL_SLAVE_PASSWORD);
