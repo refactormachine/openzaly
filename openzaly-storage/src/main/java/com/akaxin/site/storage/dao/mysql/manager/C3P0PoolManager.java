@@ -17,7 +17,7 @@ public class C3P0PoolManager extends AbstractPoolManager {
 	private static ComboPooledDataSource cpds;
 
 	public static void initPool(Properties pro) throws Exception {
-		String jdbcUrl = getDBUrl(pro);
+		String jdbcUrl = getJdbcUrl(pro);
 		String userName = trimToNull(pro, JdbcConst.MYSQL_USER_NAME);
 		String password = trimToNull(pro, JdbcConst.MYSQL_PASSWORD);
 

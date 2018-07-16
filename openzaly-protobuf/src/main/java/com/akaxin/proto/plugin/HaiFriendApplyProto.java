@@ -23,7 +23,7 @@ public final class HaiFriendApplyProto {
      * 发起好友请求的用户
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -31,7 +31,7 @@ public final class HaiFriendApplyProto {
      * 发起好友请求的用户
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -41,7 +41,7 @@ public final class HaiFriendApplyProto {
      * 目标用户
      * </pre>
      *
-     * <code>optional string friend_site_user_id = 2;</code>
+     * <code>string friend_site_user_id = 2;</code>
      */
     java.lang.String getFriendSiteUserId();
     /**
@@ -49,7 +49,7 @@ public final class HaiFriendApplyProto {
      * 目标用户
      * </pre>
      *
-     * <code>optional string friend_site_user_id = 2;</code>
+     * <code>string friend_site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFriendSiteUserIdBytes();
@@ -59,7 +59,7 @@ public final class HaiFriendApplyProto {
      * 申请理由
      * </pre>
      *
-     * <code>optional string apply_reason = 3;</code>
+     * <code>string apply_reason = 3;</code>
      */
     java.lang.String getApplyReason();
     /**
@@ -67,7 +67,7 @@ public final class HaiFriendApplyProto {
      * 申请理由
      * </pre>
      *
-     * <code>optional string apply_reason = 3;</code>
+     * <code>string apply_reason = 3;</code>
      */
     com.google.protobuf.ByteString
         getApplyReasonBytes();
@@ -92,6 +92,7 @@ public final class HaiFriendApplyProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiFriendApplyRequest)
       HaiFriendApplyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiFriendApplyRequest.newBuilder() to construct.
     private HaiFriendApplyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -105,7 +106,7 @@ public final class HaiFriendApplyProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiFriendApplyRequest(
         com.google.protobuf.CodedInputStream input,
@@ -113,6 +114,8 @@ public final class HaiFriendApplyProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -122,7 +125,8 @@ public final class HaiFriendApplyProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -153,6 +157,7 @@ public final class HaiFriendApplyProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -175,7 +180,7 @@ public final class HaiFriendApplyProto {
      * 发起好友请求的用户
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -194,7 +199,7 @@ public final class HaiFriendApplyProto {
      * 发起好友请求的用户
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -217,7 +222,7 @@ public final class HaiFriendApplyProto {
      * 目标用户
      * </pre>
      *
-     * <code>optional string friend_site_user_id = 2;</code>
+     * <code>string friend_site_user_id = 2;</code>
      */
     public java.lang.String getFriendSiteUserId() {
       java.lang.Object ref = friendSiteUserId_;
@@ -236,7 +241,7 @@ public final class HaiFriendApplyProto {
      * 目标用户
      * </pre>
      *
-     * <code>optional string friend_site_user_id = 2;</code>
+     * <code>string friend_site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getFriendSiteUserIdBytes() {
@@ -259,7 +264,7 @@ public final class HaiFriendApplyProto {
      * 申请理由
      * </pre>
      *
-     * <code>optional string apply_reason = 3;</code>
+     * <code>string apply_reason = 3;</code>
      */
     public java.lang.String getApplyReason() {
       java.lang.Object ref = applyReason_;
@@ -278,7 +283,7 @@ public final class HaiFriendApplyProto {
      * 申请理由
      * </pre>
      *
-     * <code>optional string apply_reason = 3;</code>
+     * <code>string apply_reason = 3;</code>
      */
     public com.google.protobuf.ByteString
         getApplyReasonBytes() {
@@ -315,6 +320,7 @@ public final class HaiFriendApplyProto {
       if (!getApplyReasonBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, applyReason_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -331,11 +337,11 @@ public final class HaiFriendApplyProto {
       if (!getApplyReasonBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, applyReason_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -353,6 +359,7 @@ public final class HaiFriendApplyProto {
           .equals(other.getFriendSiteUserId());
       result = result && getApplyReason()
           .equals(other.getApplyReason());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -362,7 +369,7 @@ public final class HaiFriendApplyProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + FRIEND_SITE_USER_ID_FIELD_NUMBER;
@@ -374,6 +381,17 @@ public final class HaiFriendApplyProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -540,7 +558,7 @@ public final class HaiFriendApplyProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -553,12 +571,12 @@ public final class HaiFriendApplyProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -584,6 +602,7 @@ public final class HaiFriendApplyProto {
           applyReason_ = other.applyReason_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -616,7 +635,7 @@ public final class HaiFriendApplyProto {
        * 发起好友请求的用户
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -635,7 +654,7 @@ public final class HaiFriendApplyProto {
        * 发起好友请求的用户
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -655,7 +674,7 @@ public final class HaiFriendApplyProto {
        * 发起好友请求的用户
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -672,7 +691,7 @@ public final class HaiFriendApplyProto {
        * 发起好友请求的用户
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -685,7 +704,7 @@ public final class HaiFriendApplyProto {
        * 发起好友请求的用户
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -705,7 +724,7 @@ public final class HaiFriendApplyProto {
        * 目标用户
        * </pre>
        *
-       * <code>optional string friend_site_user_id = 2;</code>
+       * <code>string friend_site_user_id = 2;</code>
        */
       public java.lang.String getFriendSiteUserId() {
         java.lang.Object ref = friendSiteUserId_;
@@ -724,7 +743,7 @@ public final class HaiFriendApplyProto {
        * 目标用户
        * </pre>
        *
-       * <code>optional string friend_site_user_id = 2;</code>
+       * <code>string friend_site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getFriendSiteUserIdBytes() {
@@ -744,7 +763,7 @@ public final class HaiFriendApplyProto {
        * 目标用户
        * </pre>
        *
-       * <code>optional string friend_site_user_id = 2;</code>
+       * <code>string friend_site_user_id = 2;</code>
        */
       public Builder setFriendSiteUserId(
           java.lang.String value) {
@@ -761,7 +780,7 @@ public final class HaiFriendApplyProto {
        * 目标用户
        * </pre>
        *
-       * <code>optional string friend_site_user_id = 2;</code>
+       * <code>string friend_site_user_id = 2;</code>
        */
       public Builder clearFriendSiteUserId() {
         
@@ -774,7 +793,7 @@ public final class HaiFriendApplyProto {
        * 目标用户
        * </pre>
        *
-       * <code>optional string friend_site_user_id = 2;</code>
+       * <code>string friend_site_user_id = 2;</code>
        */
       public Builder setFriendSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -794,7 +813,7 @@ public final class HaiFriendApplyProto {
        * 申请理由
        * </pre>
        *
-       * <code>optional string apply_reason = 3;</code>
+       * <code>string apply_reason = 3;</code>
        */
       public java.lang.String getApplyReason() {
         java.lang.Object ref = applyReason_;
@@ -813,7 +832,7 @@ public final class HaiFriendApplyProto {
        * 申请理由
        * </pre>
        *
-       * <code>optional string apply_reason = 3;</code>
+       * <code>string apply_reason = 3;</code>
        */
       public com.google.protobuf.ByteString
           getApplyReasonBytes() {
@@ -833,7 +852,7 @@ public final class HaiFriendApplyProto {
        * 申请理由
        * </pre>
        *
-       * <code>optional string apply_reason = 3;</code>
+       * <code>string apply_reason = 3;</code>
        */
       public Builder setApplyReason(
           java.lang.String value) {
@@ -850,7 +869,7 @@ public final class HaiFriendApplyProto {
        * 申请理由
        * </pre>
        *
-       * <code>optional string apply_reason = 3;</code>
+       * <code>string apply_reason = 3;</code>
        */
       public Builder clearApplyReason() {
         
@@ -863,7 +882,7 @@ public final class HaiFriendApplyProto {
        * 申请理由
        * </pre>
        *
-       * <code>optional string apply_reason = 3;</code>
+       * <code>string apply_reason = 3;</code>
        */
       public Builder setApplyReasonBytes(
           com.google.protobuf.ByteString value) {
@@ -878,12 +897,12 @@ public final class HaiFriendApplyProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -936,6 +955,7 @@ public final class HaiFriendApplyProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiFriendApplyResponse)
       HaiFriendApplyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiFriendApplyResponse.newBuilder() to construct.
     private HaiFriendApplyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -946,13 +966,15 @@ public final class HaiFriendApplyProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiFriendApplyResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -962,7 +984,8 @@ public final class HaiFriendApplyProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -975,6 +998,7 @@ public final class HaiFriendApplyProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1002,6 +1026,7 @@ public final class HaiFriendApplyProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1009,11 +1034,11 @@ public final class HaiFriendApplyProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1025,6 +1050,7 @@ public final class HaiFriendApplyProto {
       com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse other = (com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1034,12 +1060,23 @@ public final class HaiFriendApplyProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1184,7 +1221,7 @@ public final class HaiFriendApplyProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1197,12 +1234,12 @@ public final class HaiFriendApplyProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1216,6 +1253,7 @@ public final class HaiFriendApplyProto {
 
       public Builder mergeFrom(com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse other) {
         if (other == com.akaxin.proto.plugin.HaiFriendApplyProto.HaiFriendApplyResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1243,12 +1281,12 @@ public final class HaiFriendApplyProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

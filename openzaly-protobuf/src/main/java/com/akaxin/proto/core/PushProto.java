@@ -341,7 +341,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     java.lang.String getSiteServer();
     /**
@@ -349,7 +349,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteServerBytes();
@@ -359,7 +359,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     java.lang.String getPushTitle();
     /**
@@ -367,7 +367,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     com.google.protobuf.ByteString
         getPushTitleBytes();
@@ -377,7 +377,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     java.lang.String getPushAlert();
     /**
@@ -385,7 +385,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     com.google.protobuf.ByteString
         getPushAlertBytes();
@@ -395,7 +395,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 4;</code>
+     * <code>string push_goto = 4;</code>
      */
     java.lang.String getPushGoto();
     /**
@@ -403,7 +403,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 4;</code>
+     * <code>string push_goto = 4;</code>
      */
     com.google.protobuf.ByteString
         getPushGotoBytes();
@@ -413,7 +413,7 @@ public final class PushProto {
      *气泡展示个数，默认气泡数1
      * </pre>
      *
-     * <code>optional int32 push_badge = 5;</code>
+     * <code>int32 push_badge = 5;</code>
      */
     int getPushBadge();
 
@@ -422,7 +422,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     java.lang.String getPushSound();
     /**
@@ -430,7 +430,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     com.google.protobuf.ByteString
         getPushSoundBytes();
@@ -440,7 +440,7 @@ public final class PushProto {
      *用户id，这个地方需要使用Global User ID
      * </pre>
      *
-     * <code>optional string user_id = 7;</code>
+     * <code>string user_id = 7;</code>
      */
     java.lang.String getUserId();
     /**
@@ -448,7 +448,7 @@ public final class PushProto {
      *用户id，这个地方需要使用Global User ID
      * </pre>
      *
-     * <code>optional string user_id = 7;</code>
+     * <code>string user_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getUserIdBytes();
@@ -458,7 +458,7 @@ public final class PushProto {
      *接受者用户的token,给一个人发送使用
      * </pre>
      *
-     * <code>optional string user_token = 8;</code>
+     * <code>string user_token = 8;</code>
      */
     java.lang.String getUserToken();
     /**
@@ -466,7 +466,7 @@ public final class PushProto {
      *接受者用户的token,给一个人发送使用
      * </pre>
      *
-     * <code>optional string user_token = 8;</code>
+     * <code>string user_token = 8;</code>
      */
     com.google.protobuf.ByteString
         getUserTokenBytes();
@@ -476,7 +476,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
      * </pre>
      *
-     * <code>optional string push_from_id = 9;</code>
+     * <code>string push_from_id = 9;</code>
      */
     java.lang.String getPushFromId();
     /**
@@ -484,7 +484,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
      * </pre>
      *
-     * <code>optional string push_from_id = 9;</code>
+     * <code>string push_from_id = 9;</code>
      */
     com.google.protobuf.ByteString
         getPushFromIdBytes();
@@ -494,7 +494,7 @@ public final class PushProto {
      *发送着用户名称或者群名称
      * </pre>
      *
-     * <code>optional string push_from_name = 10;</code>
+     * <code>string push_from_name = 10;</code>
      */
     java.lang.String getPushFromName();
     /**
@@ -502,7 +502,7 @@ public final class PushProto {
      *发送着用户名称或者群名称
      * </pre>
      *
-     * <code>optional string push_from_name = 10;</code>
+     * <code>string push_from_name = 10;</code>
      */
     com.google.protobuf.ByteString
         getPushFromNameBytes();
@@ -553,6 +553,7 @@ public final class PushProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.Notification)
       NotificationOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use Notification.newBuilder() to construct.
     private Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -574,7 +575,7 @@ public final class PushProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private Notification(
         com.google.protobuf.CodedInputStream input,
@@ -582,6 +583,8 @@ public final class PushProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -591,7 +594,8 @@ public final class PushProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -675,6 +679,7 @@ public final class PushProto {
         if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
           userTokens_ = userTokens_.getUnmodifiableView();
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -698,7 +703,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     public java.lang.String getSiteServer() {
       java.lang.Object ref = siteServer_;
@@ -717,7 +722,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteServerBytes() {
@@ -740,7 +745,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     public java.lang.String getPushTitle() {
       java.lang.Object ref = pushTitle_;
@@ -759,7 +764,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     public com.google.protobuf.ByteString
         getPushTitleBytes() {
@@ -782,7 +787,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     public java.lang.String getPushAlert() {
       java.lang.Object ref = pushAlert_;
@@ -801,7 +806,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 3;</code>
+     * <code>string push_alert = 3;</code>
      */
     public com.google.protobuf.ByteString
         getPushAlertBytes() {
@@ -824,7 +829,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 4;</code>
+     * <code>string push_goto = 4;</code>
      */
     public java.lang.String getPushGoto() {
       java.lang.Object ref = pushGoto_;
@@ -843,7 +848,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 4;</code>
+     * <code>string push_goto = 4;</code>
      */
     public com.google.protobuf.ByteString
         getPushGotoBytes() {
@@ -866,7 +871,7 @@ public final class PushProto {
      *气泡展示个数，默认气泡数1
      * </pre>
      *
-     * <code>optional int32 push_badge = 5;</code>
+     * <code>int32 push_badge = 5;</code>
      */
     public int getPushBadge() {
       return pushBadge_;
@@ -879,7 +884,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     public java.lang.String getPushSound() {
       java.lang.Object ref = pushSound_;
@@ -898,7 +903,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 6;</code>
+     * <code>string push_sound = 6;</code>
      */
     public com.google.protobuf.ByteString
         getPushSoundBytes() {
@@ -921,7 +926,7 @@ public final class PushProto {
      *用户id，这个地方需要使用Global User ID
      * </pre>
      *
-     * <code>optional string user_id = 7;</code>
+     * <code>string user_id = 7;</code>
      */
     public java.lang.String getUserId() {
       java.lang.Object ref = userId_;
@@ -940,7 +945,7 @@ public final class PushProto {
      *用户id，这个地方需要使用Global User ID
      * </pre>
      *
-     * <code>optional string user_id = 7;</code>
+     * <code>string user_id = 7;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdBytes() {
@@ -963,7 +968,7 @@ public final class PushProto {
      *接受者用户的token,给一个人发送使用
      * </pre>
      *
-     * <code>optional string user_token = 8;</code>
+     * <code>string user_token = 8;</code>
      */
     public java.lang.String getUserToken() {
       java.lang.Object ref = userToken_;
@@ -982,7 +987,7 @@ public final class PushProto {
      *接受者用户的token,给一个人发送使用
      * </pre>
      *
-     * <code>optional string user_token = 8;</code>
+     * <code>string user_token = 8;</code>
      */
     public com.google.protobuf.ByteString
         getUserTokenBytes() {
@@ -1005,7 +1010,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
      * </pre>
      *
-     * <code>optional string push_from_id = 9;</code>
+     * <code>string push_from_id = 9;</code>
      */
     public java.lang.String getPushFromId() {
       java.lang.Object ref = pushFromId_;
@@ -1024,7 +1029,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
      * </pre>
      *
-     * <code>optional string push_from_id = 9;</code>
+     * <code>string push_from_id = 9;</code>
      */
     public com.google.protobuf.ByteString
         getPushFromIdBytes() {
@@ -1047,7 +1052,7 @@ public final class PushProto {
      *发送着用户名称或者群名称
      * </pre>
      *
-     * <code>optional string push_from_name = 10;</code>
+     * <code>string push_from_name = 10;</code>
      */
     public java.lang.String getPushFromName() {
       java.lang.Object ref = pushFromName_;
@@ -1066,7 +1071,7 @@ public final class PushProto {
      *发送着用户名称或者群名称
      * </pre>
      *
-     * <code>optional string push_from_name = 10;</code>
+     * <code>string push_from_name = 10;</code>
      */
     public com.google.protobuf.ByteString
         getPushFromNameBytes() {
@@ -1172,6 +1177,7 @@ public final class PushProto {
       for (int i = 0; i < userTokens_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, userTokens_.getRaw(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1218,11 +1224,11 @@ public final class PushProto {
         size += dataSize;
         size += 1 * getUserTokensList().size();
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1256,6 +1262,7 @@ public final class PushProto {
           .equals(other.getPushFromName());
       result = result && getUserTokensList()
           .equals(other.getUserTokensList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1265,7 +1272,7 @@ public final class PushProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_SERVER_FIELD_NUMBER;
       hash = (53 * hash) + getSiteServer().hashCode();
       hash = (37 * hash) + PUSH_TITLE_FIELD_NUMBER;
@@ -1295,6 +1302,17 @@ public final class PushProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.PushProto.Notification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.PushProto.Notification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.PushProto.Notification parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1483,7 +1501,7 @@ public final class PushProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1496,12 +1514,12 @@ public final class PushProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1564,6 +1582,7 @@ public final class PushProto {
           }
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1597,7 +1616,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public java.lang.String getSiteServer() {
         java.lang.Object ref = siteServer_;
@@ -1616,7 +1635,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteServerBytes() {
@@ -1636,7 +1655,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder setSiteServer(
           java.lang.String value) {
@@ -1653,7 +1672,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder clearSiteServer() {
         
@@ -1666,7 +1685,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder setSiteServerBytes(
           com.google.protobuf.ByteString value) {
@@ -1686,7 +1705,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public java.lang.String getPushTitle() {
         java.lang.Object ref = pushTitle_;
@@ -1705,7 +1724,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPushTitleBytes() {
@@ -1725,7 +1744,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder setPushTitle(
           java.lang.String value) {
@@ -1742,7 +1761,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder clearPushTitle() {
         
@@ -1755,7 +1774,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder setPushTitleBytes(
           com.google.protobuf.ByteString value) {
@@ -1775,7 +1794,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public java.lang.String getPushAlert() {
         java.lang.Object ref = pushAlert_;
@@ -1794,7 +1813,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public com.google.protobuf.ByteString
           getPushAlertBytes() {
@@ -1814,7 +1833,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public Builder setPushAlert(
           java.lang.String value) {
@@ -1831,7 +1850,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public Builder clearPushAlert() {
         
@@ -1844,7 +1863,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 3;</code>
+       * <code>string push_alert = 3;</code>
        */
       public Builder setPushAlertBytes(
           com.google.protobuf.ByteString value) {
@@ -1864,7 +1883,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 4;</code>
+       * <code>string push_goto = 4;</code>
        */
       public java.lang.String getPushGoto() {
         java.lang.Object ref = pushGoto_;
@@ -1883,7 +1902,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 4;</code>
+       * <code>string push_goto = 4;</code>
        */
       public com.google.protobuf.ByteString
           getPushGotoBytes() {
@@ -1903,7 +1922,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 4;</code>
+       * <code>string push_goto = 4;</code>
        */
       public Builder setPushGoto(
           java.lang.String value) {
@@ -1920,7 +1939,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 4;</code>
+       * <code>string push_goto = 4;</code>
        */
       public Builder clearPushGoto() {
         
@@ -1933,7 +1952,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 4;</code>
+       * <code>string push_goto = 4;</code>
        */
       public Builder setPushGotoBytes(
           com.google.protobuf.ByteString value) {
@@ -1953,7 +1972,7 @@ public final class PushProto {
        *气泡展示个数，默认气泡数1
        * </pre>
        *
-       * <code>optional int32 push_badge = 5;</code>
+       * <code>int32 push_badge = 5;</code>
        */
       public int getPushBadge() {
         return pushBadge_;
@@ -1963,7 +1982,7 @@ public final class PushProto {
        *气泡展示个数，默认气泡数1
        * </pre>
        *
-       * <code>optional int32 push_badge = 5;</code>
+       * <code>int32 push_badge = 5;</code>
        */
       public Builder setPushBadge(int value) {
         
@@ -1976,7 +1995,7 @@ public final class PushProto {
        *气泡展示个数，默认气泡数1
        * </pre>
        *
-       * <code>optional int32 push_badge = 5;</code>
+       * <code>int32 push_badge = 5;</code>
        */
       public Builder clearPushBadge() {
         
@@ -1991,7 +2010,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public java.lang.String getPushSound() {
         java.lang.Object ref = pushSound_;
@@ -2010,7 +2029,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public com.google.protobuf.ByteString
           getPushSoundBytes() {
@@ -2030,7 +2049,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public Builder setPushSound(
           java.lang.String value) {
@@ -2047,7 +2066,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public Builder clearPushSound() {
         
@@ -2060,7 +2079,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 6;</code>
+       * <code>string push_sound = 6;</code>
        */
       public Builder setPushSoundBytes(
           com.google.protobuf.ByteString value) {
@@ -2080,7 +2099,7 @@ public final class PushProto {
        *用户id，这个地方需要使用Global User ID
        * </pre>
        *
-       * <code>optional string user_id = 7;</code>
+       * <code>string user_id = 7;</code>
        */
       public java.lang.String getUserId() {
         java.lang.Object ref = userId_;
@@ -2099,7 +2118,7 @@ public final class PushProto {
        *用户id，这个地方需要使用Global User ID
        * </pre>
        *
-       * <code>optional string user_id = 7;</code>
+       * <code>string user_id = 7;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdBytes() {
@@ -2119,7 +2138,7 @@ public final class PushProto {
        *用户id，这个地方需要使用Global User ID
        * </pre>
        *
-       * <code>optional string user_id = 7;</code>
+       * <code>string user_id = 7;</code>
        */
       public Builder setUserId(
           java.lang.String value) {
@@ -2136,7 +2155,7 @@ public final class PushProto {
        *用户id，这个地方需要使用Global User ID
        * </pre>
        *
-       * <code>optional string user_id = 7;</code>
+       * <code>string user_id = 7;</code>
        */
       public Builder clearUserId() {
         
@@ -2149,7 +2168,7 @@ public final class PushProto {
        *用户id，这个地方需要使用Global User ID
        * </pre>
        *
-       * <code>optional string user_id = 7;</code>
+       * <code>string user_id = 7;</code>
        */
       public Builder setUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2169,7 +2188,7 @@ public final class PushProto {
        *接受者用户的token,给一个人发送使用
        * </pre>
        *
-       * <code>optional string user_token = 8;</code>
+       * <code>string user_token = 8;</code>
        */
       public java.lang.String getUserToken() {
         java.lang.Object ref = userToken_;
@@ -2188,7 +2207,7 @@ public final class PushProto {
        *接受者用户的token,给一个人发送使用
        * </pre>
        *
-       * <code>optional string user_token = 8;</code>
+       * <code>string user_token = 8;</code>
        */
       public com.google.protobuf.ByteString
           getUserTokenBytes() {
@@ -2208,7 +2227,7 @@ public final class PushProto {
        *接受者用户的token,给一个人发送使用
        * </pre>
        *
-       * <code>optional string user_token = 8;</code>
+       * <code>string user_token = 8;</code>
        */
       public Builder setUserToken(
           java.lang.String value) {
@@ -2225,7 +2244,7 @@ public final class PushProto {
        *接受者用户的token,给一个人发送使用
        * </pre>
        *
-       * <code>optional string user_token = 8;</code>
+       * <code>string user_token = 8;</code>
        */
       public Builder clearUserToken() {
         
@@ -2238,7 +2257,7 @@ public final class PushProto {
        *接受者用户的token,给一个人发送使用
        * </pre>
        *
-       * <code>optional string user_token = 8;</code>
+       * <code>string user_token = 8;</code>
        */
       public Builder setUserTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -2258,7 +2277,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
        * </pre>
        *
-       * <code>optional string push_from_id = 9;</code>
+       * <code>string push_from_id = 9;</code>
        */
       public java.lang.String getPushFromId() {
         java.lang.Object ref = pushFromId_;
@@ -2277,7 +2296,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
        * </pre>
        *
-       * <code>optional string push_from_id = 9;</code>
+       * <code>string push_from_id = 9;</code>
        */
       public com.google.protobuf.ByteString
           getPushFromIdBytes() {
@@ -2297,7 +2316,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
        * </pre>
        *
-       * <code>optional string push_from_id = 9;</code>
+       * <code>string push_from_id = 9;</code>
        */
       public Builder setPushFromId(
           java.lang.String value) {
@@ -2314,7 +2333,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
        * </pre>
        *
-       * <code>optional string push_from_id = 9;</code>
+       * <code>string push_from_id = 9;</code>
        */
       public Builder clearPushFromId() {
         
@@ -2327,7 +2346,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId或者groupId
        * </pre>
        *
-       * <code>optional string push_from_id = 9;</code>
+       * <code>string push_from_id = 9;</code>
        */
       public Builder setPushFromIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2347,7 +2366,7 @@ public final class PushProto {
        *发送着用户名称或者群名称
        * </pre>
        *
-       * <code>optional string push_from_name = 10;</code>
+       * <code>string push_from_name = 10;</code>
        */
       public java.lang.String getPushFromName() {
         java.lang.Object ref = pushFromName_;
@@ -2366,7 +2385,7 @@ public final class PushProto {
        *发送着用户名称或者群名称
        * </pre>
        *
-       * <code>optional string push_from_name = 10;</code>
+       * <code>string push_from_name = 10;</code>
        */
       public com.google.protobuf.ByteString
           getPushFromNameBytes() {
@@ -2386,7 +2405,7 @@ public final class PushProto {
        *发送着用户名称或者群名称
        * </pre>
        *
-       * <code>optional string push_from_name = 10;</code>
+       * <code>string push_from_name = 10;</code>
        */
       public Builder setPushFromName(
           java.lang.String value) {
@@ -2403,7 +2422,7 @@ public final class PushProto {
        *发送着用户名称或者群名称
        * </pre>
        *
-       * <code>optional string push_from_name = 10;</code>
+       * <code>string push_from_name = 10;</code>
        */
       public Builder clearPushFromName() {
         
@@ -2416,7 +2435,7 @@ public final class PushProto {
        *发送着用户名称或者群名称
        * </pre>
        *
-       * <code>optional string push_from_name = 10;</code>
+       * <code>string push_from_name = 10;</code>
        */
       public Builder setPushFromNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2561,12 +2580,12 @@ public final class PushProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2617,7 +2636,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     java.lang.String getSiteServer();
     /**
@@ -2625,7 +2644,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteServerBytes();
@@ -2635,7 +2654,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     java.lang.String getPushTitle();
     /**
@@ -2643,7 +2662,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     com.google.protobuf.ByteString
         getPushTitleBytes();
@@ -2653,7 +2672,7 @@ public final class PushProto {
      *push的副标题
      * </pre>
      *
-     * <code>optional string push_subtitle = 3;</code>
+     * <code>string push_subtitle = 3;</code>
      */
     java.lang.String getPushSubtitle();
     /**
@@ -2661,7 +2680,7 @@ public final class PushProto {
      *push的副标题
      * </pre>
      *
-     * <code>optional string push_subtitle = 3;</code>
+     * <code>string push_subtitle = 3;</code>
      */
     com.google.protobuf.ByteString
         getPushSubtitleBytes();
@@ -2671,7 +2690,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 4;</code>
+     * <code>string push_alert = 4;</code>
      */
     java.lang.String getPushAlert();
     /**
@@ -2679,7 +2698,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 4;</code>
+     * <code>string push_alert = 4;</code>
      */
     com.google.protobuf.ByteString
         getPushAlertBytes();
@@ -2689,7 +2708,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 5;</code>
+     * <code>string push_goto = 5;</code>
      */
     java.lang.String getPushGoto();
     /**
@@ -2697,7 +2716,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 5;</code>
+     * <code>string push_goto = 5;</code>
      */
     com.google.protobuf.ByteString
         getPushGotoBytes();
@@ -2707,7 +2726,7 @@ public final class PushProto {
      *气泡展示个数，默认气泡数1
      * </pre>
      *
-     * <code>optional int32 push_badge = 6;</code>
+     * <code>int32 push_badge = 6;</code>
      */
     int getPushBadge();
 
@@ -2716,7 +2735,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 7;</code>
+     * <code>string push_sound = 7;</code>
      */
     java.lang.String getPushSound();
     /**
@@ -2724,7 +2743,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 7;</code>
+     * <code>string push_sound = 7;</code>
      */
     com.google.protobuf.ByteString
         getPushSoundBytes();
@@ -2740,6 +2759,7 @@ public final class PushProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.Notifications)
       NotificationsOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use Notifications.newBuilder() to construct.
     private Notifications(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -2757,7 +2777,7 @@ public final class PushProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private Notifications(
         com.google.protobuf.CodedInputStream input,
@@ -2765,6 +2785,8 @@ public final class PushProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2774,7 +2796,8 @@ public final class PushProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -2828,6 +2851,7 @@ public final class PushProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -2850,7 +2874,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     public java.lang.String getSiteServer() {
       java.lang.Object ref = siteServer_;
@@ -2869,7 +2893,7 @@ public final class PushProto {
      *站点服务地址eg-&gt;127.0.0.1:2021
      * </pre>
      *
-     * <code>optional string site_server = 1;</code>
+     * <code>string site_server = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteServerBytes() {
@@ -2892,7 +2916,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     public java.lang.String getPushTitle() {
       java.lang.Object ref = pushTitle_;
@@ -2911,7 +2935,7 @@ public final class PushProto {
      *站点服务名称
      * </pre>
      *
-     * <code>optional string push_title = 2;</code>
+     * <code>string push_title = 2;</code>
      */
     public com.google.protobuf.ByteString
         getPushTitleBytes() {
@@ -2934,7 +2958,7 @@ public final class PushProto {
      *push的副标题
      * </pre>
      *
-     * <code>optional string push_subtitle = 3;</code>
+     * <code>string push_subtitle = 3;</code>
      */
     public java.lang.String getPushSubtitle() {
       java.lang.Object ref = pushSubtitle_;
@@ -2953,7 +2977,7 @@ public final class PushProto {
      *push的副标题
      * </pre>
      *
-     * <code>optional string push_subtitle = 3;</code>
+     * <code>string push_subtitle = 3;</code>
      */
     public com.google.protobuf.ByteString
         getPushSubtitleBytes() {
@@ -2976,7 +3000,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 4;</code>
+     * <code>string push_alert = 4;</code>
      */
     public java.lang.String getPushAlert() {
       java.lang.Object ref = pushAlert_;
@@ -2995,7 +3019,7 @@ public final class PushProto {
      *展示的内容
      * </pre>
      *
-     * <code>optional string push_alert = 4;</code>
+     * <code>string push_alert = 4;</code>
      */
     public com.google.protobuf.ByteString
         getPushAlertBytes() {
@@ -3018,7 +3042,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 5;</code>
+     * <code>string push_goto = 5;</code>
      */
     public java.lang.String getPushGoto() {
       java.lang.Object ref = pushGoto_;
@@ -3037,7 +3061,7 @@ public final class PushProto {
      *Push跳转位置
      * </pre>
      *
-     * <code>optional string push_goto = 5;</code>
+     * <code>string push_goto = 5;</code>
      */
     public com.google.protobuf.ByteString
         getPushGotoBytes() {
@@ -3060,7 +3084,7 @@ public final class PushProto {
      *气泡展示个数，默认气泡数1
      * </pre>
      *
-     * <code>optional int32 push_badge = 6;</code>
+     * <code>int32 push_badge = 6;</code>
      */
     public int getPushBadge() {
       return pushBadge_;
@@ -3073,7 +3097,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 7;</code>
+     * <code>string push_sound = 7;</code>
      */
     public java.lang.String getPushSound() {
       java.lang.Object ref = pushSound_;
@@ -3092,7 +3116,7 @@ public final class PushProto {
      *声音
      * </pre>
      *
-     * <code>optional string push_sound = 7;</code>
+     * <code>string push_sound = 7;</code>
      */
     public com.google.protobuf.ByteString
         getPushSoundBytes() {
@@ -3141,6 +3165,7 @@ public final class PushProto {
       if (!getPushSoundBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pushSound_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -3170,11 +3195,11 @@ public final class PushProto {
       if (!getPushSoundBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pushSound_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3200,6 +3225,7 @@ public final class PushProto {
           == other.getPushBadge());
       result = result && getPushSound()
           .equals(other.getPushSound());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -3209,7 +3235,7 @@ public final class PushProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_SERVER_FIELD_NUMBER;
       hash = (53 * hash) + getSiteServer().hashCode();
       hash = (37 * hash) + PUSH_TITLE_FIELD_NUMBER;
@@ -3229,6 +3255,17 @@ public final class PushProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.PushProto.Notifications parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.PushProto.Notifications parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.PushProto.Notifications parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3398,7 +3435,7 @@ public final class PushProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3411,12 +3448,12 @@ public final class PushProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3457,6 +3494,7 @@ public final class PushProto {
           pushSound_ = other.pushSound_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -3489,7 +3527,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public java.lang.String getSiteServer() {
         java.lang.Object ref = siteServer_;
@@ -3508,7 +3546,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteServerBytes() {
@@ -3528,7 +3566,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder setSiteServer(
           java.lang.String value) {
@@ -3545,7 +3583,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder clearSiteServer() {
         
@@ -3558,7 +3596,7 @@ public final class PushProto {
        *站点服务地址eg-&gt;127.0.0.1:2021
        * </pre>
        *
-       * <code>optional string site_server = 1;</code>
+       * <code>string site_server = 1;</code>
        */
       public Builder setSiteServerBytes(
           com.google.protobuf.ByteString value) {
@@ -3578,7 +3616,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public java.lang.String getPushTitle() {
         java.lang.Object ref = pushTitle_;
@@ -3597,7 +3635,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPushTitleBytes() {
@@ -3617,7 +3655,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder setPushTitle(
           java.lang.String value) {
@@ -3634,7 +3672,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder clearPushTitle() {
         
@@ -3647,7 +3685,7 @@ public final class PushProto {
        *站点服务名称
        * </pre>
        *
-       * <code>optional string push_title = 2;</code>
+       * <code>string push_title = 2;</code>
        */
       public Builder setPushTitleBytes(
           com.google.protobuf.ByteString value) {
@@ -3667,7 +3705,7 @@ public final class PushProto {
        *push的副标题
        * </pre>
        *
-       * <code>optional string push_subtitle = 3;</code>
+       * <code>string push_subtitle = 3;</code>
        */
       public java.lang.String getPushSubtitle() {
         java.lang.Object ref = pushSubtitle_;
@@ -3686,7 +3724,7 @@ public final class PushProto {
        *push的副标题
        * </pre>
        *
-       * <code>optional string push_subtitle = 3;</code>
+       * <code>string push_subtitle = 3;</code>
        */
       public com.google.protobuf.ByteString
           getPushSubtitleBytes() {
@@ -3706,7 +3744,7 @@ public final class PushProto {
        *push的副标题
        * </pre>
        *
-       * <code>optional string push_subtitle = 3;</code>
+       * <code>string push_subtitle = 3;</code>
        */
       public Builder setPushSubtitle(
           java.lang.String value) {
@@ -3723,7 +3761,7 @@ public final class PushProto {
        *push的副标题
        * </pre>
        *
-       * <code>optional string push_subtitle = 3;</code>
+       * <code>string push_subtitle = 3;</code>
        */
       public Builder clearPushSubtitle() {
         
@@ -3736,7 +3774,7 @@ public final class PushProto {
        *push的副标题
        * </pre>
        *
-       * <code>optional string push_subtitle = 3;</code>
+       * <code>string push_subtitle = 3;</code>
        */
       public Builder setPushSubtitleBytes(
           com.google.protobuf.ByteString value) {
@@ -3756,7 +3794,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 4;</code>
+       * <code>string push_alert = 4;</code>
        */
       public java.lang.String getPushAlert() {
         java.lang.Object ref = pushAlert_;
@@ -3775,7 +3813,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 4;</code>
+       * <code>string push_alert = 4;</code>
        */
       public com.google.protobuf.ByteString
           getPushAlertBytes() {
@@ -3795,7 +3833,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 4;</code>
+       * <code>string push_alert = 4;</code>
        */
       public Builder setPushAlert(
           java.lang.String value) {
@@ -3812,7 +3850,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 4;</code>
+       * <code>string push_alert = 4;</code>
        */
       public Builder clearPushAlert() {
         
@@ -3825,7 +3863,7 @@ public final class PushProto {
        *展示的内容
        * </pre>
        *
-       * <code>optional string push_alert = 4;</code>
+       * <code>string push_alert = 4;</code>
        */
       public Builder setPushAlertBytes(
           com.google.protobuf.ByteString value) {
@@ -3845,7 +3883,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 5;</code>
+       * <code>string push_goto = 5;</code>
        */
       public java.lang.String getPushGoto() {
         java.lang.Object ref = pushGoto_;
@@ -3864,7 +3902,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 5;</code>
+       * <code>string push_goto = 5;</code>
        */
       public com.google.protobuf.ByteString
           getPushGotoBytes() {
@@ -3884,7 +3922,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 5;</code>
+       * <code>string push_goto = 5;</code>
        */
       public Builder setPushGoto(
           java.lang.String value) {
@@ -3901,7 +3939,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 5;</code>
+       * <code>string push_goto = 5;</code>
        */
       public Builder clearPushGoto() {
         
@@ -3914,7 +3952,7 @@ public final class PushProto {
        *Push跳转位置
        * </pre>
        *
-       * <code>optional string push_goto = 5;</code>
+       * <code>string push_goto = 5;</code>
        */
       public Builder setPushGotoBytes(
           com.google.protobuf.ByteString value) {
@@ -3934,7 +3972,7 @@ public final class PushProto {
        *气泡展示个数，默认气泡数1
        * </pre>
        *
-       * <code>optional int32 push_badge = 6;</code>
+       * <code>int32 push_badge = 6;</code>
        */
       public int getPushBadge() {
         return pushBadge_;
@@ -3944,7 +3982,7 @@ public final class PushProto {
        *气泡展示个数，默认气泡数1
        * </pre>
        *
-       * <code>optional int32 push_badge = 6;</code>
+       * <code>int32 push_badge = 6;</code>
        */
       public Builder setPushBadge(int value) {
         
@@ -3957,7 +3995,7 @@ public final class PushProto {
        *气泡展示个数，默认气泡数1
        * </pre>
        *
-       * <code>optional int32 push_badge = 6;</code>
+       * <code>int32 push_badge = 6;</code>
        */
       public Builder clearPushBadge() {
         
@@ -3972,7 +4010,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 7;</code>
+       * <code>string push_sound = 7;</code>
        */
       public java.lang.String getPushSound() {
         java.lang.Object ref = pushSound_;
@@ -3991,7 +4029,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 7;</code>
+       * <code>string push_sound = 7;</code>
        */
       public com.google.protobuf.ByteString
           getPushSoundBytes() {
@@ -4011,7 +4049,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 7;</code>
+       * <code>string push_sound = 7;</code>
        */
       public Builder setPushSound(
           java.lang.String value) {
@@ -4028,7 +4066,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 7;</code>
+       * <code>string push_sound = 7;</code>
        */
       public Builder clearPushSound() {
         
@@ -4041,7 +4079,7 @@ public final class PushProto {
        *声音
        * </pre>
        *
-       * <code>optional string push_sound = 7;</code>
+       * <code>string push_sound = 7;</code>
        */
       public Builder setPushSoundBytes(
           com.google.protobuf.ByteString value) {
@@ -4056,12 +4094,12 @@ public final class PushProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -4112,7 +4150,7 @@ public final class PushProto {
      *push发送者的globalUserId
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     java.lang.String getGlobalUserId();
     /**
@@ -4120,7 +4158,7 @@ public final class PushProto {
      *push发送者的globalUserId
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getGlobalUserIdBytes();
@@ -4130,7 +4168,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -4138,7 +4176,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -4148,7 +4186,7 @@ public final class PushProto {
      *发送着用户名称，文案展示的一部分
      * </pre>
      *
-     * <code>optional string push_from_name = 3;</code>
+     * <code>string push_from_name = 3;</code>
      */
     java.lang.String getPushFromName();
     /**
@@ -4156,7 +4194,7 @@ public final class PushProto {
      *发送着用户名称，文案展示的一部分
      * </pre>
      *
-     * <code>optional string push_from_name = 3;</code>
+     * <code>string push_from_name = 3;</code>
      */
     com.google.protobuf.ByteString
         getPushFromNameBytes();
@@ -4168,6 +4206,7 @@ public final class PushProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.PushFromUser)
       PushFromUserOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PushFromUser.newBuilder() to construct.
     private PushFromUser(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4181,7 +4220,7 @@ public final class PushProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private PushFromUser(
         com.google.protobuf.CodedInputStream input,
@@ -4189,6 +4228,8 @@ public final class PushProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4198,7 +4239,8 @@ public final class PushProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -4229,6 +4271,7 @@ public final class PushProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -4251,7 +4294,7 @@ public final class PushProto {
      *push发送者的globalUserId
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     public java.lang.String getGlobalUserId() {
       java.lang.Object ref = globalUserId_;
@@ -4270,7 +4313,7 @@ public final class PushProto {
      *push发送者的globalUserId
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getGlobalUserIdBytes() {
@@ -4293,7 +4336,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -4312,7 +4355,7 @@ public final class PushProto {
      *push消息发送者或者群ID，这里使用站点siteUserId
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -4335,7 +4378,7 @@ public final class PushProto {
      *发送着用户名称，文案展示的一部分
      * </pre>
      *
-     * <code>optional string push_from_name = 3;</code>
+     * <code>string push_from_name = 3;</code>
      */
     public java.lang.String getPushFromName() {
       java.lang.Object ref = pushFromName_;
@@ -4354,7 +4397,7 @@ public final class PushProto {
      *发送着用户名称，文案展示的一部分
      * </pre>
      *
-     * <code>optional string push_from_name = 3;</code>
+     * <code>string push_from_name = 3;</code>
      */
     public com.google.protobuf.ByteString
         getPushFromNameBytes() {
@@ -4391,6 +4434,7 @@ public final class PushProto {
       if (!getPushFromNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pushFromName_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -4407,11 +4451,11 @@ public final class PushProto {
       if (!getPushFromNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pushFromName_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -4429,6 +4473,7 @@ public final class PushProto {
           .equals(other.getSiteUserId());
       result = result && getPushFromName()
           .equals(other.getPushFromName());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -4438,7 +4483,7 @@ public final class PushProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + GLOBAL_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGlobalUserId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -4450,6 +4495,17 @@ public final class PushProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.PushProto.PushFromUser parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.PushProto.PushFromUser parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.PushProto.PushFromUser parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4603,7 +4659,7 @@ public final class PushProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4616,12 +4672,12 @@ public final class PushProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4647,6 +4703,7 @@ public final class PushProto {
           pushFromName_ = other.pushFromName_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -4679,7 +4736,7 @@ public final class PushProto {
        *push发送者的globalUserId
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public java.lang.String getGlobalUserId() {
         java.lang.Object ref = globalUserId_;
@@ -4698,7 +4755,7 @@ public final class PushProto {
        *push发送者的globalUserId
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getGlobalUserIdBytes() {
@@ -4718,7 +4775,7 @@ public final class PushProto {
        *push发送者的globalUserId
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public Builder setGlobalUserId(
           java.lang.String value) {
@@ -4735,7 +4792,7 @@ public final class PushProto {
        *push发送者的globalUserId
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public Builder clearGlobalUserId() {
         
@@ -4748,7 +4805,7 @@ public final class PushProto {
        *push发送者的globalUserId
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public Builder setGlobalUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4768,7 +4825,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -4787,7 +4844,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -4807,7 +4864,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -4824,7 +4881,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -4837,7 +4894,7 @@ public final class PushProto {
        *push消息发送者或者群ID，这里使用站点siteUserId
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4857,7 +4914,7 @@ public final class PushProto {
        *发送着用户名称，文案展示的一部分
        * </pre>
        *
-       * <code>optional string push_from_name = 3;</code>
+       * <code>string push_from_name = 3;</code>
        */
       public java.lang.String getPushFromName() {
         java.lang.Object ref = pushFromName_;
@@ -4876,7 +4933,7 @@ public final class PushProto {
        *发送着用户名称，文案展示的一部分
        * </pre>
        *
-       * <code>optional string push_from_name = 3;</code>
+       * <code>string push_from_name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getPushFromNameBytes() {
@@ -4896,7 +4953,7 @@ public final class PushProto {
        *发送着用户名称，文案展示的一部分
        * </pre>
        *
-       * <code>optional string push_from_name = 3;</code>
+       * <code>string push_from_name = 3;</code>
        */
       public Builder setPushFromName(
           java.lang.String value) {
@@ -4913,7 +4970,7 @@ public final class PushProto {
        *发送着用户名称，文案展示的一部分
        * </pre>
        *
-       * <code>optional string push_from_name = 3;</code>
+       * <code>string push_from_name = 3;</code>
        */
       public Builder clearPushFromName() {
         
@@ -4926,7 +4983,7 @@ public final class PushProto {
        *发送着用户名称，文案展示的一部分
        * </pre>
        *
-       * <code>optional string push_from_name = 3;</code>
+       * <code>string push_from_name = 3;</code>
        */
       public Builder setPushFromNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4941,12 +4998,12 @@ public final class PushProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -4997,7 +5054,7 @@ public final class PushProto {
      *接受者：globalUserID,
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     java.lang.String getGlobalUserId();
     /**
@@ -5005,7 +5062,7 @@ public final class PushProto {
      *接受者：globalUserID,
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getGlobalUserIdBytes();
@@ -5015,7 +5072,7 @@ public final class PushProto {
      *接受者：单人用户的token
      * </pre>
      *
-     * <code>optional string user_token = 2;</code>
+     * <code>string user_token = 2;</code>
      */
     java.lang.String getUserToken();
     /**
@@ -5023,7 +5080,7 @@ public final class PushProto {
      *接受者：单人用户的token
      * </pre>
      *
-     * <code>optional string user_token = 2;</code>
+     * <code>string user_token = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserTokenBytes();
@@ -5070,6 +5127,7 @@ public final class PushProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.PushToUser)
       PushToUserOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PushToUser.newBuilder() to construct.
     private PushToUser(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -5083,7 +5141,7 @@ public final class PushProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private PushToUser(
         com.google.protobuf.CodedInputStream input,
@@ -5091,6 +5149,8 @@ public final class PushProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -5100,7 +5160,8 @@ public final class PushProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -5137,6 +5198,7 @@ public final class PushProto {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           userTokens_ = userTokens_.getUnmodifiableView();
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -5160,7 +5222,7 @@ public final class PushProto {
      *接受者：globalUserID,
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     public java.lang.String getGlobalUserId() {
       java.lang.Object ref = globalUserId_;
@@ -5179,7 +5241,7 @@ public final class PushProto {
      *接受者：globalUserID,
      * </pre>
      *
-     * <code>optional string global_user_id = 1;</code>
+     * <code>string global_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getGlobalUserIdBytes() {
@@ -5202,7 +5264,7 @@ public final class PushProto {
      *接受者：单人用户的token
      * </pre>
      *
-     * <code>optional string user_token = 2;</code>
+     * <code>string user_token = 2;</code>
      */
     public java.lang.String getUserToken() {
       java.lang.Object ref = userToken_;
@@ -5221,7 +5283,7 @@ public final class PushProto {
      *接受者：单人用户的token
      * </pre>
      *
-     * <code>optional string user_token = 2;</code>
+     * <code>string user_token = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserTokenBytes() {
@@ -5303,6 +5365,7 @@ public final class PushProto {
       for (int i = 0; i < userTokens_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userTokens_.getRaw(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -5324,11 +5387,11 @@ public final class PushProto {
         size += dataSize;
         size += 1 * getUserTokensList().size();
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -5346,6 +5409,7 @@ public final class PushProto {
           .equals(other.getUserToken());
       result = result && getUserTokensList()
           .equals(other.getUserTokensList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -5355,7 +5419,7 @@ public final class PushProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + GLOBAL_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGlobalUserId().hashCode();
       hash = (37 * hash) + USER_TOKEN_FIELD_NUMBER;
@@ -5369,6 +5433,17 @@ public final class PushProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.PushProto.PushToUser parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.PushProto.PushToUser parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.PushProto.PushToUser parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5529,7 +5604,7 @@ public final class PushProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -5542,12 +5617,12 @@ public final class PushProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5579,6 +5654,7 @@ public final class PushProto {
           }
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -5612,7 +5688,7 @@ public final class PushProto {
        *接受者：globalUserID,
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public java.lang.String getGlobalUserId() {
         java.lang.Object ref = globalUserId_;
@@ -5631,7 +5707,7 @@ public final class PushProto {
        *接受者：globalUserID,
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getGlobalUserIdBytes() {
@@ -5651,7 +5727,7 @@ public final class PushProto {
        *接受者：globalUserID,
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public Builder setGlobalUserId(
           java.lang.String value) {
@@ -5668,7 +5744,7 @@ public final class PushProto {
        *接受者：globalUserID,
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public Builder clearGlobalUserId() {
         
@@ -5681,7 +5757,7 @@ public final class PushProto {
        *接受者：globalUserID,
        * </pre>
        *
-       * <code>optional string global_user_id = 1;</code>
+       * <code>string global_user_id = 1;</code>
        */
       public Builder setGlobalUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5701,7 +5777,7 @@ public final class PushProto {
        *接受者：单人用户的token
        * </pre>
        *
-       * <code>optional string user_token = 2;</code>
+       * <code>string user_token = 2;</code>
        */
       public java.lang.String getUserToken() {
         java.lang.Object ref = userToken_;
@@ -5720,7 +5796,7 @@ public final class PushProto {
        *接受者：单人用户的token
        * </pre>
        *
-       * <code>optional string user_token = 2;</code>
+       * <code>string user_token = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserTokenBytes() {
@@ -5740,7 +5816,7 @@ public final class PushProto {
        *接受者：单人用户的token
        * </pre>
        *
-       * <code>optional string user_token = 2;</code>
+       * <code>string user_token = 2;</code>
        */
       public Builder setUserToken(
           java.lang.String value) {
@@ -5757,7 +5833,7 @@ public final class PushProto {
        *接受者：单人用户的token
        * </pre>
        *
-       * <code>optional string user_token = 2;</code>
+       * <code>string user_token = 2;</code>
        */
       public Builder clearUserToken() {
         
@@ -5770,7 +5846,7 @@ public final class PushProto {
        *接受者：单人用户的token
        * </pre>
        *
-       * <code>optional string user_token = 2;</code>
+       * <code>string user_token = 2;</code>
        */
       public Builder setUserTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -5915,12 +5991,12 @@ public final class PushProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

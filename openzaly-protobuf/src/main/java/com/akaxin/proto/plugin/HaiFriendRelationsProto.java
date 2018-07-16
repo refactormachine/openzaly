@@ -19,11 +19,11 @@ public final class HaiFriendRelationsProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -83,6 +83,7 @@ public final class HaiFriendRelationsProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiFriendRelationsRequest)
       HaiFriendRelationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiFriendRelationsRequest.newBuilder() to construct.
     private HaiFriendRelationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -95,7 +96,7 @@ public final class HaiFriendRelationsProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiFriendRelationsRequest(
         com.google.protobuf.CodedInputStream input,
@@ -103,6 +104,8 @@ public final class HaiFriendRelationsProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -112,7 +115,8 @@ public final class HaiFriendRelationsProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -143,6 +147,7 @@ public final class HaiFriendRelationsProto {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           targetSiteUserId_ = targetSiteUserId_.getUnmodifiableView();
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -162,7 +167,7 @@ public final class HaiFriendRelationsProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -177,7 +182,7 @@ public final class HaiFriendRelationsProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -256,6 +261,7 @@ public final class HaiFriendRelationsProto {
       for (int i = 0; i < targetSiteUserId_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targetSiteUserId_.getRaw(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -274,11 +280,11 @@ public final class HaiFriendRelationsProto {
         size += dataSize;
         size += 1 * getTargetSiteUserIdList().size();
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -294,6 +300,7 @@ public final class HaiFriendRelationsProto {
           .equals(other.getSiteUserId());
       result = result && getTargetSiteUserIdList()
           .equals(other.getTargetSiteUserIdList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -303,7 +310,7 @@ public final class HaiFriendRelationsProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       if (getTargetSiteUserIdCount() > 0) {
@@ -315,6 +322,17 @@ public final class HaiFriendRelationsProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiFriendRelationsProto.HaiFriendRelationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiFriendRelationsProto.HaiFriendRelationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiFriendRelationsProto.HaiFriendRelationsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -485,7 +503,7 @@ public final class HaiFriendRelationsProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -498,12 +516,12 @@ public final class HaiFriendRelationsProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -531,6 +549,7 @@ public final class HaiFriendRelationsProto {
           }
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -560,7 +579,7 @@ public final class HaiFriendRelationsProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -575,7 +594,7 @@ public final class HaiFriendRelationsProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -591,7 +610,7 @@ public final class HaiFriendRelationsProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -604,7 +623,7 @@ public final class HaiFriendRelationsProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -613,7 +632,7 @@ public final class HaiFriendRelationsProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -758,12 +777,12 @@ public final class HaiFriendRelationsProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -860,6 +879,7 @@ public final class HaiFriendRelationsProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiFriendRelationsResponse)
       HaiFriendRelationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiFriendRelationsResponse.newBuilder() to construct.
     private HaiFriendRelationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -871,7 +891,7 @@ public final class HaiFriendRelationsProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiFriendRelationsResponse(
         com.google.protobuf.CodedInputStream input,
@@ -879,6 +899,8 @@ public final class HaiFriendRelationsProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -888,7 +910,8 @@ public final class HaiFriendRelationsProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -913,6 +936,7 @@ public final class HaiFriendRelationsProto {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           userProfile_ = java.util.Collections.unmodifiableList(userProfile_);
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -998,6 +1022,7 @@ public final class HaiFriendRelationsProto {
       for (int i = 0; i < userProfile_.size(); i++) {
         output.writeMessage(1, userProfile_.get(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1009,11 +1034,11 @@ public final class HaiFriendRelationsProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, userProfile_.get(i));
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1027,6 +1052,7 @@ public final class HaiFriendRelationsProto {
       boolean result = true;
       result = result && getUserProfileList()
           .equals(other.getUserProfileList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1036,7 +1062,7 @@ public final class HaiFriendRelationsProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getUserProfileCount() > 0) {
         hash = (37 * hash) + USER_PROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getUserProfileList().hashCode();
@@ -1046,6 +1072,17 @@ public final class HaiFriendRelationsProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiFriendRelationsProto.HaiFriendRelationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiFriendRelationsProto.HaiFriendRelationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiFriendRelationsProto.HaiFriendRelationsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1207,7 +1244,7 @@ public final class HaiFriendRelationsProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1220,12 +1257,12 @@ public final class HaiFriendRelationsProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1265,6 +1302,7 @@ public final class HaiFriendRelationsProto {
             }
           }
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1605,12 +1643,12 @@ public final class HaiFriendRelationsProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

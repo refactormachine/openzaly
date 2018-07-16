@@ -823,21 +823,21 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string code = 1;</code>
+     * <code>string code = 1;</code>
      */
     java.lang.String getCode();
     /**
-     * <code>optional string code = 1;</code>
+     * <code>string code = 1;</code>
      */
     com.google.protobuf.ByteString
         getCodeBytes();
 
     /**
-     * <code>optional string info = 2;</code>
+     * <code>string info = 2;</code>
      */
     java.lang.String getInfo();
     /**
-     * <code>optional string info = 2;</code>
+     * <code>string info = 2;</code>
      */
     com.google.protobuf.ByteString
         getInfoBytes();
@@ -860,6 +860,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.ErrorInfo)
       ErrorInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ErrorInfo.newBuilder() to construct.
     private ErrorInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -872,7 +873,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ErrorInfo(
         com.google.protobuf.CodedInputStream input,
@@ -880,6 +881,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -889,7 +892,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -914,6 +918,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -932,7 +937,7 @@ public final class CoreProto {
     public static final int CODE_FIELD_NUMBER = 1;
     private volatile java.lang.Object code_;
     /**
-     * <code>optional string code = 1;</code>
+     * <code>string code = 1;</code>
      */
     public java.lang.String getCode() {
       java.lang.Object ref = code_;
@@ -947,7 +952,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string code = 1;</code>
+     * <code>string code = 1;</code>
      */
     public com.google.protobuf.ByteString
         getCodeBytes() {
@@ -966,7 +971,7 @@ public final class CoreProto {
     public static final int INFO_FIELD_NUMBER = 2;
     private volatile java.lang.Object info_;
     /**
-     * <code>optional string info = 2;</code>
+     * <code>string info = 2;</code>
      */
     public java.lang.String getInfo() {
       java.lang.Object ref = info_;
@@ -981,7 +986,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string info = 2;</code>
+     * <code>string info = 2;</code>
      */
     public com.google.protobuf.ByteString
         getInfoBytes() {
@@ -1015,6 +1020,7 @@ public final class CoreProto {
       if (!getInfoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, info_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1028,11 +1034,11 @@ public final class CoreProto {
       if (!getInfoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, info_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1048,6 +1054,7 @@ public final class CoreProto {
           .equals(other.getCode());
       result = result && getInfo()
           .equals(other.getInfo());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1057,7 +1064,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCode().hashCode();
       hash = (37 * hash) + INFO_FIELD_NUMBER;
@@ -1067,6 +1074,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.ErrorInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.ErrorInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.ErrorInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1228,7 +1246,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1241,12 +1259,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1268,6 +1286,7 @@ public final class CoreProto {
           info_ = other.info_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1296,7 +1315,7 @@ public final class CoreProto {
 
       private java.lang.Object code_ = "";
       /**
-       * <code>optional string code = 1;</code>
+       * <code>string code = 1;</code>
        */
       public java.lang.String getCode() {
         java.lang.Object ref = code_;
@@ -1311,7 +1330,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string code = 1;</code>
+       * <code>string code = 1;</code>
        */
       public com.google.protobuf.ByteString
           getCodeBytes() {
@@ -1327,7 +1346,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string code = 1;</code>
+       * <code>string code = 1;</code>
        */
       public Builder setCode(
           java.lang.String value) {
@@ -1340,7 +1359,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string code = 1;</code>
+       * <code>string code = 1;</code>
        */
       public Builder clearCode() {
         
@@ -1349,7 +1368,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string code = 1;</code>
+       * <code>string code = 1;</code>
        */
       public Builder setCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1365,7 +1384,7 @@ public final class CoreProto {
 
       private java.lang.Object info_ = "";
       /**
-       * <code>optional string info = 2;</code>
+       * <code>string info = 2;</code>
        */
       public java.lang.String getInfo() {
         java.lang.Object ref = info_;
@@ -1380,7 +1399,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string info = 2;</code>
+       * <code>string info = 2;</code>
        */
       public com.google.protobuf.ByteString
           getInfoBytes() {
@@ -1396,7 +1415,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string info = 2;</code>
+       * <code>string info = 2;</code>
        */
       public Builder setInfo(
           java.lang.String value) {
@@ -1409,7 +1428,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string info = 2;</code>
+       * <code>string info = 2;</code>
        */
       public Builder clearInfo() {
         
@@ -1418,7 +1437,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string info = 2;</code>
+       * <code>string info = 2;</code>
        */
       public Builder setInfoBytes(
           com.google.protobuf.ByteString value) {
@@ -1433,12 +1452,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1495,6 +1514,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.NoneResponse)
       NoneResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use NoneResponse.newBuilder() to construct.
     private NoneResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1505,13 +1525,15 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private NoneResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1521,7 +1543,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1534,6 +1557,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1561,6 +1585,7 @@ public final class CoreProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1568,11 +1593,11 @@ public final class CoreProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1584,6 +1609,7 @@ public final class CoreProto {
       com.akaxin.proto.core.CoreProto.NoneResponse other = (com.akaxin.proto.core.CoreProto.NoneResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1593,12 +1619,23 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.NoneResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.NoneResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.NoneResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1747,7 +1784,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1760,12 +1797,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1779,6 +1816,7 @@ public final class CoreProto {
 
       public Builder mergeFrom(com.akaxin.proto.core.CoreProto.NoneResponse other) {
         if (other == com.akaxin.proto.core.CoreProto.NoneResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1806,12 +1844,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1862,7 +1900,7 @@ public final class CoreProto {
      *错误信息，如果err不为null，data很有可能是无用的。
      * </pre>
      *
-     * <code>optional .core.ErrorInfo err = 1;</code>
+     * <code>.core.ErrorInfo err = 1;</code>
      */
     boolean hasErr();
     /**
@@ -1870,7 +1908,7 @@ public final class CoreProto {
      *错误信息，如果err不为null，data很有可能是无用的。
      * </pre>
      *
-     * <code>optional .core.ErrorInfo err = 1;</code>
+     * <code>.core.ErrorInfo err = 1;</code>
      */
     com.akaxin.proto.core.CoreProto.ErrorInfo getErr();
     /**
@@ -1878,7 +1916,7 @@ public final class CoreProto {
      *错误信息，如果err不为null，data很有可能是无用的。
      * </pre>
      *
-     * <code>optional .core.ErrorInfo err = 1;</code>
+     * <code>.core.ErrorInfo err = 1;</code>
      */
     com.akaxin.proto.core.CoreProto.ErrorInfoOrBuilder getErrOrBuilder();
 
@@ -1887,7 +1925,7 @@ public final class CoreProto {
      *业务Data，由业务逻辑自己解析
      * </pre>
      *
-     * <code>optional bytes data = 2;</code>
+     * <code>bytes data = 2;</code>
      */
     com.google.protobuf.ByteString getData();
 
@@ -1971,6 +2009,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.TransportPackageData)
       TransportPackageDataOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use TransportPackageData.newBuilder() to construct.
     private TransportPackageData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1982,7 +2021,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private TransportPackageData(
         com.google.protobuf.CodedInputStream input,
@@ -1990,6 +2029,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1999,7 +2040,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -2029,9 +2071,10 @@ public final class CoreProto {
                 mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-              header = input.readMessage(
+              header__ = input.readMessage(
                   HeaderDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              header_.getMutableMap().put(header.getKey(), header.getValue());
+              header_.getMutableMap().put(
+                  header__.getKey(), header__.getValue());
               break;
             }
           }
@@ -2042,6 +2085,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -2076,7 +2120,7 @@ public final class CoreProto {
      *错误信息，如果err不为null，data很有可能是无用的。
      * </pre>
      *
-     * <code>optional .core.ErrorInfo err = 1;</code>
+     * <code>.core.ErrorInfo err = 1;</code>
      */
     public boolean hasErr() {
       return err_ != null;
@@ -2086,7 +2130,7 @@ public final class CoreProto {
      *错误信息，如果err不为null，data很有可能是无用的。
      * </pre>
      *
-     * <code>optional .core.ErrorInfo err = 1;</code>
+     * <code>.core.ErrorInfo err = 1;</code>
      */
     public com.akaxin.proto.core.CoreProto.ErrorInfo getErr() {
       return err_ == null ? com.akaxin.proto.core.CoreProto.ErrorInfo.getDefaultInstance() : err_;
@@ -2096,7 +2140,7 @@ public final class CoreProto {
      *错误信息，如果err不为null，data很有可能是无用的。
      * </pre>
      *
-     * <code>optional .core.ErrorInfo err = 1;</code>
+     * <code>.core.ErrorInfo err = 1;</code>
      */
     public com.akaxin.proto.core.CoreProto.ErrorInfoOrBuilder getErrOrBuilder() {
       return getErr();
@@ -2109,7 +2153,7 @@ public final class CoreProto {
      *业务Data，由业务逻辑自己解析
      * </pre>
      *
-     * <code>optional bytes data = 2;</code>
+     * <code>bytes data = 2;</code>
      */
     public com.google.protobuf.ByteString getData() {
       return data_;
@@ -2237,15 +2281,13 @@ public final class CoreProto {
       if (!data_.isEmpty()) {
         output.writeBytes(2, data_);
       }
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
-           : internalGetHeader().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-        header = HeaderDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        output.writeMessage(3, header);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeIntegerMapTo(
+          output,
+          internalGetHeader(),
+          HeaderDefaultEntryHolder.defaultEntry,
+          3);
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -2264,18 +2306,18 @@ public final class CoreProto {
       for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
            : internalGetHeader().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-        header = HeaderDefaultEntryHolder.defaultEntry.newBuilderForType()
+        header__ = HeaderDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, header);
+            .computeMessageSize(3, header__);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2296,6 +2338,7 @@ public final class CoreProto {
           .equals(other.getData());
       result = result && internalGetHeader().equals(
           other.internalGetHeader());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -2305,7 +2348,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasErr()) {
         hash = (37 * hash) + ERR_FIELD_NUMBER;
         hash = (53 * hash) + getErr().hashCode();
@@ -2321,6 +2364,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.TransportPackageData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.TransportPackageData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.TransportPackageData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2511,7 +2565,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2524,12 +2578,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2551,6 +2605,7 @@ public final class CoreProto {
         }
         internalGetMutableHeader().mergeFrom(
             other.internalGetHeader());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2586,7 +2641,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public boolean hasErr() {
         return errBuilder_ != null || err_ != null;
@@ -2596,7 +2651,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public com.akaxin.proto.core.CoreProto.ErrorInfo getErr() {
         if (errBuilder_ == null) {
@@ -2610,7 +2665,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public Builder setErr(com.akaxin.proto.core.CoreProto.ErrorInfo value) {
         if (errBuilder_ == null) {
@@ -2630,7 +2685,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public Builder setErr(
           com.akaxin.proto.core.CoreProto.ErrorInfo.Builder builderForValue) {
@@ -2648,7 +2703,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public Builder mergeErr(com.akaxin.proto.core.CoreProto.ErrorInfo value) {
         if (errBuilder_ == null) {
@@ -2670,7 +2725,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public Builder clearErr() {
         if (errBuilder_ == null) {
@@ -2688,7 +2743,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public com.akaxin.proto.core.CoreProto.ErrorInfo.Builder getErrBuilder() {
         
@@ -2700,7 +2755,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       public com.akaxin.proto.core.CoreProto.ErrorInfoOrBuilder getErrOrBuilder() {
         if (errBuilder_ != null) {
@@ -2715,7 +2770,7 @@ public final class CoreProto {
        *错误信息，如果err不为null，data很有可能是无用的。
        * </pre>
        *
-       * <code>optional .core.ErrorInfo err = 1;</code>
+       * <code>.core.ErrorInfo err = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.ErrorInfo, com.akaxin.proto.core.CoreProto.ErrorInfo.Builder, com.akaxin.proto.core.CoreProto.ErrorInfoOrBuilder> 
@@ -2737,7 +2792,7 @@ public final class CoreProto {
        *业务Data，由业务逻辑自己解析
        * </pre>
        *
-       * <code>optional bytes data = 2;</code>
+       * <code>bytes data = 2;</code>
        */
       public com.google.protobuf.ByteString getData() {
         return data_;
@@ -2747,7 +2802,7 @@ public final class CoreProto {
        *业务Data，由业务逻辑自己解析
        * </pre>
        *
-       * <code>optional bytes data = 2;</code>
+       * <code>bytes data = 2;</code>
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -2763,7 +2818,7 @@ public final class CoreProto {
        *业务Data，由业务逻辑自己解析
        * </pre>
        *
-       * <code>optional bytes data = 2;</code>
+       * <code>bytes data = 2;</code>
        */
       public Builder clearData() {
         
@@ -2877,7 +2932,8 @@ public final class CoreProto {
       }
 
       public Builder clearHeader() {
-        getMutableHeader().clear();
+        internalGetMutableHeader().getMutableMap()
+            .clear();
         return this;
       }
       /**
@@ -2894,7 +2950,8 @@ public final class CoreProto {
       public Builder removeHeader(
           int key) {
         
-        getMutableHeader().remove(key);
+        internalGetMutableHeader().getMutableMap()
+            .remove(key);
         return this;
       }
       /**
@@ -2920,7 +2977,8 @@ public final class CoreProto {
           java.lang.String value) {
         
         if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutableHeader().put(key, value);
+        internalGetMutableHeader().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
@@ -2936,17 +2994,18 @@ public final class CoreProto {
 
       public Builder putAllHeader(
           java.util.Map<java.lang.Integer, java.lang.String> values) {
-        getMutableHeader().putAll(values);
+        internalGetMutableHeader().getMutableMap()
+            .putAll(values);
         return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2993,17 +3052,17 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional int32 msg_status = 2;</code>
+     * <code>int32 msg_status = 2;</code>
      */
     int getMsgStatus();
 
@@ -3017,7 +3076,7 @@ public final class CoreProto {
      * &#64;todo 补充v2之前版本对此字段的处理逻辑（默认使用msg_time_send的值）
      * </pre>
      *
-     * <code>optional int64 msg_server_time = 3;</code>
+     * <code>int64 msg_server_time = 3;</code>
      */
     long getMsgServerTime();
 
@@ -3026,7 +3085,7 @@ public final class CoreProto {
      * &#64;since v6
      * </pre>
      *
-     * <code>optional int32 msg_pointer = 4;</code>
+     * <code>int32 msg_pointer = 4;</code>
      */
     int getMsgPointer();
   }
@@ -3045,6 +3104,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgStatus)
       MsgStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgStatus.newBuilder() to construct.
     private MsgStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3059,7 +3119,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgStatus(
         com.google.protobuf.CodedInputStream input,
@@ -3067,6 +3127,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3076,7 +3138,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -3110,6 +3173,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -3128,7 +3192,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -3143,7 +3207,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -3162,7 +3226,7 @@ public final class CoreProto {
     public static final int MSG_STATUS_FIELD_NUMBER = 2;
     private int msgStatus_;
     /**
-     * <code>optional int32 msg_status = 2;</code>
+     * <code>int32 msg_status = 2;</code>
      */
     public int getMsgStatus() {
       return msgStatus_;
@@ -3180,7 +3244,7 @@ public final class CoreProto {
      * &#64;todo 补充v2之前版本对此字段的处理逻辑（默认使用msg_time_send的值）
      * </pre>
      *
-     * <code>optional int64 msg_server_time = 3;</code>
+     * <code>int64 msg_server_time = 3;</code>
      */
     public long getMsgServerTime() {
       return msgServerTime_;
@@ -3193,7 +3257,7 @@ public final class CoreProto {
      * &#64;since v6
      * </pre>
      *
-     * <code>optional int32 msg_pointer = 4;</code>
+     * <code>int32 msg_pointer = 4;</code>
      */
     public int getMsgPointer() {
       return msgPointer_;
@@ -3223,6 +3287,7 @@ public final class CoreProto {
       if (msgPointer_ != 0) {
         output.writeInt32(4, msgPointer_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -3245,11 +3310,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, msgPointer_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3269,6 +3334,7 @@ public final class CoreProto {
           == other.getMsgServerTime());
       result = result && (getMsgPointer()
           == other.getMsgPointer());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -3278,7 +3344,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + MSG_STATUS_FIELD_NUMBER;
@@ -3293,6 +3359,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgStatus parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3457,7 +3534,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3470,12 +3547,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3502,6 +3579,7 @@ public final class CoreProto {
         if (other.getMsgPointer() != 0) {
           setMsgPointer(other.getMsgPointer());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -3530,7 +3608,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -3545,7 +3623,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -3561,7 +3639,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -3574,7 +3652,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -3583,7 +3661,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3599,13 +3677,13 @@ public final class CoreProto {
 
       private int msgStatus_ ;
       /**
-       * <code>optional int32 msg_status = 2;</code>
+       * <code>int32 msg_status = 2;</code>
        */
       public int getMsgStatus() {
         return msgStatus_;
       }
       /**
-       * <code>optional int32 msg_status = 2;</code>
+       * <code>int32 msg_status = 2;</code>
        */
       public Builder setMsgStatus(int value) {
         
@@ -3614,7 +3692,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional int32 msg_status = 2;</code>
+       * <code>int32 msg_status = 2;</code>
        */
       public Builder clearMsgStatus() {
         
@@ -3634,7 +3712,7 @@ public final class CoreProto {
        * &#64;todo 补充v2之前版本对此字段的处理逻辑（默认使用msg_time_send的值）
        * </pre>
        *
-       * <code>optional int64 msg_server_time = 3;</code>
+       * <code>int64 msg_server_time = 3;</code>
        */
       public long getMsgServerTime() {
         return msgServerTime_;
@@ -3649,7 +3727,7 @@ public final class CoreProto {
        * &#64;todo 补充v2之前版本对此字段的处理逻辑（默认使用msg_time_send的值）
        * </pre>
        *
-       * <code>optional int64 msg_server_time = 3;</code>
+       * <code>int64 msg_server_time = 3;</code>
        */
       public Builder setMsgServerTime(long value) {
         
@@ -3667,7 +3745,7 @@ public final class CoreProto {
        * &#64;todo 补充v2之前版本对此字段的处理逻辑（默认使用msg_time_send的值）
        * </pre>
        *
-       * <code>optional int64 msg_server_time = 3;</code>
+       * <code>int64 msg_server_time = 3;</code>
        */
       public Builder clearMsgServerTime() {
         
@@ -3682,7 +3760,7 @@ public final class CoreProto {
        * &#64;since v6
        * </pre>
        *
-       * <code>optional int32 msg_pointer = 4;</code>
+       * <code>int32 msg_pointer = 4;</code>
        */
       public int getMsgPointer() {
         return msgPointer_;
@@ -3692,7 +3770,7 @@ public final class CoreProto {
        * &#64;since v6
        * </pre>
        *
-       * <code>optional int32 msg_pointer = 4;</code>
+       * <code>int32 msg_pointer = 4;</code>
        */
       public Builder setMsgPointer(int value) {
         
@@ -3705,7 +3783,7 @@ public final class CoreProto {
        * &#64;since v6
        * </pre>
        *
-       * <code>optional int32 msg_pointer = 4;</code>
+       * <code>int32 msg_pointer = 4;</code>
        */
       public Builder clearMsgPointer() {
         
@@ -3715,12 +3793,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -3771,7 +3849,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -3779,33 +3857,33 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
 
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     com.google.protobuf.ByteString getText();
 
@@ -3814,7 +3892,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     long getTime();
   }
@@ -3829,6 +3907,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgText)
       MsgTextOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgText.newBuilder() to construct.
     private MsgText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3844,7 +3923,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgText(
         com.google.protobuf.CodedInputStream input,
@@ -3852,6 +3931,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3861,7 +3942,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -3902,6 +3984,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -3924,7 +4007,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -3943,7 +4026,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -3962,7 +4045,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -3977,7 +4060,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -3996,7 +4079,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -4011,7 +4094,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -4030,7 +4113,7 @@ public final class CoreProto {
     public static final int TEXT_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString text_;
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     public com.google.protobuf.ByteString getText() {
       return text_;
@@ -4043,7 +4126,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     public long getTime() {
       return time_;
@@ -4076,6 +4159,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(5, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -4100,11 +4184,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -4126,6 +4210,7 @@ public final class CoreProto {
           .equals(other.getText());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -4135,7 +4220,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -4152,6 +4237,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgText parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgText parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgText parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4315,7 +4411,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4328,12 +4424,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4365,6 +4461,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -4397,7 +4494,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -4416,7 +4513,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -4436,7 +4533,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -4453,7 +4550,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -4466,7 +4563,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4482,7 +4579,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -4497,7 +4594,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -4513,7 +4610,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -4526,7 +4623,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -4535,7 +4632,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4551,7 +4648,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -4566,7 +4663,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -4582,7 +4679,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -4595,7 +4692,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -4604,7 +4701,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4620,13 +4717,13 @@ public final class CoreProto {
 
       private com.google.protobuf.ByteString text_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public com.google.protobuf.ByteString getText() {
         return text_;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder setText(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -4638,7 +4735,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder clearText() {
         
@@ -4653,7 +4750,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public long getTime() {
         return time_;
@@ -4663,7 +4760,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder setTime(long value) {
         
@@ -4676,7 +4773,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder clearTime() {
         
@@ -4686,12 +4783,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -4738,37 +4835,37 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
 
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     com.google.protobuf.ByteString getText();
 
@@ -4777,7 +4874,7 @@ public final class CoreProto {
      *加密key,base64
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -4785,17 +4882,17 @@ public final class CoreProto {
      *加密key,base64
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
 
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     java.lang.String getToDeviceId();
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -4805,7 +4902,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -4820,6 +4917,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgSecretText)
       MsgSecretTextOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgSecretText.newBuilder() to construct.
     private MsgSecretText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4837,7 +4935,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgSecretText(
         com.google.protobuf.CodedInputStream input,
@@ -4845,6 +4943,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4854,7 +4954,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -4907,6 +5008,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -4925,7 +5027,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -4940,7 +5042,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -4959,7 +5061,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -4974,7 +5076,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -4993,7 +5095,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -5008,7 +5110,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -5027,7 +5129,7 @@ public final class CoreProto {
     public static final int TEXT_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString text_;
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     public com.google.protobuf.ByteString getText() {
       return text_;
@@ -5040,7 +5142,7 @@ public final class CoreProto {
      *加密key,base64
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -5059,7 +5161,7 @@ public final class CoreProto {
      *加密key,base64
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -5078,7 +5180,7 @@ public final class CoreProto {
     public static final int TO_DEVICE_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object toDeviceId_;
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -5093,7 +5195,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -5116,7 +5218,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -5155,6 +5257,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -5185,11 +5288,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -5215,6 +5318,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -5224,7 +5328,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -5245,6 +5349,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgSecretText parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgSecretText parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgSecretText parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5414,7 +5529,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -5427,12 +5542,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5472,6 +5587,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -5500,7 +5616,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -5515,7 +5631,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -5531,7 +5647,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -5544,7 +5660,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -5553,7 +5669,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5569,7 +5685,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -5584,7 +5700,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -5600,7 +5716,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -5613,7 +5729,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -5622,7 +5738,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5638,7 +5754,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -5653,7 +5769,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -5669,7 +5785,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -5682,7 +5798,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -5691,7 +5807,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5707,13 +5823,13 @@ public final class CoreProto {
 
       private com.google.protobuf.ByteString text_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public com.google.protobuf.ByteString getText() {
         return text_;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder setText(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -5725,7 +5841,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder clearText() {
         
@@ -5740,7 +5856,7 @@ public final class CoreProto {
        *加密key,base64
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -5759,7 +5875,7 @@ public final class CoreProto {
        *加密key,base64
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -5779,7 +5895,7 @@ public final class CoreProto {
        *加密key,base64
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -5796,7 +5912,7 @@ public final class CoreProto {
        *加密key,base64
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -5809,7 +5925,7 @@ public final class CoreProto {
        *加密key,base64
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -5825,7 +5941,7 @@ public final class CoreProto {
 
       private java.lang.Object toDeviceId_ = "";
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -5840,7 +5956,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -5856,7 +5972,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -5869,7 +5985,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -5878,7 +5994,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5898,7 +6014,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -5908,7 +6024,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -5921,7 +6037,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -5931,12 +6047,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -5987,7 +6103,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -5995,33 +6111,33 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
 
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     com.google.protobuf.ByteString getText();
 
@@ -6030,7 +6146,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     long getTime();
 
@@ -6039,7 +6155,7 @@ public final class CoreProto {
      *&#64;who 群消息可以&#64;他人
      * </pre>
      *
-     * <code>optional string at_site_user_id = 6;</code>
+     * <code>string at_site_user_id = 6;</code>
      */
     java.lang.String getAtSiteUserId();
     /**
@@ -6047,7 +6163,7 @@ public final class CoreProto {
      *&#64;who 群消息可以&#64;他人
      * </pre>
      *
-     * <code>optional string at_site_user_id = 6;</code>
+     * <code>string at_site_user_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getAtSiteUserIdBytes();
@@ -6063,6 +6179,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupText)
       GroupTextOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupText.newBuilder() to construct.
     private GroupText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -6079,7 +6196,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupText(
         com.google.protobuf.CodedInputStream input,
@@ -6087,6 +6204,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -6096,7 +6215,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -6143,6 +6263,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -6165,7 +6286,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -6184,7 +6305,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -6203,7 +6324,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -6218,7 +6339,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -6237,7 +6358,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -6252,7 +6373,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -6271,7 +6392,7 @@ public final class CoreProto {
     public static final int TEXT_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString text_;
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     public com.google.protobuf.ByteString getText() {
       return text_;
@@ -6284,7 +6405,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     public long getTime() {
       return time_;
@@ -6297,7 +6418,7 @@ public final class CoreProto {
      *&#64;who 群消息可以&#64;他人
      * </pre>
      *
-     * <code>optional string at_site_user_id = 6;</code>
+     * <code>string at_site_user_id = 6;</code>
      */
     public java.lang.String getAtSiteUserId() {
       java.lang.Object ref = atSiteUserId_;
@@ -6316,7 +6437,7 @@ public final class CoreProto {
      *&#64;who 群消息可以&#64;他人
      * </pre>
      *
-     * <code>optional string at_site_user_id = 6;</code>
+     * <code>string at_site_user_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getAtSiteUserIdBytes() {
@@ -6362,6 +6483,7 @@ public final class CoreProto {
       if (!getAtSiteUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, atSiteUserId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -6389,11 +6511,11 @@ public final class CoreProto {
       if (!getAtSiteUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, atSiteUserId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -6417,6 +6539,7 @@ public final class CoreProto {
           == other.getTime());
       result = result && getAtSiteUserId()
           .equals(other.getAtSiteUserId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -6426,7 +6549,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -6445,6 +6568,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupText parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupText parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupText parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6611,7 +6745,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -6624,12 +6758,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6665,6 +6799,7 @@ public final class CoreProto {
           atSiteUserId_ = other.atSiteUserId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -6697,7 +6832,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -6716,7 +6851,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -6736,7 +6871,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -6753,7 +6888,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -6766,7 +6901,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6782,7 +6917,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -6797,7 +6932,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -6813,7 +6948,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -6826,7 +6961,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -6835,7 +6970,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6851,7 +6986,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -6866,7 +7001,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -6882,7 +7017,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -6895,7 +7030,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -6904,7 +7039,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6920,13 +7055,13 @@ public final class CoreProto {
 
       private com.google.protobuf.ByteString text_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public com.google.protobuf.ByteString getText() {
         return text_;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder setText(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -6938,7 +7073,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder clearText() {
         
@@ -6953,7 +7088,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public long getTime() {
         return time_;
@@ -6963,7 +7098,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder setTime(long value) {
         
@@ -6976,7 +7111,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder clearTime() {
         
@@ -6991,7 +7126,7 @@ public final class CoreProto {
        *&#64;who 群消息可以&#64;他人
        * </pre>
        *
-       * <code>optional string at_site_user_id = 6;</code>
+       * <code>string at_site_user_id = 6;</code>
        */
       public java.lang.String getAtSiteUserId() {
         java.lang.Object ref = atSiteUserId_;
@@ -7010,7 +7145,7 @@ public final class CoreProto {
        *&#64;who 群消息可以&#64;他人
        * </pre>
        *
-       * <code>optional string at_site_user_id = 6;</code>
+       * <code>string at_site_user_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getAtSiteUserIdBytes() {
@@ -7030,7 +7165,7 @@ public final class CoreProto {
        *&#64;who 群消息可以&#64;他人
        * </pre>
        *
-       * <code>optional string at_site_user_id = 6;</code>
+       * <code>string at_site_user_id = 6;</code>
        */
       public Builder setAtSiteUserId(
           java.lang.String value) {
@@ -7047,7 +7182,7 @@ public final class CoreProto {
        *&#64;who 群消息可以&#64;他人
        * </pre>
        *
-       * <code>optional string at_site_user_id = 6;</code>
+       * <code>string at_site_user_id = 6;</code>
        */
       public Builder clearAtSiteUserId() {
         
@@ -7060,7 +7195,7 @@ public final class CoreProto {
        *&#64;who 群消息可以&#64;他人
        * </pre>
        *
-       * <code>optional string at_site_user_id = 6;</code>
+       * <code>string at_site_user_id = 6;</code>
        */
       public Builder setAtSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7075,12 +7210,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -7127,37 +7262,37 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
 
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     com.google.protobuf.ByteString getText();
 
@@ -7166,7 +7301,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -7174,17 +7309,17 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
 
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     java.lang.String getToDeviceId();
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -7194,7 +7329,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -7209,6 +7344,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupSecretText)
       GroupSecretTextOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupSecretText.newBuilder() to construct.
     private GroupSecretText(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -7226,7 +7362,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupSecretText(
         com.google.protobuf.CodedInputStream input,
@@ -7234,6 +7370,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7243,7 +7381,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -7296,6 +7435,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -7314,7 +7454,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -7329,7 +7469,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -7348,7 +7488,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -7363,7 +7503,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -7382,7 +7522,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -7397,7 +7537,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -7416,7 +7556,7 @@ public final class CoreProto {
     public static final int TEXT_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString text_;
     /**
-     * <code>optional bytes text = 4;</code>
+     * <code>bytes text = 4;</code>
      */
     public com.google.protobuf.ByteString getText() {
       return text_;
@@ -7429,7 +7569,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -7448,7 +7588,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -7467,7 +7607,7 @@ public final class CoreProto {
     public static final int TO_DEVICE_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object toDeviceId_;
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -7482,7 +7622,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -7505,7 +7645,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -7544,6 +7684,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -7574,11 +7715,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -7604,6 +7745,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -7613,7 +7755,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -7634,6 +7776,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupSecretText parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupSecretText parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupSecretText parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7803,7 +7956,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -7816,12 +7969,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7861,6 +8014,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -7889,7 +8043,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -7904,7 +8058,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -7920,7 +8074,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -7933,7 +8087,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -7942,7 +8096,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -7958,7 +8112,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -7973,7 +8127,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -7989,7 +8143,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -8002,7 +8156,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -8011,7 +8165,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8027,7 +8181,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -8042,7 +8196,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -8058,7 +8212,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -8071,7 +8225,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -8080,7 +8234,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8096,13 +8250,13 @@ public final class CoreProto {
 
       private com.google.protobuf.ByteString text_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public com.google.protobuf.ByteString getText() {
         return text_;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder setText(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8114,7 +8268,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional bytes text = 4;</code>
+       * <code>bytes text = 4;</code>
        */
       public Builder clearText() {
         
@@ -8129,7 +8283,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -8148,7 +8302,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -8168,7 +8322,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -8185,7 +8339,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -8198,7 +8352,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -8214,7 +8368,7 @@ public final class CoreProto {
 
       private java.lang.Object toDeviceId_ = "";
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -8229,7 +8383,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -8245,7 +8399,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -8258,7 +8412,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -8267,7 +8421,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8287,7 +8441,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -8297,7 +8451,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -8310,7 +8464,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -8320,12 +8474,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -8372,41 +8526,41 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
 
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     java.lang.String getImageId();
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -8416,7 +8570,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -8431,6 +8585,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgImage)
       MsgImageOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgImage.newBuilder() to construct.
     private MsgImage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -8446,7 +8601,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgImage(
         com.google.protobuf.CodedInputStream input,
@@ -8454,6 +8609,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -8463,7 +8620,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -8505,6 +8663,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -8523,7 +8682,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -8538,7 +8697,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -8557,7 +8716,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -8572,7 +8731,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -8591,7 +8750,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -8606,7 +8765,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -8625,7 +8784,7 @@ public final class CoreProto {
     public static final int IMAGEID_FIELD_NUMBER = 4;
     private volatile java.lang.Object imageId_;
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
@@ -8640,7 +8799,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getImageIdBytes() {
@@ -8663,7 +8822,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -8696,6 +8855,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -8719,11 +8879,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -8745,6 +8905,7 @@ public final class CoreProto {
           .equals(other.getImageId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -8754,7 +8915,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -8771,6 +8932,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgImage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgImage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgImage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -8934,7 +9106,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -8947,12 +9119,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8985,6 +9157,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -9013,7 +9186,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -9028,7 +9201,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -9044,7 +9217,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -9057,7 +9230,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -9066,7 +9239,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9082,7 +9255,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -9097,7 +9270,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -9113,7 +9286,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -9126,7 +9299,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -9135,7 +9308,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9151,7 +9324,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -9166,7 +9339,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -9182,7 +9355,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -9195,7 +9368,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -9204,7 +9377,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9220,7 +9393,7 @@ public final class CoreProto {
 
       private java.lang.Object imageId_ = "";
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -9235,7 +9408,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -9251,7 +9424,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -9264,7 +9437,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder clearImageId() {
         
@@ -9273,7 +9446,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9293,7 +9466,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -9303,7 +9476,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -9316,7 +9489,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -9326,12 +9499,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -9378,41 +9551,41 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
 
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     java.lang.String getImageId();
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -9422,7 +9595,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -9430,17 +9603,17 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
 
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     java.lang.String getToDeviceId();
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -9450,7 +9623,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -9465,6 +9638,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgSecretImage)
       MsgSecretImageOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgSecretImage.newBuilder() to construct.
     private MsgSecretImage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -9482,7 +9656,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgSecretImage(
         com.google.protobuf.CodedInputStream input,
@@ -9490,6 +9664,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -9499,7 +9675,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -9553,6 +9730,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -9571,7 +9749,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -9586,7 +9764,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -9605,7 +9783,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -9620,7 +9798,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -9639,7 +9817,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -9654,7 +9832,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -9673,7 +9851,7 @@ public final class CoreProto {
     public static final int IMAGEID_FIELD_NUMBER = 4;
     private volatile java.lang.Object imageId_;
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
@@ -9688,7 +9866,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getImageIdBytes() {
@@ -9711,7 +9889,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -9730,7 +9908,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -9749,7 +9927,7 @@ public final class CoreProto {
     public static final int TO_DEVICE_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object toDeviceId_;
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -9764,7 +9942,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -9787,7 +9965,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -9826,6 +10004,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -9855,11 +10034,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -9885,6 +10064,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -9894,7 +10074,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -9915,6 +10095,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgSecretImage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgSecretImage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgSecretImage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -10084,7 +10275,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -10097,12 +10288,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10143,6 +10334,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -10171,7 +10363,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -10186,7 +10378,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -10202,7 +10394,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -10215,7 +10407,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -10224,7 +10416,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10240,7 +10432,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -10255,7 +10447,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -10271,7 +10463,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -10284,7 +10476,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -10293,7 +10485,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10309,7 +10501,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -10324,7 +10516,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -10340,7 +10532,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -10353,7 +10545,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -10362,7 +10554,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10378,7 +10570,7 @@ public final class CoreProto {
 
       private java.lang.Object imageId_ = "";
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -10393,7 +10585,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -10409,7 +10601,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -10422,7 +10614,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder clearImageId() {
         
@@ -10431,7 +10623,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10451,7 +10643,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -10470,7 +10662,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -10490,7 +10682,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -10507,7 +10699,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -10520,7 +10712,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -10536,7 +10728,7 @@ public final class CoreProto {
 
       private java.lang.Object toDeviceId_ = "";
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -10551,7 +10743,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -10567,7 +10759,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -10580,7 +10772,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -10589,7 +10781,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10609,7 +10801,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -10619,7 +10811,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -10632,7 +10824,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -10642,12 +10834,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -10694,41 +10886,41 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
 
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     java.lang.String getImageId();
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -10738,7 +10930,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -10753,6 +10945,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupImage)
       GroupImageOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupImage.newBuilder() to construct.
     private GroupImage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -10768,7 +10961,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupImage(
         com.google.protobuf.CodedInputStream input,
@@ -10776,6 +10969,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -10785,7 +10980,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -10827,6 +11023,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -10845,7 +11042,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -10860,7 +11057,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -10879,7 +11076,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -10894,7 +11091,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -10913,7 +11110,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -10928,7 +11125,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -10947,7 +11144,7 @@ public final class CoreProto {
     public static final int IMAGEID_FIELD_NUMBER = 4;
     private volatile java.lang.Object imageId_;
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
@@ -10962,7 +11159,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getImageIdBytes() {
@@ -10985,7 +11182,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -11018,6 +11215,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -11041,11 +11239,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -11067,6 +11265,7 @@ public final class CoreProto {
           .equals(other.getImageId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -11076,7 +11275,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -11093,6 +11292,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupImage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupImage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupImage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11256,7 +11466,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -11269,12 +11479,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -11307,6 +11517,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -11335,7 +11546,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -11350,7 +11561,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -11366,7 +11577,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -11379,7 +11590,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -11388,7 +11599,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11404,7 +11615,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -11419,7 +11630,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -11435,7 +11646,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -11448,7 +11659,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -11457,7 +11668,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11473,7 +11684,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -11488,7 +11699,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -11504,7 +11715,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -11517,7 +11728,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -11526,7 +11737,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11542,7 +11753,7 @@ public final class CoreProto {
 
       private java.lang.Object imageId_ = "";
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -11557,7 +11768,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -11573,7 +11784,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -11586,7 +11797,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder clearImageId() {
         
@@ -11595,7 +11806,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -11615,7 +11826,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -11625,7 +11836,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -11638,7 +11849,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -11648,12 +11859,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -11700,41 +11911,41 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
 
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     java.lang.String getImageId();
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     com.google.protobuf.ByteString
         getImageIdBytes();
@@ -11744,7 +11955,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -11752,17 +11963,17 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
 
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     java.lang.String getToDeviceId();
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -11772,7 +11983,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -11787,6 +11998,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupSecretImage)
       GroupSecretImageOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupSecretImage.newBuilder() to construct.
     private GroupSecretImage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -11804,7 +12016,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupSecretImage(
         com.google.protobuf.CodedInputStream input,
@@ -11812,6 +12024,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -11821,7 +12035,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -11875,6 +12090,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -11893,7 +12109,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -11908,7 +12124,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -11927,7 +12143,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -11942,7 +12158,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -11961,7 +12177,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -11976,7 +12192,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -11995,7 +12211,7 @@ public final class CoreProto {
     public static final int IMAGEID_FIELD_NUMBER = 4;
     private volatile java.lang.Object imageId_;
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public java.lang.String getImageId() {
       java.lang.Object ref = imageId_;
@@ -12010,7 +12226,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string imageId = 4;</code>
+     * <code>string imageId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getImageIdBytes() {
@@ -12033,7 +12249,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -12052,7 +12268,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -12071,7 +12287,7 @@ public final class CoreProto {
     public static final int TO_DEVICE_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object toDeviceId_;
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -12086,7 +12302,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -12109,7 +12325,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -12148,6 +12364,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -12177,11 +12394,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -12207,6 +12424,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -12216,7 +12434,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -12237,6 +12455,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupSecretImage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupSecretImage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupSecretImage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -12406,7 +12635,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -12419,12 +12648,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -12465,6 +12694,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -12493,7 +12723,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -12508,7 +12738,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -12524,7 +12754,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -12537,7 +12767,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -12546,7 +12776,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12562,7 +12792,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -12577,7 +12807,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -12593,7 +12823,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -12606,7 +12836,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -12615,7 +12845,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12631,7 +12861,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -12646,7 +12876,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -12662,7 +12892,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -12675,7 +12905,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -12684,7 +12914,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12700,7 +12930,7 @@ public final class CoreProto {
 
       private java.lang.Object imageId_ = "";
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public java.lang.String getImageId() {
         java.lang.Object ref = imageId_;
@@ -12715,7 +12945,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getImageIdBytes() {
@@ -12731,7 +12961,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageId(
           java.lang.String value) {
@@ -12744,7 +12974,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder clearImageId() {
         
@@ -12753,7 +12983,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string imageId = 4;</code>
+       * <code>string imageId = 4;</code>
        */
       public Builder setImageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12773,7 +13003,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -12792,7 +13022,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -12812,7 +13042,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -12829,7 +13059,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -12842,7 +13072,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -12858,7 +13088,7 @@ public final class CoreProto {
 
       private java.lang.Object toDeviceId_ = "";
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -12873,7 +13103,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -12889,7 +13119,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -12902,7 +13132,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -12911,7 +13141,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -12931,7 +13161,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -12941,7 +13171,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -12954,7 +13184,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -12964,12 +13194,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -13016,31 +13246,31 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -13050,7 +13280,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     java.lang.String getVoiceId();
     /**
@@ -13058,7 +13288,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     com.google.protobuf.ByteString
         getVoiceIdBytes();
@@ -13068,7 +13298,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -13083,6 +13313,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgVoice)
       MsgVoiceOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgVoice.newBuilder() to construct.
     private MsgVoice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -13098,7 +13329,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgVoice(
         com.google.protobuf.CodedInputStream input,
@@ -13106,6 +13337,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -13115,7 +13348,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -13157,6 +13391,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -13175,7 +13410,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -13190,7 +13425,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -13209,7 +13444,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -13224,7 +13459,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -13243,7 +13478,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -13258,7 +13493,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -13281,7 +13516,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public java.lang.String getVoiceId() {
       java.lang.Object ref = voiceId_;
@@ -13300,7 +13535,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getVoiceIdBytes() {
@@ -13323,7 +13558,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -13356,6 +13591,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -13379,11 +13615,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -13405,6 +13641,7 @@ public final class CoreProto {
           .equals(other.getVoiceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -13414,7 +13651,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -13431,6 +13668,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgVoice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgVoice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgVoice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13594,7 +13842,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -13607,12 +13855,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -13645,6 +13893,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -13673,7 +13922,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -13688,7 +13937,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -13704,7 +13953,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -13717,7 +13966,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -13726,7 +13975,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13742,7 +13991,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -13757,7 +14006,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -13773,7 +14022,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -13786,7 +14035,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -13795,7 +14044,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13811,7 +14060,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -13826,7 +14075,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -13842,7 +14091,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -13855,7 +14104,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -13864,7 +14113,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13884,7 +14133,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public java.lang.String getVoiceId() {
         java.lang.Object ref = voiceId_;
@@ -13903,7 +14152,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getVoiceIdBytes() {
@@ -13923,7 +14172,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceId(
           java.lang.String value) {
@@ -13940,7 +14189,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder clearVoiceId() {
         
@@ -13953,7 +14202,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13973,7 +14222,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -13983,7 +14232,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -13996,7 +14245,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -14006,12 +14255,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -14058,41 +14307,41 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
 
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     java.lang.String getVoiceId();
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     com.google.protobuf.ByteString
         getVoiceIdBytes();
@@ -14102,7 +14351,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -14110,17 +14359,17 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
 
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     java.lang.String getToDeviceId();
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -14130,7 +14379,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -14145,6 +14394,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.MsgSecretVoice)
       MsgSecretVoiceOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use MsgSecretVoice.newBuilder() to construct.
     private MsgSecretVoice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -14162,7 +14412,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private MsgSecretVoice(
         com.google.protobuf.CodedInputStream input,
@@ -14170,6 +14420,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -14179,7 +14431,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -14233,6 +14486,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -14251,7 +14505,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -14266,7 +14520,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -14285,7 +14539,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -14300,7 +14554,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -14319,7 +14573,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -14334,7 +14588,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -14353,7 +14607,7 @@ public final class CoreProto {
     public static final int VOICEID_FIELD_NUMBER = 4;
     private volatile java.lang.Object voiceId_;
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public java.lang.String getVoiceId() {
       java.lang.Object ref = voiceId_;
@@ -14368,7 +14622,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getVoiceIdBytes() {
@@ -14391,7 +14645,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -14410,7 +14664,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -14429,7 +14683,7 @@ public final class CoreProto {
     public static final int TO_DEVICE_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object toDeviceId_;
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -14444,7 +14698,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -14467,7 +14721,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -14506,6 +14760,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -14535,11 +14790,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -14565,6 +14820,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -14574,7 +14830,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -14595,6 +14851,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.MsgSecretVoice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.MsgSecretVoice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.MsgSecretVoice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -14764,7 +15031,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -14777,12 +15044,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -14823,6 +15090,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -14851,7 +15119,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -14866,7 +15134,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -14882,7 +15150,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -14895,7 +15163,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -14904,7 +15172,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14920,7 +15188,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -14935,7 +15203,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -14951,7 +15219,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -14964,7 +15232,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -14973,7 +15241,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14989,7 +15257,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -15004,7 +15272,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -15020,7 +15288,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -15033,7 +15301,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -15042,7 +15310,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15058,7 +15326,7 @@ public final class CoreProto {
 
       private java.lang.Object voiceId_ = "";
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public java.lang.String getVoiceId() {
         java.lang.Object ref = voiceId_;
@@ -15073,7 +15341,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getVoiceIdBytes() {
@@ -15089,7 +15357,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceId(
           java.lang.String value) {
@@ -15102,7 +15370,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder clearVoiceId() {
         
@@ -15111,7 +15379,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15131,7 +15399,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -15150,7 +15418,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -15170,7 +15438,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -15187,7 +15455,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -15200,7 +15468,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -15216,7 +15484,7 @@ public final class CoreProto {
 
       private java.lang.Object toDeviceId_ = "";
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -15231,7 +15499,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -15247,7 +15515,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -15260,7 +15528,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -15269,7 +15537,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -15289,7 +15557,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -15299,7 +15567,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -15312,7 +15580,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -15322,12 +15590,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -15374,31 +15642,31 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -15408,7 +15676,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     java.lang.String getVoiceId();
     /**
@@ -15416,7 +15684,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     com.google.protobuf.ByteString
         getVoiceIdBytes();
@@ -15426,7 +15694,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -15441,6 +15709,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupVoice)
       GroupVoiceOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupVoice.newBuilder() to construct.
     private GroupVoice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -15456,7 +15725,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupVoice(
         com.google.protobuf.CodedInputStream input,
@@ -15464,6 +15733,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -15473,7 +15744,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -15515,6 +15787,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -15533,7 +15806,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -15548,7 +15821,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -15567,7 +15840,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -15582,7 +15855,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -15601,7 +15874,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -15616,7 +15889,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -15639,7 +15912,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public java.lang.String getVoiceId() {
       java.lang.Object ref = voiceId_;
@@ -15658,7 +15931,7 @@ public final class CoreProto {
      *语音地址ID
      * </pre>
      *
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getVoiceIdBytes() {
@@ -15681,7 +15954,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -15714,6 +15987,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -15737,11 +16011,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -15763,6 +16037,7 @@ public final class CoreProto {
           .equals(other.getVoiceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -15772,7 +16047,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -15789,6 +16064,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupVoice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupVoice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupVoice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -15952,7 +16238,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -15965,12 +16251,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -16003,6 +16289,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -16031,7 +16318,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -16046,7 +16333,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -16062,7 +16349,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -16075,7 +16362,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -16084,7 +16371,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16100,7 +16387,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -16115,7 +16402,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -16131,7 +16418,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -16144,7 +16431,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -16153,7 +16440,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16169,7 +16456,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -16184,7 +16471,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -16200,7 +16487,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -16213,7 +16500,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -16222,7 +16509,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16242,7 +16529,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public java.lang.String getVoiceId() {
         java.lang.Object ref = voiceId_;
@@ -16261,7 +16548,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getVoiceIdBytes() {
@@ -16281,7 +16568,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceId(
           java.lang.String value) {
@@ -16298,7 +16585,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder clearVoiceId() {
         
@@ -16311,7 +16598,7 @@ public final class CoreProto {
        *语音地址ID
        * </pre>
        *
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -16331,7 +16618,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -16341,7 +16628,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -16354,7 +16641,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -16364,12 +16651,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -16416,41 +16703,41 @@ public final class CoreProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
 
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     java.lang.String getVoiceId();
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     com.google.protobuf.ByteString
         getVoiceIdBytes();
@@ -16460,7 +16747,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -16468,7 +16755,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
@@ -16478,7 +16765,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     java.lang.String getToDeviceId();
     /**
@@ -16486,7 +16773,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -16496,7 +16783,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
   }
@@ -16511,6 +16798,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupSecretVoice)
       GroupSecretVoiceOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupSecretVoice.newBuilder() to construct.
     private GroupSecretVoice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -16528,7 +16816,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupSecretVoice(
         com.google.protobuf.CodedInputStream input,
@@ -16536,6 +16824,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -16545,7 +16835,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -16599,6 +16890,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -16617,7 +16909,7 @@ public final class CoreProto {
     public static final int MSG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object msgId_;
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -16632,7 +16924,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -16651,7 +16943,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -16666,7 +16958,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -16685,7 +16977,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -16700,7 +16992,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -16719,7 +17011,7 @@ public final class CoreProto {
     public static final int VOICEID_FIELD_NUMBER = 4;
     private volatile java.lang.Object voiceId_;
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public java.lang.String getVoiceId() {
       java.lang.Object ref = voiceId_;
@@ -16734,7 +17026,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string voiceId = 4;</code>
+     * <code>string voiceId = 4;</code>
      */
     public com.google.protobuf.ByteString
         getVoiceIdBytes() {
@@ -16757,7 +17049,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -16776,7 +17068,7 @@ public final class CoreProto {
      *加密key，值为aes密钥（原始bytes base64encode后的字符串）
      * </pre>
      *
-     * <code>optional string base64_ts_key = 5;</code>
+     * <code>string base64_ts_key = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -16799,7 +17091,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -16818,7 +17110,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 6;</code>
+     * <code>string to_device_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -16841,7 +17133,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -16880,6 +17172,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(7, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -16909,11 +17202,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -16939,6 +17232,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -16948,7 +17242,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -16969,6 +17263,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupSecretVoice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupSecretVoice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupSecretVoice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -17138,7 +17443,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -17151,12 +17456,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -17197,6 +17502,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -17225,7 +17531,7 @@ public final class CoreProto {
 
       private java.lang.Object msgId_ = "";
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -17240,7 +17546,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -17256,7 +17562,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -17269,7 +17575,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -17278,7 +17584,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17294,7 +17600,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -17309,7 +17615,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -17325,7 +17631,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -17338,7 +17644,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -17347,7 +17653,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17363,7 +17669,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -17378,7 +17684,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -17394,7 +17700,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -17407,7 +17713,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -17416,7 +17722,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17432,7 +17738,7 @@ public final class CoreProto {
 
       private java.lang.Object voiceId_ = "";
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public java.lang.String getVoiceId() {
         java.lang.Object ref = voiceId_;
@@ -17447,7 +17753,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public com.google.protobuf.ByteString
           getVoiceIdBytes() {
@@ -17463,7 +17769,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceId(
           java.lang.String value) {
@@ -17476,7 +17782,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder clearVoiceId() {
         
@@ -17485,7 +17791,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string voiceId = 4;</code>
+       * <code>string voiceId = 4;</code>
        */
       public Builder setVoiceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17505,7 +17811,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -17524,7 +17830,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -17544,7 +17850,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -17561,7 +17867,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -17574,7 +17880,7 @@ public final class CoreProto {
        *加密key，值为aes密钥（原始bytes base64encode后的字符串）
        * </pre>
        *
-       * <code>optional string base64_ts_key = 5;</code>
+       * <code>string base64_ts_key = 5;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -17594,7 +17900,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -17613,7 +17919,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -17633,7 +17939,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -17650,7 +17956,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -17663,7 +17969,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 6;</code>
+       * <code>string to_device_id = 6;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17683,7 +17989,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -17693,7 +17999,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -17706,7 +18012,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -17716,12 +18022,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -17772,7 +18078,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -17780,7 +18086,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -17790,7 +18096,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -17798,7 +18104,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -17808,7 +18114,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -17816,7 +18122,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -17826,7 +18132,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     java.lang.String getLng();
     /**
@@ -17834,7 +18140,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     com.google.protobuf.ByteString
         getLngBytes();
@@ -17844,7 +18150,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     java.lang.String getLat();
     /**
@@ -17852,7 +18158,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     com.google.protobuf.ByteString
         getLatBytes();
@@ -17862,7 +18168,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 6;</code>
+     * <code>int64 time = 6;</code>
      */
     long getTime();
   }
@@ -17877,6 +18183,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.U2Map)
       U2MapOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use U2Map.newBuilder() to construct.
     private U2Map(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -17893,7 +18200,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private U2Map(
         com.google.protobuf.CodedInputStream input,
@@ -17901,6 +18208,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -17910,7 +18219,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -17958,6 +18268,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -17980,7 +18291,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -17999,7 +18310,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -18022,7 +18333,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -18041,7 +18352,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -18064,7 +18375,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -18083,7 +18394,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -18106,7 +18417,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     public java.lang.String getLng() {
       java.lang.Object ref = lng_;
@@ -18125,7 +18436,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     public com.google.protobuf.ByteString
         getLngBytes() {
@@ -18148,7 +18459,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     public java.lang.String getLat() {
       java.lang.Object ref = lat_;
@@ -18167,7 +18478,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     public com.google.protobuf.ByteString
         getLatBytes() {
@@ -18190,7 +18501,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 6;</code>
+     * <code>int64 time = 6;</code>
      */
     public long getTime() {
       return time_;
@@ -18226,6 +18537,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(6, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -18252,11 +18564,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -18280,6 +18592,7 @@ public final class CoreProto {
           .equals(other.getLat());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -18289,7 +18602,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -18308,6 +18621,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.U2Map parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.U2Map parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.U2Map parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18474,7 +18798,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -18487,12 +18811,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -18529,6 +18853,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -18561,7 +18886,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -18580,7 +18905,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -18600,7 +18925,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -18617,7 +18942,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -18630,7 +18955,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18650,7 +18975,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -18669,7 +18994,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -18689,7 +19014,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -18706,7 +19031,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -18719,7 +19044,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18739,7 +19064,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -18758,7 +19083,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -18778,7 +19103,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -18795,7 +19120,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -18808,7 +19133,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18828,7 +19153,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public java.lang.String getLng() {
         java.lang.Object ref = lng_;
@@ -18847,7 +19172,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public com.google.protobuf.ByteString
           getLngBytes() {
@@ -18867,7 +19192,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public Builder setLng(
           java.lang.String value) {
@@ -18884,7 +19209,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public Builder clearLng() {
         
@@ -18897,7 +19222,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public Builder setLngBytes(
           com.google.protobuf.ByteString value) {
@@ -18917,7 +19242,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public java.lang.String getLat() {
         java.lang.Object ref = lat_;
@@ -18936,7 +19261,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public com.google.protobuf.ByteString
           getLatBytes() {
@@ -18956,7 +19281,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public Builder setLat(
           java.lang.String value) {
@@ -18973,7 +19298,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public Builder clearLat() {
         
@@ -18986,7 +19311,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public Builder setLatBytes(
           com.google.protobuf.ByteString value) {
@@ -19006,7 +19331,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 6;</code>
+       * <code>int64 time = 6;</code>
        */
       public long getTime() {
         return time_;
@@ -19016,7 +19341,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 6;</code>
+       * <code>int64 time = 6;</code>
        */
       public Builder setTime(long value) {
         
@@ -19029,7 +19354,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 6;</code>
+       * <code>int64 time = 6;</code>
        */
       public Builder clearTime() {
         
@@ -19039,12 +19364,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -19095,7 +19420,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -19103,7 +19428,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -19113,7 +19438,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -19121,7 +19446,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -19131,7 +19456,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -19139,7 +19464,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -19149,7 +19474,7 @@ public final class CoreProto {
      *加密Base64经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     java.lang.String getBase64Lng();
     /**
@@ -19157,7 +19482,7 @@ public final class CoreProto {
      *加密Base64经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     com.google.protobuf.ByteString
         getBase64LngBytes();
@@ -19167,7 +19492,7 @@ public final class CoreProto {
      *加密Base64纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     java.lang.String getBase64Lat();
     /**
@@ -19175,7 +19500,7 @@ public final class CoreProto {
      *加密Base64纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64LatBytes();
@@ -19185,7 +19510,7 @@ public final class CoreProto {
      *Base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -19193,7 +19518,7 @@ public final class CoreProto {
      *Base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
@@ -19203,7 +19528,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     java.lang.String getToDeviceId();
     /**
@@ -19211,7 +19536,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -19221,7 +19546,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 8;</code>
+     * <code>int64 time = 8;</code>
      */
     long getTime();
   }
@@ -19236,6 +19561,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.U2SecretMap)
       U2SecretMapOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use U2SecretMap.newBuilder() to construct.
     private U2SecretMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -19254,7 +19580,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private U2SecretMap(
         com.google.protobuf.CodedInputStream input,
@@ -19262,6 +19588,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -19271,7 +19599,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -19331,6 +19660,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -19353,7 +19683,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -19372,7 +19702,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -19395,7 +19725,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -19414,7 +19744,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -19437,7 +19767,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -19456,7 +19786,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -19479,7 +19809,7 @@ public final class CoreProto {
      *加密Base64经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     public java.lang.String getBase64Lng() {
       java.lang.Object ref = base64Lng_;
@@ -19498,7 +19828,7 @@ public final class CoreProto {
      *加密Base64经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     public com.google.protobuf.ByteString
         getBase64LngBytes() {
@@ -19521,7 +19851,7 @@ public final class CoreProto {
      *加密Base64纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     public java.lang.String getBase64Lat() {
       java.lang.Object ref = base64Lat_;
@@ -19540,7 +19870,7 @@ public final class CoreProto {
      *加密Base64纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64LatBytes() {
@@ -19563,7 +19893,7 @@ public final class CoreProto {
      *Base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -19582,7 +19912,7 @@ public final class CoreProto {
      *Base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -19605,7 +19935,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -19624,7 +19954,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -19647,7 +19977,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 8;</code>
+     * <code>int64 time = 8;</code>
      */
     public long getTime() {
       return time_;
@@ -19689,6 +20019,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(8, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -19721,11 +20052,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -19753,6 +20084,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -19762,7 +20094,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -19785,6 +20117,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.U2SecretMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.U2SecretMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.U2SecretMap parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19957,7 +20300,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -19970,12 +20313,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -20020,6 +20363,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -20052,7 +20396,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -20071,7 +20415,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -20091,7 +20435,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -20108,7 +20452,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -20121,7 +20465,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20141,7 +20485,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -20160,7 +20504,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -20180,7 +20524,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -20197,7 +20541,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -20210,7 +20554,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20230,7 +20574,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -20249,7 +20593,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -20269,7 +20613,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -20286,7 +20630,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -20299,7 +20643,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20319,7 +20663,7 @@ public final class CoreProto {
        *加密Base64经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public java.lang.String getBase64Lng() {
         java.lang.Object ref = base64Lng_;
@@ -20338,7 +20682,7 @@ public final class CoreProto {
        *加密Base64经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public com.google.protobuf.ByteString
           getBase64LngBytes() {
@@ -20358,7 +20702,7 @@ public final class CoreProto {
        *加密Base64经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public Builder setBase64Lng(
           java.lang.String value) {
@@ -20375,7 +20719,7 @@ public final class CoreProto {
        *加密Base64经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public Builder clearBase64Lng() {
         
@@ -20388,7 +20732,7 @@ public final class CoreProto {
        *加密Base64经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public Builder setBase64LngBytes(
           com.google.protobuf.ByteString value) {
@@ -20408,7 +20752,7 @@ public final class CoreProto {
        *加密Base64纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public java.lang.String getBase64Lat() {
         java.lang.Object ref = base64Lat_;
@@ -20427,7 +20771,7 @@ public final class CoreProto {
        *加密Base64纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64LatBytes() {
@@ -20447,7 +20791,7 @@ public final class CoreProto {
        *加密Base64纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public Builder setBase64Lat(
           java.lang.String value) {
@@ -20464,7 +20808,7 @@ public final class CoreProto {
        *加密Base64纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public Builder clearBase64Lat() {
         
@@ -20477,7 +20821,7 @@ public final class CoreProto {
        *加密Base64纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public Builder setBase64LatBytes(
           com.google.protobuf.ByteString value) {
@@ -20497,7 +20841,7 @@ public final class CoreProto {
        *Base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -20516,7 +20860,7 @@ public final class CoreProto {
        *Base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -20536,7 +20880,7 @@ public final class CoreProto {
        *Base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -20553,7 +20897,7 @@ public final class CoreProto {
        *Base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -20566,7 +20910,7 @@ public final class CoreProto {
        *Base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -20586,7 +20930,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -20605,7 +20949,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -20625,7 +20969,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -20642,7 +20986,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -20655,7 +20999,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -20675,7 +21019,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 8;</code>
+       * <code>int64 time = 8;</code>
        */
       public long getTime() {
         return time_;
@@ -20685,7 +21029,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 8;</code>
+       * <code>int64 time = 8;</code>
        */
       public Builder setTime(long value) {
         
@@ -20698,7 +21042,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 8;</code>
+       * <code>int64 time = 8;</code>
        */
       public Builder clearTime() {
         
@@ -20708,12 +21052,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -20764,7 +21108,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -20772,7 +21116,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -20782,7 +21126,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -20790,7 +21134,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -20800,7 +21144,7 @@ public final class CoreProto {
      *to（群id）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
@@ -20808,7 +21152,7 @@ public final class CoreProto {
      *to（群id）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -20818,7 +21162,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     java.lang.String getLng();
     /**
@@ -20826,7 +21170,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     com.google.protobuf.ByteString
         getLngBytes();
@@ -20836,7 +21180,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     java.lang.String getLat();
     /**
@@ -20844,7 +21188,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     com.google.protobuf.ByteString
         getLatBytes();
@@ -20854,7 +21198,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 6;</code>
+     * <code>int64 time = 6;</code>
      */
     long getTime();
   }
@@ -20869,6 +21213,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupMap)
       GroupMapOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupMap.newBuilder() to construct.
     private GroupMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -20885,7 +21230,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupMap(
         com.google.protobuf.CodedInputStream input,
@@ -20893,6 +21238,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -20902,7 +21249,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -20950,6 +21298,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -20972,7 +21321,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -20991,7 +21340,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -21014,7 +21363,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -21033,7 +21382,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -21056,7 +21405,7 @@ public final class CoreProto {
      *to（群id）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -21075,7 +21424,7 @@ public final class CoreProto {
      *to（群id）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -21098,7 +21447,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     public java.lang.String getLng() {
       java.lang.Object ref = lng_;
@@ -21117,7 +21466,7 @@ public final class CoreProto {
      *经度
      * </pre>
      *
-     * <code>optional string lng = 4;</code>
+     * <code>string lng = 4;</code>
      */
     public com.google.protobuf.ByteString
         getLngBytes() {
@@ -21140,7 +21489,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     public java.lang.String getLat() {
       java.lang.Object ref = lat_;
@@ -21159,7 +21508,7 @@ public final class CoreProto {
      *纬度
      * </pre>
      *
-     * <code>optional string lat = 5;</code>
+     * <code>string lat = 5;</code>
      */
     public com.google.protobuf.ByteString
         getLatBytes() {
@@ -21182,7 +21531,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 6;</code>
+     * <code>int64 time = 6;</code>
      */
     public long getTime() {
       return time_;
@@ -21218,6 +21567,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(6, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -21244,11 +21594,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -21272,6 +21622,7 @@ public final class CoreProto {
           .equals(other.getLat());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -21281,7 +21632,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -21300,6 +21651,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupMap parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -21466,7 +21828,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -21479,12 +21841,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -21521,6 +21883,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -21553,7 +21916,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -21572,7 +21935,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -21592,7 +21955,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -21609,7 +21972,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -21622,7 +21985,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -21642,7 +22005,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -21661,7 +22024,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -21681,7 +22044,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -21698,7 +22061,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -21711,7 +22074,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -21731,7 +22094,7 @@ public final class CoreProto {
        *to（群id）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -21750,7 +22113,7 @@ public final class CoreProto {
        *to（群id）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -21770,7 +22133,7 @@ public final class CoreProto {
        *to（群id）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -21787,7 +22150,7 @@ public final class CoreProto {
        *to（群id）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -21800,7 +22163,7 @@ public final class CoreProto {
        *to（群id）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -21820,7 +22183,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public java.lang.String getLng() {
         java.lang.Object ref = lng_;
@@ -21839,7 +22202,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public com.google.protobuf.ByteString
           getLngBytes() {
@@ -21859,7 +22222,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public Builder setLng(
           java.lang.String value) {
@@ -21876,7 +22239,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public Builder clearLng() {
         
@@ -21889,7 +22252,7 @@ public final class CoreProto {
        *经度
        * </pre>
        *
-       * <code>optional string lng = 4;</code>
+       * <code>string lng = 4;</code>
        */
       public Builder setLngBytes(
           com.google.protobuf.ByteString value) {
@@ -21909,7 +22272,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public java.lang.String getLat() {
         java.lang.Object ref = lat_;
@@ -21928,7 +22291,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public com.google.protobuf.ByteString
           getLatBytes() {
@@ -21948,7 +22311,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public Builder setLat(
           java.lang.String value) {
@@ -21965,7 +22328,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public Builder clearLat() {
         
@@ -21978,7 +22341,7 @@ public final class CoreProto {
        *纬度
        * </pre>
        *
-       * <code>optional string lat = 5;</code>
+       * <code>string lat = 5;</code>
        */
       public Builder setLatBytes(
           com.google.protobuf.ByteString value) {
@@ -21998,7 +22361,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 6;</code>
+       * <code>int64 time = 6;</code>
        */
       public long getTime() {
         return time_;
@@ -22008,7 +22371,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 6;</code>
+       * <code>int64 time = 6;</code>
        */
       public Builder setTime(long value) {
         
@@ -22021,7 +22384,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 6;</code>
+       * <code>int64 time = 6;</code>
        */
       public Builder clearTime() {
         
@@ -22031,12 +22394,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -22087,7 +22450,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -22095,7 +22458,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -22105,7 +22468,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -22113,7 +22476,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -22123,7 +22486,7 @@ public final class CoreProto {
      *to（群ID）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
@@ -22131,7 +22494,7 @@ public final class CoreProto {
      *to（群ID）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -22141,7 +22504,7 @@ public final class CoreProto {
      *加密经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     java.lang.String getBase64Lng();
     /**
@@ -22149,7 +22512,7 @@ public final class CoreProto {
      *加密经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     com.google.protobuf.ByteString
         getBase64LngBytes();
@@ -22159,7 +22522,7 @@ public final class CoreProto {
      *加密纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     java.lang.String getBase64Lat();
     /**
@@ -22167,7 +22530,7 @@ public final class CoreProto {
      *加密纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     com.google.protobuf.ByteString
         getBase64LatBytes();
@@ -22177,7 +22540,7 @@ public final class CoreProto {
      *base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     java.lang.String getBase64TsKey();
     /**
@@ -22185,7 +22548,7 @@ public final class CoreProto {
      *base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     com.google.protobuf.ByteString
         getBase64TsKeyBytes();
@@ -22195,7 +22558,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     java.lang.String getToDeviceId();
     /**
@@ -22203,7 +22566,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getToDeviceIdBytes();
@@ -22213,7 +22576,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 8;</code>
+     * <code>int64 time = 8;</code>
      */
     long getTime();
   }
@@ -22228,6 +22591,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupSecretMap)
       GroupSecretMapOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupSecretMap.newBuilder() to construct.
     private GroupSecretMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -22246,7 +22610,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupSecretMap(
         com.google.protobuf.CodedInputStream input,
@@ -22254,6 +22618,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -22263,7 +22629,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -22323,6 +22690,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -22345,7 +22713,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -22364,7 +22732,7 @@ public final class CoreProto {
      *消息id
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -22387,7 +22755,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -22406,7 +22774,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -22429,7 +22797,7 @@ public final class CoreProto {
      *to（群ID）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -22448,7 +22816,7 @@ public final class CoreProto {
      *to（群ID）
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -22471,7 +22839,7 @@ public final class CoreProto {
      *加密经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     public java.lang.String getBase64Lng() {
       java.lang.Object ref = base64Lng_;
@@ -22490,7 +22858,7 @@ public final class CoreProto {
      *加密经度
      * </pre>
      *
-     * <code>optional string base64_lng = 4;</code>
+     * <code>string base64_lng = 4;</code>
      */
     public com.google.protobuf.ByteString
         getBase64LngBytes() {
@@ -22513,7 +22881,7 @@ public final class CoreProto {
      *加密纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     public java.lang.String getBase64Lat() {
       java.lang.Object ref = base64Lat_;
@@ -22532,7 +22900,7 @@ public final class CoreProto {
      *加密纬度
      * </pre>
      *
-     * <code>optional string base64_lat = 5;</code>
+     * <code>string base64_lat = 5;</code>
      */
     public com.google.protobuf.ByteString
         getBase64LatBytes() {
@@ -22555,7 +22923,7 @@ public final class CoreProto {
      *base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     public java.lang.String getBase64TsKey() {
       java.lang.Object ref = base64TsKey_;
@@ -22574,7 +22942,7 @@ public final class CoreProto {
      *base64的加密key，用于AES加密使用
      * </pre>
      *
-     * <code>optional string base64_ts_key = 6;</code>
+     * <code>string base64_ts_key = 6;</code>
      */
     public com.google.protobuf.ByteString
         getBase64TsKeyBytes() {
@@ -22597,7 +22965,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     public java.lang.String getToDeviceId() {
       java.lang.Object ref = toDeviceId_;
@@ -22616,7 +22984,7 @@ public final class CoreProto {
      *接受者的设备ID
      * </pre>
      *
-     * <code>optional string to_device_id = 7;</code>
+     * <code>string to_device_id = 7;</code>
      */
     public com.google.protobuf.ByteString
         getToDeviceIdBytes() {
@@ -22639,7 +23007,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 8;</code>
+     * <code>int64 time = 8;</code>
      */
     public long getTime() {
       return time_;
@@ -22681,6 +23049,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(8, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -22713,11 +23082,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -22745,6 +23114,7 @@ public final class CoreProto {
           .equals(other.getToDeviceId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -22754,7 +23124,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -22777,6 +23147,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupSecretMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupSecretMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupSecretMap parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22949,7 +23330,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -22962,12 +23343,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -23012,6 +23393,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -23044,7 +23426,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -23063,7 +23445,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -23083,7 +23465,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -23100,7 +23482,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -23113,7 +23495,7 @@ public final class CoreProto {
        *消息id
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23133,7 +23515,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -23152,7 +23534,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -23172,7 +23554,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -23189,7 +23571,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -23202,7 +23584,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23222,7 +23604,7 @@ public final class CoreProto {
        *to（群ID）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -23241,7 +23623,7 @@ public final class CoreProto {
        *to（群ID）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -23261,7 +23643,7 @@ public final class CoreProto {
        *to（群ID）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -23278,7 +23660,7 @@ public final class CoreProto {
        *to（群ID）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -23291,7 +23673,7 @@ public final class CoreProto {
        *to（群ID）
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23311,7 +23693,7 @@ public final class CoreProto {
        *加密经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public java.lang.String getBase64Lng() {
         java.lang.Object ref = base64Lng_;
@@ -23330,7 +23712,7 @@ public final class CoreProto {
        *加密经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public com.google.protobuf.ByteString
           getBase64LngBytes() {
@@ -23350,7 +23732,7 @@ public final class CoreProto {
        *加密经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public Builder setBase64Lng(
           java.lang.String value) {
@@ -23367,7 +23749,7 @@ public final class CoreProto {
        *加密经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public Builder clearBase64Lng() {
         
@@ -23380,7 +23762,7 @@ public final class CoreProto {
        *加密经度
        * </pre>
        *
-       * <code>optional string base64_lng = 4;</code>
+       * <code>string base64_lng = 4;</code>
        */
       public Builder setBase64LngBytes(
           com.google.protobuf.ByteString value) {
@@ -23400,7 +23782,7 @@ public final class CoreProto {
        *加密纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public java.lang.String getBase64Lat() {
         java.lang.Object ref = base64Lat_;
@@ -23419,7 +23801,7 @@ public final class CoreProto {
        *加密纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public com.google.protobuf.ByteString
           getBase64LatBytes() {
@@ -23439,7 +23821,7 @@ public final class CoreProto {
        *加密纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public Builder setBase64Lat(
           java.lang.String value) {
@@ -23456,7 +23838,7 @@ public final class CoreProto {
        *加密纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public Builder clearBase64Lat() {
         
@@ -23469,7 +23851,7 @@ public final class CoreProto {
        *加密纬度
        * </pre>
        *
-       * <code>optional string base64_lat = 5;</code>
+       * <code>string base64_lat = 5;</code>
        */
       public Builder setBase64LatBytes(
           com.google.protobuf.ByteString value) {
@@ -23489,7 +23871,7 @@ public final class CoreProto {
        *base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public java.lang.String getBase64TsKey() {
         java.lang.Object ref = base64TsKey_;
@@ -23508,7 +23890,7 @@ public final class CoreProto {
        *base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public com.google.protobuf.ByteString
           getBase64TsKeyBytes() {
@@ -23528,7 +23910,7 @@ public final class CoreProto {
        *base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public Builder setBase64TsKey(
           java.lang.String value) {
@@ -23545,7 +23927,7 @@ public final class CoreProto {
        *base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public Builder clearBase64TsKey() {
         
@@ -23558,7 +23940,7 @@ public final class CoreProto {
        *base64的加密key，用于AES加密使用
        * </pre>
        *
-       * <code>optional string base64_ts_key = 6;</code>
+       * <code>string base64_ts_key = 6;</code>
        */
       public Builder setBase64TsKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -23578,7 +23960,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public java.lang.String getToDeviceId() {
         java.lang.Object ref = toDeviceId_;
@@ -23597,7 +23979,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public com.google.protobuf.ByteString
           getToDeviceIdBytes() {
@@ -23617,7 +23999,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public Builder setToDeviceId(
           java.lang.String value) {
@@ -23634,7 +24016,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public Builder clearToDeviceId() {
         
@@ -23647,7 +24029,7 @@ public final class CoreProto {
        *接受者的设备ID
        * </pre>
        *
-       * <code>optional string to_device_id = 7;</code>
+       * <code>string to_device_id = 7;</code>
        */
       public Builder setToDeviceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -23667,7 +24049,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 8;</code>
+       * <code>int64 time = 8;</code>
        */
       public long getTime() {
         return time_;
@@ -23677,7 +24059,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 8;</code>
+       * <code>int64 time = 8;</code>
        */
       public Builder setTime(long value) {
         
@@ -23690,7 +24072,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 8;</code>
+       * <code>int64 time = 8;</code>
        */
       public Builder clearTime() {
         
@@ -23700,12 +24082,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -23756,7 +24138,7 @@ public final class CoreProto {
      *通知可能的发送方
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -23764,7 +24146,7 @@ public final class CoreProto {
      *通知可能的发送方
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -23774,7 +24156,7 @@ public final class CoreProto {
      *消息的接收方
      * </pre>
      *
-     * <code>optional string site_friend_id = 2;</code>
+     * <code>string site_friend_id = 2;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -23782,7 +24164,7 @@ public final class CoreProto {
      *消息的接收方
      * </pre>
      *
-     * <code>optional string site_friend_id = 2;</code>
+     * <code>string site_friend_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -23792,7 +24174,7 @@ public final class CoreProto {
      *消息通知内容
      * </pre>
      *
-     * <code>optional bytes text = 3;</code>
+     * <code>bytes text = 3;</code>
      */
     com.google.protobuf.ByteString getText();
 
@@ -23801,7 +24183,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 4;</code>
+     * <code>int64 time = 4;</code>
      */
     long getTime();
 
@@ -23810,7 +24192,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -23818,7 +24200,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -23834,6 +24216,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.U2MsgNotice)
       U2MsgNoticeOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use U2MsgNotice.newBuilder() to construct.
     private U2MsgNotice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -23849,7 +24232,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private U2MsgNotice(
         com.google.protobuf.CodedInputStream input,
@@ -23857,6 +24240,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -23866,7 +24251,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -23907,6 +24293,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -23929,7 +24316,7 @@ public final class CoreProto {
      *通知可能的发送方
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -23948,7 +24335,7 @@ public final class CoreProto {
      *通知可能的发送方
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -23971,7 +24358,7 @@ public final class CoreProto {
      *消息的接收方
      * </pre>
      *
-     * <code>optional string site_friend_id = 2;</code>
+     * <code>string site_friend_id = 2;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -23990,7 +24377,7 @@ public final class CoreProto {
      *消息的接收方
      * </pre>
      *
-     * <code>optional string site_friend_id = 2;</code>
+     * <code>string site_friend_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -24013,7 +24400,7 @@ public final class CoreProto {
      *消息通知内容
      * </pre>
      *
-     * <code>optional bytes text = 3;</code>
+     * <code>bytes text = 3;</code>
      */
     public com.google.protobuf.ByteString getText() {
       return text_;
@@ -24026,7 +24413,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 4;</code>
+     * <code>int64 time = 4;</code>
      */
     public long getTime() {
       return time_;
@@ -24039,7 +24426,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -24058,7 +24445,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -24101,6 +24488,7 @@ public final class CoreProto {
       if (!getMsgIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, msgId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -24125,11 +24513,11 @@ public final class CoreProto {
       if (!getMsgIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, msgId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -24151,6 +24539,7 @@ public final class CoreProto {
           == other.getTime());
       result = result && getMsgId()
           .equals(other.getMsgId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -24160,7 +24549,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + SITE_FRIEND_ID_FIELD_NUMBER;
@@ -24177,6 +24566,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.U2MsgNotice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.U2MsgNotice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.U2MsgNotice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -24340,7 +24740,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -24353,12 +24753,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -24390,6 +24790,7 @@ public final class CoreProto {
           msgId_ = other.msgId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -24422,7 +24823,7 @@ public final class CoreProto {
        *通知可能的发送方
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -24441,7 +24842,7 @@ public final class CoreProto {
        *通知可能的发送方
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -24461,7 +24862,7 @@ public final class CoreProto {
        *通知可能的发送方
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -24478,7 +24879,7 @@ public final class CoreProto {
        *通知可能的发送方
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -24491,7 +24892,7 @@ public final class CoreProto {
        *通知可能的发送方
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -24511,7 +24912,7 @@ public final class CoreProto {
        *消息的接收方
        * </pre>
        *
-       * <code>optional string site_friend_id = 2;</code>
+       * <code>string site_friend_id = 2;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -24530,7 +24931,7 @@ public final class CoreProto {
        *消息的接收方
        * </pre>
        *
-       * <code>optional string site_friend_id = 2;</code>
+       * <code>string site_friend_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -24550,7 +24951,7 @@ public final class CoreProto {
        *消息的接收方
        * </pre>
        *
-       * <code>optional string site_friend_id = 2;</code>
+       * <code>string site_friend_id = 2;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -24567,7 +24968,7 @@ public final class CoreProto {
        *消息的接收方
        * </pre>
        *
-       * <code>optional string site_friend_id = 2;</code>
+       * <code>string site_friend_id = 2;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -24580,7 +24981,7 @@ public final class CoreProto {
        *消息的接收方
        * </pre>
        *
-       * <code>optional string site_friend_id = 2;</code>
+       * <code>string site_friend_id = 2;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -24600,7 +25001,7 @@ public final class CoreProto {
        *消息通知内容
        * </pre>
        *
-       * <code>optional bytes text = 3;</code>
+       * <code>bytes text = 3;</code>
        */
       public com.google.protobuf.ByteString getText() {
         return text_;
@@ -24610,7 +25011,7 @@ public final class CoreProto {
        *消息通知内容
        * </pre>
        *
-       * <code>optional bytes text = 3;</code>
+       * <code>bytes text = 3;</code>
        */
       public Builder setText(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -24626,7 +25027,7 @@ public final class CoreProto {
        *消息通知内容
        * </pre>
        *
-       * <code>optional bytes text = 3;</code>
+       * <code>bytes text = 3;</code>
        */
       public Builder clearText() {
         
@@ -24641,7 +25042,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 4;</code>
+       * <code>int64 time = 4;</code>
        */
       public long getTime() {
         return time_;
@@ -24651,7 +25052,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 4;</code>
+       * <code>int64 time = 4;</code>
        */
       public Builder setTime(long value) {
         
@@ -24664,7 +25065,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 4;</code>
+       * <code>int64 time = 4;</code>
        */
       public Builder clearTime() {
         
@@ -24679,7 +25080,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -24698,7 +25099,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -24718,7 +25119,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -24735,7 +25136,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public Builder clearMsgId() {
         
@@ -24748,7 +25149,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -24763,12 +25164,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -24819,7 +25220,7 @@ public final class CoreProto {
      *通知发送者
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -24827,7 +25228,7 @@ public final class CoreProto {
      *通知发送者
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -24837,7 +25238,7 @@ public final class CoreProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string site_group_id = 2;</code>
+     * <code>string site_group_id = 2;</code>
      */
     java.lang.String getSiteGroupId();
     /**
@@ -24845,7 +25246,7 @@ public final class CoreProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string site_group_id = 2;</code>
+     * <code>string site_group_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -24855,7 +25256,7 @@ public final class CoreProto {
      *通知消息
      * </pre>
      *
-     * <code>optional bytes text = 3;</code>
+     * <code>bytes text = 3;</code>
      */
     com.google.protobuf.ByteString getText();
 
@@ -24864,7 +25265,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 4;</code>
+     * <code>int64 time = 4;</code>
      */
     long getTime();
 
@@ -24873,7 +25274,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -24881,7 +25282,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -24897,6 +25298,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupMsgNotice)
       GroupMsgNoticeOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupMsgNotice.newBuilder() to construct.
     private GroupMsgNotice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -24912,7 +25314,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupMsgNotice(
         com.google.protobuf.CodedInputStream input,
@@ -24920,6 +25322,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -24929,7 +25333,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -24970,6 +25375,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -24992,7 +25398,7 @@ public final class CoreProto {
      *通知发送者
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -25011,7 +25417,7 @@ public final class CoreProto {
      *通知发送者
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -25034,7 +25440,7 @@ public final class CoreProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string site_group_id = 2;</code>
+     * <code>string site_group_id = 2;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -25053,7 +25459,7 @@ public final class CoreProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string site_group_id = 2;</code>
+     * <code>string site_group_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -25076,7 +25482,7 @@ public final class CoreProto {
      *通知消息
      * </pre>
      *
-     * <code>optional bytes text = 3;</code>
+     * <code>bytes text = 3;</code>
      */
     public com.google.protobuf.ByteString getText() {
       return text_;
@@ -25089,7 +25495,7 @@ public final class CoreProto {
      *消息时间，单位ms
      * </pre>
      *
-     * <code>optional int64 time = 4;</code>
+     * <code>int64 time = 4;</code>
      */
     public long getTime() {
       return time_;
@@ -25102,7 +25508,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -25121,7 +25527,7 @@ public final class CoreProto {
      *通知消息id
      * </pre>
      *
-     * <code>optional string msg_id = 5;</code>
+     * <code>string msg_id = 5;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -25164,6 +25570,7 @@ public final class CoreProto {
       if (!getMsgIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, msgId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -25188,11 +25595,11 @@ public final class CoreProto {
       if (!getMsgIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, msgId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -25214,6 +25621,7 @@ public final class CoreProto {
           == other.getTime());
       result = result && getMsgId()
           .equals(other.getMsgId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -25223,7 +25631,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + SITE_GROUP_ID_FIELD_NUMBER;
@@ -25240,6 +25648,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupMsgNotice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupMsgNotice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupMsgNotice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -25403,7 +25822,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -25416,12 +25835,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -25453,6 +25872,7 @@ public final class CoreProto {
           msgId_ = other.msgId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -25485,7 +25905,7 @@ public final class CoreProto {
        *通知发送者
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -25504,7 +25924,7 @@ public final class CoreProto {
        *通知发送者
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -25524,7 +25944,7 @@ public final class CoreProto {
        *通知发送者
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -25541,7 +25961,7 @@ public final class CoreProto {
        *通知发送者
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -25554,7 +25974,7 @@ public final class CoreProto {
        *通知发送者
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25574,7 +25994,7 @@ public final class CoreProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string site_group_id = 2;</code>
+       * <code>string site_group_id = 2;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -25593,7 +26013,7 @@ public final class CoreProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string site_group_id = 2;</code>
+       * <code>string site_group_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -25613,7 +26033,7 @@ public final class CoreProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string site_group_id = 2;</code>
+       * <code>string site_group_id = 2;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -25630,7 +26050,7 @@ public final class CoreProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string site_group_id = 2;</code>
+       * <code>string site_group_id = 2;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -25643,7 +26063,7 @@ public final class CoreProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string site_group_id = 2;</code>
+       * <code>string site_group_id = 2;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25663,7 +26083,7 @@ public final class CoreProto {
        *通知消息
        * </pre>
        *
-       * <code>optional bytes text = 3;</code>
+       * <code>bytes text = 3;</code>
        */
       public com.google.protobuf.ByteString getText() {
         return text_;
@@ -25673,7 +26093,7 @@ public final class CoreProto {
        *通知消息
        * </pre>
        *
-       * <code>optional bytes text = 3;</code>
+       * <code>bytes text = 3;</code>
        */
       public Builder setText(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -25689,7 +26109,7 @@ public final class CoreProto {
        *通知消息
        * </pre>
        *
-       * <code>optional bytes text = 3;</code>
+       * <code>bytes text = 3;</code>
        */
       public Builder clearText() {
         
@@ -25704,7 +26124,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 4;</code>
+       * <code>int64 time = 4;</code>
        */
       public long getTime() {
         return time_;
@@ -25714,7 +26134,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 4;</code>
+       * <code>int64 time = 4;</code>
        */
       public Builder setTime(long value) {
         
@@ -25727,7 +26147,7 @@ public final class CoreProto {
        *消息时间，单位ms
        * </pre>
        *
-       * <code>optional int64 time = 4;</code>
+       * <code>int64 time = 4;</code>
        */
       public Builder clearTime() {
         
@@ -25742,7 +26162,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -25761,7 +26181,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -25781,7 +26201,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -25798,7 +26218,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public Builder clearMsgId() {
         
@@ -25811,7 +26231,7 @@ public final class CoreProto {
        *通知消息id
        * </pre>
        *
-       * <code>optional string msg_id = 5;</code>
+       * <code>string msg_id = 5;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25826,12 +26246,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -25882,7 +26302,7 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -25890,27 +26310,27 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -25920,7 +26340,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     java.lang.String getRecallMsgId();
     /**
@@ -25928,7 +26348,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     com.google.protobuf.ByteString
         getRecallMsgIdBytes();
@@ -25938,7 +26358,7 @@ public final class CoreProto {
      *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     long getTime();
   }
@@ -25953,6 +26373,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.U2Recall)
       U2RecallOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use U2Recall.newBuilder() to construct.
     private U2Recall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -25968,7 +26389,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private U2Recall(
         com.google.protobuf.CodedInputStream input,
@@ -25976,6 +26397,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -25985,7 +26408,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -26027,6 +26451,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -26049,7 +26474,7 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -26068,7 +26493,7 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -26087,7 +26512,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -26102,7 +26527,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -26121,7 +26546,7 @@ public final class CoreProto {
     public static final int SITE_FRIEND_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteFriendId_;
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -26136,7 +26561,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -26159,7 +26584,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     public java.lang.String getRecallMsgId() {
       java.lang.Object ref = recallMsgId_;
@@ -26178,7 +26603,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     public com.google.protobuf.ByteString
         getRecallMsgIdBytes() {
@@ -26201,7 +26626,7 @@ public final class CoreProto {
      *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     public long getTime() {
       return time_;
@@ -26234,6 +26659,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(5, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -26257,11 +26683,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -26283,6 +26709,7 @@ public final class CoreProto {
           .equals(other.getRecallMsgId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -26292,7 +26719,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -26309,6 +26736,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.U2Recall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.U2Recall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.U2Recall parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -26472,7 +26910,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -26485,12 +26923,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -26523,6 +26961,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -26555,7 +26994,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -26574,7 +27013,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -26594,7 +27033,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -26611,7 +27050,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -26624,7 +27063,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -26640,7 +27079,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -26655,7 +27094,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -26671,7 +27110,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -26684,7 +27123,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -26693,7 +27132,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -26709,7 +27148,7 @@ public final class CoreProto {
 
       private java.lang.Object siteFriendId_ = "";
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -26724,7 +27163,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -26740,7 +27179,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -26753,7 +27192,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -26762,7 +27201,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -26782,7 +27221,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public java.lang.String getRecallMsgId() {
         java.lang.Object ref = recallMsgId_;
@@ -26801,7 +27240,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public com.google.protobuf.ByteString
           getRecallMsgIdBytes() {
@@ -26821,7 +27260,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public Builder setRecallMsgId(
           java.lang.String value) {
@@ -26838,7 +27277,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public Builder clearRecallMsgId() {
         
@@ -26851,7 +27290,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public Builder setRecallMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -26871,7 +27310,7 @@ public final class CoreProto {
        *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public long getTime() {
         return time_;
@@ -26881,7 +27320,7 @@ public final class CoreProto {
        *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder setTime(long value) {
         
@@ -26894,7 +27333,7 @@ public final class CoreProto {
        *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder clearTime() {
         
@@ -26904,12 +27343,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -26960,7 +27399,7 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -26968,27 +27407,27 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
 
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
 
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -26998,7 +27437,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     java.lang.String getRecallMsgId();
     /**
@@ -27006,7 +27445,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     com.google.protobuf.ByteString
         getRecallMsgIdBytes();
@@ -27016,7 +27455,7 @@ public final class CoreProto {
      *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     long getTime();
   }
@@ -27031,6 +27470,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupRecall)
       GroupRecallOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupRecall.newBuilder() to construct.
     private GroupRecall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -27046,7 +27486,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupRecall(
         com.google.protobuf.CodedInputStream input,
@@ -27054,6 +27494,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -27063,7 +27505,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -27105,6 +27548,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -27127,7 +27571,7 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -27146,7 +27590,7 @@ public final class CoreProto {
      *撤回消息的ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -27165,7 +27609,7 @@ public final class CoreProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -27180,7 +27624,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -27199,7 +27643,7 @@ public final class CoreProto {
     public static final int SITE_GROUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object siteGroupId_;
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -27214,7 +27658,7 @@ public final class CoreProto {
       }
     }
     /**
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -27237,7 +27681,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     public java.lang.String getRecallMsgId() {
       java.lang.Object ref = recallMsgId_;
@@ -27256,7 +27700,7 @@ public final class CoreProto {
      *撤回的消息ID
      * </pre>
      *
-     * <code>optional string recall_msg_id = 4;</code>
+     * <code>string recall_msg_id = 4;</code>
      */
     public com.google.protobuf.ByteString
         getRecallMsgIdBytes() {
@@ -27279,7 +27723,7 @@ public final class CoreProto {
      *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     public long getTime() {
       return time_;
@@ -27312,6 +27756,7 @@ public final class CoreProto {
       if (time_ != 0L) {
         output.writeInt64(5, time_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -27335,11 +27780,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, time_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -27361,6 +27806,7 @@ public final class CoreProto {
           .equals(other.getRecallMsgId());
       result = result && (getTime()
           == other.getTime());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -27370,7 +27816,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -27387,6 +27833,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupRecall parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupRecall parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupRecall parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -27550,7 +28007,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -27563,12 +28020,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -27601,6 +28058,7 @@ public final class CoreProto {
         if (other.getTime() != 0L) {
           setTime(other.getTime());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -27633,7 +28091,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -27652,7 +28110,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -27672,7 +28130,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -27689,7 +28147,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -27702,7 +28160,7 @@ public final class CoreProto {
        *撤回消息的ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27718,7 +28176,7 @@ public final class CoreProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -27733,7 +28191,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -27749,7 +28207,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -27762,7 +28220,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -27771,7 +28229,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27787,7 +28245,7 @@ public final class CoreProto {
 
       private java.lang.Object siteGroupId_ = "";
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -27802,7 +28260,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -27818,7 +28276,7 @@ public final class CoreProto {
         }
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -27831,7 +28289,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -27840,7 +28298,7 @@ public final class CoreProto {
         return this;
       }
       /**
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27860,7 +28318,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public java.lang.String getRecallMsgId() {
         java.lang.Object ref = recallMsgId_;
@@ -27879,7 +28337,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public com.google.protobuf.ByteString
           getRecallMsgIdBytes() {
@@ -27899,7 +28357,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public Builder setRecallMsgId(
           java.lang.String value) {
@@ -27916,7 +28374,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public Builder clearRecallMsgId() {
         
@@ -27929,7 +28387,7 @@ public final class CoreProto {
        *撤回的消息ID
        * </pre>
        *
-       * <code>optional string recall_msg_id = 4;</code>
+       * <code>string recall_msg_id = 4;</code>
        */
       public Builder setRecallMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -27949,7 +28407,7 @@ public final class CoreProto {
        *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public long getTime() {
         return time_;
@@ -27959,7 +28417,7 @@ public final class CoreProto {
        *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder setTime(long value) {
         
@@ -27972,7 +28430,7 @@ public final class CoreProto {
        *消息时间，单位ms,（撤回消息客户端需要判断是否超过2minutes）
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder clearTime() {
         
@@ -27982,12 +28440,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -28038,7 +28496,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -28046,7 +28504,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -28056,7 +28514,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -28064,7 +28522,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -28074,7 +28532,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -28082,7 +28540,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -28092,7 +28550,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     java.lang.String getWebCode();
     /**
@@ -28100,7 +28558,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     com.google.protobuf.ByteString
         getWebCodeBytes();
@@ -28110,7 +28568,7 @@ public final class CoreProto {
      *web消息的宽度
      * </pre>
      *
-     * <code>optional int32 width = 5;</code>
+     * <code>int32 width = 5;</code>
      */
     int getWidth();
 
@@ -28119,7 +28577,7 @@ public final class CoreProto {
      *web消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 6;</code>
+     * <code>int32 height = 6;</code>
      */
     int getHeight();
 
@@ -28128,7 +28586,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
 
@@ -28137,7 +28595,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     java.lang.String getHrefUrl();
     /**
@@ -28145,7 +28603,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     com.google.protobuf.ByteString
         getHrefUrlBytes();
@@ -28161,6 +28619,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.U2Web)
       U2WebOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use U2Web.newBuilder() to construct.
     private U2Web(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -28179,7 +28638,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private U2Web(
         com.google.protobuf.CodedInputStream input,
@@ -28187,6 +28646,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -28196,7 +28657,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -28254,6 +28716,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -28276,7 +28739,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -28295,7 +28758,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -28318,7 +28781,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -28337,7 +28800,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -28360,7 +28823,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -28379,7 +28842,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -28402,7 +28865,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public java.lang.String getWebCode() {
       java.lang.Object ref = webCode_;
@@ -28421,7 +28884,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public com.google.protobuf.ByteString
         getWebCodeBytes() {
@@ -28444,7 +28907,7 @@ public final class CoreProto {
      *web消息的宽度
      * </pre>
      *
-     * <code>optional int32 width = 5;</code>
+     * <code>int32 width = 5;</code>
      */
     public int getWidth() {
       return width_;
@@ -28457,7 +28920,7 @@ public final class CoreProto {
      *web消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 6;</code>
+     * <code>int32 height = 6;</code>
      */
     public int getHeight() {
       return height_;
@@ -28470,7 +28933,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -28483,7 +28946,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     public java.lang.String getHrefUrl() {
       java.lang.Object ref = hrefUrl_;
@@ -28502,7 +28965,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     public com.google.protobuf.ByteString
         getHrefUrlBytes() {
@@ -28554,6 +29017,7 @@ public final class CoreProto {
       if (!getHrefUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, hrefUrl_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -28588,11 +29052,11 @@ public final class CoreProto {
       if (!getHrefUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, hrefUrl_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -28620,6 +29084,7 @@ public final class CoreProto {
           == other.getTime());
       result = result && getHrefUrl()
           .equals(other.getHrefUrl());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -28629,7 +29094,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -28652,6 +29117,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.U2Web parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.U2Web parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.U2Web parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -28824,7 +29300,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -28837,12 +29313,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -28885,6 +29361,7 @@ public final class CoreProto {
           hrefUrl_ = other.hrefUrl_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -28917,7 +29394,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -28936,7 +29413,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -28956,7 +29433,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -28973,7 +29450,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -28986,7 +29463,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29006,7 +29483,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -29025,7 +29502,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -29045,7 +29522,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -29062,7 +29539,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -29075,7 +29552,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29095,7 +29572,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -29114,7 +29591,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -29134,7 +29611,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -29151,7 +29628,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -29164,7 +29641,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29184,7 +29661,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public java.lang.String getWebCode() {
         java.lang.Object ref = webCode_;
@@ -29203,7 +29680,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public com.google.protobuf.ByteString
           getWebCodeBytes() {
@@ -29223,7 +29700,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCode(
           java.lang.String value) {
@@ -29240,7 +29717,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder clearWebCode() {
         
@@ -29253,7 +29730,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -29273,7 +29750,7 @@ public final class CoreProto {
        *web消息的宽度
        * </pre>
        *
-       * <code>optional int32 width = 5;</code>
+       * <code>int32 width = 5;</code>
        */
       public int getWidth() {
         return width_;
@@ -29283,7 +29760,7 @@ public final class CoreProto {
        *web消息的宽度
        * </pre>
        *
-       * <code>optional int32 width = 5;</code>
+       * <code>int32 width = 5;</code>
        */
       public Builder setWidth(int value) {
         
@@ -29296,7 +29773,7 @@ public final class CoreProto {
        *web消息的宽度
        * </pre>
        *
-       * <code>optional int32 width = 5;</code>
+       * <code>int32 width = 5;</code>
        */
       public Builder clearWidth() {
         
@@ -29311,7 +29788,7 @@ public final class CoreProto {
        *web消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 6;</code>
+       * <code>int32 height = 6;</code>
        */
       public int getHeight() {
         return height_;
@@ -29321,7 +29798,7 @@ public final class CoreProto {
        *web消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 6;</code>
+       * <code>int32 height = 6;</code>
        */
       public Builder setHeight(int value) {
         
@@ -29334,7 +29811,7 @@ public final class CoreProto {
        *web消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 6;</code>
+       * <code>int32 height = 6;</code>
        */
       public Builder clearHeight() {
         
@@ -29349,7 +29826,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -29359,7 +29836,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -29372,7 +29849,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -29387,7 +29864,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public java.lang.String getHrefUrl() {
         java.lang.Object ref = hrefUrl_;
@@ -29406,7 +29883,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public com.google.protobuf.ByteString
           getHrefUrlBytes() {
@@ -29426,7 +29903,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public Builder setHrefUrl(
           java.lang.String value) {
@@ -29443,7 +29920,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public Builder clearHrefUrl() {
         
@@ -29456,7 +29933,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public Builder setHrefUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -29471,12 +29948,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -29527,7 +30004,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -29535,7 +30012,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -29545,7 +30022,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -29553,7 +30030,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -29563,7 +30040,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
@@ -29571,7 +30048,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -29581,7 +30058,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     java.lang.String getWebCode();
     /**
@@ -29589,7 +30066,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     com.google.protobuf.ByteString
         getWebCodeBytes();
@@ -29599,7 +30076,7 @@ public final class CoreProto {
      *web消息的宽度
      * </pre>
      *
-     * <code>optional int32 width = 5;</code>
+     * <code>int32 width = 5;</code>
      */
     int getWidth();
 
@@ -29608,7 +30085,7 @@ public final class CoreProto {
      *web消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 6;</code>
+     * <code>int32 height = 6;</code>
      */
     int getHeight();
 
@@ -29617,7 +30094,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     long getTime();
 
@@ -29626,7 +30103,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     java.lang.String getHrefUrl();
     /**
@@ -29634,7 +30111,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     com.google.protobuf.ByteString
         getHrefUrlBytes();
@@ -29650,6 +30127,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupWeb)
       GroupWebOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupWeb.newBuilder() to construct.
     private GroupWeb(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -29668,7 +30146,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupWeb(
         com.google.protobuf.CodedInputStream input,
@@ -29676,6 +30154,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -29685,7 +30165,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -29743,6 +30224,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -29765,7 +30247,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -29784,7 +30266,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -29807,7 +30289,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -29826,7 +30308,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -29849,7 +30331,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -29868,7 +30350,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -29891,7 +30373,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public java.lang.String getWebCode() {
       java.lang.Object ref = webCode_;
@@ -29910,7 +30392,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public com.google.protobuf.ByteString
         getWebCodeBytes() {
@@ -29933,7 +30415,7 @@ public final class CoreProto {
      *web消息的宽度
      * </pre>
      *
-     * <code>optional int32 width = 5;</code>
+     * <code>int32 width = 5;</code>
      */
     public int getWidth() {
       return width_;
@@ -29946,7 +30428,7 @@ public final class CoreProto {
      *web消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 6;</code>
+     * <code>int32 height = 6;</code>
      */
     public int getHeight() {
       return height_;
@@ -29959,7 +30441,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 7;</code>
+     * <code>int64 time = 7;</code>
      */
     public long getTime() {
       return time_;
@@ -29972,7 +30454,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     public java.lang.String getHrefUrl() {
       java.lang.Object ref = hrefUrl_;
@@ -29991,7 +30473,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 8;</code>
+     * <code>string href_url = 8;</code>
      */
     public com.google.protobuf.ByteString
         getHrefUrlBytes() {
@@ -30043,6 +30525,7 @@ public final class CoreProto {
       if (!getHrefUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, hrefUrl_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -30077,11 +30560,11 @@ public final class CoreProto {
       if (!getHrefUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, hrefUrl_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -30109,6 +30592,7 @@ public final class CoreProto {
           == other.getTime());
       result = result && getHrefUrl()
           .equals(other.getHrefUrl());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -30118,7 +30602,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -30141,6 +30625,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupWeb parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupWeb parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupWeb parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -30313,7 +30808,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -30326,12 +30821,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -30374,6 +30869,7 @@ public final class CoreProto {
           hrefUrl_ = other.hrefUrl_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -30406,7 +30902,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -30425,7 +30921,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -30445,7 +30941,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -30462,7 +30958,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -30475,7 +30971,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -30495,7 +30991,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -30514,7 +31010,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -30534,7 +31030,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -30551,7 +31047,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -30564,7 +31060,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -30584,7 +31080,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -30603,7 +31099,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -30623,7 +31119,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -30640,7 +31136,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -30653,7 +31149,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -30673,7 +31169,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public java.lang.String getWebCode() {
         java.lang.Object ref = webCode_;
@@ -30692,7 +31188,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public com.google.protobuf.ByteString
           getWebCodeBytes() {
@@ -30712,7 +31208,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCode(
           java.lang.String value) {
@@ -30729,7 +31225,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder clearWebCode() {
         
@@ -30742,7 +31238,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -30762,7 +31258,7 @@ public final class CoreProto {
        *web消息的宽度
        * </pre>
        *
-       * <code>optional int32 width = 5;</code>
+       * <code>int32 width = 5;</code>
        */
       public int getWidth() {
         return width_;
@@ -30772,7 +31268,7 @@ public final class CoreProto {
        *web消息的宽度
        * </pre>
        *
-       * <code>optional int32 width = 5;</code>
+       * <code>int32 width = 5;</code>
        */
       public Builder setWidth(int value) {
         
@@ -30785,7 +31281,7 @@ public final class CoreProto {
        *web消息的宽度
        * </pre>
        *
-       * <code>optional int32 width = 5;</code>
+       * <code>int32 width = 5;</code>
        */
       public Builder clearWidth() {
         
@@ -30800,7 +31296,7 @@ public final class CoreProto {
        *web消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 6;</code>
+       * <code>int32 height = 6;</code>
        */
       public int getHeight() {
         return height_;
@@ -30810,7 +31306,7 @@ public final class CoreProto {
        *web消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 6;</code>
+       * <code>int32 height = 6;</code>
        */
       public Builder setHeight(int value) {
         
@@ -30823,7 +31319,7 @@ public final class CoreProto {
        *web消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 6;</code>
+       * <code>int32 height = 6;</code>
        */
       public Builder clearHeight() {
         
@@ -30838,7 +31334,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public long getTime() {
         return time_;
@@ -30848,7 +31344,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder setTime(long value) {
         
@@ -30861,7 +31357,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 7;</code>
+       * <code>int64 time = 7;</code>
        */
       public Builder clearTime() {
         
@@ -30876,7 +31372,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public java.lang.String getHrefUrl() {
         java.lang.Object ref = hrefUrl_;
@@ -30895,7 +31391,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public com.google.protobuf.ByteString
           getHrefUrlBytes() {
@@ -30915,7 +31411,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public Builder setHrefUrl(
           java.lang.String value) {
@@ -30932,7 +31428,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public Builder clearHrefUrl() {
         
@@ -30945,7 +31441,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 8;</code>
+       * <code>string href_url = 8;</code>
        */
       public Builder setHrefUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -30960,12 +31456,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -31016,7 +31512,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -31024,7 +31520,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -31034,7 +31530,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -31042,7 +31538,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -31052,7 +31548,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -31060,7 +31556,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -31070,7 +31566,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     java.lang.String getWebCode();
     /**
@@ -31078,7 +31574,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     com.google.protobuf.ByteString
         getWebCodeBytes();
@@ -31088,7 +31584,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     long getTime();
 
@@ -31097,7 +31593,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     java.lang.String getHrefUrl();
     /**
@@ -31105,7 +31601,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     com.google.protobuf.ByteString
         getHrefUrlBytes();
@@ -31115,7 +31611,7 @@ public final class CoreProto {
      *web notice消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 7;</code>
+     * <code>int32 height = 7;</code>
      */
     int getHeight();
   }
@@ -31130,6 +31626,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.U2WebNotice)
       U2WebNoticeOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use U2WebNotice.newBuilder() to construct.
     private U2WebNotice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -31147,7 +31644,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private U2WebNotice(
         com.google.protobuf.CodedInputStream input,
@@ -31155,6 +31652,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -31164,7 +31663,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -31217,6 +31717,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -31239,7 +31740,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -31258,7 +31759,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -31281,7 +31782,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -31300,7 +31801,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -31323,7 +31824,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -31342,7 +31843,7 @@ public final class CoreProto {
      *to
      * </pre>
      *
-     * <code>optional string site_friend_id = 3;</code>
+     * <code>string site_friend_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -31365,7 +31866,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public java.lang.String getWebCode() {
       java.lang.Object ref = webCode_;
@@ -31384,7 +31885,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public com.google.protobuf.ByteString
         getWebCodeBytes() {
@@ -31407,7 +31908,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     public long getTime() {
       return time_;
@@ -31420,7 +31921,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     public java.lang.String getHrefUrl() {
       java.lang.Object ref = hrefUrl_;
@@ -31439,7 +31940,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     public com.google.protobuf.ByteString
         getHrefUrlBytes() {
@@ -31462,7 +31963,7 @@ public final class CoreProto {
      *web notice消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 7;</code>
+     * <code>int32 height = 7;</code>
      */
     public int getHeight() {
       return height_;
@@ -31501,6 +32002,7 @@ public final class CoreProto {
       if (height_ != 0) {
         output.writeInt32(7, height_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -31531,11 +32033,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, height_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -31561,6 +32063,7 @@ public final class CoreProto {
           .equals(other.getHrefUrl());
       result = result && (getHeight()
           == other.getHeight());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -31570,7 +32073,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -31591,6 +32094,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.U2WebNotice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.U2WebNotice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.U2WebNotice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -31760,7 +32274,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -31773,12 +32287,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -31818,6 +32332,7 @@ public final class CoreProto {
         if (other.getHeight() != 0) {
           setHeight(other.getHeight());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -31850,7 +32365,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -31869,7 +32384,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -31889,7 +32404,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -31906,7 +32421,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -31919,7 +32434,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -31939,7 +32454,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -31958,7 +32473,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -31978,7 +32493,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -31995,7 +32510,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -32008,7 +32523,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -32028,7 +32543,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -32047,7 +32562,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -32067,7 +32582,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -32084,7 +32599,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -32097,7 +32612,7 @@ public final class CoreProto {
        *to
        * </pre>
        *
-       * <code>optional string site_friend_id = 3;</code>
+       * <code>string site_friend_id = 3;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -32117,7 +32632,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public java.lang.String getWebCode() {
         java.lang.Object ref = webCode_;
@@ -32136,7 +32651,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public com.google.protobuf.ByteString
           getWebCodeBytes() {
@@ -32156,7 +32671,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCode(
           java.lang.String value) {
@@ -32173,7 +32688,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder clearWebCode() {
         
@@ -32186,7 +32701,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -32206,7 +32721,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public long getTime() {
         return time_;
@@ -32216,7 +32731,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder setTime(long value) {
         
@@ -32229,7 +32744,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder clearTime() {
         
@@ -32244,7 +32759,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public java.lang.String getHrefUrl() {
         java.lang.Object ref = hrefUrl_;
@@ -32263,7 +32778,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public com.google.protobuf.ByteString
           getHrefUrlBytes() {
@@ -32283,7 +32798,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public Builder setHrefUrl(
           java.lang.String value) {
@@ -32300,7 +32815,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public Builder clearHrefUrl() {
         
@@ -32313,7 +32828,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public Builder setHrefUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -32333,7 +32848,7 @@ public final class CoreProto {
        *web notice消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 7;</code>
+       * <code>int32 height = 7;</code>
        */
       public int getHeight() {
         return height_;
@@ -32343,7 +32858,7 @@ public final class CoreProto {
        *web notice消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 7;</code>
+       * <code>int32 height = 7;</code>
        */
       public Builder setHeight(int value) {
         
@@ -32356,7 +32871,7 @@ public final class CoreProto {
        *web notice消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 7;</code>
+       * <code>int32 height = 7;</code>
        */
       public Builder clearHeight() {
         
@@ -32366,12 +32881,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -32422,7 +32937,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     java.lang.String getMsgId();
     /**
@@ -32430,7 +32945,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getMsgIdBytes();
@@ -32440,7 +32955,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -32448,7 +32963,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -32458,7 +32973,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     java.lang.String getSiteGroupId();
     /**
@@ -32466,7 +32981,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteGroupIdBytes();
@@ -32476,7 +32991,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     java.lang.String getWebCode();
     /**
@@ -32484,7 +32999,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     com.google.protobuf.ByteString
         getWebCodeBytes();
@@ -32494,7 +33009,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     long getTime();
 
@@ -32503,7 +33018,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     java.lang.String getHrefUrl();
     /**
@@ -32511,7 +33026,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     com.google.protobuf.ByteString
         getHrefUrlBytes();
@@ -32521,7 +33036,7 @@ public final class CoreProto {
      *web notice消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 7;</code>
+     * <code>int32 height = 7;</code>
      */
     int getHeight();
   }
@@ -32536,6 +33051,7 @@ public final class CoreProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.GroupWebNotice)
       GroupWebNoticeOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GroupWebNotice.newBuilder() to construct.
     private GroupWebNotice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -32553,7 +33069,7 @@ public final class CoreProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private GroupWebNotice(
         com.google.protobuf.CodedInputStream input,
@@ -32561,6 +33077,8 @@ public final class CoreProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -32570,7 +33088,8 @@ public final class CoreProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -32623,6 +33142,7 @@ public final class CoreProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -32645,7 +33165,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public java.lang.String getMsgId() {
       java.lang.Object ref = msgId_;
@@ -32664,7 +33184,7 @@ public final class CoreProto {
      *消息ID
      * </pre>
      *
-     * <code>optional string msg_id = 1;</code>
+     * <code>string msg_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getMsgIdBytes() {
@@ -32687,7 +33207,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -32706,7 +33226,7 @@ public final class CoreProto {
      *from
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -32729,7 +33249,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public java.lang.String getSiteGroupId() {
       java.lang.Object ref = siteGroupId_;
@@ -32748,7 +33268,7 @@ public final class CoreProto {
      *群ID(to)
      * </pre>
      *
-     * <code>optional string site_group_id = 3;</code>
+     * <code>string site_group_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteGroupIdBytes() {
@@ -32771,7 +33291,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public java.lang.String getWebCode() {
       java.lang.Object ref = webCode_;
@@ -32790,7 +33310,7 @@ public final class CoreProto {
      *统一使用web消息需要的代码内容
      * </pre>
      *
-     * <code>optional string web_code = 4;</code>
+     * <code>string web_code = 4;</code>
      */
     public com.google.protobuf.ByteString
         getWebCodeBytes() {
@@ -32813,7 +33333,7 @@ public final class CoreProto {
      *消息时间
      * </pre>
      *
-     * <code>optional int64 time = 5;</code>
+     * <code>int64 time = 5;</code>
      */
     public long getTime() {
       return time_;
@@ -32826,7 +33346,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     public java.lang.String getHrefUrl() {
       java.lang.Object ref = hrefUrl_;
@@ -32845,7 +33365,7 @@ public final class CoreProto {
      *跳转链接；如果为空则不跳转。
      * </pre>
      *
-     * <code>optional string href_url = 6;</code>
+     * <code>string href_url = 6;</code>
      */
     public com.google.protobuf.ByteString
         getHrefUrlBytes() {
@@ -32868,7 +33388,7 @@ public final class CoreProto {
      *web notice消息的高度
      * </pre>
      *
-     * <code>optional int32 height = 7;</code>
+     * <code>int32 height = 7;</code>
      */
     public int getHeight() {
       return height_;
@@ -32907,6 +33427,7 @@ public final class CoreProto {
       if (height_ != 0) {
         output.writeInt32(7, height_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -32937,11 +33458,11 @@ public final class CoreProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, height_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -32967,6 +33488,7 @@ public final class CoreProto {
           .equals(other.getHrefUrl());
       result = result && (getHeight()
           == other.getHeight());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -32976,7 +33498,7 @@ public final class CoreProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MSG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMsgId().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -32997,6 +33519,17 @@ public final class CoreProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.CoreProto.GroupWebNotice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.CoreProto.GroupWebNotice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.CoreProto.GroupWebNotice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -33166,7 +33699,7 @@ public final class CoreProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -33179,12 +33712,12 @@ public final class CoreProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -33224,6 +33757,7 @@ public final class CoreProto {
         if (other.getHeight() != 0) {
           setHeight(other.getHeight());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -33256,7 +33790,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public java.lang.String getMsgId() {
         java.lang.Object ref = msgId_;
@@ -33275,7 +33809,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getMsgIdBytes() {
@@ -33295,7 +33829,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgId(
           java.lang.String value) {
@@ -33312,7 +33846,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder clearMsgId() {
         
@@ -33325,7 +33859,7 @@ public final class CoreProto {
        *消息ID
        * </pre>
        *
-       * <code>optional string msg_id = 1;</code>
+       * <code>string msg_id = 1;</code>
        */
       public Builder setMsgIdBytes(
           com.google.protobuf.ByteString value) {
@@ -33345,7 +33879,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -33364,7 +33898,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -33384,7 +33918,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -33401,7 +33935,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -33414,7 +33948,7 @@ public final class CoreProto {
        *from
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -33434,7 +33968,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public java.lang.String getSiteGroupId() {
         java.lang.Object ref = siteGroupId_;
@@ -33453,7 +33987,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteGroupIdBytes() {
@@ -33473,7 +34007,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupId(
           java.lang.String value) {
@@ -33490,7 +34024,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder clearSiteGroupId() {
         
@@ -33503,7 +34037,7 @@ public final class CoreProto {
        *群ID(to)
        * </pre>
        *
-       * <code>optional string site_group_id = 3;</code>
+       * <code>string site_group_id = 3;</code>
        */
       public Builder setSiteGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -33523,7 +34057,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public java.lang.String getWebCode() {
         java.lang.Object ref = webCode_;
@@ -33542,7 +34076,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public com.google.protobuf.ByteString
           getWebCodeBytes() {
@@ -33562,7 +34096,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCode(
           java.lang.String value) {
@@ -33579,7 +34113,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder clearWebCode() {
         
@@ -33592,7 +34126,7 @@ public final class CoreProto {
        *统一使用web消息需要的代码内容
        * </pre>
        *
-       * <code>optional string web_code = 4;</code>
+       * <code>string web_code = 4;</code>
        */
       public Builder setWebCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -33612,7 +34146,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public long getTime() {
         return time_;
@@ -33622,7 +34156,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder setTime(long value) {
         
@@ -33635,7 +34169,7 @@ public final class CoreProto {
        *消息时间
        * </pre>
        *
-       * <code>optional int64 time = 5;</code>
+       * <code>int64 time = 5;</code>
        */
       public Builder clearTime() {
         
@@ -33650,7 +34184,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public java.lang.String getHrefUrl() {
         java.lang.Object ref = hrefUrl_;
@@ -33669,7 +34203,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public com.google.protobuf.ByteString
           getHrefUrlBytes() {
@@ -33689,7 +34223,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public Builder setHrefUrl(
           java.lang.String value) {
@@ -33706,7 +34240,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public Builder clearHrefUrl() {
         
@@ -33719,7 +34253,7 @@ public final class CoreProto {
        *跳转链接；如果为空则不跳转。
        * </pre>
        *
-       * <code>optional string href_url = 6;</code>
+       * <code>string href_url = 6;</code>
        */
       public Builder setHrefUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -33739,7 +34273,7 @@ public final class CoreProto {
        *web notice消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 7;</code>
+       * <code>int32 height = 7;</code>
        */
       public int getHeight() {
         return height_;
@@ -33749,7 +34283,7 @@ public final class CoreProto {
        *web notice消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 7;</code>
+       * <code>int32 height = 7;</code>
        */
       public Builder setHeight(int value) {
         
@@ -33762,7 +34296,7 @@ public final class CoreProto {
        *web notice消息的高度
        * </pre>
        *
-       * <code>optional int32 height = 7;</code>
+       * <code>int32 height = 7;</code>
        */
       public Builder clearHeight() {
         
@@ -33772,12 +34306,12 @@ public final class CoreProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

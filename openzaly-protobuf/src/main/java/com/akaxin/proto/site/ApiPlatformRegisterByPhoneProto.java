@@ -23,7 +23,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     java.lang.String getUserIdPrik();
     /**
@@ -31,7 +31,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPrikBytes();
@@ -41,7 +41,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -49,7 +49,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -59,7 +59,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户名（选填）
      * </pre>
      *
-     * <code>optional string user_name = 3;</code>
+     * <code>string user_name = 3;</code>
      */
     java.lang.String getUserName();
     /**
@@ -67,7 +67,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户名（选填）
      * </pre>
      *
-     * <code>optional string user_name = 3;</code>
+     * <code>string user_name = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -77,7 +77,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户头像（选填）
      * </pre>
      *
-     * <code>optional string user_photo = 4;</code>
+     * <code>string user_photo = 4;</code>
      */
     java.lang.String getUserPhoto();
     /**
@@ -85,7 +85,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户头像（选填）
      * </pre>
      *
-     * <code>optional string user_photo = 4;</code>
+     * <code>string user_photo = 4;</code>
      */
     com.google.protobuf.ByteString
         getUserPhotoBytes();
@@ -95,7 +95,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *客户端接受PUSH需要的token
      * </pre>
      *
-     * <code>optional string push_token = 5;</code>
+     * <code>string push_token = 5;</code>
      */
     java.lang.String getPushToken();
     /**
@@ -103,7 +103,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *客户端接受PUSH需要的token
      * </pre>
      *
-     * <code>optional string push_token = 5;</code>
+     * <code>string push_token = 5;</code>
      */
     com.google.protobuf.ByteString
         getPushTokenBytes();
@@ -113,7 +113,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
      * </pre>
      *
-     * <code>optional string phone_id = 6;</code>
+     * <code>string phone_id = 6;</code>
      */
     java.lang.String getPhoneId();
     /**
@@ -121,7 +121,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
      * </pre>
      *
-     * <code>optional string phone_id = 6;</code>
+     * <code>string phone_id = 6;</code>
      */
     com.google.protobuf.ByteString
         getPhoneIdBytes();
@@ -131,7 +131,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 7;</code>
+     * <code>string country_code = 7;</code>
      */
     java.lang.String getCountryCode();
     /**
@@ -139,7 +139,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 7;</code>
+     * <code>string country_code = 7;</code>
      */
     com.google.protobuf.ByteString
         getCountryCodeBytes();
@@ -149,7 +149,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *短信验证码
      * </pre>
      *
-     * <code>optional string phone_verify_code = 8;</code>
+     * <code>string phone_verify_code = 8;</code>
      */
     java.lang.String getPhoneVerifyCode();
     /**
@@ -157,7 +157,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *短信验证码
      * </pre>
      *
-     * <code>optional string phone_verify_code = 8;</code>
+     * <code>string phone_verify_code = 8;</code>
      */
     com.google.protobuf.ByteString
         getPhoneVerifyCodeBytes();
@@ -167,7 +167,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *短信验证码类型
      * </pre>
      *
-     * <code>optional int32 vc_type = 9;</code>
+     * <code>int32 vc_type = 9;</code>
      */
     int getVcType();
   }
@@ -178,6 +178,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPlatformRegisterByPhoneRequest)
       ApiPlatformRegisterByPhoneRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPlatformRegisterByPhoneRequest.newBuilder() to construct.
     private ApiPlatformRegisterByPhoneRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -197,14 +198,19 @@ public final class ApiPlatformRegisterByPhoneProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPlatformRegisterByPhoneRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -214,7 +220,8 @@ public final class ApiPlatformRegisterByPhoneProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -280,6 +287,7 @@ public final class ApiPlatformRegisterByPhoneProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -302,7 +310,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     public java.lang.String getUserIdPrik() {
       java.lang.Object ref = userIdPrik_;
@@ -321,7 +329,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPrikBytes() {
@@ -344,7 +352,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -363,7 +371,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -386,7 +394,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户名（选填）
      * </pre>
      *
-     * <code>optional string user_name = 3;</code>
+     * <code>string user_name = 3;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -405,7 +413,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户名（选填）
      * </pre>
      *
-     * <code>optional string user_name = 3;</code>
+     * <code>string user_name = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -428,7 +436,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户头像（选填）
      * </pre>
      *
-     * <code>optional string user_photo = 4;</code>
+     * <code>string user_photo = 4;</code>
      */
     public java.lang.String getUserPhoto() {
       java.lang.Object ref = userPhoto_;
@@ -447,7 +455,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户头像（选填）
      * </pre>
      *
-     * <code>optional string user_photo = 4;</code>
+     * <code>string user_photo = 4;</code>
      */
     public com.google.protobuf.ByteString
         getUserPhotoBytes() {
@@ -470,7 +478,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *客户端接受PUSH需要的token
      * </pre>
      *
-     * <code>optional string push_token = 5;</code>
+     * <code>string push_token = 5;</code>
      */
     public java.lang.String getPushToken() {
       java.lang.Object ref = pushToken_;
@@ -489,7 +497,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *客户端接受PUSH需要的token
      * </pre>
      *
-     * <code>optional string push_token = 5;</code>
+     * <code>string push_token = 5;</code>
      */
     public com.google.protobuf.ByteString
         getPushTokenBytes() {
@@ -512,7 +520,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
      * </pre>
      *
-     * <code>optional string phone_id = 6;</code>
+     * <code>string phone_id = 6;</code>
      */
     public java.lang.String getPhoneId() {
       java.lang.Object ref = phoneId_;
@@ -531,7 +539,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
      * </pre>
      *
-     * <code>optional string phone_id = 6;</code>
+     * <code>string phone_id = 6;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneIdBytes() {
@@ -554,7 +562,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 7;</code>
+     * <code>string country_code = 7;</code>
      */
     public java.lang.String getCountryCode() {
       java.lang.Object ref = countryCode_;
@@ -573,7 +581,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 7;</code>
+     * <code>string country_code = 7;</code>
      */
     public com.google.protobuf.ByteString
         getCountryCodeBytes() {
@@ -596,7 +604,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *短信验证码
      * </pre>
      *
-     * <code>optional string phone_verify_code = 8;</code>
+     * <code>string phone_verify_code = 8;</code>
      */
     public java.lang.String getPhoneVerifyCode() {
       java.lang.Object ref = phoneVerifyCode_;
@@ -615,7 +623,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *短信验证码
      * </pre>
      *
-     * <code>optional string phone_verify_code = 8;</code>
+     * <code>string phone_verify_code = 8;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneVerifyCodeBytes() {
@@ -638,7 +646,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *短信验证码类型
      * </pre>
      *
-     * <code>optional int32 vc_type = 9;</code>
+     * <code>int32 vc_type = 9;</code>
      */
     public int getVcType() {
       return vcType_;
@@ -683,6 +691,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       if (vcType_ != 0) {
         output.writeInt32(9, vcType_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -718,11 +727,11 @@ public final class ApiPlatformRegisterByPhoneProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, vcType_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -752,6 +761,7 @@ public final class ApiPlatformRegisterByPhoneProto {
           .equals(other.getPhoneVerifyCode());
       result = result && (getVcType()
           == other.getVcType());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -761,7 +771,7 @@ public final class ApiPlatformRegisterByPhoneProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_PRIK_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdPrik().hashCode();
       hash = (37 * hash) + USER_ID_PUBK_FIELD_NUMBER;
@@ -785,6 +795,17 @@ public final class ApiPlatformRegisterByPhoneProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPlatformRegisterByPhoneProto.ApiPlatformRegisterByPhoneRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPlatformRegisterByPhoneProto.ApiPlatformRegisterByPhoneRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPlatformRegisterByPhoneProto.ApiPlatformRegisterByPhoneRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -956,7 +977,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -969,12 +990,12 @@ public final class ApiPlatformRegisterByPhoneProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1023,6 +1044,7 @@ public final class ApiPlatformRegisterByPhoneProto {
         if (other.getVcType() != 0) {
           setVcType(other.getVcType());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1055,7 +1077,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public java.lang.String getUserIdPrik() {
         java.lang.Object ref = userIdPrik_;
@@ -1074,7 +1096,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPrikBytes() {
@@ -1094,7 +1116,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public Builder setUserIdPrik(
           java.lang.String value) {
@@ -1111,7 +1133,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public Builder clearUserIdPrik() {
         
@@ -1124,7 +1146,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public Builder setUserIdPrikBytes(
           com.google.protobuf.ByteString value) {
@@ -1144,7 +1166,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -1163,7 +1185,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -1183,7 +1205,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -1200,7 +1222,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -1213,7 +1235,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1233,7 +1255,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户名（选填）
        * </pre>
        *
-       * <code>optional string user_name = 3;</code>
+       * <code>string user_name = 3;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -1252,7 +1274,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户名（选填）
        * </pre>
        *
-       * <code>optional string user_name = 3;</code>
+       * <code>string user_name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -1272,7 +1294,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户名（选填）
        * </pre>
        *
-       * <code>optional string user_name = 3;</code>
+       * <code>string user_name = 3;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -1289,7 +1311,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户名（选填）
        * </pre>
        *
-       * <code>optional string user_name = 3;</code>
+       * <code>string user_name = 3;</code>
        */
       public Builder clearUserName() {
         
@@ -1302,7 +1324,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户名（选填）
        * </pre>
        *
-       * <code>optional string user_name = 3;</code>
+       * <code>string user_name = 3;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1322,7 +1344,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户头像（选填）
        * </pre>
        *
-       * <code>optional string user_photo = 4;</code>
+       * <code>string user_photo = 4;</code>
        */
       public java.lang.String getUserPhoto() {
         java.lang.Object ref = userPhoto_;
@@ -1341,7 +1363,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户头像（选填）
        * </pre>
        *
-       * <code>optional string user_photo = 4;</code>
+       * <code>string user_photo = 4;</code>
        */
       public com.google.protobuf.ByteString
           getUserPhotoBytes() {
@@ -1361,7 +1383,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户头像（选填）
        * </pre>
        *
-       * <code>optional string user_photo = 4;</code>
+       * <code>string user_photo = 4;</code>
        */
       public Builder setUserPhoto(
           java.lang.String value) {
@@ -1378,7 +1400,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户头像（选填）
        * </pre>
        *
-       * <code>optional string user_photo = 4;</code>
+       * <code>string user_photo = 4;</code>
        */
       public Builder clearUserPhoto() {
         
@@ -1391,7 +1413,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户头像（选填）
        * </pre>
        *
-       * <code>optional string user_photo = 4;</code>
+       * <code>string user_photo = 4;</code>
        */
       public Builder setUserPhotoBytes(
           com.google.protobuf.ByteString value) {
@@ -1411,7 +1433,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *客户端接受PUSH需要的token
        * </pre>
        *
-       * <code>optional string push_token = 5;</code>
+       * <code>string push_token = 5;</code>
        */
       public java.lang.String getPushToken() {
         java.lang.Object ref = pushToken_;
@@ -1430,7 +1452,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *客户端接受PUSH需要的token
        * </pre>
        *
-       * <code>optional string push_token = 5;</code>
+       * <code>string push_token = 5;</code>
        */
       public com.google.protobuf.ByteString
           getPushTokenBytes() {
@@ -1450,7 +1472,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *客户端接受PUSH需要的token
        * </pre>
        *
-       * <code>optional string push_token = 5;</code>
+       * <code>string push_token = 5;</code>
        */
       public Builder setPushToken(
           java.lang.String value) {
@@ -1467,7 +1489,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *客户端接受PUSH需要的token
        * </pre>
        *
-       * <code>optional string push_token = 5;</code>
+       * <code>string push_token = 5;</code>
        */
       public Builder clearPushToken() {
         
@@ -1480,7 +1502,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *客户端接受PUSH需要的token
        * </pre>
        *
-       * <code>optional string push_token = 5;</code>
+       * <code>string push_token = 5;</code>
        */
       public Builder setPushTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1500,7 +1522,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
        * </pre>
        *
-       * <code>optional string phone_id = 6;</code>
+       * <code>string phone_id = 6;</code>
        */
       public java.lang.String getPhoneId() {
         java.lang.Object ref = phoneId_;
@@ -1519,7 +1541,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
        * </pre>
        *
-       * <code>optional string phone_id = 6;</code>
+       * <code>string phone_id = 6;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneIdBytes() {
@@ -1539,7 +1561,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
        * </pre>
        *
-       * <code>optional string phone_id = 6;</code>
+       * <code>string phone_id = 6;</code>
        */
       public Builder setPhoneId(
           java.lang.String value) {
@@ -1556,7 +1578,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
        * </pre>
        *
-       * <code>optional string phone_id = 6;</code>
+       * <code>string phone_id = 6;</code>
        */
       public Builder clearPhoneId() {
         
@@ -1569,7 +1591,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *增加用户可以设置用户ID（只允许字符串，数字组成6～20位）
        * </pre>
        *
-       * <code>optional string phone_id = 6;</code>
+       * <code>string phone_id = 6;</code>
        */
       public Builder setPhoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1589,7 +1611,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 7;</code>
+       * <code>string country_code = 7;</code>
        */
       public java.lang.String getCountryCode() {
         java.lang.Object ref = countryCode_;
@@ -1608,7 +1630,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 7;</code>
+       * <code>string country_code = 7;</code>
        */
       public com.google.protobuf.ByteString
           getCountryCodeBytes() {
@@ -1628,7 +1650,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 7;</code>
+       * <code>string country_code = 7;</code>
        */
       public Builder setCountryCode(
           java.lang.String value) {
@@ -1645,7 +1667,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 7;</code>
+       * <code>string country_code = 7;</code>
        */
       public Builder clearCountryCode() {
         
@@ -1658,7 +1680,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 7;</code>
+       * <code>string country_code = 7;</code>
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1678,7 +1700,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码
        * </pre>
        *
-       * <code>optional string phone_verify_code = 8;</code>
+       * <code>string phone_verify_code = 8;</code>
        */
       public java.lang.String getPhoneVerifyCode() {
         java.lang.Object ref = phoneVerifyCode_;
@@ -1697,7 +1719,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码
        * </pre>
        *
-       * <code>optional string phone_verify_code = 8;</code>
+       * <code>string phone_verify_code = 8;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneVerifyCodeBytes() {
@@ -1717,7 +1739,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码
        * </pre>
        *
-       * <code>optional string phone_verify_code = 8;</code>
+       * <code>string phone_verify_code = 8;</code>
        */
       public Builder setPhoneVerifyCode(
           java.lang.String value) {
@@ -1734,7 +1756,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码
        * </pre>
        *
-       * <code>optional string phone_verify_code = 8;</code>
+       * <code>string phone_verify_code = 8;</code>
        */
       public Builder clearPhoneVerifyCode() {
         
@@ -1747,7 +1769,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码
        * </pre>
        *
-       * <code>optional string phone_verify_code = 8;</code>
+       * <code>string phone_verify_code = 8;</code>
        */
       public Builder setPhoneVerifyCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1767,7 +1789,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码类型
        * </pre>
        *
-       * <code>optional int32 vc_type = 9;</code>
+       * <code>int32 vc_type = 9;</code>
        */
       public int getVcType() {
         return vcType_;
@@ -1777,7 +1799,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码类型
        * </pre>
        *
-       * <code>optional int32 vc_type = 9;</code>
+       * <code>int32 vc_type = 9;</code>
        */
       public Builder setVcType(int value) {
         
@@ -1790,7 +1812,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *短信验证码类型
        * </pre>
        *
-       * <code>optional int32 vc_type = 9;</code>
+       * <code>int32 vc_type = 9;</code>
        */
       public Builder clearVcType() {
         
@@ -1800,12 +1822,12 @@ public final class ApiPlatformRegisterByPhoneProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1828,7 +1850,7 @@ public final class ApiPlatformRegisterByPhoneProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPlatformRegisterByPhoneRequest(input, extensionRegistry);
+        return new ApiPlatformRegisterByPhoneRequest(input, extensionRegistry);
       }
     };
 
@@ -1856,7 +1878,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     java.lang.String getUserIdPrik();
     /**
@@ -1864,7 +1886,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPrikBytes();
@@ -1874,7 +1896,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -1882,7 +1904,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -1894,6 +1916,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPlatformRegisterByPhoneResponse)
       ApiPlatformRegisterByPhoneResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPlatformRegisterByPhoneResponse.newBuilder() to construct.
     private ApiPlatformRegisterByPhoneResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1906,14 +1929,19 @@ public final class ApiPlatformRegisterByPhoneProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPlatformRegisterByPhoneResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1923,7 +1951,8 @@ public final class ApiPlatformRegisterByPhoneProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1948,6 +1977,7 @@ public final class ApiPlatformRegisterByPhoneProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1970,7 +2000,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     public java.lang.String getUserIdPrik() {
       java.lang.Object ref = userIdPrik_;
@@ -1989,7 +2019,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份私钥
      * </pre>
      *
-     * <code>optional string user_id_prik = 1;</code>
+     * <code>string user_id_prik = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPrikBytes() {
@@ -2012,7 +2042,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -2031,7 +2061,7 @@ public final class ApiPlatformRegisterByPhoneProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 2;</code>
+     * <code>string user_id_pubk = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -2065,6 +2095,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userIdPubk_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -2078,11 +2109,11 @@ public final class ApiPlatformRegisterByPhoneProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userIdPubk_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2098,6 +2129,7 @@ public final class ApiPlatformRegisterByPhoneProto {
           .equals(other.getUserIdPrik());
       result = result && getUserIdPubk()
           .equals(other.getUserIdPubk());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -2107,7 +2139,7 @@ public final class ApiPlatformRegisterByPhoneProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_PRIK_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdPrik().hashCode();
       hash = (37 * hash) + USER_ID_PUBK_FIELD_NUMBER;
@@ -2117,6 +2149,17 @@ public final class ApiPlatformRegisterByPhoneProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPlatformRegisterByPhoneProto.ApiPlatformRegisterByPhoneResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPlatformRegisterByPhoneProto.ApiPlatformRegisterByPhoneResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPlatformRegisterByPhoneProto.ApiPlatformRegisterByPhoneResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2267,7 +2310,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2280,12 +2323,12 @@ public final class ApiPlatformRegisterByPhoneProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2307,6 +2350,7 @@ public final class ApiPlatformRegisterByPhoneProto {
           userIdPubk_ = other.userIdPubk_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2339,7 +2383,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public java.lang.String getUserIdPrik() {
         java.lang.Object ref = userIdPrik_;
@@ -2358,7 +2402,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPrikBytes() {
@@ -2378,7 +2422,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public Builder setUserIdPrik(
           java.lang.String value) {
@@ -2395,7 +2439,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public Builder clearUserIdPrik() {
         
@@ -2408,7 +2452,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份私钥
        * </pre>
        *
-       * <code>optional string user_id_prik = 1;</code>
+       * <code>string user_id_prik = 1;</code>
        */
       public Builder setUserIdPrikBytes(
           com.google.protobuf.ByteString value) {
@@ -2428,7 +2472,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -2447,7 +2491,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -2467,7 +2511,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -2484,7 +2528,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -2497,7 +2541,7 @@ public final class ApiPlatformRegisterByPhoneProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 2;</code>
+       * <code>string user_id_pubk = 2;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -2512,12 +2556,12 @@ public final class ApiPlatformRegisterByPhoneProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2540,7 +2584,7 @@ public final class ApiPlatformRegisterByPhoneProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPlatformRegisterByPhoneResponse(input, extensionRegistry);
+        return new ApiPlatformRegisterByPhoneResponse(input, extensionRegistry);
       }
     };
 
@@ -2587,7 +2631,7 @@ public final class ApiPlatformRegisterByPhoneProto {
       "e_verify_code\030\010 \001(\t\022\017\n\007vc_type\030\t \001(\005\"P\n\"" +
       "ApiPlatformRegisterByPhoneResponse\022\024\n\014us" +
       "er_id_prik\030\001 \001(\t\022\024\n\014user_id_pubk\030\002 \001(\t2\211" +
-      "\001\n!ApiPlatformRegisterByPhoneService\022d\n\017",
+      "\001\n!ApiPlatformRegisterByPhoneService\022d\n\017" +
       "registerByPhone\022\'.site.ApiPlatformRegist" +
       "erByPhoneRequest\032(.site.ApiPlatformRegis" +
       "terByPhoneResponseB8\n\025com.akaxin.proto.s" +

@@ -23,7 +23,7 @@ public final class ImCtsMessageProto {
      *消息类型
      * </pre>
      *
-     * <code>optional .core.MsgType type = 1;</code>
+     * <code>.core.MsgType type = 1;</code>
      */
     int getTypeValue();
     /**
@@ -31,7 +31,7 @@ public final class ImCtsMessageProto {
      *消息类型
      * </pre>
      *
-     * <code>optional .core.MsgType type = 1;</code>
+     * <code>.core.MsgType type = 1;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgType getType();
 
@@ -40,7 +40,7 @@ public final class ImCtsMessageProto {
      *二人文本消息
      * </pre>
      *
-     * <code>optional .core.MsgText text = 2;</code>
+     * <code>.core.MsgText text = 2;</code>
      */
     boolean hasText();
     /**
@@ -48,7 +48,7 @@ public final class ImCtsMessageProto {
      *二人文本消息
      * </pre>
      *
-     * <code>optional .core.MsgText text = 2;</code>
+     * <code>.core.MsgText text = 2;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgText getText();
     /**
@@ -56,7 +56,7 @@ public final class ImCtsMessageProto {
      *二人文本消息
      * </pre>
      *
-     * <code>optional .core.MsgText text = 2;</code>
+     * <code>.core.MsgText text = 2;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgTextOrBuilder getTextOrBuilder();
 
@@ -65,7 +65,7 @@ public final class ImCtsMessageProto {
      *二人加密文本消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretText secretText = 3;</code>
+     * <code>.core.MsgSecretText secretText = 3;</code>
      */
     boolean hasSecretText();
     /**
@@ -73,7 +73,7 @@ public final class ImCtsMessageProto {
      *二人加密文本消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretText secretText = 3;</code>
+     * <code>.core.MsgSecretText secretText = 3;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgSecretText getSecretText();
     /**
@@ -81,7 +81,7 @@ public final class ImCtsMessageProto {
      *二人加密文本消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretText secretText = 3;</code>
+     * <code>.core.MsgSecretText secretText = 3;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgSecretTextOrBuilder getSecretTextOrBuilder();
 
@@ -90,7 +90,7 @@ public final class ImCtsMessageProto {
      *群文本消息
      * </pre>
      *
-     * <code>optional .core.GroupText groupText = 4;</code>
+     * <code>.core.GroupText groupText = 4;</code>
      */
     boolean hasGroupText();
     /**
@@ -98,7 +98,7 @@ public final class ImCtsMessageProto {
      *群文本消息
      * </pre>
      *
-     * <code>optional .core.GroupText groupText = 4;</code>
+     * <code>.core.GroupText groupText = 4;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupText getGroupText();
     /**
@@ -106,7 +106,7 @@ public final class ImCtsMessageProto {
      *群文本消息
      * </pre>
      *
-     * <code>optional .core.GroupText groupText = 4;</code>
+     * <code>.core.GroupText groupText = 4;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupTextOrBuilder getGroupTextOrBuilder();
 
@@ -115,7 +115,7 @@ public final class ImCtsMessageProto {
      *群加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+     * <code>.core.GroupSecretText groupSecretText = 5;</code>
      */
     boolean hasGroupSecretText();
     /**
@@ -123,7 +123,7 @@ public final class ImCtsMessageProto {
      *群加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+     * <code>.core.GroupSecretText groupSecretText = 5;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretText getGroupSecretText();
     /**
@@ -131,7 +131,7 @@ public final class ImCtsMessageProto {
      *群加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+     * <code>.core.GroupSecretText groupSecretText = 5;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretTextOrBuilder getGroupSecretTextOrBuilder();
 
@@ -140,7 +140,7 @@ public final class ImCtsMessageProto {
      *二人图片消息
      * </pre>
      *
-     * <code>optional .core.MsgImage image = 6;</code>
+     * <code>.core.MsgImage image = 6;</code>
      */
     boolean hasImage();
     /**
@@ -148,7 +148,7 @@ public final class ImCtsMessageProto {
      *二人图片消息
      * </pre>
      *
-     * <code>optional .core.MsgImage image = 6;</code>
+     * <code>.core.MsgImage image = 6;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgImage getImage();
     /**
@@ -156,7 +156,7 @@ public final class ImCtsMessageProto {
      *二人图片消息
      * </pre>
      *
-     * <code>optional .core.MsgImage image = 6;</code>
+     * <code>.core.MsgImage image = 6;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgImageOrBuilder getImageOrBuilder();
 
@@ -165,7 +165,7 @@ public final class ImCtsMessageProto {
      *二人加密图片消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+     * <code>.core.MsgSecretImage secretImage = 7;</code>
      */
     boolean hasSecretImage();
     /**
@@ -173,7 +173,7 @@ public final class ImCtsMessageProto {
      *二人加密图片消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+     * <code>.core.MsgSecretImage secretImage = 7;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgSecretImage getSecretImage();
     /**
@@ -181,7 +181,7 @@ public final class ImCtsMessageProto {
      *二人加密图片消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+     * <code>.core.MsgSecretImage secretImage = 7;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgSecretImageOrBuilder getSecretImageOrBuilder();
 
@@ -190,7 +190,7 @@ public final class ImCtsMessageProto {
      *群图片消息
      * </pre>
      *
-     * <code>optional .core.GroupImage groupImage = 8;</code>
+     * <code>.core.GroupImage groupImage = 8;</code>
      */
     boolean hasGroupImage();
     /**
@@ -198,7 +198,7 @@ public final class ImCtsMessageProto {
      *群图片消息
      * </pre>
      *
-     * <code>optional .core.GroupImage groupImage = 8;</code>
+     * <code>.core.GroupImage groupImage = 8;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupImage getGroupImage();
     /**
@@ -206,7 +206,7 @@ public final class ImCtsMessageProto {
      *群图片消息
      * </pre>
      *
-     * <code>optional .core.GroupImage groupImage = 8;</code>
+     * <code>.core.GroupImage groupImage = 8;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupImageOrBuilder getGroupImageOrBuilder();
 
@@ -215,7 +215,7 @@ public final class ImCtsMessageProto {
      *群图片加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+     * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
      */
     boolean hasGroupSecretImage();
     /**
@@ -223,7 +223,7 @@ public final class ImCtsMessageProto {
      *群图片加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+     * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretImage getGroupSecretImage();
     /**
@@ -231,7 +231,7 @@ public final class ImCtsMessageProto {
      *群图片加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+     * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretImageOrBuilder getGroupSecretImageOrBuilder();
 
@@ -240,7 +240,7 @@ public final class ImCtsMessageProto {
      *二人语音
      * </pre>
      *
-     * <code>optional .core.MsgVoice voice = 10;</code>
+     * <code>.core.MsgVoice voice = 10;</code>
      */
     boolean hasVoice();
     /**
@@ -248,7 +248,7 @@ public final class ImCtsMessageProto {
      *二人语音
      * </pre>
      *
-     * <code>optional .core.MsgVoice voice = 10;</code>
+     * <code>.core.MsgVoice voice = 10;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgVoice getVoice();
     /**
@@ -256,7 +256,7 @@ public final class ImCtsMessageProto {
      *二人语音
      * </pre>
      *
-     * <code>optional .core.MsgVoice voice = 10;</code>
+     * <code>.core.MsgVoice voice = 10;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgVoiceOrBuilder getVoiceOrBuilder();
 
@@ -265,7 +265,7 @@ public final class ImCtsMessageProto {
      *二人加密语音
      * </pre>
      *
-     * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+     * <code>.core.MsgSecretVoice secretVoice = 11;</code>
      */
     boolean hasSecretVoice();
     /**
@@ -273,7 +273,7 @@ public final class ImCtsMessageProto {
      *二人加密语音
      * </pre>
      *
-     * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+     * <code>.core.MsgSecretVoice secretVoice = 11;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgSecretVoice getSecretVoice();
     /**
@@ -281,7 +281,7 @@ public final class ImCtsMessageProto {
      *二人加密语音
      * </pre>
      *
-     * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+     * <code>.core.MsgSecretVoice secretVoice = 11;</code>
      */
     com.akaxin.proto.core.CoreProto.MsgSecretVoiceOrBuilder getSecretVoiceOrBuilder();
 
@@ -290,7 +290,7 @@ public final class ImCtsMessageProto {
      *群语音
      * </pre>
      *
-     * <code>optional .core.GroupVoice groupVoice = 12;</code>
+     * <code>.core.GroupVoice groupVoice = 12;</code>
      */
     boolean hasGroupVoice();
     /**
@@ -298,7 +298,7 @@ public final class ImCtsMessageProto {
      *群语音
      * </pre>
      *
-     * <code>optional .core.GroupVoice groupVoice = 12;</code>
+     * <code>.core.GroupVoice groupVoice = 12;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupVoice getGroupVoice();
     /**
@@ -306,7 +306,7 @@ public final class ImCtsMessageProto {
      *群语音
      * </pre>
      *
-     * <code>optional .core.GroupVoice groupVoice = 12;</code>
+     * <code>.core.GroupVoice groupVoice = 12;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupVoiceOrBuilder getGroupVoiceOrBuilder();
 
@@ -315,7 +315,7 @@ public final class ImCtsMessageProto {
      *群加密语音
      * </pre>
      *
-     * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+     * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
      */
     boolean hasGroupSecretVoice();
     /**
@@ -323,7 +323,7 @@ public final class ImCtsMessageProto {
      *群加密语音
      * </pre>
      *
-     * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+     * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretVoice getGroupSecretVoice();
     /**
@@ -331,7 +331,7 @@ public final class ImCtsMessageProto {
      *群加密语音
      * </pre>
      *
-     * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+     * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretVoiceOrBuilder getGroupSecretVoiceOrBuilder();
 
@@ -340,7 +340,7 @@ public final class ImCtsMessageProto {
      *v0.4.3 版本未使用
      * </pre>
      *
-     * <code>optional .core.U2Map u2Map = 14;</code>
+     * <code>.core.U2Map u2Map = 14;</code>
      */
     boolean hasU2Map();
     /**
@@ -348,7 +348,7 @@ public final class ImCtsMessageProto {
      *v0.4.3 版本未使用
      * </pre>
      *
-     * <code>optional .core.U2Map u2Map = 14;</code>
+     * <code>.core.U2Map u2Map = 14;</code>
      */
     com.akaxin.proto.core.CoreProto.U2Map getU2Map();
     /**
@@ -356,7 +356,7 @@ public final class ImCtsMessageProto {
      *v0.4.3 版本未使用
      * </pre>
      *
-     * <code>optional .core.U2Map u2Map = 14;</code>
+     * <code>.core.U2Map u2Map = 14;</code>
      */
     com.akaxin.proto.core.CoreProto.U2MapOrBuilder getU2MapOrBuilder();
 
@@ -365,7 +365,7 @@ public final class ImCtsMessageProto {
      *加密地图消息
      * </pre>
      *
-     * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+     * <code>.core.U2SecretMap u2SecretMap = 15;</code>
      */
     boolean hasU2SecretMap();
     /**
@@ -373,7 +373,7 @@ public final class ImCtsMessageProto {
      *加密地图消息
      * </pre>
      *
-     * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+     * <code>.core.U2SecretMap u2SecretMap = 15;</code>
      */
     com.akaxin.proto.core.CoreProto.U2SecretMap getU2SecretMap();
     /**
@@ -381,7 +381,7 @@ public final class ImCtsMessageProto {
      *加密地图消息
      * </pre>
      *
-     * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+     * <code>.core.U2SecretMap u2SecretMap = 15;</code>
      */
     com.akaxin.proto.core.CoreProto.U2SecretMapOrBuilder getU2SecretMapOrBuilder();
 
@@ -390,7 +390,7 @@ public final class ImCtsMessageProto {
      *群地图
      * </pre>
      *
-     * <code>optional .core.GroupMap groupMap = 16;</code>
+     * <code>.core.GroupMap groupMap = 16;</code>
      */
     boolean hasGroupMap();
     /**
@@ -398,7 +398,7 @@ public final class ImCtsMessageProto {
      *群地图
      * </pre>
      *
-     * <code>optional .core.GroupMap groupMap = 16;</code>
+     * <code>.core.GroupMap groupMap = 16;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupMap getGroupMap();
     /**
@@ -406,7 +406,7 @@ public final class ImCtsMessageProto {
      *群地图
      * </pre>
      *
-     * <code>optional .core.GroupMap groupMap = 16;</code>
+     * <code>.core.GroupMap groupMap = 16;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupMapOrBuilder getGroupMapOrBuilder();
 
@@ -415,7 +415,7 @@ public final class ImCtsMessageProto {
      *群加密地图
      * </pre>
      *
-     * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+     * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
      */
     boolean hasGroupSecretMap();
     /**
@@ -423,7 +423,7 @@ public final class ImCtsMessageProto {
      *群加密地图
      * </pre>
      *
-     * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+     * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretMap getGroupSecretMap();
     /**
@@ -431,7 +431,7 @@ public final class ImCtsMessageProto {
      *群加密地图
      * </pre>
      *
-     * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+     * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupSecretMapOrBuilder getGroupSecretMapOrBuilder();
 
@@ -440,7 +440,7 @@ public final class ImCtsMessageProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+     * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
      */
     boolean hasU2MsgNotice();
     /**
@@ -448,7 +448,7 @@ public final class ImCtsMessageProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+     * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
      */
     com.akaxin.proto.core.CoreProto.U2MsgNotice getU2MsgNotice();
     /**
@@ -456,7 +456,7 @@ public final class ImCtsMessageProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+     * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
      */
     com.akaxin.proto.core.CoreProto.U2MsgNoticeOrBuilder getU2MsgNoticeOrBuilder();
 
@@ -465,7 +465,7 @@ public final class ImCtsMessageProto {
      *群消息通知
      * </pre>
      *
-     * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+     * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
      */
     boolean hasGroupMsgNotice();
     /**
@@ -473,7 +473,7 @@ public final class ImCtsMessageProto {
      *群消息通知
      * </pre>
      *
-     * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+     * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupMsgNotice getGroupMsgNotice();
     /**
@@ -481,7 +481,7 @@ public final class ImCtsMessageProto {
      *群消息通知
      * </pre>
      *
-     * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+     * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupMsgNoticeOrBuilder getGroupMsgNoticeOrBuilder();
 
@@ -490,7 +490,7 @@ public final class ImCtsMessageProto {
      *召回消息
      * </pre>
      *
-     * <code>optional .core.U2Recall u2Recall = 20;</code>
+     * <code>.core.U2Recall u2Recall = 20;</code>
      */
     boolean hasU2Recall();
     /**
@@ -498,7 +498,7 @@ public final class ImCtsMessageProto {
      *召回消息
      * </pre>
      *
-     * <code>optional .core.U2Recall u2Recall = 20;</code>
+     * <code>.core.U2Recall u2Recall = 20;</code>
      */
     com.akaxin.proto.core.CoreProto.U2Recall getU2Recall();
     /**
@@ -506,7 +506,7 @@ public final class ImCtsMessageProto {
      *召回消息
      * </pre>
      *
-     * <code>optional .core.U2Recall u2Recall = 20;</code>
+     * <code>.core.U2Recall u2Recall = 20;</code>
      */
     com.akaxin.proto.core.CoreProto.U2RecallOrBuilder getU2RecallOrBuilder();
 
@@ -515,7 +515,7 @@ public final class ImCtsMessageProto {
      *群组召回消息
      * </pre>
      *
-     * <code>optional .core.GroupRecall groupRecall = 21;</code>
+     * <code>.core.GroupRecall groupRecall = 21;</code>
      */
     boolean hasGroupRecall();
     /**
@@ -523,7 +523,7 @@ public final class ImCtsMessageProto {
      *群组召回消息
      * </pre>
      *
-     * <code>optional .core.GroupRecall groupRecall = 21;</code>
+     * <code>.core.GroupRecall groupRecall = 21;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupRecall getGroupRecall();
     /**
@@ -531,7 +531,7 @@ public final class ImCtsMessageProto {
      *群组召回消息
      * </pre>
      *
-     * <code>optional .core.GroupRecall groupRecall = 21;</code>
+     * <code>.core.GroupRecall groupRecall = 21;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupRecallOrBuilder getGroupRecallOrBuilder();
 
@@ -540,7 +540,7 @@ public final class ImCtsMessageProto {
      *web消息
      * </pre>
      *
-     * <code>optional .core.U2Web u2Web = 22;</code>
+     * <code>.core.U2Web u2Web = 22;</code>
      */
     boolean hasU2Web();
     /**
@@ -548,7 +548,7 @@ public final class ImCtsMessageProto {
      *web消息
      * </pre>
      *
-     * <code>optional .core.U2Web u2Web = 22;</code>
+     * <code>.core.U2Web u2Web = 22;</code>
      */
     com.akaxin.proto.core.CoreProto.U2Web getU2Web();
     /**
@@ -556,7 +556,7 @@ public final class ImCtsMessageProto {
      *web消息
      * </pre>
      *
-     * <code>optional .core.U2Web u2Web = 22;</code>
+     * <code>.core.U2Web u2Web = 22;</code>
      */
     com.akaxin.proto.core.CoreProto.U2WebOrBuilder getU2WebOrBuilder();
 
@@ -565,7 +565,7 @@ public final class ImCtsMessageProto {
      *群组web消息
      * </pre>
      *
-     * <code>optional .core.GroupWeb groupWeb = 23;</code>
+     * <code>.core.GroupWeb groupWeb = 23;</code>
      */
     boolean hasGroupWeb();
     /**
@@ -573,7 +573,7 @@ public final class ImCtsMessageProto {
      *群组web消息
      * </pre>
      *
-     * <code>optional .core.GroupWeb groupWeb = 23;</code>
+     * <code>.core.GroupWeb groupWeb = 23;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupWeb getGroupWeb();
     /**
@@ -581,7 +581,7 @@ public final class ImCtsMessageProto {
      *群组web消息
      * </pre>
      *
-     * <code>optional .core.GroupWeb groupWeb = 23;</code>
+     * <code>.core.GroupWeb groupWeb = 23;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupWebOrBuilder getGroupWebOrBuilder();
 
@@ -590,7 +590,7 @@ public final class ImCtsMessageProto {
      *web通知消息
      * </pre>
      *
-     * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+     * <code>.core.U2WebNotice u2WebNotice = 24;</code>
      */
     boolean hasU2WebNotice();
     /**
@@ -598,7 +598,7 @@ public final class ImCtsMessageProto {
      *web通知消息
      * </pre>
      *
-     * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+     * <code>.core.U2WebNotice u2WebNotice = 24;</code>
      */
     com.akaxin.proto.core.CoreProto.U2WebNotice getU2WebNotice();
     /**
@@ -606,7 +606,7 @@ public final class ImCtsMessageProto {
      *web通知消息
      * </pre>
      *
-     * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+     * <code>.core.U2WebNotice u2WebNotice = 24;</code>
      */
     com.akaxin.proto.core.CoreProto.U2WebNoticeOrBuilder getU2WebNoticeOrBuilder();
 
@@ -615,7 +615,7 @@ public final class ImCtsMessageProto {
      *群组web通知消息
      * </pre>
      *
-     * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+     * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
      */
     boolean hasGroupWebNotice();
     /**
@@ -623,7 +623,7 @@ public final class ImCtsMessageProto {
      *群组web通知消息
      * </pre>
      *
-     * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+     * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupWebNotice getGroupWebNotice();
     /**
@@ -631,7 +631,7 @@ public final class ImCtsMessageProto {
      *群组web通知消息
      * </pre>
      *
-     * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+     * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
      */
     com.akaxin.proto.core.CoreProto.GroupWebNoticeOrBuilder getGroupWebNoticeOrBuilder();
   }
@@ -642,6 +642,7 @@ public final class ImCtsMessageProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ImCtsMessageRequest)
       ImCtsMessageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ImCtsMessageRequest.newBuilder() to construct.
     private ImCtsMessageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -653,14 +654,19 @@ public final class ImCtsMessageProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ImCtsMessageRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -670,7 +676,8 @@ public final class ImCtsMessageProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1001,6 +1008,7 @@ public final class ImCtsMessageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1023,7 +1031,7 @@ public final class ImCtsMessageProto {
      *消息类型
      * </pre>
      *
-     * <code>optional .core.MsgType type = 1;</code>
+     * <code>.core.MsgType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -1033,7 +1041,7 @@ public final class ImCtsMessageProto {
      *消息类型
      * </pre>
      *
-     * <code>optional .core.MsgType type = 1;</code>
+     * <code>.core.MsgType type = 1;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgType getType() {
       com.akaxin.proto.core.CoreProto.MsgType result = com.akaxin.proto.core.CoreProto.MsgType.valueOf(type_);
@@ -1047,7 +1055,7 @@ public final class ImCtsMessageProto {
      *二人文本消息
      * </pre>
      *
-     * <code>optional .core.MsgText text = 2;</code>
+     * <code>.core.MsgText text = 2;</code>
      */
     public boolean hasText() {
       return text_ != null;
@@ -1057,7 +1065,7 @@ public final class ImCtsMessageProto {
      *二人文本消息
      * </pre>
      *
-     * <code>optional .core.MsgText text = 2;</code>
+     * <code>.core.MsgText text = 2;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgText getText() {
       return text_ == null ? com.akaxin.proto.core.CoreProto.MsgText.getDefaultInstance() : text_;
@@ -1067,7 +1075,7 @@ public final class ImCtsMessageProto {
      *二人文本消息
      * </pre>
      *
-     * <code>optional .core.MsgText text = 2;</code>
+     * <code>.core.MsgText text = 2;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgTextOrBuilder getTextOrBuilder() {
       return getText();
@@ -1080,7 +1088,7 @@ public final class ImCtsMessageProto {
      *二人加密文本消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretText secretText = 3;</code>
+     * <code>.core.MsgSecretText secretText = 3;</code>
      */
     public boolean hasSecretText() {
       return secretText_ != null;
@@ -1090,7 +1098,7 @@ public final class ImCtsMessageProto {
      *二人加密文本消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretText secretText = 3;</code>
+     * <code>.core.MsgSecretText secretText = 3;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgSecretText getSecretText() {
       return secretText_ == null ? com.akaxin.proto.core.CoreProto.MsgSecretText.getDefaultInstance() : secretText_;
@@ -1100,7 +1108,7 @@ public final class ImCtsMessageProto {
      *二人加密文本消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretText secretText = 3;</code>
+     * <code>.core.MsgSecretText secretText = 3;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgSecretTextOrBuilder getSecretTextOrBuilder() {
       return getSecretText();
@@ -1113,7 +1121,7 @@ public final class ImCtsMessageProto {
      *群文本消息
      * </pre>
      *
-     * <code>optional .core.GroupText groupText = 4;</code>
+     * <code>.core.GroupText groupText = 4;</code>
      */
     public boolean hasGroupText() {
       return groupText_ != null;
@@ -1123,7 +1131,7 @@ public final class ImCtsMessageProto {
      *群文本消息
      * </pre>
      *
-     * <code>optional .core.GroupText groupText = 4;</code>
+     * <code>.core.GroupText groupText = 4;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupText getGroupText() {
       return groupText_ == null ? com.akaxin.proto.core.CoreProto.GroupText.getDefaultInstance() : groupText_;
@@ -1133,7 +1141,7 @@ public final class ImCtsMessageProto {
      *群文本消息
      * </pre>
      *
-     * <code>optional .core.GroupText groupText = 4;</code>
+     * <code>.core.GroupText groupText = 4;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupTextOrBuilder getGroupTextOrBuilder() {
       return getGroupText();
@@ -1146,7 +1154,7 @@ public final class ImCtsMessageProto {
      *群加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+     * <code>.core.GroupSecretText groupSecretText = 5;</code>
      */
     public boolean hasGroupSecretText() {
       return groupSecretText_ != null;
@@ -1156,7 +1164,7 @@ public final class ImCtsMessageProto {
      *群加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+     * <code>.core.GroupSecretText groupSecretText = 5;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretText getGroupSecretText() {
       return groupSecretText_ == null ? com.akaxin.proto.core.CoreProto.GroupSecretText.getDefaultInstance() : groupSecretText_;
@@ -1166,7 +1174,7 @@ public final class ImCtsMessageProto {
      *群加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+     * <code>.core.GroupSecretText groupSecretText = 5;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretTextOrBuilder getGroupSecretTextOrBuilder() {
       return getGroupSecretText();
@@ -1179,7 +1187,7 @@ public final class ImCtsMessageProto {
      *二人图片消息
      * </pre>
      *
-     * <code>optional .core.MsgImage image = 6;</code>
+     * <code>.core.MsgImage image = 6;</code>
      */
     public boolean hasImage() {
       return image_ != null;
@@ -1189,7 +1197,7 @@ public final class ImCtsMessageProto {
      *二人图片消息
      * </pre>
      *
-     * <code>optional .core.MsgImage image = 6;</code>
+     * <code>.core.MsgImage image = 6;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgImage getImage() {
       return image_ == null ? com.akaxin.proto.core.CoreProto.MsgImage.getDefaultInstance() : image_;
@@ -1199,7 +1207,7 @@ public final class ImCtsMessageProto {
      *二人图片消息
      * </pre>
      *
-     * <code>optional .core.MsgImage image = 6;</code>
+     * <code>.core.MsgImage image = 6;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgImageOrBuilder getImageOrBuilder() {
       return getImage();
@@ -1212,7 +1220,7 @@ public final class ImCtsMessageProto {
      *二人加密图片消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+     * <code>.core.MsgSecretImage secretImage = 7;</code>
      */
     public boolean hasSecretImage() {
       return secretImage_ != null;
@@ -1222,7 +1230,7 @@ public final class ImCtsMessageProto {
      *二人加密图片消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+     * <code>.core.MsgSecretImage secretImage = 7;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgSecretImage getSecretImage() {
       return secretImage_ == null ? com.akaxin.proto.core.CoreProto.MsgSecretImage.getDefaultInstance() : secretImage_;
@@ -1232,7 +1240,7 @@ public final class ImCtsMessageProto {
      *二人加密图片消息
      * </pre>
      *
-     * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+     * <code>.core.MsgSecretImage secretImage = 7;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgSecretImageOrBuilder getSecretImageOrBuilder() {
       return getSecretImage();
@@ -1245,7 +1253,7 @@ public final class ImCtsMessageProto {
      *群图片消息
      * </pre>
      *
-     * <code>optional .core.GroupImage groupImage = 8;</code>
+     * <code>.core.GroupImage groupImage = 8;</code>
      */
     public boolean hasGroupImage() {
       return groupImage_ != null;
@@ -1255,7 +1263,7 @@ public final class ImCtsMessageProto {
      *群图片消息
      * </pre>
      *
-     * <code>optional .core.GroupImage groupImage = 8;</code>
+     * <code>.core.GroupImage groupImage = 8;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupImage getGroupImage() {
       return groupImage_ == null ? com.akaxin.proto.core.CoreProto.GroupImage.getDefaultInstance() : groupImage_;
@@ -1265,7 +1273,7 @@ public final class ImCtsMessageProto {
      *群图片消息
      * </pre>
      *
-     * <code>optional .core.GroupImage groupImage = 8;</code>
+     * <code>.core.GroupImage groupImage = 8;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupImageOrBuilder getGroupImageOrBuilder() {
       return getGroupImage();
@@ -1278,7 +1286,7 @@ public final class ImCtsMessageProto {
      *群图片加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+     * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
      */
     public boolean hasGroupSecretImage() {
       return groupSecretImage_ != null;
@@ -1288,7 +1296,7 @@ public final class ImCtsMessageProto {
      *群图片加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+     * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretImage getGroupSecretImage() {
       return groupSecretImage_ == null ? com.akaxin.proto.core.CoreProto.GroupSecretImage.getDefaultInstance() : groupSecretImage_;
@@ -1298,7 +1306,7 @@ public final class ImCtsMessageProto {
      *群图片加密消息
      * </pre>
      *
-     * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+     * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretImageOrBuilder getGroupSecretImageOrBuilder() {
       return getGroupSecretImage();
@@ -1311,7 +1319,7 @@ public final class ImCtsMessageProto {
      *二人语音
      * </pre>
      *
-     * <code>optional .core.MsgVoice voice = 10;</code>
+     * <code>.core.MsgVoice voice = 10;</code>
      */
     public boolean hasVoice() {
       return voice_ != null;
@@ -1321,7 +1329,7 @@ public final class ImCtsMessageProto {
      *二人语音
      * </pre>
      *
-     * <code>optional .core.MsgVoice voice = 10;</code>
+     * <code>.core.MsgVoice voice = 10;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgVoice getVoice() {
       return voice_ == null ? com.akaxin.proto.core.CoreProto.MsgVoice.getDefaultInstance() : voice_;
@@ -1331,7 +1339,7 @@ public final class ImCtsMessageProto {
      *二人语音
      * </pre>
      *
-     * <code>optional .core.MsgVoice voice = 10;</code>
+     * <code>.core.MsgVoice voice = 10;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgVoiceOrBuilder getVoiceOrBuilder() {
       return getVoice();
@@ -1344,7 +1352,7 @@ public final class ImCtsMessageProto {
      *二人加密语音
      * </pre>
      *
-     * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+     * <code>.core.MsgSecretVoice secretVoice = 11;</code>
      */
     public boolean hasSecretVoice() {
       return secretVoice_ != null;
@@ -1354,7 +1362,7 @@ public final class ImCtsMessageProto {
      *二人加密语音
      * </pre>
      *
-     * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+     * <code>.core.MsgSecretVoice secretVoice = 11;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgSecretVoice getSecretVoice() {
       return secretVoice_ == null ? com.akaxin.proto.core.CoreProto.MsgSecretVoice.getDefaultInstance() : secretVoice_;
@@ -1364,7 +1372,7 @@ public final class ImCtsMessageProto {
      *二人加密语音
      * </pre>
      *
-     * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+     * <code>.core.MsgSecretVoice secretVoice = 11;</code>
      */
     public com.akaxin.proto.core.CoreProto.MsgSecretVoiceOrBuilder getSecretVoiceOrBuilder() {
       return getSecretVoice();
@@ -1377,7 +1385,7 @@ public final class ImCtsMessageProto {
      *群语音
      * </pre>
      *
-     * <code>optional .core.GroupVoice groupVoice = 12;</code>
+     * <code>.core.GroupVoice groupVoice = 12;</code>
      */
     public boolean hasGroupVoice() {
       return groupVoice_ != null;
@@ -1387,7 +1395,7 @@ public final class ImCtsMessageProto {
      *群语音
      * </pre>
      *
-     * <code>optional .core.GroupVoice groupVoice = 12;</code>
+     * <code>.core.GroupVoice groupVoice = 12;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupVoice getGroupVoice() {
       return groupVoice_ == null ? com.akaxin.proto.core.CoreProto.GroupVoice.getDefaultInstance() : groupVoice_;
@@ -1397,7 +1405,7 @@ public final class ImCtsMessageProto {
      *群语音
      * </pre>
      *
-     * <code>optional .core.GroupVoice groupVoice = 12;</code>
+     * <code>.core.GroupVoice groupVoice = 12;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupVoiceOrBuilder getGroupVoiceOrBuilder() {
       return getGroupVoice();
@@ -1410,7 +1418,7 @@ public final class ImCtsMessageProto {
      *群加密语音
      * </pre>
      *
-     * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+     * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
      */
     public boolean hasGroupSecretVoice() {
       return groupSecretVoice_ != null;
@@ -1420,7 +1428,7 @@ public final class ImCtsMessageProto {
      *群加密语音
      * </pre>
      *
-     * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+     * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretVoice getGroupSecretVoice() {
       return groupSecretVoice_ == null ? com.akaxin.proto.core.CoreProto.GroupSecretVoice.getDefaultInstance() : groupSecretVoice_;
@@ -1430,7 +1438,7 @@ public final class ImCtsMessageProto {
      *群加密语音
      * </pre>
      *
-     * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+     * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretVoiceOrBuilder getGroupSecretVoiceOrBuilder() {
       return getGroupSecretVoice();
@@ -1443,7 +1451,7 @@ public final class ImCtsMessageProto {
      *v0.4.3 版本未使用
      * </pre>
      *
-     * <code>optional .core.U2Map u2Map = 14;</code>
+     * <code>.core.U2Map u2Map = 14;</code>
      */
     public boolean hasU2Map() {
       return u2Map_ != null;
@@ -1453,7 +1461,7 @@ public final class ImCtsMessageProto {
      *v0.4.3 版本未使用
      * </pre>
      *
-     * <code>optional .core.U2Map u2Map = 14;</code>
+     * <code>.core.U2Map u2Map = 14;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2Map getU2Map() {
       return u2Map_ == null ? com.akaxin.proto.core.CoreProto.U2Map.getDefaultInstance() : u2Map_;
@@ -1463,7 +1471,7 @@ public final class ImCtsMessageProto {
      *v0.4.3 版本未使用
      * </pre>
      *
-     * <code>optional .core.U2Map u2Map = 14;</code>
+     * <code>.core.U2Map u2Map = 14;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2MapOrBuilder getU2MapOrBuilder() {
       return getU2Map();
@@ -1476,7 +1484,7 @@ public final class ImCtsMessageProto {
      *加密地图消息
      * </pre>
      *
-     * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+     * <code>.core.U2SecretMap u2SecretMap = 15;</code>
      */
     public boolean hasU2SecretMap() {
       return u2SecretMap_ != null;
@@ -1486,7 +1494,7 @@ public final class ImCtsMessageProto {
      *加密地图消息
      * </pre>
      *
-     * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+     * <code>.core.U2SecretMap u2SecretMap = 15;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2SecretMap getU2SecretMap() {
       return u2SecretMap_ == null ? com.akaxin.proto.core.CoreProto.U2SecretMap.getDefaultInstance() : u2SecretMap_;
@@ -1496,7 +1504,7 @@ public final class ImCtsMessageProto {
      *加密地图消息
      * </pre>
      *
-     * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+     * <code>.core.U2SecretMap u2SecretMap = 15;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2SecretMapOrBuilder getU2SecretMapOrBuilder() {
       return getU2SecretMap();
@@ -1509,7 +1517,7 @@ public final class ImCtsMessageProto {
      *群地图
      * </pre>
      *
-     * <code>optional .core.GroupMap groupMap = 16;</code>
+     * <code>.core.GroupMap groupMap = 16;</code>
      */
     public boolean hasGroupMap() {
       return groupMap_ != null;
@@ -1519,7 +1527,7 @@ public final class ImCtsMessageProto {
      *群地图
      * </pre>
      *
-     * <code>optional .core.GroupMap groupMap = 16;</code>
+     * <code>.core.GroupMap groupMap = 16;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupMap getGroupMap() {
       return groupMap_ == null ? com.akaxin.proto.core.CoreProto.GroupMap.getDefaultInstance() : groupMap_;
@@ -1529,7 +1537,7 @@ public final class ImCtsMessageProto {
      *群地图
      * </pre>
      *
-     * <code>optional .core.GroupMap groupMap = 16;</code>
+     * <code>.core.GroupMap groupMap = 16;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupMapOrBuilder getGroupMapOrBuilder() {
       return getGroupMap();
@@ -1542,7 +1550,7 @@ public final class ImCtsMessageProto {
      *群加密地图
      * </pre>
      *
-     * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+     * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
      */
     public boolean hasGroupSecretMap() {
       return groupSecretMap_ != null;
@@ -1552,7 +1560,7 @@ public final class ImCtsMessageProto {
      *群加密地图
      * </pre>
      *
-     * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+     * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretMap getGroupSecretMap() {
       return groupSecretMap_ == null ? com.akaxin.proto.core.CoreProto.GroupSecretMap.getDefaultInstance() : groupSecretMap_;
@@ -1562,7 +1570,7 @@ public final class ImCtsMessageProto {
      *群加密地图
      * </pre>
      *
-     * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+     * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupSecretMapOrBuilder getGroupSecretMapOrBuilder() {
       return getGroupSecretMap();
@@ -1575,7 +1583,7 @@ public final class ImCtsMessageProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+     * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
      */
     public boolean hasU2MsgNotice() {
       return u2MsgNotice_ != null;
@@ -1585,7 +1593,7 @@ public final class ImCtsMessageProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+     * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2MsgNotice getU2MsgNotice() {
       return u2MsgNotice_ == null ? com.akaxin.proto.core.CoreProto.U2MsgNotice.getDefaultInstance() : u2MsgNotice_;
@@ -1595,7 +1603,7 @@ public final class ImCtsMessageProto {
      *通知消息
      * </pre>
      *
-     * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+     * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2MsgNoticeOrBuilder getU2MsgNoticeOrBuilder() {
       return getU2MsgNotice();
@@ -1608,7 +1616,7 @@ public final class ImCtsMessageProto {
      *群消息通知
      * </pre>
      *
-     * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+     * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
      */
     public boolean hasGroupMsgNotice() {
       return groupMsgNotice_ != null;
@@ -1618,7 +1626,7 @@ public final class ImCtsMessageProto {
      *群消息通知
      * </pre>
      *
-     * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+     * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupMsgNotice getGroupMsgNotice() {
       return groupMsgNotice_ == null ? com.akaxin.proto.core.CoreProto.GroupMsgNotice.getDefaultInstance() : groupMsgNotice_;
@@ -1628,7 +1636,7 @@ public final class ImCtsMessageProto {
      *群消息通知
      * </pre>
      *
-     * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+     * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupMsgNoticeOrBuilder getGroupMsgNoticeOrBuilder() {
       return getGroupMsgNotice();
@@ -1641,7 +1649,7 @@ public final class ImCtsMessageProto {
      *召回消息
      * </pre>
      *
-     * <code>optional .core.U2Recall u2Recall = 20;</code>
+     * <code>.core.U2Recall u2Recall = 20;</code>
      */
     public boolean hasU2Recall() {
       return u2Recall_ != null;
@@ -1651,7 +1659,7 @@ public final class ImCtsMessageProto {
      *召回消息
      * </pre>
      *
-     * <code>optional .core.U2Recall u2Recall = 20;</code>
+     * <code>.core.U2Recall u2Recall = 20;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2Recall getU2Recall() {
       return u2Recall_ == null ? com.akaxin.proto.core.CoreProto.U2Recall.getDefaultInstance() : u2Recall_;
@@ -1661,7 +1669,7 @@ public final class ImCtsMessageProto {
      *召回消息
      * </pre>
      *
-     * <code>optional .core.U2Recall u2Recall = 20;</code>
+     * <code>.core.U2Recall u2Recall = 20;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2RecallOrBuilder getU2RecallOrBuilder() {
       return getU2Recall();
@@ -1674,7 +1682,7 @@ public final class ImCtsMessageProto {
      *群组召回消息
      * </pre>
      *
-     * <code>optional .core.GroupRecall groupRecall = 21;</code>
+     * <code>.core.GroupRecall groupRecall = 21;</code>
      */
     public boolean hasGroupRecall() {
       return groupRecall_ != null;
@@ -1684,7 +1692,7 @@ public final class ImCtsMessageProto {
      *群组召回消息
      * </pre>
      *
-     * <code>optional .core.GroupRecall groupRecall = 21;</code>
+     * <code>.core.GroupRecall groupRecall = 21;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupRecall getGroupRecall() {
       return groupRecall_ == null ? com.akaxin.proto.core.CoreProto.GroupRecall.getDefaultInstance() : groupRecall_;
@@ -1694,7 +1702,7 @@ public final class ImCtsMessageProto {
      *群组召回消息
      * </pre>
      *
-     * <code>optional .core.GroupRecall groupRecall = 21;</code>
+     * <code>.core.GroupRecall groupRecall = 21;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupRecallOrBuilder getGroupRecallOrBuilder() {
       return getGroupRecall();
@@ -1707,7 +1715,7 @@ public final class ImCtsMessageProto {
      *web消息
      * </pre>
      *
-     * <code>optional .core.U2Web u2Web = 22;</code>
+     * <code>.core.U2Web u2Web = 22;</code>
      */
     public boolean hasU2Web() {
       return u2Web_ != null;
@@ -1717,7 +1725,7 @@ public final class ImCtsMessageProto {
      *web消息
      * </pre>
      *
-     * <code>optional .core.U2Web u2Web = 22;</code>
+     * <code>.core.U2Web u2Web = 22;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2Web getU2Web() {
       return u2Web_ == null ? com.akaxin.proto.core.CoreProto.U2Web.getDefaultInstance() : u2Web_;
@@ -1727,7 +1735,7 @@ public final class ImCtsMessageProto {
      *web消息
      * </pre>
      *
-     * <code>optional .core.U2Web u2Web = 22;</code>
+     * <code>.core.U2Web u2Web = 22;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2WebOrBuilder getU2WebOrBuilder() {
       return getU2Web();
@@ -1740,7 +1748,7 @@ public final class ImCtsMessageProto {
      *群组web消息
      * </pre>
      *
-     * <code>optional .core.GroupWeb groupWeb = 23;</code>
+     * <code>.core.GroupWeb groupWeb = 23;</code>
      */
     public boolean hasGroupWeb() {
       return groupWeb_ != null;
@@ -1750,7 +1758,7 @@ public final class ImCtsMessageProto {
      *群组web消息
      * </pre>
      *
-     * <code>optional .core.GroupWeb groupWeb = 23;</code>
+     * <code>.core.GroupWeb groupWeb = 23;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupWeb getGroupWeb() {
       return groupWeb_ == null ? com.akaxin.proto.core.CoreProto.GroupWeb.getDefaultInstance() : groupWeb_;
@@ -1760,7 +1768,7 @@ public final class ImCtsMessageProto {
      *群组web消息
      * </pre>
      *
-     * <code>optional .core.GroupWeb groupWeb = 23;</code>
+     * <code>.core.GroupWeb groupWeb = 23;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupWebOrBuilder getGroupWebOrBuilder() {
       return getGroupWeb();
@@ -1773,7 +1781,7 @@ public final class ImCtsMessageProto {
      *web通知消息
      * </pre>
      *
-     * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+     * <code>.core.U2WebNotice u2WebNotice = 24;</code>
      */
     public boolean hasU2WebNotice() {
       return u2WebNotice_ != null;
@@ -1783,7 +1791,7 @@ public final class ImCtsMessageProto {
      *web通知消息
      * </pre>
      *
-     * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+     * <code>.core.U2WebNotice u2WebNotice = 24;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2WebNotice getU2WebNotice() {
       return u2WebNotice_ == null ? com.akaxin.proto.core.CoreProto.U2WebNotice.getDefaultInstance() : u2WebNotice_;
@@ -1793,7 +1801,7 @@ public final class ImCtsMessageProto {
      *web通知消息
      * </pre>
      *
-     * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+     * <code>.core.U2WebNotice u2WebNotice = 24;</code>
      */
     public com.akaxin.proto.core.CoreProto.U2WebNoticeOrBuilder getU2WebNoticeOrBuilder() {
       return getU2WebNotice();
@@ -1806,7 +1814,7 @@ public final class ImCtsMessageProto {
      *群组web通知消息
      * </pre>
      *
-     * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+     * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
      */
     public boolean hasGroupWebNotice() {
       return groupWebNotice_ != null;
@@ -1816,7 +1824,7 @@ public final class ImCtsMessageProto {
      *群组web通知消息
      * </pre>
      *
-     * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+     * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupWebNotice getGroupWebNotice() {
       return groupWebNotice_ == null ? com.akaxin.proto.core.CoreProto.GroupWebNotice.getDefaultInstance() : groupWebNotice_;
@@ -1826,7 +1834,7 @@ public final class ImCtsMessageProto {
      *群组web通知消息
      * </pre>
      *
-     * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+     * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
      */
     public com.akaxin.proto.core.CoreProto.GroupWebNoticeOrBuilder getGroupWebNoticeOrBuilder() {
       return getGroupWebNotice();
@@ -1919,6 +1927,7 @@ public final class ImCtsMessageProto {
       if (groupWebNotice_ != null) {
         output.writeMessage(25, getGroupWebNotice());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -2026,11 +2035,11 @@ public final class ImCtsMessageProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, getGroupWebNotice());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2163,6 +2172,7 @@ public final class ImCtsMessageProto {
         result = result && getGroupWebNotice()
             .equals(other.getGroupWebNotice());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -2172,7 +2182,7 @@ public final class ImCtsMessageProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
       if (hasText()) {
@@ -2276,6 +2286,17 @@ public final class ImCtsMessageProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ImCtsMessageProto.ImCtsMessageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2687,7 +2708,7 @@ public final class ImCtsMessageProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2700,12 +2721,12 @@ public final class ImCtsMessageProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2794,6 +2815,7 @@ public final class ImCtsMessageProto {
         if (other.hasGroupWebNotice()) {
           mergeGroupWebNotice(other.getGroupWebNotice());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2826,7 +2848,7 @@ public final class ImCtsMessageProto {
        *消息类型
        * </pre>
        *
-       * <code>optional .core.MsgType type = 1;</code>
+       * <code>.core.MsgType type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
@@ -2836,7 +2858,7 @@ public final class ImCtsMessageProto {
        *消息类型
        * </pre>
        *
-       * <code>optional .core.MsgType type = 1;</code>
+       * <code>.core.MsgType type = 1;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -2848,7 +2870,7 @@ public final class ImCtsMessageProto {
        *消息类型
        * </pre>
        *
-       * <code>optional .core.MsgType type = 1;</code>
+       * <code>.core.MsgType type = 1;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgType getType() {
         com.akaxin.proto.core.CoreProto.MsgType result = com.akaxin.proto.core.CoreProto.MsgType.valueOf(type_);
@@ -2859,7 +2881,7 @@ public final class ImCtsMessageProto {
        *消息类型
        * </pre>
        *
-       * <code>optional .core.MsgType type = 1;</code>
+       * <code>.core.MsgType type = 1;</code>
        */
       public Builder setType(com.akaxin.proto.core.CoreProto.MsgType value) {
         if (value == null) {
@@ -2875,7 +2897,7 @@ public final class ImCtsMessageProto {
        *消息类型
        * </pre>
        *
-       * <code>optional .core.MsgType type = 1;</code>
+       * <code>.core.MsgType type = 1;</code>
        */
       public Builder clearType() {
         
@@ -2892,7 +2914,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public boolean hasText() {
         return textBuilder_ != null || text_ != null;
@@ -2902,7 +2924,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgText getText() {
         if (textBuilder_ == null) {
@@ -2916,7 +2938,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public Builder setText(com.akaxin.proto.core.CoreProto.MsgText value) {
         if (textBuilder_ == null) {
@@ -2936,7 +2958,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public Builder setText(
           com.akaxin.proto.core.CoreProto.MsgText.Builder builderForValue) {
@@ -2954,7 +2976,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public Builder mergeText(com.akaxin.proto.core.CoreProto.MsgText value) {
         if (textBuilder_ == null) {
@@ -2976,7 +2998,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public Builder clearText() {
         if (textBuilder_ == null) {
@@ -2994,7 +3016,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgText.Builder getTextBuilder() {
         
@@ -3006,7 +3028,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgTextOrBuilder getTextOrBuilder() {
         if (textBuilder_ != null) {
@@ -3021,7 +3043,7 @@ public final class ImCtsMessageProto {
        *二人文本消息
        * </pre>
        *
-       * <code>optional .core.MsgText text = 2;</code>
+       * <code>.core.MsgText text = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.MsgText, com.akaxin.proto.core.CoreProto.MsgText.Builder, com.akaxin.proto.core.CoreProto.MsgTextOrBuilder> 
@@ -3045,7 +3067,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public boolean hasSecretText() {
         return secretTextBuilder_ != null || secretText_ != null;
@@ -3055,7 +3077,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretText getSecretText() {
         if (secretTextBuilder_ == null) {
@@ -3069,7 +3091,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public Builder setSecretText(com.akaxin.proto.core.CoreProto.MsgSecretText value) {
         if (secretTextBuilder_ == null) {
@@ -3089,7 +3111,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public Builder setSecretText(
           com.akaxin.proto.core.CoreProto.MsgSecretText.Builder builderForValue) {
@@ -3107,7 +3129,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public Builder mergeSecretText(com.akaxin.proto.core.CoreProto.MsgSecretText value) {
         if (secretTextBuilder_ == null) {
@@ -3129,7 +3151,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public Builder clearSecretText() {
         if (secretTextBuilder_ == null) {
@@ -3147,7 +3169,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretText.Builder getSecretTextBuilder() {
         
@@ -3159,7 +3181,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretTextOrBuilder getSecretTextOrBuilder() {
         if (secretTextBuilder_ != null) {
@@ -3174,7 +3196,7 @@ public final class ImCtsMessageProto {
        *二人加密文本消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretText secretText = 3;</code>
+       * <code>.core.MsgSecretText secretText = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.MsgSecretText, com.akaxin.proto.core.CoreProto.MsgSecretText.Builder, com.akaxin.proto.core.CoreProto.MsgSecretTextOrBuilder> 
@@ -3198,7 +3220,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public boolean hasGroupText() {
         return groupTextBuilder_ != null || groupText_ != null;
@@ -3208,7 +3230,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupText getGroupText() {
         if (groupTextBuilder_ == null) {
@@ -3222,7 +3244,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public Builder setGroupText(com.akaxin.proto.core.CoreProto.GroupText value) {
         if (groupTextBuilder_ == null) {
@@ -3242,7 +3264,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public Builder setGroupText(
           com.akaxin.proto.core.CoreProto.GroupText.Builder builderForValue) {
@@ -3260,7 +3282,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public Builder mergeGroupText(com.akaxin.proto.core.CoreProto.GroupText value) {
         if (groupTextBuilder_ == null) {
@@ -3282,7 +3304,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public Builder clearGroupText() {
         if (groupTextBuilder_ == null) {
@@ -3300,7 +3322,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupText.Builder getGroupTextBuilder() {
         
@@ -3312,7 +3334,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupTextOrBuilder getGroupTextOrBuilder() {
         if (groupTextBuilder_ != null) {
@@ -3327,7 +3349,7 @@ public final class ImCtsMessageProto {
        *群文本消息
        * </pre>
        *
-       * <code>optional .core.GroupText groupText = 4;</code>
+       * <code>.core.GroupText groupText = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupText, com.akaxin.proto.core.CoreProto.GroupText.Builder, com.akaxin.proto.core.CoreProto.GroupTextOrBuilder> 
@@ -3351,7 +3373,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public boolean hasGroupSecretText() {
         return groupSecretTextBuilder_ != null || groupSecretText_ != null;
@@ -3361,7 +3383,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretText getGroupSecretText() {
         if (groupSecretTextBuilder_ == null) {
@@ -3375,7 +3397,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public Builder setGroupSecretText(com.akaxin.proto.core.CoreProto.GroupSecretText value) {
         if (groupSecretTextBuilder_ == null) {
@@ -3395,7 +3417,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public Builder setGroupSecretText(
           com.akaxin.proto.core.CoreProto.GroupSecretText.Builder builderForValue) {
@@ -3413,7 +3435,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public Builder mergeGroupSecretText(com.akaxin.proto.core.CoreProto.GroupSecretText value) {
         if (groupSecretTextBuilder_ == null) {
@@ -3435,7 +3457,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public Builder clearGroupSecretText() {
         if (groupSecretTextBuilder_ == null) {
@@ -3453,7 +3475,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretText.Builder getGroupSecretTextBuilder() {
         
@@ -3465,7 +3487,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretTextOrBuilder getGroupSecretTextOrBuilder() {
         if (groupSecretTextBuilder_ != null) {
@@ -3480,7 +3502,7 @@ public final class ImCtsMessageProto {
        *群加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretText groupSecretText = 5;</code>
+       * <code>.core.GroupSecretText groupSecretText = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupSecretText, com.akaxin.proto.core.CoreProto.GroupSecretText.Builder, com.akaxin.proto.core.CoreProto.GroupSecretTextOrBuilder> 
@@ -3504,7 +3526,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public boolean hasImage() {
         return imageBuilder_ != null || image_ != null;
@@ -3514,7 +3536,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgImage getImage() {
         if (imageBuilder_ == null) {
@@ -3528,7 +3550,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public Builder setImage(com.akaxin.proto.core.CoreProto.MsgImage value) {
         if (imageBuilder_ == null) {
@@ -3548,7 +3570,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public Builder setImage(
           com.akaxin.proto.core.CoreProto.MsgImage.Builder builderForValue) {
@@ -3566,7 +3588,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public Builder mergeImage(com.akaxin.proto.core.CoreProto.MsgImage value) {
         if (imageBuilder_ == null) {
@@ -3588,7 +3610,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public Builder clearImage() {
         if (imageBuilder_ == null) {
@@ -3606,7 +3628,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgImage.Builder getImageBuilder() {
         
@@ -3618,7 +3640,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgImageOrBuilder getImageOrBuilder() {
         if (imageBuilder_ != null) {
@@ -3633,7 +3655,7 @@ public final class ImCtsMessageProto {
        *二人图片消息
        * </pre>
        *
-       * <code>optional .core.MsgImage image = 6;</code>
+       * <code>.core.MsgImage image = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.MsgImage, com.akaxin.proto.core.CoreProto.MsgImage.Builder, com.akaxin.proto.core.CoreProto.MsgImageOrBuilder> 
@@ -3657,7 +3679,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public boolean hasSecretImage() {
         return secretImageBuilder_ != null || secretImage_ != null;
@@ -3667,7 +3689,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretImage getSecretImage() {
         if (secretImageBuilder_ == null) {
@@ -3681,7 +3703,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public Builder setSecretImage(com.akaxin.proto.core.CoreProto.MsgSecretImage value) {
         if (secretImageBuilder_ == null) {
@@ -3701,7 +3723,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public Builder setSecretImage(
           com.akaxin.proto.core.CoreProto.MsgSecretImage.Builder builderForValue) {
@@ -3719,7 +3741,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public Builder mergeSecretImage(com.akaxin.proto.core.CoreProto.MsgSecretImage value) {
         if (secretImageBuilder_ == null) {
@@ -3741,7 +3763,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public Builder clearSecretImage() {
         if (secretImageBuilder_ == null) {
@@ -3759,7 +3781,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretImage.Builder getSecretImageBuilder() {
         
@@ -3771,7 +3793,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretImageOrBuilder getSecretImageOrBuilder() {
         if (secretImageBuilder_ != null) {
@@ -3786,7 +3808,7 @@ public final class ImCtsMessageProto {
        *二人加密图片消息
        * </pre>
        *
-       * <code>optional .core.MsgSecretImage secretImage = 7;</code>
+       * <code>.core.MsgSecretImage secretImage = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.MsgSecretImage, com.akaxin.proto.core.CoreProto.MsgSecretImage.Builder, com.akaxin.proto.core.CoreProto.MsgSecretImageOrBuilder> 
@@ -3810,7 +3832,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public boolean hasGroupImage() {
         return groupImageBuilder_ != null || groupImage_ != null;
@@ -3820,7 +3842,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupImage getGroupImage() {
         if (groupImageBuilder_ == null) {
@@ -3834,7 +3856,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public Builder setGroupImage(com.akaxin.proto.core.CoreProto.GroupImage value) {
         if (groupImageBuilder_ == null) {
@@ -3854,7 +3876,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public Builder setGroupImage(
           com.akaxin.proto.core.CoreProto.GroupImage.Builder builderForValue) {
@@ -3872,7 +3894,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public Builder mergeGroupImage(com.akaxin.proto.core.CoreProto.GroupImage value) {
         if (groupImageBuilder_ == null) {
@@ -3894,7 +3916,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public Builder clearGroupImage() {
         if (groupImageBuilder_ == null) {
@@ -3912,7 +3934,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupImage.Builder getGroupImageBuilder() {
         
@@ -3924,7 +3946,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupImageOrBuilder getGroupImageOrBuilder() {
         if (groupImageBuilder_ != null) {
@@ -3939,7 +3961,7 @@ public final class ImCtsMessageProto {
        *群图片消息
        * </pre>
        *
-       * <code>optional .core.GroupImage groupImage = 8;</code>
+       * <code>.core.GroupImage groupImage = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupImage, com.akaxin.proto.core.CoreProto.GroupImage.Builder, com.akaxin.proto.core.CoreProto.GroupImageOrBuilder> 
@@ -3963,7 +3985,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public boolean hasGroupSecretImage() {
         return groupSecretImageBuilder_ != null || groupSecretImage_ != null;
@@ -3973,7 +3995,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretImage getGroupSecretImage() {
         if (groupSecretImageBuilder_ == null) {
@@ -3987,7 +4009,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public Builder setGroupSecretImage(com.akaxin.proto.core.CoreProto.GroupSecretImage value) {
         if (groupSecretImageBuilder_ == null) {
@@ -4007,7 +4029,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public Builder setGroupSecretImage(
           com.akaxin.proto.core.CoreProto.GroupSecretImage.Builder builderForValue) {
@@ -4025,7 +4047,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public Builder mergeGroupSecretImage(com.akaxin.proto.core.CoreProto.GroupSecretImage value) {
         if (groupSecretImageBuilder_ == null) {
@@ -4047,7 +4069,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public Builder clearGroupSecretImage() {
         if (groupSecretImageBuilder_ == null) {
@@ -4065,7 +4087,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretImage.Builder getGroupSecretImageBuilder() {
         
@@ -4077,7 +4099,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretImageOrBuilder getGroupSecretImageOrBuilder() {
         if (groupSecretImageBuilder_ != null) {
@@ -4092,7 +4114,7 @@ public final class ImCtsMessageProto {
        *群图片加密消息
        * </pre>
        *
-       * <code>optional .core.GroupSecretImage groupSecretImage = 9;</code>
+       * <code>.core.GroupSecretImage groupSecretImage = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupSecretImage, com.akaxin.proto.core.CoreProto.GroupSecretImage.Builder, com.akaxin.proto.core.CoreProto.GroupSecretImageOrBuilder> 
@@ -4116,7 +4138,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public boolean hasVoice() {
         return voiceBuilder_ != null || voice_ != null;
@@ -4126,7 +4148,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgVoice getVoice() {
         if (voiceBuilder_ == null) {
@@ -4140,7 +4162,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public Builder setVoice(com.akaxin.proto.core.CoreProto.MsgVoice value) {
         if (voiceBuilder_ == null) {
@@ -4160,7 +4182,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public Builder setVoice(
           com.akaxin.proto.core.CoreProto.MsgVoice.Builder builderForValue) {
@@ -4178,7 +4200,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public Builder mergeVoice(com.akaxin.proto.core.CoreProto.MsgVoice value) {
         if (voiceBuilder_ == null) {
@@ -4200,7 +4222,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public Builder clearVoice() {
         if (voiceBuilder_ == null) {
@@ -4218,7 +4240,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgVoice.Builder getVoiceBuilder() {
         
@@ -4230,7 +4252,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgVoiceOrBuilder getVoiceOrBuilder() {
         if (voiceBuilder_ != null) {
@@ -4245,7 +4267,7 @@ public final class ImCtsMessageProto {
        *二人语音
        * </pre>
        *
-       * <code>optional .core.MsgVoice voice = 10;</code>
+       * <code>.core.MsgVoice voice = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.MsgVoice, com.akaxin.proto.core.CoreProto.MsgVoice.Builder, com.akaxin.proto.core.CoreProto.MsgVoiceOrBuilder> 
@@ -4269,7 +4291,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public boolean hasSecretVoice() {
         return secretVoiceBuilder_ != null || secretVoice_ != null;
@@ -4279,7 +4301,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretVoice getSecretVoice() {
         if (secretVoiceBuilder_ == null) {
@@ -4293,7 +4315,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public Builder setSecretVoice(com.akaxin.proto.core.CoreProto.MsgSecretVoice value) {
         if (secretVoiceBuilder_ == null) {
@@ -4313,7 +4335,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public Builder setSecretVoice(
           com.akaxin.proto.core.CoreProto.MsgSecretVoice.Builder builderForValue) {
@@ -4331,7 +4353,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public Builder mergeSecretVoice(com.akaxin.proto.core.CoreProto.MsgSecretVoice value) {
         if (secretVoiceBuilder_ == null) {
@@ -4353,7 +4375,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public Builder clearSecretVoice() {
         if (secretVoiceBuilder_ == null) {
@@ -4371,7 +4393,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretVoice.Builder getSecretVoiceBuilder() {
         
@@ -4383,7 +4405,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       public com.akaxin.proto.core.CoreProto.MsgSecretVoiceOrBuilder getSecretVoiceOrBuilder() {
         if (secretVoiceBuilder_ != null) {
@@ -4398,7 +4420,7 @@ public final class ImCtsMessageProto {
        *二人加密语音
        * </pre>
        *
-       * <code>optional .core.MsgSecretVoice secretVoice = 11;</code>
+       * <code>.core.MsgSecretVoice secretVoice = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.MsgSecretVoice, com.akaxin.proto.core.CoreProto.MsgSecretVoice.Builder, com.akaxin.proto.core.CoreProto.MsgSecretVoiceOrBuilder> 
@@ -4422,7 +4444,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public boolean hasGroupVoice() {
         return groupVoiceBuilder_ != null || groupVoice_ != null;
@@ -4432,7 +4454,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupVoice getGroupVoice() {
         if (groupVoiceBuilder_ == null) {
@@ -4446,7 +4468,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public Builder setGroupVoice(com.akaxin.proto.core.CoreProto.GroupVoice value) {
         if (groupVoiceBuilder_ == null) {
@@ -4466,7 +4488,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public Builder setGroupVoice(
           com.akaxin.proto.core.CoreProto.GroupVoice.Builder builderForValue) {
@@ -4484,7 +4506,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public Builder mergeGroupVoice(com.akaxin.proto.core.CoreProto.GroupVoice value) {
         if (groupVoiceBuilder_ == null) {
@@ -4506,7 +4528,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public Builder clearGroupVoice() {
         if (groupVoiceBuilder_ == null) {
@@ -4524,7 +4546,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupVoice.Builder getGroupVoiceBuilder() {
         
@@ -4536,7 +4558,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupVoiceOrBuilder getGroupVoiceOrBuilder() {
         if (groupVoiceBuilder_ != null) {
@@ -4551,7 +4573,7 @@ public final class ImCtsMessageProto {
        *群语音
        * </pre>
        *
-       * <code>optional .core.GroupVoice groupVoice = 12;</code>
+       * <code>.core.GroupVoice groupVoice = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupVoice, com.akaxin.proto.core.CoreProto.GroupVoice.Builder, com.akaxin.proto.core.CoreProto.GroupVoiceOrBuilder> 
@@ -4575,7 +4597,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public boolean hasGroupSecretVoice() {
         return groupSecretVoiceBuilder_ != null || groupSecretVoice_ != null;
@@ -4585,7 +4607,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretVoice getGroupSecretVoice() {
         if (groupSecretVoiceBuilder_ == null) {
@@ -4599,7 +4621,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public Builder setGroupSecretVoice(com.akaxin.proto.core.CoreProto.GroupSecretVoice value) {
         if (groupSecretVoiceBuilder_ == null) {
@@ -4619,7 +4641,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public Builder setGroupSecretVoice(
           com.akaxin.proto.core.CoreProto.GroupSecretVoice.Builder builderForValue) {
@@ -4637,7 +4659,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public Builder mergeGroupSecretVoice(com.akaxin.proto.core.CoreProto.GroupSecretVoice value) {
         if (groupSecretVoiceBuilder_ == null) {
@@ -4659,7 +4681,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public Builder clearGroupSecretVoice() {
         if (groupSecretVoiceBuilder_ == null) {
@@ -4677,7 +4699,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretVoice.Builder getGroupSecretVoiceBuilder() {
         
@@ -4689,7 +4711,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretVoiceOrBuilder getGroupSecretVoiceOrBuilder() {
         if (groupSecretVoiceBuilder_ != null) {
@@ -4704,7 +4726,7 @@ public final class ImCtsMessageProto {
        *群加密语音
        * </pre>
        *
-       * <code>optional .core.GroupSecretVoice groupSecretVoice = 13;</code>
+       * <code>.core.GroupSecretVoice groupSecretVoice = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupSecretVoice, com.akaxin.proto.core.CoreProto.GroupSecretVoice.Builder, com.akaxin.proto.core.CoreProto.GroupSecretVoiceOrBuilder> 
@@ -4728,7 +4750,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public boolean hasU2Map() {
         return u2MapBuilder_ != null || u2Map_ != null;
@@ -4738,7 +4760,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2Map getU2Map() {
         if (u2MapBuilder_ == null) {
@@ -4752,7 +4774,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public Builder setU2Map(com.akaxin.proto.core.CoreProto.U2Map value) {
         if (u2MapBuilder_ == null) {
@@ -4772,7 +4794,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public Builder setU2Map(
           com.akaxin.proto.core.CoreProto.U2Map.Builder builderForValue) {
@@ -4790,7 +4812,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public Builder mergeU2Map(com.akaxin.proto.core.CoreProto.U2Map value) {
         if (u2MapBuilder_ == null) {
@@ -4812,7 +4834,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public Builder clearU2Map() {
         if (u2MapBuilder_ == null) {
@@ -4830,7 +4852,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2Map.Builder getU2MapBuilder() {
         
@@ -4842,7 +4864,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2MapOrBuilder getU2MapOrBuilder() {
         if (u2MapBuilder_ != null) {
@@ -4857,7 +4879,7 @@ public final class ImCtsMessageProto {
        *v0.4.3 版本未使用
        * </pre>
        *
-       * <code>optional .core.U2Map u2Map = 14;</code>
+       * <code>.core.U2Map u2Map = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.U2Map, com.akaxin.proto.core.CoreProto.U2Map.Builder, com.akaxin.proto.core.CoreProto.U2MapOrBuilder> 
@@ -4881,7 +4903,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public boolean hasU2SecretMap() {
         return u2SecretMapBuilder_ != null || u2SecretMap_ != null;
@@ -4891,7 +4913,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2SecretMap getU2SecretMap() {
         if (u2SecretMapBuilder_ == null) {
@@ -4905,7 +4927,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public Builder setU2SecretMap(com.akaxin.proto.core.CoreProto.U2SecretMap value) {
         if (u2SecretMapBuilder_ == null) {
@@ -4925,7 +4947,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public Builder setU2SecretMap(
           com.akaxin.proto.core.CoreProto.U2SecretMap.Builder builderForValue) {
@@ -4943,7 +4965,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public Builder mergeU2SecretMap(com.akaxin.proto.core.CoreProto.U2SecretMap value) {
         if (u2SecretMapBuilder_ == null) {
@@ -4965,7 +4987,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public Builder clearU2SecretMap() {
         if (u2SecretMapBuilder_ == null) {
@@ -4983,7 +5005,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2SecretMap.Builder getU2SecretMapBuilder() {
         
@@ -4995,7 +5017,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2SecretMapOrBuilder getU2SecretMapOrBuilder() {
         if (u2SecretMapBuilder_ != null) {
@@ -5010,7 +5032,7 @@ public final class ImCtsMessageProto {
        *加密地图消息
        * </pre>
        *
-       * <code>optional .core.U2SecretMap u2SecretMap = 15;</code>
+       * <code>.core.U2SecretMap u2SecretMap = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.U2SecretMap, com.akaxin.proto.core.CoreProto.U2SecretMap.Builder, com.akaxin.proto.core.CoreProto.U2SecretMapOrBuilder> 
@@ -5034,7 +5056,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public boolean hasGroupMap() {
         return groupMapBuilder_ != null || groupMap_ != null;
@@ -5044,7 +5066,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupMap getGroupMap() {
         if (groupMapBuilder_ == null) {
@@ -5058,7 +5080,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public Builder setGroupMap(com.akaxin.proto.core.CoreProto.GroupMap value) {
         if (groupMapBuilder_ == null) {
@@ -5078,7 +5100,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public Builder setGroupMap(
           com.akaxin.proto.core.CoreProto.GroupMap.Builder builderForValue) {
@@ -5096,7 +5118,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public Builder mergeGroupMap(com.akaxin.proto.core.CoreProto.GroupMap value) {
         if (groupMapBuilder_ == null) {
@@ -5118,7 +5140,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public Builder clearGroupMap() {
         if (groupMapBuilder_ == null) {
@@ -5136,7 +5158,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupMap.Builder getGroupMapBuilder() {
         
@@ -5148,7 +5170,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupMapOrBuilder getGroupMapOrBuilder() {
         if (groupMapBuilder_ != null) {
@@ -5163,7 +5185,7 @@ public final class ImCtsMessageProto {
        *群地图
        * </pre>
        *
-       * <code>optional .core.GroupMap groupMap = 16;</code>
+       * <code>.core.GroupMap groupMap = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupMap, com.akaxin.proto.core.CoreProto.GroupMap.Builder, com.akaxin.proto.core.CoreProto.GroupMapOrBuilder> 
@@ -5187,7 +5209,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public boolean hasGroupSecretMap() {
         return groupSecretMapBuilder_ != null || groupSecretMap_ != null;
@@ -5197,7 +5219,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretMap getGroupSecretMap() {
         if (groupSecretMapBuilder_ == null) {
@@ -5211,7 +5233,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public Builder setGroupSecretMap(com.akaxin.proto.core.CoreProto.GroupSecretMap value) {
         if (groupSecretMapBuilder_ == null) {
@@ -5231,7 +5253,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public Builder setGroupSecretMap(
           com.akaxin.proto.core.CoreProto.GroupSecretMap.Builder builderForValue) {
@@ -5249,7 +5271,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public Builder mergeGroupSecretMap(com.akaxin.proto.core.CoreProto.GroupSecretMap value) {
         if (groupSecretMapBuilder_ == null) {
@@ -5271,7 +5293,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public Builder clearGroupSecretMap() {
         if (groupSecretMapBuilder_ == null) {
@@ -5289,7 +5311,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretMap.Builder getGroupSecretMapBuilder() {
         
@@ -5301,7 +5323,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupSecretMapOrBuilder getGroupSecretMapOrBuilder() {
         if (groupSecretMapBuilder_ != null) {
@@ -5316,7 +5338,7 @@ public final class ImCtsMessageProto {
        *群加密地图
        * </pre>
        *
-       * <code>optional .core.GroupSecretMap groupSecretMap = 17;</code>
+       * <code>.core.GroupSecretMap groupSecretMap = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupSecretMap, com.akaxin.proto.core.CoreProto.GroupSecretMap.Builder, com.akaxin.proto.core.CoreProto.GroupSecretMapOrBuilder> 
@@ -5340,7 +5362,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public boolean hasU2MsgNotice() {
         return u2MsgNoticeBuilder_ != null || u2MsgNotice_ != null;
@@ -5350,7 +5372,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2MsgNotice getU2MsgNotice() {
         if (u2MsgNoticeBuilder_ == null) {
@@ -5364,7 +5386,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public Builder setU2MsgNotice(com.akaxin.proto.core.CoreProto.U2MsgNotice value) {
         if (u2MsgNoticeBuilder_ == null) {
@@ -5384,7 +5406,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public Builder setU2MsgNotice(
           com.akaxin.proto.core.CoreProto.U2MsgNotice.Builder builderForValue) {
@@ -5402,7 +5424,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public Builder mergeU2MsgNotice(com.akaxin.proto.core.CoreProto.U2MsgNotice value) {
         if (u2MsgNoticeBuilder_ == null) {
@@ -5424,7 +5446,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public Builder clearU2MsgNotice() {
         if (u2MsgNoticeBuilder_ == null) {
@@ -5442,7 +5464,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2MsgNotice.Builder getU2MsgNoticeBuilder() {
         
@@ -5454,7 +5476,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2MsgNoticeOrBuilder getU2MsgNoticeOrBuilder() {
         if (u2MsgNoticeBuilder_ != null) {
@@ -5469,7 +5491,7 @@ public final class ImCtsMessageProto {
        *通知消息
        * </pre>
        *
-       * <code>optional .core.U2MsgNotice u2MsgNotice = 18;</code>
+       * <code>.core.U2MsgNotice u2MsgNotice = 18;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.U2MsgNotice, com.akaxin.proto.core.CoreProto.U2MsgNotice.Builder, com.akaxin.proto.core.CoreProto.U2MsgNoticeOrBuilder> 
@@ -5493,7 +5515,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public boolean hasGroupMsgNotice() {
         return groupMsgNoticeBuilder_ != null || groupMsgNotice_ != null;
@@ -5503,7 +5525,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupMsgNotice getGroupMsgNotice() {
         if (groupMsgNoticeBuilder_ == null) {
@@ -5517,7 +5539,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public Builder setGroupMsgNotice(com.akaxin.proto.core.CoreProto.GroupMsgNotice value) {
         if (groupMsgNoticeBuilder_ == null) {
@@ -5537,7 +5559,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public Builder setGroupMsgNotice(
           com.akaxin.proto.core.CoreProto.GroupMsgNotice.Builder builderForValue) {
@@ -5555,7 +5577,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public Builder mergeGroupMsgNotice(com.akaxin.proto.core.CoreProto.GroupMsgNotice value) {
         if (groupMsgNoticeBuilder_ == null) {
@@ -5577,7 +5599,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public Builder clearGroupMsgNotice() {
         if (groupMsgNoticeBuilder_ == null) {
@@ -5595,7 +5617,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupMsgNotice.Builder getGroupMsgNoticeBuilder() {
         
@@ -5607,7 +5629,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupMsgNoticeOrBuilder getGroupMsgNoticeOrBuilder() {
         if (groupMsgNoticeBuilder_ != null) {
@@ -5622,7 +5644,7 @@ public final class ImCtsMessageProto {
        *群消息通知
        * </pre>
        *
-       * <code>optional .core.GroupMsgNotice groupMsgNotice = 19;</code>
+       * <code>.core.GroupMsgNotice groupMsgNotice = 19;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupMsgNotice, com.akaxin.proto.core.CoreProto.GroupMsgNotice.Builder, com.akaxin.proto.core.CoreProto.GroupMsgNoticeOrBuilder> 
@@ -5646,7 +5668,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public boolean hasU2Recall() {
         return u2RecallBuilder_ != null || u2Recall_ != null;
@@ -5656,7 +5678,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2Recall getU2Recall() {
         if (u2RecallBuilder_ == null) {
@@ -5670,7 +5692,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public Builder setU2Recall(com.akaxin.proto.core.CoreProto.U2Recall value) {
         if (u2RecallBuilder_ == null) {
@@ -5690,7 +5712,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public Builder setU2Recall(
           com.akaxin.proto.core.CoreProto.U2Recall.Builder builderForValue) {
@@ -5708,7 +5730,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public Builder mergeU2Recall(com.akaxin.proto.core.CoreProto.U2Recall value) {
         if (u2RecallBuilder_ == null) {
@@ -5730,7 +5752,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public Builder clearU2Recall() {
         if (u2RecallBuilder_ == null) {
@@ -5748,7 +5770,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2Recall.Builder getU2RecallBuilder() {
         
@@ -5760,7 +5782,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2RecallOrBuilder getU2RecallOrBuilder() {
         if (u2RecallBuilder_ != null) {
@@ -5775,7 +5797,7 @@ public final class ImCtsMessageProto {
        *召回消息
        * </pre>
        *
-       * <code>optional .core.U2Recall u2Recall = 20;</code>
+       * <code>.core.U2Recall u2Recall = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.U2Recall, com.akaxin.proto.core.CoreProto.U2Recall.Builder, com.akaxin.proto.core.CoreProto.U2RecallOrBuilder> 
@@ -5799,7 +5821,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public boolean hasGroupRecall() {
         return groupRecallBuilder_ != null || groupRecall_ != null;
@@ -5809,7 +5831,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupRecall getGroupRecall() {
         if (groupRecallBuilder_ == null) {
@@ -5823,7 +5845,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public Builder setGroupRecall(com.akaxin.proto.core.CoreProto.GroupRecall value) {
         if (groupRecallBuilder_ == null) {
@@ -5843,7 +5865,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public Builder setGroupRecall(
           com.akaxin.proto.core.CoreProto.GroupRecall.Builder builderForValue) {
@@ -5861,7 +5883,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public Builder mergeGroupRecall(com.akaxin.proto.core.CoreProto.GroupRecall value) {
         if (groupRecallBuilder_ == null) {
@@ -5883,7 +5905,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public Builder clearGroupRecall() {
         if (groupRecallBuilder_ == null) {
@@ -5901,7 +5923,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupRecall.Builder getGroupRecallBuilder() {
         
@@ -5913,7 +5935,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupRecallOrBuilder getGroupRecallOrBuilder() {
         if (groupRecallBuilder_ != null) {
@@ -5928,7 +5950,7 @@ public final class ImCtsMessageProto {
        *群组召回消息
        * </pre>
        *
-       * <code>optional .core.GroupRecall groupRecall = 21;</code>
+       * <code>.core.GroupRecall groupRecall = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupRecall, com.akaxin.proto.core.CoreProto.GroupRecall.Builder, com.akaxin.proto.core.CoreProto.GroupRecallOrBuilder> 
@@ -5952,7 +5974,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public boolean hasU2Web() {
         return u2WebBuilder_ != null || u2Web_ != null;
@@ -5962,7 +5984,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2Web getU2Web() {
         if (u2WebBuilder_ == null) {
@@ -5976,7 +5998,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public Builder setU2Web(com.akaxin.proto.core.CoreProto.U2Web value) {
         if (u2WebBuilder_ == null) {
@@ -5996,7 +6018,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public Builder setU2Web(
           com.akaxin.proto.core.CoreProto.U2Web.Builder builderForValue) {
@@ -6014,7 +6036,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public Builder mergeU2Web(com.akaxin.proto.core.CoreProto.U2Web value) {
         if (u2WebBuilder_ == null) {
@@ -6036,7 +6058,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public Builder clearU2Web() {
         if (u2WebBuilder_ == null) {
@@ -6054,7 +6076,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2Web.Builder getU2WebBuilder() {
         
@@ -6066,7 +6088,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2WebOrBuilder getU2WebOrBuilder() {
         if (u2WebBuilder_ != null) {
@@ -6081,7 +6103,7 @@ public final class ImCtsMessageProto {
        *web消息
        * </pre>
        *
-       * <code>optional .core.U2Web u2Web = 22;</code>
+       * <code>.core.U2Web u2Web = 22;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.U2Web, com.akaxin.proto.core.CoreProto.U2Web.Builder, com.akaxin.proto.core.CoreProto.U2WebOrBuilder> 
@@ -6105,7 +6127,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public boolean hasGroupWeb() {
         return groupWebBuilder_ != null || groupWeb_ != null;
@@ -6115,7 +6137,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupWeb getGroupWeb() {
         if (groupWebBuilder_ == null) {
@@ -6129,7 +6151,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public Builder setGroupWeb(com.akaxin.proto.core.CoreProto.GroupWeb value) {
         if (groupWebBuilder_ == null) {
@@ -6149,7 +6171,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public Builder setGroupWeb(
           com.akaxin.proto.core.CoreProto.GroupWeb.Builder builderForValue) {
@@ -6167,7 +6189,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public Builder mergeGroupWeb(com.akaxin.proto.core.CoreProto.GroupWeb value) {
         if (groupWebBuilder_ == null) {
@@ -6189,7 +6211,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public Builder clearGroupWeb() {
         if (groupWebBuilder_ == null) {
@@ -6207,7 +6229,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupWeb.Builder getGroupWebBuilder() {
         
@@ -6219,7 +6241,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupWebOrBuilder getGroupWebOrBuilder() {
         if (groupWebBuilder_ != null) {
@@ -6234,7 +6256,7 @@ public final class ImCtsMessageProto {
        *群组web消息
        * </pre>
        *
-       * <code>optional .core.GroupWeb groupWeb = 23;</code>
+       * <code>.core.GroupWeb groupWeb = 23;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupWeb, com.akaxin.proto.core.CoreProto.GroupWeb.Builder, com.akaxin.proto.core.CoreProto.GroupWebOrBuilder> 
@@ -6258,7 +6280,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public boolean hasU2WebNotice() {
         return u2WebNoticeBuilder_ != null || u2WebNotice_ != null;
@@ -6268,7 +6290,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2WebNotice getU2WebNotice() {
         if (u2WebNoticeBuilder_ == null) {
@@ -6282,7 +6304,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public Builder setU2WebNotice(com.akaxin.proto.core.CoreProto.U2WebNotice value) {
         if (u2WebNoticeBuilder_ == null) {
@@ -6302,7 +6324,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public Builder setU2WebNotice(
           com.akaxin.proto.core.CoreProto.U2WebNotice.Builder builderForValue) {
@@ -6320,7 +6342,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public Builder mergeU2WebNotice(com.akaxin.proto.core.CoreProto.U2WebNotice value) {
         if (u2WebNoticeBuilder_ == null) {
@@ -6342,7 +6364,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public Builder clearU2WebNotice() {
         if (u2WebNoticeBuilder_ == null) {
@@ -6360,7 +6382,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2WebNotice.Builder getU2WebNoticeBuilder() {
         
@@ -6372,7 +6394,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       public com.akaxin.proto.core.CoreProto.U2WebNoticeOrBuilder getU2WebNoticeOrBuilder() {
         if (u2WebNoticeBuilder_ != null) {
@@ -6387,7 +6409,7 @@ public final class ImCtsMessageProto {
        *web通知消息
        * </pre>
        *
-       * <code>optional .core.U2WebNotice u2WebNotice = 24;</code>
+       * <code>.core.U2WebNotice u2WebNotice = 24;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.U2WebNotice, com.akaxin.proto.core.CoreProto.U2WebNotice.Builder, com.akaxin.proto.core.CoreProto.U2WebNoticeOrBuilder> 
@@ -6411,7 +6433,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public boolean hasGroupWebNotice() {
         return groupWebNoticeBuilder_ != null || groupWebNotice_ != null;
@@ -6421,7 +6443,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupWebNotice getGroupWebNotice() {
         if (groupWebNoticeBuilder_ == null) {
@@ -6435,7 +6457,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public Builder setGroupWebNotice(com.akaxin.proto.core.CoreProto.GroupWebNotice value) {
         if (groupWebNoticeBuilder_ == null) {
@@ -6455,7 +6477,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public Builder setGroupWebNotice(
           com.akaxin.proto.core.CoreProto.GroupWebNotice.Builder builderForValue) {
@@ -6473,7 +6495,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public Builder mergeGroupWebNotice(com.akaxin.proto.core.CoreProto.GroupWebNotice value) {
         if (groupWebNoticeBuilder_ == null) {
@@ -6495,7 +6517,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public Builder clearGroupWebNotice() {
         if (groupWebNoticeBuilder_ == null) {
@@ -6513,7 +6535,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupWebNotice.Builder getGroupWebNoticeBuilder() {
         
@@ -6525,7 +6547,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       public com.akaxin.proto.core.CoreProto.GroupWebNoticeOrBuilder getGroupWebNoticeOrBuilder() {
         if (groupWebNoticeBuilder_ != null) {
@@ -6540,7 +6562,7 @@ public final class ImCtsMessageProto {
        *群组web通知消息
        * </pre>
        *
-       * <code>optional .core.GroupWebNotice groupWebNotice = 25;</code>
+       * <code>.core.GroupWebNotice groupWebNotice = 25;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.CoreProto.GroupWebNotice, com.akaxin.proto.core.CoreProto.GroupWebNotice.Builder, com.akaxin.proto.core.CoreProto.GroupWebNoticeOrBuilder> 
@@ -6557,12 +6579,12 @@ public final class ImCtsMessageProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -6585,7 +6607,7 @@ public final class ImCtsMessageProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ImCtsMessageRequest(input, extensionRegistry);
+        return new ImCtsMessageRequest(input, extensionRegistry);
       }
     };
 
@@ -6627,7 +6649,7 @@ public final class ImCtsMessageProto {
       "e.GroupSecretText\022\035\n\005image\030\006 \001(\0132\016.core." +
       "MsgImage\022)\n\013secretImage\030\007 \001(\0132\024.core.Msg" +
       "SecretImage\022$\n\ngroupImage\030\010 \001(\0132\020.core.G" +
-      "roupImage\0220\n\020groupSecretImage\030\t \001(\0132\026.co",
+      "roupImage\0220\n\020groupSecretImage\030\t \001(\0132\026.co" +
       "re.GroupSecretImage\022\035\n\005voice\030\n \001(\0132\016.cor" +
       "e.MsgVoice\022)\n\013secretVoice\030\013 \001(\0132\024.core.M" +
       "sgSecretVoice\022$\n\ngroupVoice\030\014 \001(\0132\020.core" +
@@ -6637,7 +6659,7 @@ public final class ImCtsMessageProto {
       "SecretMap\022 \n\010groupMap\030\020 \001(\0132\016.core.Group" +
       "Map\022,\n\016groupSecretMap\030\021 \001(\0132\024.core.Group" +
       "SecretMap\022&\n\013u2MsgNotice\030\022 \001(\0132\021.core.U2" +
-      "MsgNotice\022,\n\016groupMsgNotice\030\023 \001(\0132\024.core",
+      "MsgNotice\022,\n\016groupMsgNotice\030\023 \001(\0132\024.core" +
       ".GroupMsgNotice\022 \n\010u2Recall\030\024 \001(\0132\016.core" +
       ".U2Recall\022&\n\013groupRecall\030\025 \001(\0132\021.core.Gr" +
       "oupRecall\022\032\n\005u2Web\030\026 \001(\0132\013.core.U2Web\022 \n" +

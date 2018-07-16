@@ -23,7 +23,7 @@ public final class ApiSiteRegisterProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -31,7 +31,7 @@ public final class ApiSiteRegisterProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -41,7 +41,7 @@ public final class ApiSiteRegisterProto {
      *用户名
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     java.lang.String getUserName();
     /**
@@ -49,7 +49,7 @@ public final class ApiSiteRegisterProto {
      *用户名
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
@@ -59,7 +59,7 @@ public final class ApiSiteRegisterProto {
      *用户头像
      * </pre>
      *
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     java.lang.String getUserPhoto();
     /**
@@ -67,7 +67,7 @@ public final class ApiSiteRegisterProto {
      *用户头像
      * </pre>
      *
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserPhotoBytes();
@@ -77,7 +77,7 @@ public final class ApiSiteRegisterProto {
      *用户邀请码
      * </pre>
      *
-     * <code>optional string user_uic = 4;</code>
+     * <code>string user_uic = 4;</code>
      */
     java.lang.String getUserUic();
     /**
@@ -85,7 +85,7 @@ public final class ApiSiteRegisterProto {
      *用户邀请码
      * </pre>
      *
-     * <code>optional string user_uic = 4;</code>
+     * <code>string user_uic = 4;</code>
      */
     com.google.protobuf.ByteString
         getUserUicBytes();
@@ -95,7 +95,7 @@ public final class ApiSiteRegisterProto {
      *注册申请信息
      * </pre>
      *
-     * <code>optional string apply_info = 5;</code>
+     * <code>string apply_info = 5;</code>
      */
     java.lang.String getApplyInfo();
     /**
@@ -103,7 +103,7 @@ public final class ApiSiteRegisterProto {
      *注册申请信息
      * </pre>
      *
-     * <code>optional string apply_info = 5;</code>
+     * <code>string apply_info = 5;</code>
      */
     com.google.protobuf.ByteString
         getApplyInfoBytes();
@@ -113,7 +113,7 @@ public final class ApiSiteRegisterProto {
      *站点需实名时，提供的平台手机令牌（授权码）
      * </pre>
      *
-     * <code>optional string phone_token = 6;</code>
+     * <code>string phone_token = 6;</code>
      */
     java.lang.String getPhoneToken();
     /**
@@ -121,7 +121,7 @@ public final class ApiSiteRegisterProto {
      *站点需实名时，提供的平台手机令牌（授权码）
      * </pre>
      *
-     * <code>optional string phone_token = 6;</code>
+     * <code>string phone_token = 6;</code>
      */
     com.google.protobuf.ByteString
         getPhoneTokenBytes();
@@ -131,7 +131,7 @@ public final class ApiSiteRegisterProto {
      *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     java.lang.String getSiteLoginId();
     /**
@@ -139,7 +139,7 @@ public final class ApiSiteRegisterProto {
      *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getSiteLoginIdBytes();
@@ -151,6 +151,7 @@ public final class ApiSiteRegisterProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteRegisterRequest)
       ApiSiteRegisterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteRegisterRequest.newBuilder() to construct.
     private ApiSiteRegisterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -168,14 +169,19 @@ public final class ApiSiteRegisterProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteRegisterRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -185,7 +191,8 @@ public final class ApiSiteRegisterProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -240,6 +247,7 @@ public final class ApiSiteRegisterProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -262,7 +270,7 @@ public final class ApiSiteRegisterProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -281,7 +289,7 @@ public final class ApiSiteRegisterProto {
      *用户身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -304,7 +312,7 @@ public final class ApiSiteRegisterProto {
      *用户名
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -323,7 +331,7 @@ public final class ApiSiteRegisterProto {
      *用户名
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -346,7 +354,7 @@ public final class ApiSiteRegisterProto {
      *用户头像
      * </pre>
      *
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     public java.lang.String getUserPhoto() {
       java.lang.Object ref = userPhoto_;
@@ -365,7 +373,7 @@ public final class ApiSiteRegisterProto {
      *用户头像
      * </pre>
      *
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserPhotoBytes() {
@@ -388,7 +396,7 @@ public final class ApiSiteRegisterProto {
      *用户邀请码
      * </pre>
      *
-     * <code>optional string user_uic = 4;</code>
+     * <code>string user_uic = 4;</code>
      */
     public java.lang.String getUserUic() {
       java.lang.Object ref = userUic_;
@@ -407,7 +415,7 @@ public final class ApiSiteRegisterProto {
      *用户邀请码
      * </pre>
      *
-     * <code>optional string user_uic = 4;</code>
+     * <code>string user_uic = 4;</code>
      */
     public com.google.protobuf.ByteString
         getUserUicBytes() {
@@ -430,7 +438,7 @@ public final class ApiSiteRegisterProto {
      *注册申请信息
      * </pre>
      *
-     * <code>optional string apply_info = 5;</code>
+     * <code>string apply_info = 5;</code>
      */
     public java.lang.String getApplyInfo() {
       java.lang.Object ref = applyInfo_;
@@ -449,7 +457,7 @@ public final class ApiSiteRegisterProto {
      *注册申请信息
      * </pre>
      *
-     * <code>optional string apply_info = 5;</code>
+     * <code>string apply_info = 5;</code>
      */
     public com.google.protobuf.ByteString
         getApplyInfoBytes() {
@@ -472,7 +480,7 @@ public final class ApiSiteRegisterProto {
      *站点需实名时，提供的平台手机令牌（授权码）
      * </pre>
      *
-     * <code>optional string phone_token = 6;</code>
+     * <code>string phone_token = 6;</code>
      */
     public java.lang.String getPhoneToken() {
       java.lang.Object ref = phoneToken_;
@@ -491,7 +499,7 @@ public final class ApiSiteRegisterProto {
      *站点需实名时，提供的平台手机令牌（授权码）
      * </pre>
      *
-     * <code>optional string phone_token = 6;</code>
+     * <code>string phone_token = 6;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneTokenBytes() {
@@ -514,7 +522,7 @@ public final class ApiSiteRegisterProto {
      *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     public java.lang.String getSiteLoginId() {
       java.lang.Object ref = siteLoginId_;
@@ -533,7 +541,7 @@ public final class ApiSiteRegisterProto {
      *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     public com.google.protobuf.ByteString
         getSiteLoginIdBytes() {
@@ -582,6 +590,7 @@ public final class ApiSiteRegisterProto {
       if (!getSiteLoginIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, siteLoginId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -610,11 +619,11 @@ public final class ApiSiteRegisterProto {
       if (!getSiteLoginIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, siteLoginId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -640,6 +649,7 @@ public final class ApiSiteRegisterProto {
           .equals(other.getPhoneToken());
       result = result && getSiteLoginId()
           .equals(other.getSiteLoginId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -649,7 +659,7 @@ public final class ApiSiteRegisterProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_PUBK_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdPubk().hashCode();
       hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
@@ -669,6 +679,17 @@ public final class ApiSiteRegisterProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteRegisterProto.ApiSiteRegisterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteRegisterProto.ApiSiteRegisterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteRegisterProto.ApiSiteRegisterRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -834,7 +855,7 @@ public final class ApiSiteRegisterProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -847,12 +868,12 @@ public final class ApiSiteRegisterProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -894,6 +915,7 @@ public final class ApiSiteRegisterProto {
           siteLoginId_ = other.siteLoginId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -926,7 +948,7 @@ public final class ApiSiteRegisterProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -945,7 +967,7 @@ public final class ApiSiteRegisterProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -965,7 +987,7 @@ public final class ApiSiteRegisterProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -982,7 +1004,7 @@ public final class ApiSiteRegisterProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -995,7 +1017,7 @@ public final class ApiSiteRegisterProto {
        *用户身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1015,7 +1037,7 @@ public final class ApiSiteRegisterProto {
        *用户名
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -1034,7 +1056,7 @@ public final class ApiSiteRegisterProto {
        *用户名
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -1054,7 +1076,7 @@ public final class ApiSiteRegisterProto {
        *用户名
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -1071,7 +1093,7 @@ public final class ApiSiteRegisterProto {
        *用户名
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder clearUserName() {
         
@@ -1084,7 +1106,7 @@ public final class ApiSiteRegisterProto {
        *用户名
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1104,7 +1126,7 @@ public final class ApiSiteRegisterProto {
        *用户头像
        * </pre>
        *
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public java.lang.String getUserPhoto() {
         java.lang.Object ref = userPhoto_;
@@ -1123,7 +1145,7 @@ public final class ApiSiteRegisterProto {
        *用户头像
        * </pre>
        *
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserPhotoBytes() {
@@ -1143,7 +1165,7 @@ public final class ApiSiteRegisterProto {
        *用户头像
        * </pre>
        *
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder setUserPhoto(
           java.lang.String value) {
@@ -1160,7 +1182,7 @@ public final class ApiSiteRegisterProto {
        *用户头像
        * </pre>
        *
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder clearUserPhoto() {
         
@@ -1173,7 +1195,7 @@ public final class ApiSiteRegisterProto {
        *用户头像
        * </pre>
        *
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder setUserPhotoBytes(
           com.google.protobuf.ByteString value) {
@@ -1193,7 +1215,7 @@ public final class ApiSiteRegisterProto {
        *用户邀请码
        * </pre>
        *
-       * <code>optional string user_uic = 4;</code>
+       * <code>string user_uic = 4;</code>
        */
       public java.lang.String getUserUic() {
         java.lang.Object ref = userUic_;
@@ -1212,7 +1234,7 @@ public final class ApiSiteRegisterProto {
        *用户邀请码
        * </pre>
        *
-       * <code>optional string user_uic = 4;</code>
+       * <code>string user_uic = 4;</code>
        */
       public com.google.protobuf.ByteString
           getUserUicBytes() {
@@ -1232,7 +1254,7 @@ public final class ApiSiteRegisterProto {
        *用户邀请码
        * </pre>
        *
-       * <code>optional string user_uic = 4;</code>
+       * <code>string user_uic = 4;</code>
        */
       public Builder setUserUic(
           java.lang.String value) {
@@ -1249,7 +1271,7 @@ public final class ApiSiteRegisterProto {
        *用户邀请码
        * </pre>
        *
-       * <code>optional string user_uic = 4;</code>
+       * <code>string user_uic = 4;</code>
        */
       public Builder clearUserUic() {
         
@@ -1262,7 +1284,7 @@ public final class ApiSiteRegisterProto {
        *用户邀请码
        * </pre>
        *
-       * <code>optional string user_uic = 4;</code>
+       * <code>string user_uic = 4;</code>
        */
       public Builder setUserUicBytes(
           com.google.protobuf.ByteString value) {
@@ -1282,7 +1304,7 @@ public final class ApiSiteRegisterProto {
        *注册申请信息
        * </pre>
        *
-       * <code>optional string apply_info = 5;</code>
+       * <code>string apply_info = 5;</code>
        */
       public java.lang.String getApplyInfo() {
         java.lang.Object ref = applyInfo_;
@@ -1301,7 +1323,7 @@ public final class ApiSiteRegisterProto {
        *注册申请信息
        * </pre>
        *
-       * <code>optional string apply_info = 5;</code>
+       * <code>string apply_info = 5;</code>
        */
       public com.google.protobuf.ByteString
           getApplyInfoBytes() {
@@ -1321,7 +1343,7 @@ public final class ApiSiteRegisterProto {
        *注册申请信息
        * </pre>
        *
-       * <code>optional string apply_info = 5;</code>
+       * <code>string apply_info = 5;</code>
        */
       public Builder setApplyInfo(
           java.lang.String value) {
@@ -1338,7 +1360,7 @@ public final class ApiSiteRegisterProto {
        *注册申请信息
        * </pre>
        *
-       * <code>optional string apply_info = 5;</code>
+       * <code>string apply_info = 5;</code>
        */
       public Builder clearApplyInfo() {
         
@@ -1351,7 +1373,7 @@ public final class ApiSiteRegisterProto {
        *注册申请信息
        * </pre>
        *
-       * <code>optional string apply_info = 5;</code>
+       * <code>string apply_info = 5;</code>
        */
       public Builder setApplyInfoBytes(
           com.google.protobuf.ByteString value) {
@@ -1371,7 +1393,7 @@ public final class ApiSiteRegisterProto {
        *站点需实名时，提供的平台手机令牌（授权码）
        * </pre>
        *
-       * <code>optional string phone_token = 6;</code>
+       * <code>string phone_token = 6;</code>
        */
       public java.lang.String getPhoneToken() {
         java.lang.Object ref = phoneToken_;
@@ -1390,7 +1412,7 @@ public final class ApiSiteRegisterProto {
        *站点需实名时，提供的平台手机令牌（授权码）
        * </pre>
        *
-       * <code>optional string phone_token = 6;</code>
+       * <code>string phone_token = 6;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneTokenBytes() {
@@ -1410,7 +1432,7 @@ public final class ApiSiteRegisterProto {
        *站点需实名时，提供的平台手机令牌（授权码）
        * </pre>
        *
-       * <code>optional string phone_token = 6;</code>
+       * <code>string phone_token = 6;</code>
        */
       public Builder setPhoneToken(
           java.lang.String value) {
@@ -1427,7 +1449,7 @@ public final class ApiSiteRegisterProto {
        *站点需实名时，提供的平台手机令牌（授权码）
        * </pre>
        *
-       * <code>optional string phone_token = 6;</code>
+       * <code>string phone_token = 6;</code>
        */
       public Builder clearPhoneToken() {
         
@@ -1440,7 +1462,7 @@ public final class ApiSiteRegisterProto {
        *站点需实名时，提供的平台手机令牌（授权码）
        * </pre>
        *
-       * <code>optional string phone_token = 6;</code>
+       * <code>string phone_token = 6;</code>
        */
       public Builder setPhoneTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1460,7 +1482,7 @@ public final class ApiSiteRegisterProto {
        *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public java.lang.String getSiteLoginId() {
         java.lang.Object ref = siteLoginId_;
@@ -1479,7 +1501,7 @@ public final class ApiSiteRegisterProto {
        *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public com.google.protobuf.ByteString
           getSiteLoginIdBytes() {
@@ -1499,7 +1521,7 @@ public final class ApiSiteRegisterProto {
        *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public Builder setSiteLoginId(
           java.lang.String value) {
@@ -1516,7 +1538,7 @@ public final class ApiSiteRegisterProto {
        *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public Builder clearSiteLoginId() {
         
@@ -1529,7 +1551,7 @@ public final class ApiSiteRegisterProto {
        *登陆用户账号（只允许字符串开头，数字组成6～20位）（选填）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public Builder setSiteLoginIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1544,12 +1566,12 @@ public final class ApiSiteRegisterProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1572,7 +1594,7 @@ public final class ApiSiteRegisterProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteRegisterRequest(input, extensionRegistry);
+        return new ApiSiteRegisterRequest(input, extensionRegistry);
       }
     };
 
@@ -1600,7 +1622,7 @@ public final class ApiSiteRegisterProto {
      *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -1608,7 +1630,7 @@ public final class ApiSiteRegisterProto {
      *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -1620,6 +1642,7 @@ public final class ApiSiteRegisterProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteRegisterResponse)
       ApiSiteRegisterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteRegisterResponse.newBuilder() to construct.
     private ApiSiteRegisterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1631,14 +1654,19 @@ public final class ApiSiteRegisterProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteRegisterResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1648,7 +1676,8 @@ public final class ApiSiteRegisterProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1667,6 +1696,7 @@ public final class ApiSiteRegisterProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1689,7 +1719,7 @@ public final class ApiSiteRegisterProto {
      *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -1708,7 +1738,7 @@ public final class ApiSiteRegisterProto {
      *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -1739,6 +1769,7 @@ public final class ApiSiteRegisterProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteUserId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1749,11 +1780,11 @@ public final class ApiSiteRegisterProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteUserId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1767,6 +1798,7 @@ public final class ApiSiteRegisterProto {
       boolean result = true;
       result = result && getSiteUserId()
           .equals(other.getSiteUserId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1776,7 +1808,7 @@ public final class ApiSiteRegisterProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -1784,6 +1816,17 @@ public final class ApiSiteRegisterProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteRegisterProto.ApiSiteRegisterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteRegisterProto.ApiSiteRegisterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteRegisterProto.ApiSiteRegisterResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1931,7 +1974,7 @@ public final class ApiSiteRegisterProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1944,12 +1987,12 @@ public final class ApiSiteRegisterProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1967,6 +2010,7 @@ public final class ApiSiteRegisterProto {
           siteUserId_ = other.siteUserId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1999,7 +2043,7 @@ public final class ApiSiteRegisterProto {
        *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -2018,7 +2062,7 @@ public final class ApiSiteRegisterProto {
        *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -2038,7 +2082,7 @@ public final class ApiSiteRegisterProto {
        *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -2055,7 +2099,7 @@ public final class ApiSiteRegisterProto {
        *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -2068,7 +2112,7 @@ public final class ApiSiteRegisterProto {
        *返回用户在站点的用户ID,后期登陆以及其他情况使用。节省使用公钥的传输消费
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2083,12 +2127,12 @@ public final class ApiSiteRegisterProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2111,7 +2155,7 @@ public final class ApiSiteRegisterProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteRegisterResponse(input, extensionRegistry);
+        return new ApiSiteRegisterResponse(input, extensionRegistry);
       }
     };
 
@@ -2158,7 +2202,7 @@ public final class ApiSiteRegisterProto {
       "e_user_id\030\001 \001(\t2a\n\026ApiSiteRegisterServic" +
       "e\022G\n\010register\022\034.site.ApiSiteRegisterRequ" +
       "est\032\035.site.ApiSiteRegisterResponseB-\n\025co" +
-      "m.akaxin.proto.siteB\024ApiSiteRegisterProt",
+      "m.akaxin.proto.siteB\024ApiSiteRegisterProt" +
       "ob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -23,7 +23,7 @@ public final class ApiFriendProfileProto {
      *用户身份的公钥,站点优先使用此值
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -31,7 +31,7 @@ public final class ApiFriendProfileProto {
      *用户身份的公钥,站点优先使用此值
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -41,7 +41,7 @@ public final class ApiFriendProfileProto {
      *用户在站点的ID，用户公钥为空情况，使用用户站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -49,7 +49,7 @@ public final class ApiFriendProfileProto {
      *用户在站点的ID，用户公钥为空情况，使用用户站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -61,6 +61,7 @@ public final class ApiFriendProfileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFriendProfileRequest)
       ApiFriendProfileRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFriendProfileRequest.newBuilder() to construct.
     private ApiFriendProfileRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -73,14 +74,19 @@ public final class ApiFriendProfileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFriendProfileRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -90,7 +96,8 @@ public final class ApiFriendProfileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -115,6 +122,7 @@ public final class ApiFriendProfileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -137,7 +145,7 @@ public final class ApiFriendProfileProto {
      *用户身份的公钥,站点优先使用此值
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -156,7 +164,7 @@ public final class ApiFriendProfileProto {
      *用户身份的公钥,站点优先使用此值
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -179,7 +187,7 @@ public final class ApiFriendProfileProto {
      *用户在站点的ID，用户公钥为空情况，使用用户站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -198,7 +206,7 @@ public final class ApiFriendProfileProto {
      *用户在站点的ID，用户公钥为空情况，使用用户站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 2;</code>
+     * <code>string site_user_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -232,6 +240,7 @@ public final class ApiFriendProfileProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, siteUserId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -245,11 +254,11 @@ public final class ApiFriendProfileProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, siteUserId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -265,6 +274,7 @@ public final class ApiFriendProfileProto {
           .equals(other.getUserIdPubk());
       result = result && getSiteUserId()
           .equals(other.getSiteUserId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -274,7 +284,7 @@ public final class ApiFriendProfileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_PUBK_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdPubk().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
@@ -284,6 +294,17 @@ public final class ApiFriendProfileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFriendProfileProto.ApiFriendProfileRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFriendProfileProto.ApiFriendProfileRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFriendProfileProto.ApiFriendProfileRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -434,7 +455,7 @@ public final class ApiFriendProfileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -447,12 +468,12 @@ public final class ApiFriendProfileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -474,6 +495,7 @@ public final class ApiFriendProfileProto {
           siteUserId_ = other.siteUserId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -506,7 +528,7 @@ public final class ApiFriendProfileProto {
        *用户身份的公钥,站点优先使用此值
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -525,7 +547,7 @@ public final class ApiFriendProfileProto {
        *用户身份的公钥,站点优先使用此值
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -545,7 +567,7 @@ public final class ApiFriendProfileProto {
        *用户身份的公钥,站点优先使用此值
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -562,7 +584,7 @@ public final class ApiFriendProfileProto {
        *用户身份的公钥,站点优先使用此值
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -575,7 +597,7 @@ public final class ApiFriendProfileProto {
        *用户身份的公钥,站点优先使用此值
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -595,7 +617,7 @@ public final class ApiFriendProfileProto {
        *用户在站点的ID，用户公钥为空情况，使用用户站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -614,7 +636,7 @@ public final class ApiFriendProfileProto {
        *用户在站点的ID，用户公钥为空情况，使用用户站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -634,7 +656,7 @@ public final class ApiFriendProfileProto {
        *用户在站点的ID，用户公钥为空情况，使用用户站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -651,7 +673,7 @@ public final class ApiFriendProfileProto {
        *用户在站点的ID，用户公钥为空情况，使用用户站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -664,7 +686,7 @@ public final class ApiFriendProfileProto {
        *用户在站点的ID，用户公钥为空情况，使用用户站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 2;</code>
+       * <code>string site_user_id = 2;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -679,12 +701,12 @@ public final class ApiFriendProfileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -707,7 +729,7 @@ public final class ApiFriendProfileProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFriendProfileRequest(input, extensionRegistry);
+        return new ApiFriendProfileRequest(input, extensionRegistry);
       }
     };
 
@@ -735,7 +757,7 @@ public final class ApiFriendProfileProto {
      *用户好友的信息
      * </pre>
      *
-     * <code>optional .core.UserProfile profile = 1;</code>
+     * <code>.core.UserProfile profile = 1;</code>
      */
     boolean hasProfile();
     /**
@@ -743,7 +765,7 @@ public final class ApiFriendProfileProto {
      *用户好友的信息
      * </pre>
      *
-     * <code>optional .core.UserProfile profile = 1;</code>
+     * <code>.core.UserProfile profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfile getProfile();
     /**
@@ -751,7 +773,7 @@ public final class ApiFriendProfileProto {
      *用户好友的信息
      * </pre>
      *
-     * <code>optional .core.UserProfile profile = 1;</code>
+     * <code>.core.UserProfile profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfileOrBuilder getProfileOrBuilder();
 
@@ -760,7 +782,7 @@ public final class ApiFriendProfileProto {
      *用户之间的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     int getRelationValue();
     /**
@@ -768,7 +790,7 @@ public final class ApiFriendProfileProto {
      *用户之间的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     com.akaxin.proto.core.UserProto.UserRelation getRelation();
 
@@ -777,7 +799,7 @@ public final class ApiFriendProfileProto {
      *用户公钥，客户端称呼用户身份或者用户证书
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -785,7 +807,7 @@ public final class ApiFriendProfileProto {
      *用户公钥，客户端称呼用户身份或者用户证书
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -797,6 +819,7 @@ public final class ApiFriendProfileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFriendProfileResponse)
       ApiFriendProfileResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFriendProfileResponse.newBuilder() to construct.
     private ApiFriendProfileResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -809,14 +832,19 @@ public final class ApiFriendProfileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFriendProfileResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -826,7 +854,8 @@ public final class ApiFriendProfileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -864,6 +893,7 @@ public final class ApiFriendProfileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -886,7 +916,7 @@ public final class ApiFriendProfileProto {
      *用户好友的信息
      * </pre>
      *
-     * <code>optional .core.UserProfile profile = 1;</code>
+     * <code>.core.UserProfile profile = 1;</code>
      */
     public boolean hasProfile() {
       return profile_ != null;
@@ -896,7 +926,7 @@ public final class ApiFriendProfileProto {
      *用户好友的信息
      * </pre>
      *
-     * <code>optional .core.UserProfile profile = 1;</code>
+     * <code>.core.UserProfile profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfile getProfile() {
       return profile_ == null ? com.akaxin.proto.core.UserProto.UserProfile.getDefaultInstance() : profile_;
@@ -906,7 +936,7 @@ public final class ApiFriendProfileProto {
      *用户好友的信息
      * </pre>
      *
-     * <code>optional .core.UserProfile profile = 1;</code>
+     * <code>.core.UserProfile profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getProfileOrBuilder() {
       return getProfile();
@@ -919,7 +949,7 @@ public final class ApiFriendProfileProto {
      *用户之间的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     public int getRelationValue() {
       return relation_;
@@ -929,7 +959,7 @@ public final class ApiFriendProfileProto {
      *用户之间的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     public com.akaxin.proto.core.UserProto.UserRelation getRelation() {
       com.akaxin.proto.core.UserProto.UserRelation result = com.akaxin.proto.core.UserProto.UserRelation.valueOf(relation_);
@@ -943,7 +973,7 @@ public final class ApiFriendProfileProto {
      *用户公钥，客户端称呼用户身份或者用户证书
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -962,7 +992,7 @@ public final class ApiFriendProfileProto {
      *用户公钥，客户端称呼用户身份或者用户证书
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -999,6 +1029,7 @@ public final class ApiFriendProfileProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userIdPubk_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1017,11 +1048,11 @@ public final class ApiFriendProfileProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userIdPubk_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1041,6 +1072,7 @@ public final class ApiFriendProfileProto {
       result = result && relation_ == other.relation_;
       result = result && getUserIdPubk()
           .equals(other.getUserIdPubk());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1050,7 +1082,7 @@ public final class ApiFriendProfileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasProfile()) {
         hash = (37 * hash) + PROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getProfile().hashCode();
@@ -1064,6 +1096,17 @@ public final class ApiFriendProfileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFriendProfileProto.ApiFriendProfileResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFriendProfileProto.ApiFriendProfileResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFriendProfileProto.ApiFriendProfileResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1225,7 +1268,7 @@ public final class ApiFriendProfileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1238,12 +1281,12 @@ public final class ApiFriendProfileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1267,6 +1310,7 @@ public final class ApiFriendProfileProto {
           userIdPubk_ = other.userIdPubk_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1301,7 +1345,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public boolean hasProfile() {
         return profileBuilder_ != null || profile_ != null;
@@ -1311,7 +1355,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile getProfile() {
         if (profileBuilder_ == null) {
@@ -1325,7 +1369,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public Builder setProfile(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (profileBuilder_ == null) {
@@ -1345,7 +1389,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public Builder setProfile(
           com.akaxin.proto.core.UserProto.UserProfile.Builder builderForValue) {
@@ -1363,7 +1407,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public Builder mergeProfile(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (profileBuilder_ == null) {
@@ -1385,7 +1429,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
@@ -1403,7 +1447,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile.Builder getProfileBuilder() {
         
@@ -1415,7 +1459,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getProfileOrBuilder() {
         if (profileBuilder_ != null) {
@@ -1430,7 +1474,7 @@ public final class ApiFriendProfileProto {
        *用户好友的信息
        * </pre>
        *
-       * <code>optional .core.UserProfile profile = 1;</code>
+       * <code>.core.UserProfile profile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.UserProto.UserProfile, com.akaxin.proto.core.UserProto.UserProfile.Builder, com.akaxin.proto.core.UserProto.UserProfileOrBuilder> 
@@ -1452,7 +1496,7 @@ public final class ApiFriendProfileProto {
        *用户之间的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public int getRelationValue() {
         return relation_;
@@ -1462,7 +1506,7 @@ public final class ApiFriendProfileProto {
        *用户之间的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public Builder setRelationValue(int value) {
         relation_ = value;
@@ -1474,7 +1518,7 @@ public final class ApiFriendProfileProto {
        *用户之间的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public com.akaxin.proto.core.UserProto.UserRelation getRelation() {
         com.akaxin.proto.core.UserProto.UserRelation result = com.akaxin.proto.core.UserProto.UserRelation.valueOf(relation_);
@@ -1485,7 +1529,7 @@ public final class ApiFriendProfileProto {
        *用户之间的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public Builder setRelation(com.akaxin.proto.core.UserProto.UserRelation value) {
         if (value == null) {
@@ -1501,7 +1545,7 @@ public final class ApiFriendProfileProto {
        *用户之间的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public Builder clearRelation() {
         
@@ -1516,7 +1560,7 @@ public final class ApiFriendProfileProto {
        *用户公钥，客户端称呼用户身份或者用户证书
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -1535,7 +1579,7 @@ public final class ApiFriendProfileProto {
        *用户公钥，客户端称呼用户身份或者用户证书
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -1555,7 +1599,7 @@ public final class ApiFriendProfileProto {
        *用户公钥，客户端称呼用户身份或者用户证书
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -1572,7 +1616,7 @@ public final class ApiFriendProfileProto {
        *用户公钥，客户端称呼用户身份或者用户证书
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -1585,7 +1629,7 @@ public final class ApiFriendProfileProto {
        *用户公钥，客户端称呼用户身份或者用户证书
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1600,12 +1644,12 @@ public final class ApiFriendProfileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1628,7 +1672,7 @@ public final class ApiFriendProfileProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFriendProfileResponse(input, extensionRegistry);
+        return new ApiFriendProfileResponse(input, extensionRegistry);
       }
     };
 
@@ -1675,7 +1719,7 @@ public final class ApiFriendProfileProto {
       "ubk\030\003 \001(\t2c\n\027ApiFriendProfileService\022H\n\007" +
       "profile\022\035.site.ApiFriendProfileRequest\032\036" +
       ".site.ApiFriendProfileResponseB.\n\025com.ak" +
-      "axin.proto.siteB\025ApiFriendProfileProtob\006",
+      "axin.proto.siteB\025ApiFriendProfileProtob\006" +
       "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

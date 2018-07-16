@@ -23,7 +23,7 @@ public final class ApiDeviceListProto {
      *获取列表的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -31,7 +31,7 @@ public final class ApiDeviceListProto {
      *获取列表的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -41,7 +41,7 @@ public final class ApiDeviceListProto {
      *第几页
      * </pre>
      *
-     * <code>optional int32 page_number = 2;</code>
+     * <code>int32 page_number = 2;</code>
      */
     int getPageNumber();
 
@@ -50,7 +50,7 @@ public final class ApiDeviceListProto {
      *每页第几条
      * </pre>
      *
-     * <code>optional int32 page_size = 3;</code>
+     * <code>int32 page_size = 3;</code>
      */
     int getPageSize();
   }
@@ -61,6 +61,7 @@ public final class ApiDeviceListProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.DeviceListInfoRequest)
       DeviceListInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use DeviceListInfoRequest.newBuilder() to construct.
     private DeviceListInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -74,14 +75,19 @@ public final class ApiDeviceListProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private DeviceListInfoRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -91,7 +97,8 @@ public final class ApiDeviceListProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -120,6 +127,7 @@ public final class ApiDeviceListProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -142,7 +150,7 @@ public final class ApiDeviceListProto {
      *获取列表的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -161,7 +169,7 @@ public final class ApiDeviceListProto {
      *获取列表的用户ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -184,7 +192,7 @@ public final class ApiDeviceListProto {
      *第几页
      * </pre>
      *
-     * <code>optional int32 page_number = 2;</code>
+     * <code>int32 page_number = 2;</code>
      */
     public int getPageNumber() {
       return pageNumber_;
@@ -197,7 +205,7 @@ public final class ApiDeviceListProto {
      *每页第几条
      * </pre>
      *
-     * <code>optional int32 page_size = 3;</code>
+     * <code>int32 page_size = 3;</code>
      */
     public int getPageSize() {
       return pageSize_;
@@ -224,6 +232,7 @@ public final class ApiDeviceListProto {
       if (pageSize_ != 0) {
         output.writeInt32(3, pageSize_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -242,11 +251,11 @@ public final class ApiDeviceListProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, pageSize_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -264,6 +273,7 @@ public final class ApiDeviceListProto {
           == other.getPageNumber());
       result = result && (getPageSize()
           == other.getPageSize());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -273,7 +283,7 @@ public final class ApiDeviceListProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + PAGE_NUMBER_FIELD_NUMBER;
@@ -285,6 +295,17 @@ public final class ApiDeviceListProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiDeviceListProto.DeviceListInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiDeviceListProto.DeviceListInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiDeviceListProto.DeviceListInfoRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -438,7 +459,7 @@ public final class ApiDeviceListProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -451,12 +472,12 @@ public final class ApiDeviceListProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -480,6 +501,7 @@ public final class ApiDeviceListProto {
         if (other.getPageSize() != 0) {
           setPageSize(other.getPageSize());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -512,7 +534,7 @@ public final class ApiDeviceListProto {
        *获取列表的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -531,7 +553,7 @@ public final class ApiDeviceListProto {
        *获取列表的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -551,7 +573,7 @@ public final class ApiDeviceListProto {
        *获取列表的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -568,7 +590,7 @@ public final class ApiDeviceListProto {
        *获取列表的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -581,7 +603,7 @@ public final class ApiDeviceListProto {
        *获取列表的用户ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -601,7 +623,7 @@ public final class ApiDeviceListProto {
        *第几页
        * </pre>
        *
-       * <code>optional int32 page_number = 2;</code>
+       * <code>int32 page_number = 2;</code>
        */
       public int getPageNumber() {
         return pageNumber_;
@@ -611,7 +633,7 @@ public final class ApiDeviceListProto {
        *第几页
        * </pre>
        *
-       * <code>optional int32 page_number = 2;</code>
+       * <code>int32 page_number = 2;</code>
        */
       public Builder setPageNumber(int value) {
         
@@ -624,7 +646,7 @@ public final class ApiDeviceListProto {
        *第几页
        * </pre>
        *
-       * <code>optional int32 page_number = 2;</code>
+       * <code>int32 page_number = 2;</code>
        */
       public Builder clearPageNumber() {
         
@@ -639,7 +661,7 @@ public final class ApiDeviceListProto {
        *每页第几条
        * </pre>
        *
-       * <code>optional int32 page_size = 3;</code>
+       * <code>int32 page_size = 3;</code>
        */
       public int getPageSize() {
         return pageSize_;
@@ -649,7 +671,7 @@ public final class ApiDeviceListProto {
        *每页第几条
        * </pre>
        *
-       * <code>optional int32 page_size = 3;</code>
+       * <code>int32 page_size = 3;</code>
        */
       public Builder setPageSize(int value) {
         
@@ -662,7 +684,7 @@ public final class ApiDeviceListProto {
        *每页第几条
        * </pre>
        *
-       * <code>optional int32 page_size = 3;</code>
+       * <code>int32 page_size = 3;</code>
        */
       public Builder clearPageSize() {
         
@@ -672,12 +694,12 @@ public final class ApiDeviceListProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -700,7 +722,7 @@ public final class ApiDeviceListProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeviceListInfoRequest(input, extensionRegistry);
+        return new DeviceListInfoRequest(input, extensionRegistry);
       }
     };
 
@@ -774,6 +796,7 @@ public final class ApiDeviceListProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.DeviceListInfoResponse)
       DeviceListInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use DeviceListInfoResponse.newBuilder() to construct.
     private DeviceListInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -785,14 +808,19 @@ public final class ApiDeviceListProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private DeviceListInfoResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -802,7 +830,8 @@ public final class ApiDeviceListProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -827,6 +856,7 @@ public final class ApiDeviceListProto {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           list_ = java.util.Collections.unmodifiableList(list_);
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -912,6 +942,7 @@ public final class ApiDeviceListProto {
       for (int i = 0; i < list_.size(); i++) {
         output.writeMessage(1, list_.get(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -923,11 +954,11 @@ public final class ApiDeviceListProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -941,6 +972,7 @@ public final class ApiDeviceListProto {
       boolean result = true;
       result = result && getListList()
           .equals(other.getListList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -950,7 +982,7 @@ public final class ApiDeviceListProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getListCount() > 0) {
         hash = (37 * hash) + LIST_FIELD_NUMBER;
         hash = (53 * hash) + getListList().hashCode();
@@ -960,6 +992,17 @@ public final class ApiDeviceListProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiDeviceListProto.DeviceListInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiDeviceListProto.DeviceListInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiDeviceListProto.DeviceListInfoResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1121,7 +1164,7 @@ public final class ApiDeviceListProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1134,12 +1177,12 @@ public final class ApiDeviceListProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1179,6 +1222,7 @@ public final class ApiDeviceListProto {
             }
           }
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1519,12 +1563,12 @@ public final class ApiDeviceListProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1547,7 +1591,7 @@ public final class ApiDeviceListProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeviceListInfoResponse(input, extensionRegistry);
+        return new DeviceListInfoResponse(input, extensionRegistry);
       }
     };
 

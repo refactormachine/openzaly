@@ -23,7 +23,7 @@ public final class ApiSiteLogoutProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -31,7 +31,7 @@ public final class ApiSiteLogoutProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -41,7 +41,7 @@ public final class ApiSiteLogoutProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     java.lang.String getUserDeviceIdPubk();
     /**
@@ -49,7 +49,7 @@ public final class ApiSiteLogoutProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserDeviceIdPubkBytes();
@@ -59,7 +59,7 @@ public final class ApiSiteLogoutProto {
      *用户设备签名
      * </pre>
      *
-     * <code>optional string user_device_id_sign = 3;</code>
+     * <code>string user_device_id_sign = 3;</code>
      */
     java.lang.String getUserDeviceIdSign();
     /**
@@ -67,7 +67,7 @@ public final class ApiSiteLogoutProto {
      *用户设备签名
      * </pre>
      *
-     * <code>optional string user_device_id_sign = 3;</code>
+     * <code>string user_device_id_sign = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserDeviceIdSignBytes();
@@ -79,6 +79,7 @@ public final class ApiSiteLogoutProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteLogoutRequest)
       ApiSiteLogoutRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteLogoutRequest.newBuilder() to construct.
     private ApiSiteLogoutRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -92,14 +93,19 @@ public final class ApiSiteLogoutProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteLogoutRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -109,7 +115,8 @@ public final class ApiSiteLogoutProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -140,6 +147,7 @@ public final class ApiSiteLogoutProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -162,7 +170,7 @@ public final class ApiSiteLogoutProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -181,7 +189,7 @@ public final class ApiSiteLogoutProto {
      *用户个人身份公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 1;</code>
+     * <code>string user_id_pubk = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -204,7 +212,7 @@ public final class ApiSiteLogoutProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     public java.lang.String getUserDeviceIdPubk() {
       java.lang.Object ref = userDeviceIdPubk_;
@@ -223,7 +231,7 @@ public final class ApiSiteLogoutProto {
      *用户设备公钥
      * </pre>
      *
-     * <code>optional string user_device_id_pubk = 2;</code>
+     * <code>string user_device_id_pubk = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserDeviceIdPubkBytes() {
@@ -246,7 +254,7 @@ public final class ApiSiteLogoutProto {
      *用户设备签名
      * </pre>
      *
-     * <code>optional string user_device_id_sign = 3;</code>
+     * <code>string user_device_id_sign = 3;</code>
      */
     public java.lang.String getUserDeviceIdSign() {
       java.lang.Object ref = userDeviceIdSign_;
@@ -265,7 +273,7 @@ public final class ApiSiteLogoutProto {
      *用户设备签名
      * </pre>
      *
-     * <code>optional string user_device_id_sign = 3;</code>
+     * <code>string user_device_id_sign = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserDeviceIdSignBytes() {
@@ -302,6 +310,7 @@ public final class ApiSiteLogoutProto {
       if (!getUserDeviceIdSignBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userDeviceIdSign_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -318,11 +327,11 @@ public final class ApiSiteLogoutProto {
       if (!getUserDeviceIdSignBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userDeviceIdSign_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -340,6 +349,7 @@ public final class ApiSiteLogoutProto {
           .equals(other.getUserDeviceIdPubk());
       result = result && getUserDeviceIdSign()
           .equals(other.getUserDeviceIdSign());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -349,7 +359,7 @@ public final class ApiSiteLogoutProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_PUBK_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdPubk().hashCode();
       hash = (37 * hash) + USER_DEVICE_ID_PUBK_FIELD_NUMBER;
@@ -361,6 +371,17 @@ public final class ApiSiteLogoutProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -514,7 +535,7 @@ public final class ApiSiteLogoutProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -527,12 +548,12 @@ public final class ApiSiteLogoutProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -558,6 +579,7 @@ public final class ApiSiteLogoutProto {
           userDeviceIdSign_ = other.userDeviceIdSign_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -590,7 +612,7 @@ public final class ApiSiteLogoutProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -609,7 +631,7 @@ public final class ApiSiteLogoutProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -629,7 +651,7 @@ public final class ApiSiteLogoutProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -646,7 +668,7 @@ public final class ApiSiteLogoutProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -659,7 +681,7 @@ public final class ApiSiteLogoutProto {
        *用户个人身份公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 1;</code>
+       * <code>string user_id_pubk = 1;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -679,7 +701,7 @@ public final class ApiSiteLogoutProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public java.lang.String getUserDeviceIdPubk() {
         java.lang.Object ref = userDeviceIdPubk_;
@@ -698,7 +720,7 @@ public final class ApiSiteLogoutProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserDeviceIdPubkBytes() {
@@ -718,7 +740,7 @@ public final class ApiSiteLogoutProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public Builder setUserDeviceIdPubk(
           java.lang.String value) {
@@ -735,7 +757,7 @@ public final class ApiSiteLogoutProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public Builder clearUserDeviceIdPubk() {
         
@@ -748,7 +770,7 @@ public final class ApiSiteLogoutProto {
        *用户设备公钥
        * </pre>
        *
-       * <code>optional string user_device_id_pubk = 2;</code>
+       * <code>string user_device_id_pubk = 2;</code>
        */
       public Builder setUserDeviceIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -768,7 +790,7 @@ public final class ApiSiteLogoutProto {
        *用户设备签名
        * </pre>
        *
-       * <code>optional string user_device_id_sign = 3;</code>
+       * <code>string user_device_id_sign = 3;</code>
        */
       public java.lang.String getUserDeviceIdSign() {
         java.lang.Object ref = userDeviceIdSign_;
@@ -787,7 +809,7 @@ public final class ApiSiteLogoutProto {
        *用户设备签名
        * </pre>
        *
-       * <code>optional string user_device_id_sign = 3;</code>
+       * <code>string user_device_id_sign = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserDeviceIdSignBytes() {
@@ -807,7 +829,7 @@ public final class ApiSiteLogoutProto {
        *用户设备签名
        * </pre>
        *
-       * <code>optional string user_device_id_sign = 3;</code>
+       * <code>string user_device_id_sign = 3;</code>
        */
       public Builder setUserDeviceIdSign(
           java.lang.String value) {
@@ -824,7 +846,7 @@ public final class ApiSiteLogoutProto {
        *用户设备签名
        * </pre>
        *
-       * <code>optional string user_device_id_sign = 3;</code>
+       * <code>string user_device_id_sign = 3;</code>
        */
       public Builder clearUserDeviceIdSign() {
         
@@ -837,7 +859,7 @@ public final class ApiSiteLogoutProto {
        *用户设备签名
        * </pre>
        *
-       * <code>optional string user_device_id_sign = 3;</code>
+       * <code>string user_device_id_sign = 3;</code>
        */
       public Builder setUserDeviceIdSignBytes(
           com.google.protobuf.ByteString value) {
@@ -852,12 +874,12 @@ public final class ApiSiteLogoutProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -880,7 +902,7 @@ public final class ApiSiteLogoutProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteLogoutRequest(input, extensionRegistry);
+        return new ApiSiteLogoutRequest(input, extensionRegistry);
       }
     };
 
@@ -914,6 +936,7 @@ public final class ApiSiteLogoutProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiSiteLogoutResponse)
       ApiSiteLogoutResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiSiteLogoutResponse.newBuilder() to construct.
     private ApiSiteLogoutResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -924,13 +947,18 @@ public final class ApiSiteLogoutProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiSiteLogoutResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -940,7 +968,8 @@ public final class ApiSiteLogoutProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -953,6 +982,7 @@ public final class ApiSiteLogoutProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -980,6 +1010,7 @@ public final class ApiSiteLogoutProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -987,11 +1018,11 @@ public final class ApiSiteLogoutProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1003,6 +1034,7 @@ public final class ApiSiteLogoutProto {
       com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse other = (com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1012,12 +1044,23 @@ public final class ApiSiteLogoutProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1166,7 +1209,7 @@ public final class ApiSiteLogoutProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1179,12 +1222,12 @@ public final class ApiSiteLogoutProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1198,6 +1241,7 @@ public final class ApiSiteLogoutProto {
 
       public Builder mergeFrom(com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse other) {
         if (other == com.akaxin.proto.site.ApiSiteLogoutProto.ApiSiteLogoutResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1225,12 +1269,12 @@ public final class ApiSiteLogoutProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1253,7 +1297,7 @@ public final class ApiSiteLogoutProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiSiteLogoutResponse(input, extensionRegistry);
+        return new ApiSiteLogoutResponse(input, extensionRegistry);
       }
     };
 

@@ -23,7 +23,7 @@ public final class ApiPluginDeleteProto {
      *需要删除的插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     java.lang.String getPluginId();
     /**
@@ -31,7 +31,7 @@ public final class ApiPluginDeleteProto {
      *需要删除的插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getPluginIdBytes();
@@ -43,6 +43,7 @@ public final class ApiPluginDeleteProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPluginDeleteRequest)
       ApiPluginDeleteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPluginDeleteRequest.newBuilder() to construct.
     private ApiPluginDeleteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiPluginDeleteProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPluginDeleteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiPluginDeleteProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiPluginDeleteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiPluginDeleteProto {
      *需要删除的插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     public java.lang.String getPluginId() {
       java.lang.Object ref = pluginId_;
@@ -131,7 +139,7 @@ public final class ApiPluginDeleteProto {
      *需要删除的插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getPluginIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiPluginDeleteProto {
       if (!getPluginIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pluginId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiPluginDeleteProto {
       if (!getPluginIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pluginId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiPluginDeleteProto {
       boolean result = true;
       result = result && getPluginId()
           .equals(other.getPluginId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiPluginDeleteProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PLUGIN_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPluginId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiPluginDeleteProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiPluginDeleteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiPluginDeleteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiPluginDeleteProto {
           pluginId_ = other.pluginId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiPluginDeleteProto {
        *需要删除的插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public java.lang.String getPluginId() {
         java.lang.Object ref = pluginId_;
@@ -441,7 +463,7 @@ public final class ApiPluginDeleteProto {
        *需要删除的插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getPluginIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiPluginDeleteProto {
        *需要删除的插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public Builder setPluginId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiPluginDeleteProto {
        *需要删除的插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public Builder clearPluginId() {
         
@@ -491,7 +513,7 @@ public final class ApiPluginDeleteProto {
        *需要删除的插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public Builder setPluginIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiPluginDeleteProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiPluginDeleteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPluginDeleteRequest(input, extensionRegistry);
+        return new ApiPluginDeleteRequest(input, extensionRegistry);
       }
     };
 
@@ -564,6 +586,7 @@ public final class ApiPluginDeleteProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPluginDeleteResponse)
       ApiPluginDeleteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPluginDeleteResponse.newBuilder() to construct.
     private ApiPluginDeleteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -574,13 +597,18 @@ public final class ApiPluginDeleteProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPluginDeleteResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -590,7 +618,8 @@ public final class ApiPluginDeleteProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -603,6 +632,7 @@ public final class ApiPluginDeleteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -630,6 +660,7 @@ public final class ApiPluginDeleteProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -637,11 +668,11 @@ public final class ApiPluginDeleteProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -653,6 +684,7 @@ public final class ApiPluginDeleteProto {
       com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse other = (com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -662,12 +694,23 @@ public final class ApiPluginDeleteProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -812,7 +855,7 @@ public final class ApiPluginDeleteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -825,12 +868,12 @@ public final class ApiPluginDeleteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -844,6 +887,7 @@ public final class ApiPluginDeleteProto {
 
       public Builder mergeFrom(com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse other) {
         if (other == com.akaxin.proto.site.ApiPluginDeleteProto.ApiPluginDeleteResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -871,12 +915,12 @@ public final class ApiPluginDeleteProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -899,7 +943,7 @@ public final class ApiPluginDeleteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPluginDeleteResponse(input, extensionRegistry);
+        return new ApiPluginDeleteResponse(input, extensionRegistry);
       }
     };
 

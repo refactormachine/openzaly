@@ -1490,7 +1490,7 @@ public final class ConfigProto {
      *站点ip
      * </pre>
      *
-     * <code>optional string site_address = 1;</code>
+     * <code>string site_address = 1;</code>
      */
     java.lang.String getSiteAddress();
     /**
@@ -1498,7 +1498,7 @@ public final class ConfigProto {
      *站点ip
      * </pre>
      *
-     * <code>optional string site_address = 1;</code>
+     * <code>string site_address = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteAddressBytes();
@@ -1508,7 +1508,7 @@ public final class ConfigProto {
      *站点地址
      * </pre>
      *
-     * <code>optional int32 site_port = 2;</code>
+     * <code>int32 site_port = 2;</code>
      */
     int getSitePort();
 
@@ -1517,7 +1517,7 @@ public final class ConfigProto {
      *站点名称
      * </pre>
      *
-     * <code>optional string site_name = 3;</code>
+     * <code>string site_name = 3;</code>
      */
     java.lang.String getSiteName();
     /**
@@ -1525,7 +1525,7 @@ public final class ConfigProto {
      *站点名称
      * </pre>
      *
-     * <code>optional string site_name = 3;</code>
+     * <code>string site_name = 3;</code>
      */
     com.google.protobuf.ByteString
         getSiteNameBytes();
@@ -1535,7 +1535,7 @@ public final class ConfigProto {
      *站点logo
      * </pre>
      *
-     * <code>optional string site_logo = 4;</code>
+     * <code>string site_logo = 4;</code>
      */
     java.lang.String getSiteLogo();
     /**
@@ -1543,7 +1543,7 @@ public final class ConfigProto {
      *站点logo
      * </pre>
      *
-     * <code>optional string site_logo = 4;</code>
+     * <code>string site_logo = 4;</code>
      */
     com.google.protobuf.ByteString
         getSiteLogoBytes();
@@ -1553,7 +1553,7 @@ public final class ConfigProto {
      *站点版本
      * </pre>
      *
-     * <code>optional string site_version = 5;</code>
+     * <code>string site_version = 5;</code>
      */
     java.lang.String getSiteVersion();
     /**
@@ -1561,7 +1561,7 @@ public final class ConfigProto {
      *站点版本
      * </pre>
      *
-     * <code>optional string site_version = 5;</code>
+     * <code>string site_version = 5;</code>
      */
     com.google.protobuf.ByteString
         getSiteVersionBytes();
@@ -1571,7 +1571,7 @@ public final class ConfigProto {
      *站点介绍
      * </pre>
      *
-     * <code>optional string site_introduction = 6;</code>
+     * <code>string site_introduction = 6;</code>
      */
     java.lang.String getSiteIntroduction();
     /**
@@ -1579,7 +1579,7 @@ public final class ConfigProto {
      *站点介绍
      * </pre>
      *
-     * <code>optional string site_introduction = 6;</code>
+     * <code>string site_introduction = 6;</code>
      */
     com.google.protobuf.ByteString
         getSiteIntroductionBytes();
@@ -1589,7 +1589,7 @@ public final class ConfigProto {
      *站点是否需要实名
      * </pre>
      *
-     * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+     * <code>.core.RealNameConfig real_name_config = 7;</code>
      */
     int getRealNameConfigValue();
     /**
@@ -1597,7 +1597,7 @@ public final class ConfigProto {
      *站点是否需要实名
      * </pre>
      *
-     * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+     * <code>.core.RealNameConfig real_name_config = 7;</code>
      */
     com.akaxin.proto.core.ConfigProto.RealNameConfig getRealNameConfig();
 
@@ -1606,7 +1606,7 @@ public final class ConfigProto {
      *支持图片大小（width x length）
      * </pre>
      *
-     * <code>optional string pic_size = 8;</code>
+     * <code>string pic_size = 8;</code>
      */
     java.lang.String getPicSize();
     /**
@@ -1614,7 +1614,7 @@ public final class ConfigProto {
      *支持图片大小（width x length）
      * </pre>
      *
-     * <code>optional string pic_size = 8;</code>
+     * <code>string pic_size = 8;</code>
      */
     com.google.protobuf.ByteString
         getPicSizeBytes();
@@ -1624,7 +1624,7 @@ public final class ConfigProto {
      *站点状态
      * </pre>
      *
-     * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+     * <code>.core.SiteStatusConfig site_status_config = 9;</code>
      */
     int getSiteStatusConfigValue();
     /**
@@ -1632,7 +1632,7 @@ public final class ConfigProto {
      *站点状态
      * </pre>
      *
-     * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+     * <code>.core.SiteStatusConfig site_status_config = 9;</code>
      */
     com.akaxin.proto.core.ConfigProto.SiteStatusConfig getSiteStatusConfig();
 
@@ -1641,7 +1641,7 @@ public final class ConfigProto {
      *站点状态说明，一般关闭站点情况使用
      * </pre>
      *
-     * <code>optional string site_status_info = 10;</code>
+     * <code>string site_status_info = 10;</code>
      */
     java.lang.String getSiteStatusInfo();
     /**
@@ -1649,7 +1649,7 @@ public final class ConfigProto {
      *站点状态说明，一般关闭站点情况使用
      * </pre>
      *
-     * <code>optional string site_status_info = 10;</code>
+     * <code>string site_status_info = 10;</code>
      */
     com.google.protobuf.ByteString
         getSiteStatusInfoBytes();
@@ -1659,7 +1659,7 @@ public final class ConfigProto {
      *二人消息加密状态
      * </pre>
      *
-     * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+     * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
      */
     int getU2EncryptionConfigValue();
     /**
@@ -1667,7 +1667,7 @@ public final class ConfigProto {
      *二人消息加密状态
      * </pre>
      *
-     * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+     * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
      */
     com.akaxin.proto.core.ConfigProto.U2EncryptionConfig getU2EncryptionConfig();
 
@@ -1676,7 +1676,7 @@ public final class ConfigProto {
      *站点注册是否需要邀请码
      * </pre>
      *
-     * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+     * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
      */
     int getInviteCodeConfigValue();
     /**
@@ -1684,7 +1684,7 @@ public final class ConfigProto {
      *站点注册是否需要邀请码
      * </pre>
      *
-     * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+     * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
      */
     com.akaxin.proto.core.ConfigProto.InviteCodeConfig getInviteCodeConfig();
   }
@@ -1699,6 +1699,7 @@ public final class ConfigProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.SiteConfig)
       SiteConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SiteConfig.newBuilder() to construct.
     private SiteConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1721,7 +1722,7 @@ public final class ConfigProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private SiteConfig(
         com.google.protobuf.CodedInputStream input,
@@ -1729,6 +1730,8 @@ public final class ConfigProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1738,7 +1741,8 @@ public final class ConfigProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1822,6 +1826,7 @@ public final class ConfigProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1844,7 +1849,7 @@ public final class ConfigProto {
      *站点ip
      * </pre>
      *
-     * <code>optional string site_address = 1;</code>
+     * <code>string site_address = 1;</code>
      */
     public java.lang.String getSiteAddress() {
       java.lang.Object ref = siteAddress_;
@@ -1863,7 +1868,7 @@ public final class ConfigProto {
      *站点ip
      * </pre>
      *
-     * <code>optional string site_address = 1;</code>
+     * <code>string site_address = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteAddressBytes() {
@@ -1886,7 +1891,7 @@ public final class ConfigProto {
      *站点地址
      * </pre>
      *
-     * <code>optional int32 site_port = 2;</code>
+     * <code>int32 site_port = 2;</code>
      */
     public int getSitePort() {
       return sitePort_;
@@ -1899,7 +1904,7 @@ public final class ConfigProto {
      *站点名称
      * </pre>
      *
-     * <code>optional string site_name = 3;</code>
+     * <code>string site_name = 3;</code>
      */
     public java.lang.String getSiteName() {
       java.lang.Object ref = siteName_;
@@ -1918,7 +1923,7 @@ public final class ConfigProto {
      *站点名称
      * </pre>
      *
-     * <code>optional string site_name = 3;</code>
+     * <code>string site_name = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSiteNameBytes() {
@@ -1941,7 +1946,7 @@ public final class ConfigProto {
      *站点logo
      * </pre>
      *
-     * <code>optional string site_logo = 4;</code>
+     * <code>string site_logo = 4;</code>
      */
     public java.lang.String getSiteLogo() {
       java.lang.Object ref = siteLogo_;
@@ -1960,7 +1965,7 @@ public final class ConfigProto {
      *站点logo
      * </pre>
      *
-     * <code>optional string site_logo = 4;</code>
+     * <code>string site_logo = 4;</code>
      */
     public com.google.protobuf.ByteString
         getSiteLogoBytes() {
@@ -1983,7 +1988,7 @@ public final class ConfigProto {
      *站点版本
      * </pre>
      *
-     * <code>optional string site_version = 5;</code>
+     * <code>string site_version = 5;</code>
      */
     public java.lang.String getSiteVersion() {
       java.lang.Object ref = siteVersion_;
@@ -2002,7 +2007,7 @@ public final class ConfigProto {
      *站点版本
      * </pre>
      *
-     * <code>optional string site_version = 5;</code>
+     * <code>string site_version = 5;</code>
      */
     public com.google.protobuf.ByteString
         getSiteVersionBytes() {
@@ -2025,7 +2030,7 @@ public final class ConfigProto {
      *站点介绍
      * </pre>
      *
-     * <code>optional string site_introduction = 6;</code>
+     * <code>string site_introduction = 6;</code>
      */
     public java.lang.String getSiteIntroduction() {
       java.lang.Object ref = siteIntroduction_;
@@ -2044,7 +2049,7 @@ public final class ConfigProto {
      *站点介绍
      * </pre>
      *
-     * <code>optional string site_introduction = 6;</code>
+     * <code>string site_introduction = 6;</code>
      */
     public com.google.protobuf.ByteString
         getSiteIntroductionBytes() {
@@ -2067,7 +2072,7 @@ public final class ConfigProto {
      *站点是否需要实名
      * </pre>
      *
-     * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+     * <code>.core.RealNameConfig real_name_config = 7;</code>
      */
     public int getRealNameConfigValue() {
       return realNameConfig_;
@@ -2077,7 +2082,7 @@ public final class ConfigProto {
      *站点是否需要实名
      * </pre>
      *
-     * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+     * <code>.core.RealNameConfig real_name_config = 7;</code>
      */
     public com.akaxin.proto.core.ConfigProto.RealNameConfig getRealNameConfig() {
       com.akaxin.proto.core.ConfigProto.RealNameConfig result = com.akaxin.proto.core.ConfigProto.RealNameConfig.valueOf(realNameConfig_);
@@ -2091,7 +2096,7 @@ public final class ConfigProto {
      *支持图片大小（width x length）
      * </pre>
      *
-     * <code>optional string pic_size = 8;</code>
+     * <code>string pic_size = 8;</code>
      */
     public java.lang.String getPicSize() {
       java.lang.Object ref = picSize_;
@@ -2110,7 +2115,7 @@ public final class ConfigProto {
      *支持图片大小（width x length）
      * </pre>
      *
-     * <code>optional string pic_size = 8;</code>
+     * <code>string pic_size = 8;</code>
      */
     public com.google.protobuf.ByteString
         getPicSizeBytes() {
@@ -2133,7 +2138,7 @@ public final class ConfigProto {
      *站点状态
      * </pre>
      *
-     * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+     * <code>.core.SiteStatusConfig site_status_config = 9;</code>
      */
     public int getSiteStatusConfigValue() {
       return siteStatusConfig_;
@@ -2143,7 +2148,7 @@ public final class ConfigProto {
      *站点状态
      * </pre>
      *
-     * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+     * <code>.core.SiteStatusConfig site_status_config = 9;</code>
      */
     public com.akaxin.proto.core.ConfigProto.SiteStatusConfig getSiteStatusConfig() {
       com.akaxin.proto.core.ConfigProto.SiteStatusConfig result = com.akaxin.proto.core.ConfigProto.SiteStatusConfig.valueOf(siteStatusConfig_);
@@ -2157,7 +2162,7 @@ public final class ConfigProto {
      *站点状态说明，一般关闭站点情况使用
      * </pre>
      *
-     * <code>optional string site_status_info = 10;</code>
+     * <code>string site_status_info = 10;</code>
      */
     public java.lang.String getSiteStatusInfo() {
       java.lang.Object ref = siteStatusInfo_;
@@ -2176,7 +2181,7 @@ public final class ConfigProto {
      *站点状态说明，一般关闭站点情况使用
      * </pre>
      *
-     * <code>optional string site_status_info = 10;</code>
+     * <code>string site_status_info = 10;</code>
      */
     public com.google.protobuf.ByteString
         getSiteStatusInfoBytes() {
@@ -2199,7 +2204,7 @@ public final class ConfigProto {
      *二人消息加密状态
      * </pre>
      *
-     * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+     * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
      */
     public int getU2EncryptionConfigValue() {
       return u2EncryptionConfig_;
@@ -2209,7 +2214,7 @@ public final class ConfigProto {
      *二人消息加密状态
      * </pre>
      *
-     * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+     * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
      */
     public com.akaxin.proto.core.ConfigProto.U2EncryptionConfig getU2EncryptionConfig() {
       com.akaxin.proto.core.ConfigProto.U2EncryptionConfig result = com.akaxin.proto.core.ConfigProto.U2EncryptionConfig.valueOf(u2EncryptionConfig_);
@@ -2223,7 +2228,7 @@ public final class ConfigProto {
      *站点注册是否需要邀请码
      * </pre>
      *
-     * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+     * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
      */
     public int getInviteCodeConfigValue() {
       return inviteCodeConfig_;
@@ -2233,7 +2238,7 @@ public final class ConfigProto {
      *站点注册是否需要邀请码
      * </pre>
      *
-     * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+     * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
      */
     public com.akaxin.proto.core.ConfigProto.InviteCodeConfig getInviteCodeConfig() {
       com.akaxin.proto.core.ConfigProto.InviteCodeConfig result = com.akaxin.proto.core.ConfigProto.InviteCodeConfig.valueOf(inviteCodeConfig_);
@@ -2288,6 +2293,7 @@ public final class ConfigProto {
       if (inviteCodeConfig_ != com.akaxin.proto.core.ConfigProto.InviteCodeConfig.UIC_NO.getNumber()) {
         output.writeEnum(12, inviteCodeConfig_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -2336,11 +2342,11 @@ public final class ConfigProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, inviteCodeConfig_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2372,6 +2378,7 @@ public final class ConfigProto {
           .equals(other.getSiteStatusInfo());
       result = result && u2EncryptionConfig_ == other.u2EncryptionConfig_;
       result = result && inviteCodeConfig_ == other.inviteCodeConfig_;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -2381,7 +2388,7 @@ public final class ConfigProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getSiteAddress().hashCode();
       hash = (37 * hash) + SITE_PORT_FIELD_NUMBER;
@@ -2411,6 +2418,17 @@ public final class ConfigProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.ConfigProto.SiteConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.ConfigProto.SiteConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.ConfigProto.SiteConfig parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2595,7 +2613,7 @@ public final class ConfigProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2608,12 +2626,12 @@ public final class ConfigProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2670,6 +2688,7 @@ public final class ConfigProto {
         if (other.inviteCodeConfig_ != 0) {
           setInviteCodeConfigValue(other.getInviteCodeConfigValue());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2702,7 +2721,7 @@ public final class ConfigProto {
        *站点ip
        * </pre>
        *
-       * <code>optional string site_address = 1;</code>
+       * <code>string site_address = 1;</code>
        */
       public java.lang.String getSiteAddress() {
         java.lang.Object ref = siteAddress_;
@@ -2721,7 +2740,7 @@ public final class ConfigProto {
        *站点ip
        * </pre>
        *
-       * <code>optional string site_address = 1;</code>
+       * <code>string site_address = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteAddressBytes() {
@@ -2741,7 +2760,7 @@ public final class ConfigProto {
        *站点ip
        * </pre>
        *
-       * <code>optional string site_address = 1;</code>
+       * <code>string site_address = 1;</code>
        */
       public Builder setSiteAddress(
           java.lang.String value) {
@@ -2758,7 +2777,7 @@ public final class ConfigProto {
        *站点ip
        * </pre>
        *
-       * <code>optional string site_address = 1;</code>
+       * <code>string site_address = 1;</code>
        */
       public Builder clearSiteAddress() {
         
@@ -2771,7 +2790,7 @@ public final class ConfigProto {
        *站点ip
        * </pre>
        *
-       * <code>optional string site_address = 1;</code>
+       * <code>string site_address = 1;</code>
        */
       public Builder setSiteAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -2791,7 +2810,7 @@ public final class ConfigProto {
        *站点地址
        * </pre>
        *
-       * <code>optional int32 site_port = 2;</code>
+       * <code>int32 site_port = 2;</code>
        */
       public int getSitePort() {
         return sitePort_;
@@ -2801,7 +2820,7 @@ public final class ConfigProto {
        *站点地址
        * </pre>
        *
-       * <code>optional int32 site_port = 2;</code>
+       * <code>int32 site_port = 2;</code>
        */
       public Builder setSitePort(int value) {
         
@@ -2814,7 +2833,7 @@ public final class ConfigProto {
        *站点地址
        * </pre>
        *
-       * <code>optional int32 site_port = 2;</code>
+       * <code>int32 site_port = 2;</code>
        */
       public Builder clearSitePort() {
         
@@ -2829,7 +2848,7 @@ public final class ConfigProto {
        *站点名称
        * </pre>
        *
-       * <code>optional string site_name = 3;</code>
+       * <code>string site_name = 3;</code>
        */
       public java.lang.String getSiteName() {
         java.lang.Object ref = siteName_;
@@ -2848,7 +2867,7 @@ public final class ConfigProto {
        *站点名称
        * </pre>
        *
-       * <code>optional string site_name = 3;</code>
+       * <code>string site_name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSiteNameBytes() {
@@ -2868,7 +2887,7 @@ public final class ConfigProto {
        *站点名称
        * </pre>
        *
-       * <code>optional string site_name = 3;</code>
+       * <code>string site_name = 3;</code>
        */
       public Builder setSiteName(
           java.lang.String value) {
@@ -2885,7 +2904,7 @@ public final class ConfigProto {
        *站点名称
        * </pre>
        *
-       * <code>optional string site_name = 3;</code>
+       * <code>string site_name = 3;</code>
        */
       public Builder clearSiteName() {
         
@@ -2898,7 +2917,7 @@ public final class ConfigProto {
        *站点名称
        * </pre>
        *
-       * <code>optional string site_name = 3;</code>
+       * <code>string site_name = 3;</code>
        */
       public Builder setSiteNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2918,7 +2937,7 @@ public final class ConfigProto {
        *站点logo
        * </pre>
        *
-       * <code>optional string site_logo = 4;</code>
+       * <code>string site_logo = 4;</code>
        */
       public java.lang.String getSiteLogo() {
         java.lang.Object ref = siteLogo_;
@@ -2937,7 +2956,7 @@ public final class ConfigProto {
        *站点logo
        * </pre>
        *
-       * <code>optional string site_logo = 4;</code>
+       * <code>string site_logo = 4;</code>
        */
       public com.google.protobuf.ByteString
           getSiteLogoBytes() {
@@ -2957,7 +2976,7 @@ public final class ConfigProto {
        *站点logo
        * </pre>
        *
-       * <code>optional string site_logo = 4;</code>
+       * <code>string site_logo = 4;</code>
        */
       public Builder setSiteLogo(
           java.lang.String value) {
@@ -2974,7 +2993,7 @@ public final class ConfigProto {
        *站点logo
        * </pre>
        *
-       * <code>optional string site_logo = 4;</code>
+       * <code>string site_logo = 4;</code>
        */
       public Builder clearSiteLogo() {
         
@@ -2987,7 +3006,7 @@ public final class ConfigProto {
        *站点logo
        * </pre>
        *
-       * <code>optional string site_logo = 4;</code>
+       * <code>string site_logo = 4;</code>
        */
       public Builder setSiteLogoBytes(
           com.google.protobuf.ByteString value) {
@@ -3007,7 +3026,7 @@ public final class ConfigProto {
        *站点版本
        * </pre>
        *
-       * <code>optional string site_version = 5;</code>
+       * <code>string site_version = 5;</code>
        */
       public java.lang.String getSiteVersion() {
         java.lang.Object ref = siteVersion_;
@@ -3026,7 +3045,7 @@ public final class ConfigProto {
        *站点版本
        * </pre>
        *
-       * <code>optional string site_version = 5;</code>
+       * <code>string site_version = 5;</code>
        */
       public com.google.protobuf.ByteString
           getSiteVersionBytes() {
@@ -3046,7 +3065,7 @@ public final class ConfigProto {
        *站点版本
        * </pre>
        *
-       * <code>optional string site_version = 5;</code>
+       * <code>string site_version = 5;</code>
        */
       public Builder setSiteVersion(
           java.lang.String value) {
@@ -3063,7 +3082,7 @@ public final class ConfigProto {
        *站点版本
        * </pre>
        *
-       * <code>optional string site_version = 5;</code>
+       * <code>string site_version = 5;</code>
        */
       public Builder clearSiteVersion() {
         
@@ -3076,7 +3095,7 @@ public final class ConfigProto {
        *站点版本
        * </pre>
        *
-       * <code>optional string site_version = 5;</code>
+       * <code>string site_version = 5;</code>
        */
       public Builder setSiteVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -3096,7 +3115,7 @@ public final class ConfigProto {
        *站点介绍
        * </pre>
        *
-       * <code>optional string site_introduction = 6;</code>
+       * <code>string site_introduction = 6;</code>
        */
       public java.lang.String getSiteIntroduction() {
         java.lang.Object ref = siteIntroduction_;
@@ -3115,7 +3134,7 @@ public final class ConfigProto {
        *站点介绍
        * </pre>
        *
-       * <code>optional string site_introduction = 6;</code>
+       * <code>string site_introduction = 6;</code>
        */
       public com.google.protobuf.ByteString
           getSiteIntroductionBytes() {
@@ -3135,7 +3154,7 @@ public final class ConfigProto {
        *站点介绍
        * </pre>
        *
-       * <code>optional string site_introduction = 6;</code>
+       * <code>string site_introduction = 6;</code>
        */
       public Builder setSiteIntroduction(
           java.lang.String value) {
@@ -3152,7 +3171,7 @@ public final class ConfigProto {
        *站点介绍
        * </pre>
        *
-       * <code>optional string site_introduction = 6;</code>
+       * <code>string site_introduction = 6;</code>
        */
       public Builder clearSiteIntroduction() {
         
@@ -3165,7 +3184,7 @@ public final class ConfigProto {
        *站点介绍
        * </pre>
        *
-       * <code>optional string site_introduction = 6;</code>
+       * <code>string site_introduction = 6;</code>
        */
       public Builder setSiteIntroductionBytes(
           com.google.protobuf.ByteString value) {
@@ -3185,7 +3204,7 @@ public final class ConfigProto {
        *站点是否需要实名
        * </pre>
        *
-       * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+       * <code>.core.RealNameConfig real_name_config = 7;</code>
        */
       public int getRealNameConfigValue() {
         return realNameConfig_;
@@ -3195,7 +3214,7 @@ public final class ConfigProto {
        *站点是否需要实名
        * </pre>
        *
-       * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+       * <code>.core.RealNameConfig real_name_config = 7;</code>
        */
       public Builder setRealNameConfigValue(int value) {
         realNameConfig_ = value;
@@ -3207,7 +3226,7 @@ public final class ConfigProto {
        *站点是否需要实名
        * </pre>
        *
-       * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+       * <code>.core.RealNameConfig real_name_config = 7;</code>
        */
       public com.akaxin.proto.core.ConfigProto.RealNameConfig getRealNameConfig() {
         com.akaxin.proto.core.ConfigProto.RealNameConfig result = com.akaxin.proto.core.ConfigProto.RealNameConfig.valueOf(realNameConfig_);
@@ -3218,7 +3237,7 @@ public final class ConfigProto {
        *站点是否需要实名
        * </pre>
        *
-       * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+       * <code>.core.RealNameConfig real_name_config = 7;</code>
        */
       public Builder setRealNameConfig(com.akaxin.proto.core.ConfigProto.RealNameConfig value) {
         if (value == null) {
@@ -3234,7 +3253,7 @@ public final class ConfigProto {
        *站点是否需要实名
        * </pre>
        *
-       * <code>optional .core.RealNameConfig real_name_config = 7;</code>
+       * <code>.core.RealNameConfig real_name_config = 7;</code>
        */
       public Builder clearRealNameConfig() {
         
@@ -3249,7 +3268,7 @@ public final class ConfigProto {
        *支持图片大小（width x length）
        * </pre>
        *
-       * <code>optional string pic_size = 8;</code>
+       * <code>string pic_size = 8;</code>
        */
       public java.lang.String getPicSize() {
         java.lang.Object ref = picSize_;
@@ -3268,7 +3287,7 @@ public final class ConfigProto {
        *支持图片大小（width x length）
        * </pre>
        *
-       * <code>optional string pic_size = 8;</code>
+       * <code>string pic_size = 8;</code>
        */
       public com.google.protobuf.ByteString
           getPicSizeBytes() {
@@ -3288,7 +3307,7 @@ public final class ConfigProto {
        *支持图片大小（width x length）
        * </pre>
        *
-       * <code>optional string pic_size = 8;</code>
+       * <code>string pic_size = 8;</code>
        */
       public Builder setPicSize(
           java.lang.String value) {
@@ -3305,7 +3324,7 @@ public final class ConfigProto {
        *支持图片大小（width x length）
        * </pre>
        *
-       * <code>optional string pic_size = 8;</code>
+       * <code>string pic_size = 8;</code>
        */
       public Builder clearPicSize() {
         
@@ -3318,7 +3337,7 @@ public final class ConfigProto {
        *支持图片大小（width x length）
        * </pre>
        *
-       * <code>optional string pic_size = 8;</code>
+       * <code>string pic_size = 8;</code>
        */
       public Builder setPicSizeBytes(
           com.google.protobuf.ByteString value) {
@@ -3338,7 +3357,7 @@ public final class ConfigProto {
        *站点状态
        * </pre>
        *
-       * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+       * <code>.core.SiteStatusConfig site_status_config = 9;</code>
        */
       public int getSiteStatusConfigValue() {
         return siteStatusConfig_;
@@ -3348,7 +3367,7 @@ public final class ConfigProto {
        *站点状态
        * </pre>
        *
-       * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+       * <code>.core.SiteStatusConfig site_status_config = 9;</code>
        */
       public Builder setSiteStatusConfigValue(int value) {
         siteStatusConfig_ = value;
@@ -3360,7 +3379,7 @@ public final class ConfigProto {
        *站点状态
        * </pre>
        *
-       * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+       * <code>.core.SiteStatusConfig site_status_config = 9;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteStatusConfig getSiteStatusConfig() {
         com.akaxin.proto.core.ConfigProto.SiteStatusConfig result = com.akaxin.proto.core.ConfigProto.SiteStatusConfig.valueOf(siteStatusConfig_);
@@ -3371,7 +3390,7 @@ public final class ConfigProto {
        *站点状态
        * </pre>
        *
-       * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+       * <code>.core.SiteStatusConfig site_status_config = 9;</code>
        */
       public Builder setSiteStatusConfig(com.akaxin.proto.core.ConfigProto.SiteStatusConfig value) {
         if (value == null) {
@@ -3387,7 +3406,7 @@ public final class ConfigProto {
        *站点状态
        * </pre>
        *
-       * <code>optional .core.SiteStatusConfig site_status_config = 9;</code>
+       * <code>.core.SiteStatusConfig site_status_config = 9;</code>
        */
       public Builder clearSiteStatusConfig() {
         
@@ -3402,7 +3421,7 @@ public final class ConfigProto {
        *站点状态说明，一般关闭站点情况使用
        * </pre>
        *
-       * <code>optional string site_status_info = 10;</code>
+       * <code>string site_status_info = 10;</code>
        */
       public java.lang.String getSiteStatusInfo() {
         java.lang.Object ref = siteStatusInfo_;
@@ -3421,7 +3440,7 @@ public final class ConfigProto {
        *站点状态说明，一般关闭站点情况使用
        * </pre>
        *
-       * <code>optional string site_status_info = 10;</code>
+       * <code>string site_status_info = 10;</code>
        */
       public com.google.protobuf.ByteString
           getSiteStatusInfoBytes() {
@@ -3441,7 +3460,7 @@ public final class ConfigProto {
        *站点状态说明，一般关闭站点情况使用
        * </pre>
        *
-       * <code>optional string site_status_info = 10;</code>
+       * <code>string site_status_info = 10;</code>
        */
       public Builder setSiteStatusInfo(
           java.lang.String value) {
@@ -3458,7 +3477,7 @@ public final class ConfigProto {
        *站点状态说明，一般关闭站点情况使用
        * </pre>
        *
-       * <code>optional string site_status_info = 10;</code>
+       * <code>string site_status_info = 10;</code>
        */
       public Builder clearSiteStatusInfo() {
         
@@ -3471,7 +3490,7 @@ public final class ConfigProto {
        *站点状态说明，一般关闭站点情况使用
        * </pre>
        *
-       * <code>optional string site_status_info = 10;</code>
+       * <code>string site_status_info = 10;</code>
        */
       public Builder setSiteStatusInfoBytes(
           com.google.protobuf.ByteString value) {
@@ -3491,7 +3510,7 @@ public final class ConfigProto {
        *二人消息加密状态
        * </pre>
        *
-       * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+       * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
        */
       public int getU2EncryptionConfigValue() {
         return u2EncryptionConfig_;
@@ -3501,7 +3520,7 @@ public final class ConfigProto {
        *二人消息加密状态
        * </pre>
        *
-       * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+       * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
        */
       public Builder setU2EncryptionConfigValue(int value) {
         u2EncryptionConfig_ = value;
@@ -3513,7 +3532,7 @@ public final class ConfigProto {
        *二人消息加密状态
        * </pre>
        *
-       * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+       * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
        */
       public com.akaxin.proto.core.ConfigProto.U2EncryptionConfig getU2EncryptionConfig() {
         com.akaxin.proto.core.ConfigProto.U2EncryptionConfig result = com.akaxin.proto.core.ConfigProto.U2EncryptionConfig.valueOf(u2EncryptionConfig_);
@@ -3524,7 +3543,7 @@ public final class ConfigProto {
        *二人消息加密状态
        * </pre>
        *
-       * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+       * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
        */
       public Builder setU2EncryptionConfig(com.akaxin.proto.core.ConfigProto.U2EncryptionConfig value) {
         if (value == null) {
@@ -3540,7 +3559,7 @@ public final class ConfigProto {
        *二人消息加密状态
        * </pre>
        *
-       * <code>optional .core.U2EncryptionConfig u2_encryption_config = 11;</code>
+       * <code>.core.U2EncryptionConfig u2_encryption_config = 11;</code>
        */
       public Builder clearU2EncryptionConfig() {
         
@@ -3555,7 +3574,7 @@ public final class ConfigProto {
        *站点注册是否需要邀请码
        * </pre>
        *
-       * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+       * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
        */
       public int getInviteCodeConfigValue() {
         return inviteCodeConfig_;
@@ -3565,7 +3584,7 @@ public final class ConfigProto {
        *站点注册是否需要邀请码
        * </pre>
        *
-       * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+       * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
        */
       public Builder setInviteCodeConfigValue(int value) {
         inviteCodeConfig_ = value;
@@ -3577,7 +3596,7 @@ public final class ConfigProto {
        *站点注册是否需要邀请码
        * </pre>
        *
-       * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+       * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
        */
       public com.akaxin.proto.core.ConfigProto.InviteCodeConfig getInviteCodeConfig() {
         com.akaxin.proto.core.ConfigProto.InviteCodeConfig result = com.akaxin.proto.core.ConfigProto.InviteCodeConfig.valueOf(inviteCodeConfig_);
@@ -3588,7 +3607,7 @@ public final class ConfigProto {
        *站点注册是否需要邀请码
        * </pre>
        *
-       * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+       * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
        */
       public Builder setInviteCodeConfig(com.akaxin.proto.core.ConfigProto.InviteCodeConfig value) {
         if (value == null) {
@@ -3604,7 +3623,7 @@ public final class ConfigProto {
        *站点注册是否需要邀请码
        * </pre>
        *
-       * <code>optional .core.InviteCodeConfig invite_code_config = 12;</code>
+       * <code>.core.InviteCodeConfig invite_code_config = 12;</code>
        */
       public Builder clearInviteCodeConfig() {
         
@@ -3614,12 +3633,12 @@ public final class ConfigProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -3710,6 +3729,7 @@ public final class ConfigProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.SiteBackConfig)
       SiteBackConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SiteBackConfig.newBuilder() to construct.
     private SiteBackConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3720,7 +3740,7 @@ public final class ConfigProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private SiteBackConfig(
         com.google.protobuf.CodedInputStream input,
@@ -3728,6 +3748,8 @@ public final class ConfigProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3737,7 +3759,8 @@ public final class ConfigProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -3749,9 +3772,10 @@ public final class ConfigProto {
                 mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-              siteConfig = input.readMessage(
+              siteConfig__ = input.readMessage(
                   SiteConfigDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              siteConfig_.getMutableMap().put(siteConfig.getKey(), siteConfig.getValue());
+              siteConfig_.getMutableMap().put(
+                  siteConfig__.getKey(), siteConfig__.getValue());
               break;
             }
           }
@@ -3762,6 +3786,7 @@ public final class ConfigProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -3876,15 +3901,13 @@ public final class ConfigProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
-           : internalGetSiteConfig().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-        siteConfig = SiteConfigDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        output.writeMessage(1, siteConfig);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeIntegerMapTo(
+          output,
+          internalGetSiteConfig(),
+          SiteConfigDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -3895,18 +3918,18 @@ public final class ConfigProto {
       for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
            : internalGetSiteConfig().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
-        siteConfig = SiteConfigDefaultEntryHolder.defaultEntry.newBuilderForType()
+        siteConfig__ = SiteConfigDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, siteConfig);
+            .computeMessageSize(1, siteConfig__);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3920,6 +3943,7 @@ public final class ConfigProto {
       boolean result = true;
       result = result && internalGetSiteConfig().equals(
           other.internalGetSiteConfig());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -3929,7 +3953,7 @@ public final class ConfigProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (!internalGetSiteConfig().getMap().isEmpty()) {
         hash = (37 * hash) + SITE_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSiteConfig().hashCode();
@@ -3939,6 +3963,17 @@ public final class ConfigProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.ConfigProto.SiteBackConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.ConfigProto.SiteBackConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.ConfigProto.SiteBackConfig parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4113,7 +4148,7 @@ public final class ConfigProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4126,12 +4161,12 @@ public final class ConfigProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4147,6 +4182,7 @@ public final class ConfigProto {
         if (other == com.akaxin.proto.core.ConfigProto.SiteBackConfig.getDefaultInstance()) return this;
         internalGetMutableSiteConfig().mergeFrom(
             other.internalGetSiteConfig());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -4251,7 +4287,8 @@ public final class ConfigProto {
       }
 
       public Builder clearSiteConfig() {
-        getMutableSiteConfig().clear();
+        internalGetMutableSiteConfig().getMutableMap()
+            .clear();
         return this;
       }
       /**
@@ -4261,7 +4298,8 @@ public final class ConfigProto {
       public Builder removeSiteConfig(
           int key) {
         
-        getMutableSiteConfig().remove(key);
+        internalGetMutableSiteConfig().getMutableMap()
+            .remove(key);
         return this;
       }
       /**
@@ -4280,7 +4318,8 @@ public final class ConfigProto {
           java.lang.String value) {
         
         if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutableSiteConfig().put(key, value);
+        internalGetMutableSiteConfig().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
@@ -4289,17 +4328,18 @@ public final class ConfigProto {
 
       public Builder putAllSiteConfig(
           java.util.Map<java.lang.Integer, java.lang.String> values) {
-        getMutableSiteConfig().putAll(values);
+        internalGetMutableSiteConfig().getMutableMap()
+            .putAll(values);
         return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

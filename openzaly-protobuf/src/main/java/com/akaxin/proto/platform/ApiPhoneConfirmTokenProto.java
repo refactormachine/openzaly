@@ -23,7 +23,7 @@ public final class ApiPhoneConfirmTokenProto {
      *平台允许站点获取手机号的token
      * </pre>
      *
-     * <code>optional string phone_token = 1;</code>
+     * <code>string phone_token = 1;</code>
      */
     java.lang.String getPhoneToken();
     /**
@@ -31,7 +31,7 @@ public final class ApiPhoneConfirmTokenProto {
      *平台允许站点获取手机号的token
      * </pre>
      *
-     * <code>optional string phone_token = 1;</code>
+     * <code>string phone_token = 1;</code>
      */
     com.google.protobuf.ByteString
         getPhoneTokenBytes();
@@ -41,7 +41,7 @@ public final class ApiPhoneConfirmTokenProto {
      *当前站点地址demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_address = 2;</code>
+     * <code>string site_address = 2;</code>
      */
     java.lang.String getSiteAddress();
     /**
@@ -49,7 +49,7 @@ public final class ApiPhoneConfirmTokenProto {
      *当前站点地址demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_address = 2;</code>
+     * <code>string site_address = 2;</code>
      */
     com.google.protobuf.ByteString
         getSiteAddressBytes();
@@ -61,6 +61,7 @@ public final class ApiPhoneConfirmTokenProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:platform.ApiPhoneConfirmTokenRequest)
       ApiPhoneConfirmTokenRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPhoneConfirmTokenRequest.newBuilder() to construct.
     private ApiPhoneConfirmTokenRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -73,7 +74,7 @@ public final class ApiPhoneConfirmTokenProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPhoneConfirmTokenRequest(
         com.google.protobuf.CodedInputStream input,
@@ -81,6 +82,8 @@ public final class ApiPhoneConfirmTokenProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -90,7 +93,8 @@ public final class ApiPhoneConfirmTokenProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -115,6 +119,7 @@ public final class ApiPhoneConfirmTokenProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -137,7 +142,7 @@ public final class ApiPhoneConfirmTokenProto {
      *平台允许站点获取手机号的token
      * </pre>
      *
-     * <code>optional string phone_token = 1;</code>
+     * <code>string phone_token = 1;</code>
      */
     public java.lang.String getPhoneToken() {
       java.lang.Object ref = phoneToken_;
@@ -156,7 +161,7 @@ public final class ApiPhoneConfirmTokenProto {
      *平台允许站点获取手机号的token
      * </pre>
      *
-     * <code>optional string phone_token = 1;</code>
+     * <code>string phone_token = 1;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneTokenBytes() {
@@ -179,7 +184,7 @@ public final class ApiPhoneConfirmTokenProto {
      *当前站点地址demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_address = 2;</code>
+     * <code>string site_address = 2;</code>
      */
     public java.lang.String getSiteAddress() {
       java.lang.Object ref = siteAddress_;
@@ -198,7 +203,7 @@ public final class ApiPhoneConfirmTokenProto {
      *当前站点地址demo.akaxin.com:2021
      * </pre>
      *
-     * <code>optional string site_address = 2;</code>
+     * <code>string site_address = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSiteAddressBytes() {
@@ -232,6 +237,7 @@ public final class ApiPhoneConfirmTokenProto {
       if (!getSiteAddressBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, siteAddress_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -245,11 +251,11 @@ public final class ApiPhoneConfirmTokenProto {
       if (!getSiteAddressBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, siteAddress_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -265,6 +271,7 @@ public final class ApiPhoneConfirmTokenProto {
           .equals(other.getPhoneToken());
       result = result && getSiteAddress()
           .equals(other.getSiteAddress());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -274,7 +281,7 @@ public final class ApiPhoneConfirmTokenProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PHONE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPhoneToken().hashCode();
       hash = (37 * hash) + SITE_ADDRESS_FIELD_NUMBER;
@@ -284,6 +291,17 @@ public final class ApiPhoneConfirmTokenProto {
       return hash;
     }
 
+    public static com.akaxin.proto.platform.ApiPhoneConfirmTokenProto.ApiPhoneConfirmTokenRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.platform.ApiPhoneConfirmTokenProto.ApiPhoneConfirmTokenRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.platform.ApiPhoneConfirmTokenProto.ApiPhoneConfirmTokenRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -434,7 +452,7 @@ public final class ApiPhoneConfirmTokenProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -447,12 +465,12 @@ public final class ApiPhoneConfirmTokenProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -474,6 +492,7 @@ public final class ApiPhoneConfirmTokenProto {
           siteAddress_ = other.siteAddress_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -506,7 +525,7 @@ public final class ApiPhoneConfirmTokenProto {
        *平台允许站点获取手机号的token
        * </pre>
        *
-       * <code>optional string phone_token = 1;</code>
+       * <code>string phone_token = 1;</code>
        */
       public java.lang.String getPhoneToken() {
         java.lang.Object ref = phoneToken_;
@@ -525,7 +544,7 @@ public final class ApiPhoneConfirmTokenProto {
        *平台允许站点获取手机号的token
        * </pre>
        *
-       * <code>optional string phone_token = 1;</code>
+       * <code>string phone_token = 1;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneTokenBytes() {
@@ -545,7 +564,7 @@ public final class ApiPhoneConfirmTokenProto {
        *平台允许站点获取手机号的token
        * </pre>
        *
-       * <code>optional string phone_token = 1;</code>
+       * <code>string phone_token = 1;</code>
        */
       public Builder setPhoneToken(
           java.lang.String value) {
@@ -562,7 +581,7 @@ public final class ApiPhoneConfirmTokenProto {
        *平台允许站点获取手机号的token
        * </pre>
        *
-       * <code>optional string phone_token = 1;</code>
+       * <code>string phone_token = 1;</code>
        */
       public Builder clearPhoneToken() {
         
@@ -575,7 +594,7 @@ public final class ApiPhoneConfirmTokenProto {
        *平台允许站点获取手机号的token
        * </pre>
        *
-       * <code>optional string phone_token = 1;</code>
+       * <code>string phone_token = 1;</code>
        */
       public Builder setPhoneTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -595,7 +614,7 @@ public final class ApiPhoneConfirmTokenProto {
        *当前站点地址demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_address = 2;</code>
+       * <code>string site_address = 2;</code>
        */
       public java.lang.String getSiteAddress() {
         java.lang.Object ref = siteAddress_;
@@ -614,7 +633,7 @@ public final class ApiPhoneConfirmTokenProto {
        *当前站点地址demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_address = 2;</code>
+       * <code>string site_address = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSiteAddressBytes() {
@@ -634,7 +653,7 @@ public final class ApiPhoneConfirmTokenProto {
        *当前站点地址demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_address = 2;</code>
+       * <code>string site_address = 2;</code>
        */
       public Builder setSiteAddress(
           java.lang.String value) {
@@ -651,7 +670,7 @@ public final class ApiPhoneConfirmTokenProto {
        *当前站点地址demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_address = 2;</code>
+       * <code>string site_address = 2;</code>
        */
       public Builder clearSiteAddress() {
         
@@ -664,7 +683,7 @@ public final class ApiPhoneConfirmTokenProto {
        *当前站点地址demo.akaxin.com:2021
        * </pre>
        *
-       * <code>optional string site_address = 2;</code>
+       * <code>string site_address = 2;</code>
        */
       public Builder setSiteAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -679,12 +698,12 @@ public final class ApiPhoneConfirmTokenProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -735,7 +754,7 @@ public final class ApiPhoneConfirmTokenProto {
      *手机号码
      * </pre>
      *
-     * <code>optional string phone_id = 1;</code>
+     * <code>string phone_id = 1;</code>
      */
     java.lang.String getPhoneId();
     /**
@@ -743,7 +762,7 @@ public final class ApiPhoneConfirmTokenProto {
      *手机号码
      * </pre>
      *
-     * <code>optional string phone_id = 1;</code>
+     * <code>string phone_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getPhoneIdBytes();
@@ -753,7 +772,7 @@ public final class ApiPhoneConfirmTokenProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 2;</code>
+     * <code>string country_code = 2;</code>
      */
     java.lang.String getCountryCode();
     /**
@@ -761,7 +780,7 @@ public final class ApiPhoneConfirmTokenProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 2;</code>
+     * <code>string country_code = 2;</code>
      */
     com.google.protobuf.ByteString
         getCountryCodeBytes();
@@ -771,7 +790,7 @@ public final class ApiPhoneConfirmTokenProto {
      *用户公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -779,7 +798,7 @@ public final class ApiPhoneConfirmTokenProto {
      *用户公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -791,6 +810,7 @@ public final class ApiPhoneConfirmTokenProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:platform.ApiPhoneConfirmTokenResponse)
       ApiPhoneConfirmTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPhoneConfirmTokenResponse.newBuilder() to construct.
     private ApiPhoneConfirmTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -804,7 +824,7 @@ public final class ApiPhoneConfirmTokenProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPhoneConfirmTokenResponse(
         com.google.protobuf.CodedInputStream input,
@@ -812,6 +832,8 @@ public final class ApiPhoneConfirmTokenProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -821,7 +843,8 @@ public final class ApiPhoneConfirmTokenProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -852,6 +875,7 @@ public final class ApiPhoneConfirmTokenProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -874,7 +898,7 @@ public final class ApiPhoneConfirmTokenProto {
      *手机号码
      * </pre>
      *
-     * <code>optional string phone_id = 1;</code>
+     * <code>string phone_id = 1;</code>
      */
     public java.lang.String getPhoneId() {
       java.lang.Object ref = phoneId_;
@@ -893,7 +917,7 @@ public final class ApiPhoneConfirmTokenProto {
      *手机号码
      * </pre>
      *
-     * <code>optional string phone_id = 1;</code>
+     * <code>string phone_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneIdBytes() {
@@ -916,7 +940,7 @@ public final class ApiPhoneConfirmTokenProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 2;</code>
+     * <code>string country_code = 2;</code>
      */
     public java.lang.String getCountryCode() {
       java.lang.Object ref = countryCode_;
@@ -935,7 +959,7 @@ public final class ApiPhoneConfirmTokenProto {
      *+86
      * </pre>
      *
-     * <code>optional string country_code = 2;</code>
+     * <code>string country_code = 2;</code>
      */
     public com.google.protobuf.ByteString
         getCountryCodeBytes() {
@@ -958,7 +982,7 @@ public final class ApiPhoneConfirmTokenProto {
      *用户公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -977,7 +1001,7 @@ public final class ApiPhoneConfirmTokenProto {
      *用户公钥
      * </pre>
      *
-     * <code>optional string user_id_pubk = 3;</code>
+     * <code>string user_id_pubk = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -1014,6 +1038,7 @@ public final class ApiPhoneConfirmTokenProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userIdPubk_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1030,11 +1055,11 @@ public final class ApiPhoneConfirmTokenProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userIdPubk_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1052,6 +1077,7 @@ public final class ApiPhoneConfirmTokenProto {
           .equals(other.getCountryCode());
       result = result && getUserIdPubk()
           .equals(other.getUserIdPubk());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1061,7 +1087,7 @@ public final class ApiPhoneConfirmTokenProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PHONE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPhoneId().hashCode();
       hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
@@ -1073,6 +1099,17 @@ public final class ApiPhoneConfirmTokenProto {
       return hash;
     }
 
+    public static com.akaxin.proto.platform.ApiPhoneConfirmTokenProto.ApiPhoneConfirmTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.platform.ApiPhoneConfirmTokenProto.ApiPhoneConfirmTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.platform.ApiPhoneConfirmTokenProto.ApiPhoneConfirmTokenResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1226,7 +1263,7 @@ public final class ApiPhoneConfirmTokenProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1239,12 +1276,12 @@ public final class ApiPhoneConfirmTokenProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1270,6 +1307,7 @@ public final class ApiPhoneConfirmTokenProto {
           userIdPubk_ = other.userIdPubk_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1302,7 +1340,7 @@ public final class ApiPhoneConfirmTokenProto {
        *手机号码
        * </pre>
        *
-       * <code>optional string phone_id = 1;</code>
+       * <code>string phone_id = 1;</code>
        */
       public java.lang.String getPhoneId() {
         java.lang.Object ref = phoneId_;
@@ -1321,7 +1359,7 @@ public final class ApiPhoneConfirmTokenProto {
        *手机号码
        * </pre>
        *
-       * <code>optional string phone_id = 1;</code>
+       * <code>string phone_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneIdBytes() {
@@ -1341,7 +1379,7 @@ public final class ApiPhoneConfirmTokenProto {
        *手机号码
        * </pre>
        *
-       * <code>optional string phone_id = 1;</code>
+       * <code>string phone_id = 1;</code>
        */
       public Builder setPhoneId(
           java.lang.String value) {
@@ -1358,7 +1396,7 @@ public final class ApiPhoneConfirmTokenProto {
        *手机号码
        * </pre>
        *
-       * <code>optional string phone_id = 1;</code>
+       * <code>string phone_id = 1;</code>
        */
       public Builder clearPhoneId() {
         
@@ -1371,7 +1409,7 @@ public final class ApiPhoneConfirmTokenProto {
        *手机号码
        * </pre>
        *
-       * <code>optional string phone_id = 1;</code>
+       * <code>string phone_id = 1;</code>
        */
       public Builder setPhoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1391,7 +1429,7 @@ public final class ApiPhoneConfirmTokenProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 2;</code>
+       * <code>string country_code = 2;</code>
        */
       public java.lang.String getCountryCode() {
         java.lang.Object ref = countryCode_;
@@ -1410,7 +1448,7 @@ public final class ApiPhoneConfirmTokenProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 2;</code>
+       * <code>string country_code = 2;</code>
        */
       public com.google.protobuf.ByteString
           getCountryCodeBytes() {
@@ -1430,7 +1468,7 @@ public final class ApiPhoneConfirmTokenProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 2;</code>
+       * <code>string country_code = 2;</code>
        */
       public Builder setCountryCode(
           java.lang.String value) {
@@ -1447,7 +1485,7 @@ public final class ApiPhoneConfirmTokenProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 2;</code>
+       * <code>string country_code = 2;</code>
        */
       public Builder clearCountryCode() {
         
@@ -1460,7 +1498,7 @@ public final class ApiPhoneConfirmTokenProto {
        *+86
        * </pre>
        *
-       * <code>optional string country_code = 2;</code>
+       * <code>string country_code = 2;</code>
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1480,7 +1518,7 @@ public final class ApiPhoneConfirmTokenProto {
        *用户公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -1499,7 +1537,7 @@ public final class ApiPhoneConfirmTokenProto {
        *用户公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -1519,7 +1557,7 @@ public final class ApiPhoneConfirmTokenProto {
        *用户公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -1536,7 +1574,7 @@ public final class ApiPhoneConfirmTokenProto {
        *用户公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -1549,7 +1587,7 @@ public final class ApiPhoneConfirmTokenProto {
        *用户公钥
        * </pre>
        *
-       * <code>optional string user_id_pubk = 3;</code>
+       * <code>string user_id_pubk = 3;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -1564,12 +1602,12 @@ public final class ApiPhoneConfirmTokenProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

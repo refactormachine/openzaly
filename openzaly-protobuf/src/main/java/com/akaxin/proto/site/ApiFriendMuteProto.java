@@ -23,7 +23,7 @@ public final class ApiFriendMuteProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     java.lang.String getSiteFriendId();
     /**
@@ -31,7 +31,7 @@ public final class ApiFriendMuteProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteFriendIdBytes();
@@ -43,6 +43,7 @@ public final class ApiFriendMuteProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFriendMuteRequest)
       ApiFriendMuteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFriendMuteRequest.newBuilder() to construct.
     private ApiFriendMuteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiFriendMuteProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFriendMuteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiFriendMuteProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiFriendMuteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiFriendMuteProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     public java.lang.String getSiteFriendId() {
       java.lang.Object ref = siteFriendId_;
@@ -131,7 +139,7 @@ public final class ApiFriendMuteProto {
      *好友用户ID
      * </pre>
      *
-     * <code>optional string site_friend_id = 1;</code>
+     * <code>string site_friend_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteFriendIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiFriendMuteProto {
       if (!getSiteFriendIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteFriendId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiFriendMuteProto {
       if (!getSiteFriendIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteFriendId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiFriendMuteProto {
       boolean result = true;
       result = result && getSiteFriendId()
           .equals(other.getSiteFriendId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiFriendMuteProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_FRIEND_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteFriendId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiFriendMuteProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFriendMuteProto.ApiFriendMuteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFriendMuteProto.ApiFriendMuteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFriendMuteProto.ApiFriendMuteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiFriendMuteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiFriendMuteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiFriendMuteProto {
           siteFriendId_ = other.siteFriendId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiFriendMuteProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public java.lang.String getSiteFriendId() {
         java.lang.Object ref = siteFriendId_;
@@ -441,7 +463,7 @@ public final class ApiFriendMuteProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteFriendIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiFriendMuteProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder setSiteFriendId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiFriendMuteProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder clearSiteFriendId() {
         
@@ -491,7 +513,7 @@ public final class ApiFriendMuteProto {
        *好友用户ID
        * </pre>
        *
-       * <code>optional string site_friend_id = 1;</code>
+       * <code>string site_friend_id = 1;</code>
        */
       public Builder setSiteFriendIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiFriendMuteProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiFriendMuteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFriendMuteRequest(input, extensionRegistry);
+        return new ApiFriendMuteRequest(input, extensionRegistry);
       }
     };
 
@@ -562,7 +584,7 @@ public final class ApiFriendMuteProto {
      *消息免打扰 mute notifications
      * </pre>
      *
-     * <code>optional bool mute = 1;</code>
+     * <code>bool mute = 1;</code>
      */
     boolean getMute();
   }
@@ -573,6 +595,7 @@ public final class ApiFriendMuteProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiFriendMuteResponse)
       ApiFriendMuteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiFriendMuteResponse.newBuilder() to construct.
     private ApiFriendMuteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -584,14 +607,19 @@ public final class ApiFriendMuteProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiFriendMuteResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -601,7 +629,8 @@ public final class ApiFriendMuteProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -619,6 +648,7 @@ public final class ApiFriendMuteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -641,7 +671,7 @@ public final class ApiFriendMuteProto {
      *消息免打扰 mute notifications
      * </pre>
      *
-     * <code>optional bool mute = 1;</code>
+     * <code>bool mute = 1;</code>
      */
     public boolean getMute() {
       return mute_;
@@ -662,6 +692,7 @@ public final class ApiFriendMuteProto {
       if (mute_ != false) {
         output.writeBool(1, mute_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -673,11 +704,11 @@ public final class ApiFriendMuteProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, mute_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -691,6 +722,7 @@ public final class ApiFriendMuteProto {
       boolean result = true;
       result = result && (getMute()
           == other.getMute());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -700,7 +732,7 @@ public final class ApiFriendMuteProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MUTE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getMute());
@@ -709,6 +741,17 @@ public final class ApiFriendMuteProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiFriendMuteProto.ApiFriendMuteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiFriendMuteProto.ApiFriendMuteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiFriendMuteProto.ApiFriendMuteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -856,7 +899,7 @@ public final class ApiFriendMuteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -869,12 +912,12 @@ public final class ApiFriendMuteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -891,6 +934,7 @@ public final class ApiFriendMuteProto {
         if (other.getMute() != false) {
           setMute(other.getMute());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -923,7 +967,7 @@ public final class ApiFriendMuteProto {
        *消息免打扰 mute notifications
        * </pre>
        *
-       * <code>optional bool mute = 1;</code>
+       * <code>bool mute = 1;</code>
        */
       public boolean getMute() {
         return mute_;
@@ -933,7 +977,7 @@ public final class ApiFriendMuteProto {
        *消息免打扰 mute notifications
        * </pre>
        *
-       * <code>optional bool mute = 1;</code>
+       * <code>bool mute = 1;</code>
        */
       public Builder setMute(boolean value) {
         
@@ -946,7 +990,7 @@ public final class ApiFriendMuteProto {
        *消息免打扰 mute notifications
        * </pre>
        *
-       * <code>optional bool mute = 1;</code>
+       * <code>bool mute = 1;</code>
        */
       public Builder clearMute() {
         
@@ -956,12 +1000,12 @@ public final class ApiFriendMuteProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -984,7 +1028,7 @@ public final class ApiFriendMuteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiFriendMuteResponse(input, extensionRegistry);
+        return new ApiFriendMuteResponse(input, extensionRegistry);
       }
     };
 

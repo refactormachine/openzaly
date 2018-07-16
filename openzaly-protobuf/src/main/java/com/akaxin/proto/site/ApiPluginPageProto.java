@@ -23,7 +23,7 @@ public final class ApiPluginPageProto {
      *插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     java.lang.String getPluginId();
     /**
@@ -31,7 +31,7 @@ public final class ApiPluginPageProto {
      *插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getPluginIdBytes();
@@ -41,7 +41,7 @@ public final class ApiPluginPageProto {
      *需要访问的界面
      * </pre>
      *
-     * <code>optional string page = 2;</code>
+     * <code>string page = 2;</code>
      */
     java.lang.String getPage();
     /**
@@ -49,7 +49,7 @@ public final class ApiPluginPageProto {
      *需要访问的界面
      * </pre>
      *
-     * <code>optional string page = 2;</code>
+     * <code>string page = 2;</code>
      */
     com.google.protobuf.ByteString
         getPageBytes();
@@ -59,7 +59,7 @@ public final class ApiPluginPageProto {
      *调用接口所需参数
      * </pre>
      *
-     * <code>optional string params = 3;</code>
+     * <code>string params = 3;</code>
      */
     java.lang.String getParams();
     /**
@@ -67,7 +67,7 @@ public final class ApiPluginPageProto {
      *调用接口所需参数
      * </pre>
      *
-     * <code>optional string params = 3;</code>
+     * <code>string params = 3;</code>
      */
     com.google.protobuf.ByteString
         getParamsBytes();
@@ -79,6 +79,7 @@ public final class ApiPluginPageProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPluginPageRequest)
       ApiPluginPageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPluginPageRequest.newBuilder() to construct.
     private ApiPluginPageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -92,14 +93,19 @@ public final class ApiPluginPageProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPluginPageRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -109,7 +115,8 @@ public final class ApiPluginPageProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -140,6 +147,7 @@ public final class ApiPluginPageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -162,7 +170,7 @@ public final class ApiPluginPageProto {
      *插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     public java.lang.String getPluginId() {
       java.lang.Object ref = pluginId_;
@@ -181,7 +189,7 @@ public final class ApiPluginPageProto {
      *插件ID
      * </pre>
      *
-     * <code>optional string plugin_id = 1;</code>
+     * <code>string plugin_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getPluginIdBytes() {
@@ -204,7 +212,7 @@ public final class ApiPluginPageProto {
      *需要访问的界面
      * </pre>
      *
-     * <code>optional string page = 2;</code>
+     * <code>string page = 2;</code>
      */
     public java.lang.String getPage() {
       java.lang.Object ref = page_;
@@ -223,7 +231,7 @@ public final class ApiPluginPageProto {
      *需要访问的界面
      * </pre>
      *
-     * <code>optional string page = 2;</code>
+     * <code>string page = 2;</code>
      */
     public com.google.protobuf.ByteString
         getPageBytes() {
@@ -246,7 +254,7 @@ public final class ApiPluginPageProto {
      *调用接口所需参数
      * </pre>
      *
-     * <code>optional string params = 3;</code>
+     * <code>string params = 3;</code>
      */
     public java.lang.String getParams() {
       java.lang.Object ref = params_;
@@ -265,7 +273,7 @@ public final class ApiPluginPageProto {
      *调用接口所需参数
      * </pre>
      *
-     * <code>optional string params = 3;</code>
+     * <code>string params = 3;</code>
      */
     public com.google.protobuf.ByteString
         getParamsBytes() {
@@ -302,6 +310,7 @@ public final class ApiPluginPageProto {
       if (!getParamsBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, params_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -318,11 +327,11 @@ public final class ApiPluginPageProto {
       if (!getParamsBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, params_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -340,6 +349,7 @@ public final class ApiPluginPageProto {
           .equals(other.getPage());
       result = result && getParams()
           .equals(other.getParams());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -349,7 +359,7 @@ public final class ApiPluginPageProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PLUGIN_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPluginId().hashCode();
       hash = (37 * hash) + PAGE_FIELD_NUMBER;
@@ -361,6 +371,17 @@ public final class ApiPluginPageProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPluginPageProto.ApiPluginPageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPluginPageProto.ApiPluginPageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPluginPageProto.ApiPluginPageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -514,7 +535,7 @@ public final class ApiPluginPageProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -527,12 +548,12 @@ public final class ApiPluginPageProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -558,6 +579,7 @@ public final class ApiPluginPageProto {
           params_ = other.params_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -590,7 +612,7 @@ public final class ApiPluginPageProto {
        *插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public java.lang.String getPluginId() {
         java.lang.Object ref = pluginId_;
@@ -609,7 +631,7 @@ public final class ApiPluginPageProto {
        *插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getPluginIdBytes() {
@@ -629,7 +651,7 @@ public final class ApiPluginPageProto {
        *插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public Builder setPluginId(
           java.lang.String value) {
@@ -646,7 +668,7 @@ public final class ApiPluginPageProto {
        *插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public Builder clearPluginId() {
         
@@ -659,7 +681,7 @@ public final class ApiPluginPageProto {
        *插件ID
        * </pre>
        *
-       * <code>optional string plugin_id = 1;</code>
+       * <code>string plugin_id = 1;</code>
        */
       public Builder setPluginIdBytes(
           com.google.protobuf.ByteString value) {
@@ -679,7 +701,7 @@ public final class ApiPluginPageProto {
        *需要访问的界面
        * </pre>
        *
-       * <code>optional string page = 2;</code>
+       * <code>string page = 2;</code>
        */
       public java.lang.String getPage() {
         java.lang.Object ref = page_;
@@ -698,7 +720,7 @@ public final class ApiPluginPageProto {
        *需要访问的界面
        * </pre>
        *
-       * <code>optional string page = 2;</code>
+       * <code>string page = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPageBytes() {
@@ -718,7 +740,7 @@ public final class ApiPluginPageProto {
        *需要访问的界面
        * </pre>
        *
-       * <code>optional string page = 2;</code>
+       * <code>string page = 2;</code>
        */
       public Builder setPage(
           java.lang.String value) {
@@ -735,7 +757,7 @@ public final class ApiPluginPageProto {
        *需要访问的界面
        * </pre>
        *
-       * <code>optional string page = 2;</code>
+       * <code>string page = 2;</code>
        */
       public Builder clearPage() {
         
@@ -748,7 +770,7 @@ public final class ApiPluginPageProto {
        *需要访问的界面
        * </pre>
        *
-       * <code>optional string page = 2;</code>
+       * <code>string page = 2;</code>
        */
       public Builder setPageBytes(
           com.google.protobuf.ByteString value) {
@@ -768,7 +790,7 @@ public final class ApiPluginPageProto {
        *调用接口所需参数
        * </pre>
        *
-       * <code>optional string params = 3;</code>
+       * <code>string params = 3;</code>
        */
       public java.lang.String getParams() {
         java.lang.Object ref = params_;
@@ -787,7 +809,7 @@ public final class ApiPluginPageProto {
        *调用接口所需参数
        * </pre>
        *
-       * <code>optional string params = 3;</code>
+       * <code>string params = 3;</code>
        */
       public com.google.protobuf.ByteString
           getParamsBytes() {
@@ -807,7 +829,7 @@ public final class ApiPluginPageProto {
        *调用接口所需参数
        * </pre>
        *
-       * <code>optional string params = 3;</code>
+       * <code>string params = 3;</code>
        */
       public Builder setParams(
           java.lang.String value) {
@@ -824,7 +846,7 @@ public final class ApiPluginPageProto {
        *调用接口所需参数
        * </pre>
        *
-       * <code>optional string params = 3;</code>
+       * <code>string params = 3;</code>
        */
       public Builder clearParams() {
         
@@ -837,7 +859,7 @@ public final class ApiPluginPageProto {
        *调用接口所需参数
        * </pre>
        *
-       * <code>optional string params = 3;</code>
+       * <code>string params = 3;</code>
        */
       public Builder setParamsBytes(
           com.google.protobuf.ByteString value) {
@@ -852,12 +874,12 @@ public final class ApiPluginPageProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -880,7 +902,7 @@ public final class ApiPluginPageProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPluginPageRequest(input, extensionRegistry);
+        return new ApiPluginPageRequest(input, extensionRegistry);
       }
     };
 
@@ -908,7 +930,7 @@ public final class ApiPluginPageProto {
      *page对应的数据，一般是html内容
      * </pre>
      *
-     * <code>optional bytes data = 1;</code>
+     * <code>bytes data = 1;</code>
      */
     com.google.protobuf.ByteString getData();
 
@@ -973,6 +995,7 @@ public final class ApiPluginPageProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiPluginPageResponse)
       ApiPluginPageResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiPluginPageResponse.newBuilder() to construct.
     private ApiPluginPageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -984,14 +1007,19 @@ public final class ApiPluginPageProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiPluginPageResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1001,7 +1029,8 @@ public final class ApiPluginPageProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1018,9 +1047,10 @@ public final class ApiPluginPageProto {
                 mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              cookie = input.readMessage(
+              cookie__ = input.readMessage(
                   CookieDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              cookie_.getMutableMap().put(cookie.getKey(), cookie.getValue());
+              cookie_.getMutableMap().put(
+                  cookie__.getKey(), cookie__.getValue());
               break;
             }
           }
@@ -1031,6 +1061,7 @@ public final class ApiPluginPageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1065,7 +1096,7 @@ public final class ApiPluginPageProto {
      *page对应的数据，一般是html内容
      * </pre>
      *
-     * <code>optional bytes data = 1;</code>
+     * <code>bytes data = 1;</code>
      */
     public com.google.protobuf.ByteString getData() {
       return data_;
@@ -1178,15 +1209,13 @@ public final class ApiPluginPageProto {
       if (!data_.isEmpty()) {
         output.writeBytes(1, data_);
       }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetCookie().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        cookie = CookieDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        output.writeMessage(2, cookie);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetCookie(),
+          CookieDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1201,18 +1230,18 @@ public final class ApiPluginPageProto {
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetCookie().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        cookie = CookieDefaultEntryHolder.defaultEntry.newBuilderForType()
+        cookie__ = CookieDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, cookie);
+            .computeMessageSize(2, cookie__);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1228,6 +1257,7 @@ public final class ApiPluginPageProto {
           .equals(other.getData());
       result = result && internalGetCookie().equals(
           other.internalGetCookie());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1237,7 +1267,7 @@ public final class ApiPluginPageProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATA_FIELD_NUMBER;
       hash = (53 * hash) + getData().hashCode();
       if (!internalGetCookie().getMap().isEmpty()) {
@@ -1249,6 +1279,17 @@ public final class ApiPluginPageProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiPluginPageProto.ApiPluginPageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiPluginPageProto.ApiPluginPageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiPluginPageProto.ApiPluginPageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1424,7 +1465,7 @@ public final class ApiPluginPageProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1437,12 +1478,12 @@ public final class ApiPluginPageProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1461,6 +1502,7 @@ public final class ApiPluginPageProto {
         }
         internalGetMutableCookie().mergeFrom(
             other.internalGetCookie());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1494,7 +1536,7 @@ public final class ApiPluginPageProto {
        *page对应的数据，一般是html内容
        * </pre>
        *
-       * <code>optional bytes data = 1;</code>
+       * <code>bytes data = 1;</code>
        */
       public com.google.protobuf.ByteString getData() {
         return data_;
@@ -1504,7 +1546,7 @@ public final class ApiPluginPageProto {
        *page对应的数据，一般是html内容
        * </pre>
        *
-       * <code>optional bytes data = 1;</code>
+       * <code>bytes data = 1;</code>
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -1520,7 +1562,7 @@ public final class ApiPluginPageProto {
        *page对应的数据，一般是html内容
        * </pre>
        *
-       * <code>optional bytes data = 1;</code>
+       * <code>bytes data = 1;</code>
        */
       public Builder clearData() {
         
@@ -1622,7 +1664,8 @@ public final class ApiPluginPageProto {
       }
 
       public Builder clearCookie() {
-        getMutableCookie().clear();
+        internalGetMutableCookie().getMutableMap()
+            .clear();
         return this;
       }
       /**
@@ -1636,7 +1679,8 @@ public final class ApiPluginPageProto {
       public Builder removeCookie(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        getMutableCookie().remove(key);
+        internalGetMutableCookie().getMutableMap()
+            .remove(key);
         return this;
       }
       /**
@@ -1659,7 +1703,8 @@ public final class ApiPluginPageProto {
           java.lang.String value) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         if (value == null) { throw new java.lang.NullPointerException(); }
-        getMutableCookie().put(key, value);
+        internalGetMutableCookie().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
@@ -1672,17 +1717,18 @@ public final class ApiPluginPageProto {
 
       public Builder putAllCookie(
           java.util.Map<java.lang.String, java.lang.String> values) {
-        getMutableCookie().putAll(values);
+        internalGetMutableCookie().getMutableMap()
+            .putAll(values);
         return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1705,7 +1751,7 @@ public final class ApiPluginPageProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiPluginPageResponse(input, extensionRegistry);
+        return new ApiPluginPageResponse(input, extensionRegistry);
       }
     };
 

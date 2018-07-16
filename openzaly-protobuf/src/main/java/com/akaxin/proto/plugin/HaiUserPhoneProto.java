@@ -23,7 +23,7 @@ public final class HaiUserPhoneProto {
      *用户的站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
@@ -31,7 +31,7 @@ public final class HaiUserPhoneProto {
      *用户的站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -58,6 +58,7 @@ public final class HaiUserPhoneProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserPhoneRequest)
       HaiUserPhoneRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserPhoneRequest.newBuilder() to construct.
     private HaiUserPhoneRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -69,7 +70,7 @@ public final class HaiUserPhoneProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserPhoneRequest(
         com.google.protobuf.CodedInputStream input,
@@ -77,6 +78,8 @@ public final class HaiUserPhoneProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -86,7 +89,8 @@ public final class HaiUserPhoneProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -105,6 +109,7 @@ public final class HaiUserPhoneProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -127,7 +132,7 @@ public final class HaiUserPhoneProto {
      *用户的站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -146,7 +151,7 @@ public final class HaiUserPhoneProto {
      *用户的站点ID
      * </pre>
      *
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -177,6 +182,7 @@ public final class HaiUserPhoneProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteUserId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -187,11 +193,11 @@ public final class HaiUserPhoneProto {
       if (!getSiteUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteUserId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -205,6 +211,7 @@ public final class HaiUserPhoneProto {
       boolean result = true;
       result = result && getSiteUserId()
           .equals(other.getSiteUserId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -214,7 +221,7 @@ public final class HaiUserPhoneProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -222,6 +229,17 @@ public final class HaiUserPhoneProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserPhoneProto.HaiUserPhoneRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserPhoneProto.HaiUserPhoneRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserPhoneProto.HaiUserPhoneRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -384,7 +402,7 @@ public final class HaiUserPhoneProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -397,12 +415,12 @@ public final class HaiUserPhoneProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -420,6 +438,7 @@ public final class HaiUserPhoneProto {
           siteUserId_ = other.siteUserId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -452,7 +471,7 @@ public final class HaiUserPhoneProto {
        *用户的站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -471,7 +490,7 @@ public final class HaiUserPhoneProto {
        *用户的站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -491,7 +510,7 @@ public final class HaiUserPhoneProto {
        *用户的站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -508,7 +527,7 @@ public final class HaiUserPhoneProto {
        *用户的站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -521,7 +540,7 @@ public final class HaiUserPhoneProto {
        *用户的站点ID
        * </pre>
        *
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -536,12 +555,12 @@ public final class HaiUserPhoneProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -592,7 +611,7 @@ public final class HaiUserPhoneProto {
      *国际区号+86
      * </pre>
      *
-     * <code>optional string country_code = 1;</code>
+     * <code>string country_code = 1;</code>
      */
     java.lang.String getCountryCode();
     /**
@@ -600,7 +619,7 @@ public final class HaiUserPhoneProto {
      *国际区号+86
      * </pre>
      *
-     * <code>optional string country_code = 1;</code>
+     * <code>string country_code = 1;</code>
      */
     com.google.protobuf.ByteString
         getCountryCodeBytes();
@@ -610,7 +629,7 @@ public final class HaiUserPhoneProto {
      *手机号
      * </pre>
      *
-     * <code>optional string phone_id = 2;</code>
+     * <code>string phone_id = 2;</code>
      */
     java.lang.String getPhoneId();
     /**
@@ -618,7 +637,7 @@ public final class HaiUserPhoneProto {
      *手机号
      * </pre>
      *
-     * <code>optional string phone_id = 2;</code>
+     * <code>string phone_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getPhoneIdBytes();
@@ -630,6 +649,7 @@ public final class HaiUserPhoneProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiUserPhoneResponse)
       HaiUserPhoneResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiUserPhoneResponse.newBuilder() to construct.
     private HaiUserPhoneResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -642,7 +662,7 @@ public final class HaiUserPhoneProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiUserPhoneResponse(
         com.google.protobuf.CodedInputStream input,
@@ -650,6 +670,8 @@ public final class HaiUserPhoneProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -659,7 +681,8 @@ public final class HaiUserPhoneProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -684,6 +707,7 @@ public final class HaiUserPhoneProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -706,7 +730,7 @@ public final class HaiUserPhoneProto {
      *国际区号+86
      * </pre>
      *
-     * <code>optional string country_code = 1;</code>
+     * <code>string country_code = 1;</code>
      */
     public java.lang.String getCountryCode() {
       java.lang.Object ref = countryCode_;
@@ -725,7 +749,7 @@ public final class HaiUserPhoneProto {
      *国际区号+86
      * </pre>
      *
-     * <code>optional string country_code = 1;</code>
+     * <code>string country_code = 1;</code>
      */
     public com.google.protobuf.ByteString
         getCountryCodeBytes() {
@@ -748,7 +772,7 @@ public final class HaiUserPhoneProto {
      *手机号
      * </pre>
      *
-     * <code>optional string phone_id = 2;</code>
+     * <code>string phone_id = 2;</code>
      */
     public java.lang.String getPhoneId() {
       java.lang.Object ref = phoneId_;
@@ -767,7 +791,7 @@ public final class HaiUserPhoneProto {
      *手机号
      * </pre>
      *
-     * <code>optional string phone_id = 2;</code>
+     * <code>string phone_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getPhoneIdBytes() {
@@ -801,6 +825,7 @@ public final class HaiUserPhoneProto {
       if (!getPhoneIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, phoneId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -814,11 +839,11 @@ public final class HaiUserPhoneProto {
       if (!getPhoneIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, phoneId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -834,6 +859,7 @@ public final class HaiUserPhoneProto {
           .equals(other.getCountryCode());
       result = result && getPhoneId()
           .equals(other.getPhoneId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -843,7 +869,7 @@ public final class HaiUserPhoneProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getCountryCode().hashCode();
       hash = (37 * hash) + PHONE_ID_FIELD_NUMBER;
@@ -853,6 +879,17 @@ public final class HaiUserPhoneProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiUserPhoneProto.HaiUserPhoneResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiUserPhoneProto.HaiUserPhoneResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiUserPhoneProto.HaiUserPhoneResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1003,7 +1040,7 @@ public final class HaiUserPhoneProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1016,12 +1053,12 @@ public final class HaiUserPhoneProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1043,6 +1080,7 @@ public final class HaiUserPhoneProto {
           phoneId_ = other.phoneId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1075,7 +1113,7 @@ public final class HaiUserPhoneProto {
        *国际区号+86
        * </pre>
        *
-       * <code>optional string country_code = 1;</code>
+       * <code>string country_code = 1;</code>
        */
       public java.lang.String getCountryCode() {
         java.lang.Object ref = countryCode_;
@@ -1094,7 +1132,7 @@ public final class HaiUserPhoneProto {
        *国际区号+86
        * </pre>
        *
-       * <code>optional string country_code = 1;</code>
+       * <code>string country_code = 1;</code>
        */
       public com.google.protobuf.ByteString
           getCountryCodeBytes() {
@@ -1114,7 +1152,7 @@ public final class HaiUserPhoneProto {
        *国际区号+86
        * </pre>
        *
-       * <code>optional string country_code = 1;</code>
+       * <code>string country_code = 1;</code>
        */
       public Builder setCountryCode(
           java.lang.String value) {
@@ -1131,7 +1169,7 @@ public final class HaiUserPhoneProto {
        *国际区号+86
        * </pre>
        *
-       * <code>optional string country_code = 1;</code>
+       * <code>string country_code = 1;</code>
        */
       public Builder clearCountryCode() {
         
@@ -1144,7 +1182,7 @@ public final class HaiUserPhoneProto {
        *国际区号+86
        * </pre>
        *
-       * <code>optional string country_code = 1;</code>
+       * <code>string country_code = 1;</code>
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -1164,7 +1202,7 @@ public final class HaiUserPhoneProto {
        *手机号
        * </pre>
        *
-       * <code>optional string phone_id = 2;</code>
+       * <code>string phone_id = 2;</code>
        */
       public java.lang.String getPhoneId() {
         java.lang.Object ref = phoneId_;
@@ -1183,7 +1221,7 @@ public final class HaiUserPhoneProto {
        *手机号
        * </pre>
        *
-       * <code>optional string phone_id = 2;</code>
+       * <code>string phone_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPhoneIdBytes() {
@@ -1203,7 +1241,7 @@ public final class HaiUserPhoneProto {
        *手机号
        * </pre>
        *
-       * <code>optional string phone_id = 2;</code>
+       * <code>string phone_id = 2;</code>
        */
       public Builder setPhoneId(
           java.lang.String value) {
@@ -1220,7 +1258,7 @@ public final class HaiUserPhoneProto {
        *手机号
        * </pre>
        *
-       * <code>optional string phone_id = 2;</code>
+       * <code>string phone_id = 2;</code>
        */
       public Builder clearPhoneId() {
         
@@ -1233,7 +1271,7 @@ public final class HaiUserPhoneProto {
        *手机号
        * </pre>
        *
-       * <code>optional string phone_id = 2;</code>
+       * <code>string phone_id = 2;</code>
        */
       public Builder setPhoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1248,12 +1286,12 @@ public final class HaiUserPhoneProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

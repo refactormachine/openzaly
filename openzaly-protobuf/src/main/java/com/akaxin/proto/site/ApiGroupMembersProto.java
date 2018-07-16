@@ -23,7 +23,7 @@ public final class ApiGroupMembersProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     java.lang.String getGroupId();
     /**
@@ -31,7 +31,7 @@ public final class ApiGroupMembersProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getGroupIdBytes();
@@ -43,6 +43,7 @@ public final class ApiGroupMembersProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiGroupMembersRequest)
       ApiGroupMembersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiGroupMembersRequest.newBuilder() to construct.
     private ApiGroupMembersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiGroupMembersProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiGroupMembersRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiGroupMembersProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiGroupMembersProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiGroupMembersProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public java.lang.String getGroupId() {
       java.lang.Object ref = groupId_;
@@ -131,7 +139,7 @@ public final class ApiGroupMembersProto {
      *群组ID
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getGroupIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiGroupMembersProto {
       if (!getGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiGroupMembersProto {
       if (!getGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiGroupMembersProto {
       boolean result = true;
       result = result && getGroupId()
           .equals(other.getGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiGroupMembersProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiGroupMembersProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiGroupMembersProto.ApiGroupMembersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiGroupMembersProto.ApiGroupMembersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiGroupMembersProto.ApiGroupMembersRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiGroupMembersProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiGroupMembersProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiGroupMembersProto {
           groupId_ = other.groupId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiGroupMembersProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public java.lang.String getGroupId() {
         java.lang.Object ref = groupId_;
@@ -441,7 +463,7 @@ public final class ApiGroupMembersProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getGroupIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiGroupMembersProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder setGroupId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiGroupMembersProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder clearGroupId() {
         
@@ -491,7 +513,7 @@ public final class ApiGroupMembersProto {
        *群组ID
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder setGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiGroupMembersProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiGroupMembersProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiGroupMembersRequest(input, extensionRegistry);
+        return new ApiGroupMembersRequest(input, extensionRegistry);
       }
     };
 
@@ -608,6 +630,7 @@ public final class ApiGroupMembersProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiGroupMembersResponse)
       ApiGroupMembersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiGroupMembersResponse.newBuilder() to construct.
     private ApiGroupMembersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -619,14 +642,19 @@ public final class ApiGroupMembersProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiGroupMembersResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -636,7 +664,8 @@ public final class ApiGroupMembersProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -661,6 +690,7 @@ public final class ApiGroupMembersProto {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           list_ = java.util.Collections.unmodifiableList(list_);
         }
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -746,6 +776,7 @@ public final class ApiGroupMembersProto {
       for (int i = 0; i < list_.size(); i++) {
         output.writeMessage(1, list_.get(i));
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -757,11 +788,11 @@ public final class ApiGroupMembersProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, list_.get(i));
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -775,6 +806,7 @@ public final class ApiGroupMembersProto {
       boolean result = true;
       result = result && getListList()
           .equals(other.getListList());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -784,7 +816,7 @@ public final class ApiGroupMembersProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getListCount() > 0) {
         hash = (37 * hash) + LIST_FIELD_NUMBER;
         hash = (53 * hash) + getListList().hashCode();
@@ -794,6 +826,17 @@ public final class ApiGroupMembersProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiGroupMembersProto.ApiGroupMembersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiGroupMembersProto.ApiGroupMembersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiGroupMembersProto.ApiGroupMembersResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -955,7 +998,7 @@ public final class ApiGroupMembersProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -968,12 +1011,12 @@ public final class ApiGroupMembersProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1013,6 +1056,7 @@ public final class ApiGroupMembersProto {
             }
           }
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1353,12 +1397,12 @@ public final class ApiGroupMembersProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1381,7 +1425,7 @@ public final class ApiGroupMembersProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiGroupMembersResponse(input, extensionRegistry);
+        return new ApiGroupMembersResponse(input, extensionRegistry);
       }
     };
 

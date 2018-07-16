@@ -25,6 +25,7 @@ public final class ApiUserMuteProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiUserMuteRequest)
       ApiUserMuteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiUserMuteRequest.newBuilder() to construct.
     private ApiUserMuteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -35,13 +36,18 @@ public final class ApiUserMuteProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiUserMuteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -51,7 +57,8 @@ public final class ApiUserMuteProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -64,6 +71,7 @@ public final class ApiUserMuteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -91,6 +99,7 @@ public final class ApiUserMuteProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -98,11 +107,11 @@ public final class ApiUserMuteProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -114,6 +123,7 @@ public final class ApiUserMuteProto {
       com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest other = (com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -123,12 +133,23 @@ public final class ApiUserMuteProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -273,7 +294,7 @@ public final class ApiUserMuteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -286,12 +307,12 @@ public final class ApiUserMuteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -305,6 +326,7 @@ public final class ApiUserMuteProto {
 
       public Builder mergeFrom(com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest other) {
         if (other == com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -332,12 +354,12 @@ public final class ApiUserMuteProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -360,7 +382,7 @@ public final class ApiUserMuteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiUserMuteRequest(input, extensionRegistry);
+        return new ApiUserMuteRequest(input, extensionRegistry);
       }
     };
 
@@ -384,7 +406,7 @@ public final class ApiUserMuteProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional bool mute = 1;</code>
+     * <code>bool mute = 1;</code>
      */
     boolean getMute();
   }
@@ -395,6 +417,7 @@ public final class ApiUserMuteProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiUserMuteResponse)
       ApiUserMuteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiUserMuteResponse.newBuilder() to construct.
     private ApiUserMuteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -406,14 +429,19 @@ public final class ApiUserMuteProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiUserMuteResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -423,7 +451,8 @@ public final class ApiUserMuteProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -441,6 +470,7 @@ public final class ApiUserMuteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -459,7 +489,7 @@ public final class ApiUserMuteProto {
     public static final int MUTE_FIELD_NUMBER = 1;
     private boolean mute_;
     /**
-     * <code>optional bool mute = 1;</code>
+     * <code>bool mute = 1;</code>
      */
     public boolean getMute() {
       return mute_;
@@ -480,6 +510,7 @@ public final class ApiUserMuteProto {
       if (mute_ != false) {
         output.writeBool(1, mute_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -491,11 +522,11 @@ public final class ApiUserMuteProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, mute_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -509,6 +540,7 @@ public final class ApiUserMuteProto {
       boolean result = true;
       result = result && (getMute()
           == other.getMute());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -518,7 +550,7 @@ public final class ApiUserMuteProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MUTE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getMute());
@@ -527,6 +559,17 @@ public final class ApiUserMuteProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiUserMuteProto.ApiUserMuteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -674,7 +717,7 @@ public final class ApiUserMuteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -687,12 +730,12 @@ public final class ApiUserMuteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -709,6 +752,7 @@ public final class ApiUserMuteProto {
         if (other.getMute() != false) {
           setMute(other.getMute());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -737,13 +781,13 @@ public final class ApiUserMuteProto {
 
       private boolean mute_ ;
       /**
-       * <code>optional bool mute = 1;</code>
+       * <code>bool mute = 1;</code>
        */
       public boolean getMute() {
         return mute_;
       }
       /**
-       * <code>optional bool mute = 1;</code>
+       * <code>bool mute = 1;</code>
        */
       public Builder setMute(boolean value) {
         
@@ -752,7 +796,7 @@ public final class ApiUserMuteProto {
         return this;
       }
       /**
-       * <code>optional bool mute = 1;</code>
+       * <code>bool mute = 1;</code>
        */
       public Builder clearMute() {
         
@@ -762,12 +806,12 @@ public final class ApiUserMuteProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -790,7 +834,7 @@ public final class ApiUserMuteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiUserMuteResponse(input, extensionRegistry);
+        return new ApiUserMuteResponse(input, extensionRegistry);
       }
     };
 

@@ -47,7 +47,14 @@ public abstract class AbstractPoolManager {
 		}
 	}
 
-	public static String getDBUrlWithoutDBName(Properties pro) throws Exception {
+	/**
+	 * 初始化数据库使用
+	 * 
+	 * @param pro
+	 * @return
+	 * @throws Exception
+	 */
+	public static String getJdbcUrlWithoutDBName(Properties pro) throws Exception {
 		String host = trimToNull(pro, JdbcConst.MYSQL_HOST);
 		String port = trimToNull(pro, JdbcConst.MYSQL_PORT);
 
@@ -63,23 +70,20 @@ public abstract class AbstractPoolManager {
 		String verifyServerCertificate = trimToNull(pro, JdbcConst.MYSQL_VERIFY_SERVER_CERTIFICATE, "false");
 		String useSSL = trimToNull(pro, JdbcConst.MYSQL_USE_SSL, "true");
 
-		StringBuilder sb = new StringBuilder(url);
-		sb.append("?useUnicode=");
-		sb.append(useUnicode);
-
-		sb.append("&characterEncoding=");
-		sb.append(characterEncoding);
-
-		sb.append("&verifyServerCertificate=");
-		sb.append(verifyServerCertificate);
-
-		sb.append("&useSSL=");
-		sb.append(useSSL);
+		StringBuilder sb = buildJdbcUrlWithParameters(url, useUnicode, characterEncoding, verifyServerCertificate,
+				useSSL);
 
 		return sb.toString();
 	}
 
-	public static String getDBUrl(Properties pro) throws Exception {
+	/**
+	 * 初始化连接池主库
+	 * 
+	 * @param pro
+	 * @return
+	 * @throws Exception
+	 */
+	public static String getJdbcUrl(Properties pro) throws Exception {
 		String host = trimToNull(pro, JdbcConst.MYSQL_HOST);
 		String port = trimToNull(pro, JdbcConst.MYSQL_PORT);
 		String dbName = trimToNull(pro, JdbcConst.MYSQL_DB);
@@ -96,23 +100,20 @@ public abstract class AbstractPoolManager {
 		String verifyServerCertificate = trimToNull(pro, JdbcConst.MYSQL_VERIFY_SERVER_CERTIFICATE, "false");
 		String useSSL = trimToNull(pro, JdbcConst.MYSQL_USE_SSL, "true");
 
-		StringBuilder sb = new StringBuilder(url);
-		sb.append("?useUnicode=");
-		sb.append(useUnicode);
-
-		sb.append("&characterEncoding=");
-		sb.append(characterEncoding);
-
-		sb.append("&verifyServerCertificate=");
-		sb.append(verifyServerCertificate);
-
-		sb.append("&useSSL=");
-		sb.append(useSSL);
+		StringBuilder sb = buildJdbcUrlWithParameters(url, useUnicode, characterEncoding, verifyServerCertificate,
+				useSSL);
 
 		return sb.toString();
 	}
 
-	public static List<String> getSlaveDBUrl(Properties pro) throws Exception {
+	/**
+	 * 初始化从库连接池
+	 * 
+	 * @param pro
+	 * @return
+	 * @throws Exception
+	 */
+	public static List<String> getSlaveJdbcUrl(Properties pro) throws Exception {
 		String slaveHosts = trimToNull(pro, JdbcConst.MYSQL_SLAVE_HOST);// 192.168.3.4,192.168.3.5,192.168.3.6
 
 		if (StringUtils.isEmpty(slaveHosts)) {
@@ -139,22 +140,32 @@ public abstract class AbstractPoolManager {
 			String verifyServerCertificate = pro.getProperty(JdbcConst.MYSQL_SLAVE_VERIFY_SERVER_CERTIFICATE, "false");
 			String useSSL = pro.getProperty(JdbcConst.MYSQL_SLAVE_USE_SSL, "true");
 
-			StringBuilder sb = new StringBuilder(url);
-			if (url.contains("?")) {
-				sb.append("&useUnicode=");
-			} else {
-				sb.append("?useUnicode=");
-			}
-			sb.append(useUnicode);
-			sb.append("&characterEncoding=");
-			sb.append(characterEncoding);
-			sb.append("&verifyServerCertificate=");
-			sb.append(verifyServerCertificate);
-			sb.append("&useSSL=");
-			sb.append(useSSL);
+			StringBuilder sb = buildJdbcUrlWithParameters(url, useUnicode, characterEncoding, verifyServerCertificate,
+					useSSL);
 
 			urlList.add(sb.toString());
 		}
 		return urlList;
+	}
+
+	private static StringBuilder buildJdbcUrlWithParameters(String url, String useUnicode, String characterEncoding,
+			String verifyServerCertificate, String useSSL) {
+		StringBuilder sb = new StringBuilder(url);
+
+		sb.append("?useUnicode=");
+		sb.append(useUnicode);
+
+		sb.append("&characterEncoding=");
+		sb.append(characterEncoding);
+
+		sb.append("&verifyServerCertificate=");
+		sb.append(verifyServerCertificate);
+
+		sb.append("&useSSL=");
+		sb.append(useSSL);
+
+		sb.append("&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+
+		return sb;
 	}
 }

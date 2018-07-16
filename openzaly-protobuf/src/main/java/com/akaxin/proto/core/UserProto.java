@@ -285,11 +285,11 @@ public final class UserProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -299,7 +299,7 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     java.lang.String getUserName();
     /**
@@ -307,42 +307,42 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
 
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     java.lang.String getUserPhoto();
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserPhotoBytes();
 
     /**
-     * <code>optional string self_introduce = 4;</code>
+     * <code>string self_introduce = 4;</code>
      */
     java.lang.String getSelfIntroduce();
     /**
-     * <code>optional string self_introduce = 4;</code>
+     * <code>string self_introduce = 4;</code>
      */
     com.google.protobuf.ByteString
         getSelfIntroduceBytes();
 
     /**
-     * <code>optional .core.UserStatus user_status = 5;</code>
+     * <code>.core.UserStatus user_status = 5;</code>
      */
     int getUserStatusValue();
     /**
-     * <code>optional .core.UserStatus user_status = 5;</code>
+     * <code>.core.UserStatus user_status = 5;</code>
      */
     com.akaxin.proto.core.UserProto.UserStatus getUserStatus();
 
     /**
-     * <code>optional int64 register_time = 6;</code>
+     * <code>int64 register_time = 6;</code>
      */
     long getRegisterTime();
 
@@ -351,7 +351,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     java.lang.String getSiteLoginId();
     /**
@@ -359,7 +359,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getSiteLoginIdBytes();
@@ -369,7 +369,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 8;</code>
+     * <code>string nick_name = 8;</code>
      */
     java.lang.String getNickName();
     /**
@@ -377,7 +377,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 8;</code>
+     * <code>string nick_name = 8;</code>
      */
     com.google.protobuf.ByteString
         getNickNameBytes();
@@ -387,7 +387,7 @@ public final class UserProto {
      *汉字转换拼音
      * </pre>
      *
-     * <code>optional string username_in_latin = 9;</code>
+     * <code>string username_in_latin = 9;</code>
      */
     java.lang.String getUsernameInLatin();
     /**
@@ -395,7 +395,7 @@ public final class UserProto {
      *汉字转换拼音
      * </pre>
      *
-     * <code>optional string username_in_latin = 9;</code>
+     * <code>string username_in_latin = 9;</code>
      */
     com.google.protobuf.ByteString
         getUsernameInLatinBytes();
@@ -405,7 +405,7 @@ public final class UserProto {
      *用户公钥 SimpleUserProfile 不需要
      * </pre>
      *
-     * <code>optional string user_id_pubk = 10;</code>
+     * <code>string user_id_pubk = 10;</code>
      */
     java.lang.String getUserIdPubk();
     /**
@@ -413,7 +413,7 @@ public final class UserProto {
      *用户公钥 SimpleUserProfile 不需要
      * </pre>
      *
-     * <code>optional string user_id_pubk = 10;</code>
+     * <code>string user_id_pubk = 10;</code>
      */
     com.google.protobuf.ByteString
         getUserIdPubkBytes();
@@ -429,6 +429,7 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.UserProfile)
       UserProfileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use UserProfile.newBuilder() to construct.
     private UserProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -449,7 +450,7 @@ public final class UserProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private UserProfile(
         com.google.protobuf.CodedInputStream input,
@@ -457,6 +458,8 @@ public final class UserProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -466,7 +469,8 @@ public final class UserProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -538,6 +542,7 @@ public final class UserProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -556,7 +561,7 @@ public final class UserProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -571,7 +576,7 @@ public final class UserProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -594,7 +599,7 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -613,7 +618,7 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -632,7 +637,7 @@ public final class UserProto {
     public static final int USER_PHOTO_FIELD_NUMBER = 3;
     private volatile java.lang.Object userPhoto_;
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     public java.lang.String getUserPhoto() {
       java.lang.Object ref = userPhoto_;
@@ -647,7 +652,7 @@ public final class UserProto {
       }
     }
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserPhotoBytes() {
@@ -666,7 +671,7 @@ public final class UserProto {
     public static final int SELF_INTRODUCE_FIELD_NUMBER = 4;
     private volatile java.lang.Object selfIntroduce_;
     /**
-     * <code>optional string self_introduce = 4;</code>
+     * <code>string self_introduce = 4;</code>
      */
     public java.lang.String getSelfIntroduce() {
       java.lang.Object ref = selfIntroduce_;
@@ -681,7 +686,7 @@ public final class UserProto {
       }
     }
     /**
-     * <code>optional string self_introduce = 4;</code>
+     * <code>string self_introduce = 4;</code>
      */
     public com.google.protobuf.ByteString
         getSelfIntroduceBytes() {
@@ -700,13 +705,13 @@ public final class UserProto {
     public static final int USER_STATUS_FIELD_NUMBER = 5;
     private int userStatus_;
     /**
-     * <code>optional .core.UserStatus user_status = 5;</code>
+     * <code>.core.UserStatus user_status = 5;</code>
      */
     public int getUserStatusValue() {
       return userStatus_;
     }
     /**
-     * <code>optional .core.UserStatus user_status = 5;</code>
+     * <code>.core.UserStatus user_status = 5;</code>
      */
     public com.akaxin.proto.core.UserProto.UserStatus getUserStatus() {
       com.akaxin.proto.core.UserProto.UserStatus result = com.akaxin.proto.core.UserProto.UserStatus.valueOf(userStatus_);
@@ -716,7 +721,7 @@ public final class UserProto {
     public static final int REGISTER_TIME_FIELD_NUMBER = 6;
     private long registerTime_;
     /**
-     * <code>optional int64 register_time = 6;</code>
+     * <code>int64 register_time = 6;</code>
      */
     public long getRegisterTime() {
       return registerTime_;
@@ -729,7 +734,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     public java.lang.String getSiteLoginId() {
       java.lang.Object ref = siteLoginId_;
@@ -748,7 +753,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
      * </pre>
      *
-     * <code>optional string site_login_id = 7;</code>
+     * <code>string site_login_id = 7;</code>
      */
     public com.google.protobuf.ByteString
         getSiteLoginIdBytes() {
@@ -771,7 +776,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 8;</code>
+     * <code>string nick_name = 8;</code>
      */
     public java.lang.String getNickName() {
       java.lang.Object ref = nickName_;
@@ -790,7 +795,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 8;</code>
+     * <code>string nick_name = 8;</code>
      */
     public com.google.protobuf.ByteString
         getNickNameBytes() {
@@ -813,7 +818,7 @@ public final class UserProto {
      *汉字转换拼音
      * </pre>
      *
-     * <code>optional string username_in_latin = 9;</code>
+     * <code>string username_in_latin = 9;</code>
      */
     public java.lang.String getUsernameInLatin() {
       java.lang.Object ref = usernameInLatin_;
@@ -832,7 +837,7 @@ public final class UserProto {
      *汉字转换拼音
      * </pre>
      *
-     * <code>optional string username_in_latin = 9;</code>
+     * <code>string username_in_latin = 9;</code>
      */
     public com.google.protobuf.ByteString
         getUsernameInLatinBytes() {
@@ -855,7 +860,7 @@ public final class UserProto {
      *用户公钥 SimpleUserProfile 不需要
      * </pre>
      *
-     * <code>optional string user_id_pubk = 10;</code>
+     * <code>string user_id_pubk = 10;</code>
      */
     public java.lang.String getUserIdPubk() {
       java.lang.Object ref = userIdPubk_;
@@ -874,7 +879,7 @@ public final class UserProto {
      *用户公钥 SimpleUserProfile 不需要
      * </pre>
      *
-     * <code>optional string user_id_pubk = 10;</code>
+     * <code>string user_id_pubk = 10;</code>
      */
     public com.google.protobuf.ByteString
         getUserIdPubkBytes() {
@@ -932,6 +937,7 @@ public final class UserProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, userIdPubk_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -971,11 +977,11 @@ public final class UserProto {
       if (!getUserIdPubkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, userIdPubk_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1006,6 +1012,7 @@ public final class UserProto {
           .equals(other.getUsernameInLatin());
       result = result && getUserIdPubk()
           .equals(other.getUserIdPubk());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1015,7 +1022,7 @@ public final class UserProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
@@ -1042,6 +1049,17 @@ public final class UserProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.UserProto.UserProfile parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.UserProto.UserProfile parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.UserProto.UserProfile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1220,7 +1238,7 @@ public final class UserProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1233,12 +1251,12 @@ public final class UserProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1290,6 +1308,7 @@ public final class UserProto {
           userIdPubk_ = other.userIdPubk_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1318,7 +1337,7 @@ public final class UserProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -1333,7 +1352,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -1349,7 +1368,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -1362,7 +1381,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -1371,7 +1390,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1391,7 +1410,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -1410,7 +1429,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -1430,7 +1449,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -1447,7 +1466,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder clearUserName() {
         
@@ -1460,7 +1479,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称，修改个人profile昵称，直接把昵称复制这里
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1476,7 +1495,7 @@ public final class UserProto {
 
       private java.lang.Object userPhoto_ = "";
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public java.lang.String getUserPhoto() {
         java.lang.Object ref = userPhoto_;
@@ -1491,7 +1510,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserPhotoBytes() {
@@ -1507,7 +1526,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder setUserPhoto(
           java.lang.String value) {
@@ -1520,7 +1539,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder clearUserPhoto() {
         
@@ -1529,7 +1548,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder setUserPhotoBytes(
           com.google.protobuf.ByteString value) {
@@ -1545,7 +1564,7 @@ public final class UserProto {
 
       private java.lang.Object selfIntroduce_ = "";
       /**
-       * <code>optional string self_introduce = 4;</code>
+       * <code>string self_introduce = 4;</code>
        */
       public java.lang.String getSelfIntroduce() {
         java.lang.Object ref = selfIntroduce_;
@@ -1560,7 +1579,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string self_introduce = 4;</code>
+       * <code>string self_introduce = 4;</code>
        */
       public com.google.protobuf.ByteString
           getSelfIntroduceBytes() {
@@ -1576,7 +1595,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string self_introduce = 4;</code>
+       * <code>string self_introduce = 4;</code>
        */
       public Builder setSelfIntroduce(
           java.lang.String value) {
@@ -1589,7 +1608,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string self_introduce = 4;</code>
+       * <code>string self_introduce = 4;</code>
        */
       public Builder clearSelfIntroduce() {
         
@@ -1598,7 +1617,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string self_introduce = 4;</code>
+       * <code>string self_introduce = 4;</code>
        */
       public Builder setSelfIntroduceBytes(
           com.google.protobuf.ByteString value) {
@@ -1614,13 +1633,13 @@ public final class UserProto {
 
       private int userStatus_ = 0;
       /**
-       * <code>optional .core.UserStatus user_status = 5;</code>
+       * <code>.core.UserStatus user_status = 5;</code>
        */
       public int getUserStatusValue() {
         return userStatus_;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 5;</code>
+       * <code>.core.UserStatus user_status = 5;</code>
        */
       public Builder setUserStatusValue(int value) {
         userStatus_ = value;
@@ -1628,14 +1647,14 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 5;</code>
+       * <code>.core.UserStatus user_status = 5;</code>
        */
       public com.akaxin.proto.core.UserProto.UserStatus getUserStatus() {
         com.akaxin.proto.core.UserProto.UserStatus result = com.akaxin.proto.core.UserProto.UserStatus.valueOf(userStatus_);
         return result == null ? com.akaxin.proto.core.UserProto.UserStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 5;</code>
+       * <code>.core.UserStatus user_status = 5;</code>
        */
       public Builder setUserStatus(com.akaxin.proto.core.UserProto.UserStatus value) {
         if (value == null) {
@@ -1647,7 +1666,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 5;</code>
+       * <code>.core.UserStatus user_status = 5;</code>
        */
       public Builder clearUserStatus() {
         
@@ -1658,13 +1677,13 @@ public final class UserProto {
 
       private long registerTime_ ;
       /**
-       * <code>optional int64 register_time = 6;</code>
+       * <code>int64 register_time = 6;</code>
        */
       public long getRegisterTime() {
         return registerTime_;
       }
       /**
-       * <code>optional int64 register_time = 6;</code>
+       * <code>int64 register_time = 6;</code>
        */
       public Builder setRegisterTime(long value) {
         
@@ -1673,7 +1692,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional int64 register_time = 6;</code>
+       * <code>int64 register_time = 6;</code>
        */
       public Builder clearRegisterTime() {
         
@@ -1688,7 +1707,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public java.lang.String getSiteLoginId() {
         java.lang.Object ref = siteLoginId_;
@@ -1707,7 +1726,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public com.google.protobuf.ByteString
           getSiteLoginIdBytes() {
@@ -1727,7 +1746,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public Builder setSiteLoginId(
           java.lang.String value) {
@@ -1744,7 +1763,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public Builder clearSiteLoginId() {
         
@@ -1757,7 +1776,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一（例如使用：“卡号”表示）
        * </pre>
        *
-       * <code>optional string site_login_id = 7;</code>
+       * <code>string site_login_id = 7;</code>
        */
       public Builder setSiteLoginIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1777,7 +1796,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 8;</code>
+       * <code>string nick_name = 8;</code>
        */
       public java.lang.String getNickName() {
         java.lang.Object ref = nickName_;
@@ -1796,7 +1815,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 8;</code>
+       * <code>string nick_name = 8;</code>
        */
       public com.google.protobuf.ByteString
           getNickNameBytes() {
@@ -1816,7 +1835,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 8;</code>
+       * <code>string nick_name = 8;</code>
        */
       public Builder setNickName(
           java.lang.String value) {
@@ -1833,7 +1852,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 8;</code>
+       * <code>string nick_name = 8;</code>
        */
       public Builder clearNickName() {
         
@@ -1846,7 +1865,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 8;</code>
+       * <code>string nick_name = 8;</code>
        */
       public Builder setNickNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1866,7 +1885,7 @@ public final class UserProto {
        *汉字转换拼音
        * </pre>
        *
-       * <code>optional string username_in_latin = 9;</code>
+       * <code>string username_in_latin = 9;</code>
        */
       public java.lang.String getUsernameInLatin() {
         java.lang.Object ref = usernameInLatin_;
@@ -1885,7 +1904,7 @@ public final class UserProto {
        *汉字转换拼音
        * </pre>
        *
-       * <code>optional string username_in_latin = 9;</code>
+       * <code>string username_in_latin = 9;</code>
        */
       public com.google.protobuf.ByteString
           getUsernameInLatinBytes() {
@@ -1905,7 +1924,7 @@ public final class UserProto {
        *汉字转换拼音
        * </pre>
        *
-       * <code>optional string username_in_latin = 9;</code>
+       * <code>string username_in_latin = 9;</code>
        */
       public Builder setUsernameInLatin(
           java.lang.String value) {
@@ -1922,7 +1941,7 @@ public final class UserProto {
        *汉字转换拼音
        * </pre>
        *
-       * <code>optional string username_in_latin = 9;</code>
+       * <code>string username_in_latin = 9;</code>
        */
       public Builder clearUsernameInLatin() {
         
@@ -1935,7 +1954,7 @@ public final class UserProto {
        *汉字转换拼音
        * </pre>
        *
-       * <code>optional string username_in_latin = 9;</code>
+       * <code>string username_in_latin = 9;</code>
        */
       public Builder setUsernameInLatinBytes(
           com.google.protobuf.ByteString value) {
@@ -1955,7 +1974,7 @@ public final class UserProto {
        *用户公钥 SimpleUserProfile 不需要
        * </pre>
        *
-       * <code>optional string user_id_pubk = 10;</code>
+       * <code>string user_id_pubk = 10;</code>
        */
       public java.lang.String getUserIdPubk() {
         java.lang.Object ref = userIdPubk_;
@@ -1974,7 +1993,7 @@ public final class UserProto {
        *用户公钥 SimpleUserProfile 不需要
        * </pre>
        *
-       * <code>optional string user_id_pubk = 10;</code>
+       * <code>string user_id_pubk = 10;</code>
        */
       public com.google.protobuf.ByteString
           getUserIdPubkBytes() {
@@ -1994,7 +2013,7 @@ public final class UserProto {
        *用户公钥 SimpleUserProfile 不需要
        * </pre>
        *
-       * <code>optional string user_id_pubk = 10;</code>
+       * <code>string user_id_pubk = 10;</code>
        */
       public Builder setUserIdPubk(
           java.lang.String value) {
@@ -2011,7 +2030,7 @@ public final class UserProto {
        *用户公钥 SimpleUserProfile 不需要
        * </pre>
        *
-       * <code>optional string user_id_pubk = 10;</code>
+       * <code>string user_id_pubk = 10;</code>
        */
       public Builder clearUserIdPubk() {
         
@@ -2024,7 +2043,7 @@ public final class UserProto {
        *用户公钥 SimpleUserProfile 不需要
        * </pre>
        *
-       * <code>optional string user_id_pubk = 10;</code>
+       * <code>string user_id_pubk = 10;</code>
        */
       public Builder setUserIdPubkBytes(
           com.google.protobuf.ByteString value) {
@@ -2039,12 +2058,12 @@ public final class UserProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -2091,11 +2110,11 @@ public final class UserProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     java.lang.String getSiteUserId();
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getSiteUserIdBytes();
@@ -2105,7 +2124,7 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     java.lang.String getUserName();
     /**
@@ -2113,27 +2132,27 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
 
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     java.lang.String getUserPhoto();
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserPhotoBytes();
 
     /**
-     * <code>optional .core.UserStatus user_status = 4;</code>
+     * <code>.core.UserStatus user_status = 4;</code>
      */
     int getUserStatusValue();
     /**
-     * <code>optional .core.UserStatus user_status = 4;</code>
+     * <code>.core.UserStatus user_status = 4;</code>
      */
     com.akaxin.proto.core.UserProto.UserStatus getUserStatus();
 
@@ -2142,7 +2161,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一
      * </pre>
      *
-     * <code>optional string site_login_id = 5;</code>
+     * <code>string site_login_id = 5;</code>
      */
     java.lang.String getSiteLoginId();
     /**
@@ -2150,7 +2169,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一
      * </pre>
      *
-     * <code>optional string site_login_id = 5;</code>
+     * <code>string site_login_id = 5;</code>
      */
     com.google.protobuf.ByteString
         getSiteLoginIdBytes();
@@ -2160,7 +2179,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 6;</code>
+     * <code>string nick_name = 6;</code>
      */
     java.lang.String getNickName();
     /**
@@ -2168,7 +2187,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 6;</code>
+     * <code>string nick_name = 6;</code>
      */
     com.google.protobuf.ByteString
         getNickNameBytes();
@@ -2178,7 +2197,7 @@ public final class UserProto {
      *张三-&gt;  zhangsan
      * </pre>
      *
-     * <code>optional string username_in_latin = 7;</code>
+     * <code>string username_in_latin = 7;</code>
      */
     java.lang.String getUsernameInLatin();
     /**
@@ -2186,7 +2205,7 @@ public final class UserProto {
      *张三-&gt;  zhangsan
      * </pre>
      *
-     * <code>optional string username_in_latin = 7;</code>
+     * <code>string username_in_latin = 7;</code>
      */
     com.google.protobuf.ByteString
         getUsernameInLatinBytes();
@@ -2202,6 +2221,7 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.SimpleUserProfile)
       SimpleUserProfileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SimpleUserProfile.newBuilder() to construct.
     private SimpleUserProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -2219,7 +2239,7 @@ public final class UserProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private SimpleUserProfile(
         com.google.protobuf.CodedInputStream input,
@@ -2227,6 +2247,8 @@ public final class UserProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2236,7 +2258,8 @@ public final class UserProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -2291,6 +2314,7 @@ public final class UserProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -2309,7 +2333,7 @@ public final class UserProto {
     public static final int SITE_USER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object siteUserId_;
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public java.lang.String getSiteUserId() {
       java.lang.Object ref = siteUserId_;
@@ -2324,7 +2348,7 @@ public final class UserProto {
       }
     }
     /**
-     * <code>optional string site_user_id = 1;</code>
+     * <code>string site_user_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getSiteUserIdBytes() {
@@ -2347,7 +2371,7 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -2366,7 +2390,7 @@ public final class UserProto {
      *如果用户有备注，这里使用备注，如果没有使用昵称
      * </pre>
      *
-     * <code>optional string user_name = 2;</code>
+     * <code>string user_name = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -2385,7 +2409,7 @@ public final class UserProto {
     public static final int USER_PHOTO_FIELD_NUMBER = 3;
     private volatile java.lang.Object userPhoto_;
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     public java.lang.String getUserPhoto() {
       java.lang.Object ref = userPhoto_;
@@ -2400,7 +2424,7 @@ public final class UserProto {
       }
     }
     /**
-     * <code>optional string user_photo = 3;</code>
+     * <code>string user_photo = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserPhotoBytes() {
@@ -2419,13 +2443,13 @@ public final class UserProto {
     public static final int USER_STATUS_FIELD_NUMBER = 4;
     private int userStatus_;
     /**
-     * <code>optional .core.UserStatus user_status = 4;</code>
+     * <code>.core.UserStatus user_status = 4;</code>
      */
     public int getUserStatusValue() {
       return userStatus_;
     }
     /**
-     * <code>optional .core.UserStatus user_status = 4;</code>
+     * <code>.core.UserStatus user_status = 4;</code>
      */
     public com.akaxin.proto.core.UserProto.UserStatus getUserStatus() {
       com.akaxin.proto.core.UserProto.UserStatus result = com.akaxin.proto.core.UserProto.UserStatus.valueOf(userStatus_);
@@ -2439,7 +2463,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一
      * </pre>
      *
-     * <code>optional string site_login_id = 5;</code>
+     * <code>string site_login_id = 5;</code>
      */
     public java.lang.String getSiteLoginId() {
       java.lang.Object ref = siteLoginId_;
@@ -2458,7 +2482,7 @@ public final class UserProto {
      *用户唯一登陆名，站点唯一
      * </pre>
      *
-     * <code>optional string site_login_id = 5;</code>
+     * <code>string site_login_id = 5;</code>
      */
     public com.google.protobuf.ByteString
         getSiteLoginIdBytes() {
@@ -2481,7 +2505,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 6;</code>
+     * <code>string nick_name = 6;</code>
      */
     public java.lang.String getNickName() {
       java.lang.Object ref = nickName_;
@@ -2500,7 +2524,7 @@ public final class UserProto {
      *用户个人设置的昵称
      * </pre>
      *
-     * <code>optional string nick_name = 6;</code>
+     * <code>string nick_name = 6;</code>
      */
     public com.google.protobuf.ByteString
         getNickNameBytes() {
@@ -2523,7 +2547,7 @@ public final class UserProto {
      *张三-&gt;  zhangsan
      * </pre>
      *
-     * <code>optional string username_in_latin = 7;</code>
+     * <code>string username_in_latin = 7;</code>
      */
     public java.lang.String getUsernameInLatin() {
       java.lang.Object ref = usernameInLatin_;
@@ -2542,7 +2566,7 @@ public final class UserProto {
      *张三-&gt;  zhangsan
      * </pre>
      *
-     * <code>optional string username_in_latin = 7;</code>
+     * <code>string username_in_latin = 7;</code>
      */
     public com.google.protobuf.ByteString
         getUsernameInLatinBytes() {
@@ -2591,6 +2615,7 @@ public final class UserProto {
       if (!getUsernameInLatinBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, usernameInLatin_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -2620,11 +2645,11 @@ public final class UserProto {
       if (!getUsernameInLatinBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, usernameInLatin_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2649,6 +2674,7 @@ public final class UserProto {
           .equals(other.getNickName());
       result = result && getUsernameInLatin()
           .equals(other.getUsernameInLatin());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -2658,7 +2684,7 @@ public final class UserProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SITE_USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSiteUserId().hashCode();
       hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
@@ -2678,6 +2704,17 @@ public final class UserProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.UserProto.SimpleUserProfile parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.UserProto.SimpleUserProfile parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.UserProto.SimpleUserProfile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2847,7 +2884,7 @@ public final class UserProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2860,12 +2897,12 @@ public final class UserProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2906,6 +2943,7 @@ public final class UserProto {
           usernameInLatin_ = other.usernameInLatin_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2934,7 +2972,7 @@ public final class UserProto {
 
       private java.lang.Object siteUserId_ = "";
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public java.lang.String getSiteUserId() {
         java.lang.Object ref = siteUserId_;
@@ -2949,7 +2987,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getSiteUserIdBytes() {
@@ -2965,7 +3003,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserId(
           java.lang.String value) {
@@ -2978,7 +3016,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder clearSiteUserId() {
         
@@ -2987,7 +3025,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string site_user_id = 1;</code>
+       * <code>string site_user_id = 1;</code>
        */
       public Builder setSiteUserIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3007,7 +3045,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -3026,7 +3064,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -3046,7 +3084,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -3063,7 +3101,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder clearUserName() {
         
@@ -3076,7 +3114,7 @@ public final class UserProto {
        *如果用户有备注，这里使用备注，如果没有使用昵称
        * </pre>
        *
-       * <code>optional string user_name = 2;</code>
+       * <code>string user_name = 2;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3092,7 +3130,7 @@ public final class UserProto {
 
       private java.lang.Object userPhoto_ = "";
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public java.lang.String getUserPhoto() {
         java.lang.Object ref = userPhoto_;
@@ -3107,7 +3145,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserPhotoBytes() {
@@ -3123,7 +3161,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder setUserPhoto(
           java.lang.String value) {
@@ -3136,7 +3174,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder clearUserPhoto() {
         
@@ -3145,7 +3183,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string user_photo = 3;</code>
+       * <code>string user_photo = 3;</code>
        */
       public Builder setUserPhotoBytes(
           com.google.protobuf.ByteString value) {
@@ -3161,13 +3199,13 @@ public final class UserProto {
 
       private int userStatus_ = 0;
       /**
-       * <code>optional .core.UserStatus user_status = 4;</code>
+       * <code>.core.UserStatus user_status = 4;</code>
        */
       public int getUserStatusValue() {
         return userStatus_;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 4;</code>
+       * <code>.core.UserStatus user_status = 4;</code>
        */
       public Builder setUserStatusValue(int value) {
         userStatus_ = value;
@@ -3175,14 +3213,14 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 4;</code>
+       * <code>.core.UserStatus user_status = 4;</code>
        */
       public com.akaxin.proto.core.UserProto.UserStatus getUserStatus() {
         com.akaxin.proto.core.UserProto.UserStatus result = com.akaxin.proto.core.UserProto.UserStatus.valueOf(userStatus_);
         return result == null ? com.akaxin.proto.core.UserProto.UserStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 4;</code>
+       * <code>.core.UserStatus user_status = 4;</code>
        */
       public Builder setUserStatus(com.akaxin.proto.core.UserProto.UserStatus value) {
         if (value == null) {
@@ -3194,7 +3232,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserStatus user_status = 4;</code>
+       * <code>.core.UserStatus user_status = 4;</code>
        */
       public Builder clearUserStatus() {
         
@@ -3209,7 +3247,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一
        * </pre>
        *
-       * <code>optional string site_login_id = 5;</code>
+       * <code>string site_login_id = 5;</code>
        */
       public java.lang.String getSiteLoginId() {
         java.lang.Object ref = siteLoginId_;
@@ -3228,7 +3266,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一
        * </pre>
        *
-       * <code>optional string site_login_id = 5;</code>
+       * <code>string site_login_id = 5;</code>
        */
       public com.google.protobuf.ByteString
           getSiteLoginIdBytes() {
@@ -3248,7 +3286,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一
        * </pre>
        *
-       * <code>optional string site_login_id = 5;</code>
+       * <code>string site_login_id = 5;</code>
        */
       public Builder setSiteLoginId(
           java.lang.String value) {
@@ -3265,7 +3303,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一
        * </pre>
        *
-       * <code>optional string site_login_id = 5;</code>
+       * <code>string site_login_id = 5;</code>
        */
       public Builder clearSiteLoginId() {
         
@@ -3278,7 +3316,7 @@ public final class UserProto {
        *用户唯一登陆名，站点唯一
        * </pre>
        *
-       * <code>optional string site_login_id = 5;</code>
+       * <code>string site_login_id = 5;</code>
        */
       public Builder setSiteLoginIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3298,7 +3336,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 6;</code>
+       * <code>string nick_name = 6;</code>
        */
       public java.lang.String getNickName() {
         java.lang.Object ref = nickName_;
@@ -3317,7 +3355,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 6;</code>
+       * <code>string nick_name = 6;</code>
        */
       public com.google.protobuf.ByteString
           getNickNameBytes() {
@@ -3337,7 +3375,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 6;</code>
+       * <code>string nick_name = 6;</code>
        */
       public Builder setNickName(
           java.lang.String value) {
@@ -3354,7 +3392,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 6;</code>
+       * <code>string nick_name = 6;</code>
        */
       public Builder clearNickName() {
         
@@ -3367,7 +3405,7 @@ public final class UserProto {
        *用户个人设置的昵称
        * </pre>
        *
-       * <code>optional string nick_name = 6;</code>
+       * <code>string nick_name = 6;</code>
        */
       public Builder setNickNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3387,7 +3425,7 @@ public final class UserProto {
        *张三-&gt;  zhangsan
        * </pre>
        *
-       * <code>optional string username_in_latin = 7;</code>
+       * <code>string username_in_latin = 7;</code>
        */
       public java.lang.String getUsernameInLatin() {
         java.lang.Object ref = usernameInLatin_;
@@ -3406,7 +3444,7 @@ public final class UserProto {
        *张三-&gt;  zhangsan
        * </pre>
        *
-       * <code>optional string username_in_latin = 7;</code>
+       * <code>string username_in_latin = 7;</code>
        */
       public com.google.protobuf.ByteString
           getUsernameInLatinBytes() {
@@ -3426,7 +3464,7 @@ public final class UserProto {
        *张三-&gt;  zhangsan
        * </pre>
        *
-       * <code>optional string username_in_latin = 7;</code>
+       * <code>string username_in_latin = 7;</code>
        */
       public Builder setUsernameInLatin(
           java.lang.String value) {
@@ -3443,7 +3481,7 @@ public final class UserProto {
        *张三-&gt;  zhangsan
        * </pre>
        *
-       * <code>optional string username_in_latin = 7;</code>
+       * <code>string username_in_latin = 7;</code>
        */
       public Builder clearUsernameInLatin() {
         
@@ -3456,7 +3494,7 @@ public final class UserProto {
        *张三-&gt;  zhangsan
        * </pre>
        *
-       * <code>optional string username_in_latin = 7;</code>
+       * <code>string username_in_latin = 7;</code>
        */
       public Builder setUsernameInLatinBytes(
           com.google.protobuf.ByteString value) {
@@ -3471,12 +3509,12 @@ public final class UserProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -3523,24 +3561,24 @@ public final class UserProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .core.UserProfile applyUser = 1;</code>
+     * <code>.core.UserProfile applyUser = 1;</code>
      */
     boolean hasApplyUser();
     /**
-     * <code>optional .core.UserProfile applyUser = 1;</code>
+     * <code>.core.UserProfile applyUser = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfile getApplyUser();
     /**
-     * <code>optional .core.UserProfile applyUser = 1;</code>
+     * <code>.core.UserProfile applyUser = 1;</code>
      */
     com.akaxin.proto.core.UserProto.UserProfileOrBuilder getApplyUserOrBuilder();
 
     /**
-     * <code>optional string applyReason = 2;</code>
+     * <code>string applyReason = 2;</code>
      */
     java.lang.String getApplyReason();
     /**
-     * <code>optional string applyReason = 2;</code>
+     * <code>string applyReason = 2;</code>
      */
     com.google.protobuf.ByteString
         getApplyReasonBytes();
@@ -3552,6 +3590,7 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.ApplyUserProfile)
       ApplyUserProfileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApplyUserProfile.newBuilder() to construct.
     private ApplyUserProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3563,7 +3602,7 @@ public final class UserProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApplyUserProfile(
         com.google.protobuf.CodedInputStream input,
@@ -3571,6 +3610,8 @@ public final class UserProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3580,7 +3621,8 @@ public final class UserProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -3612,6 +3654,7 @@ public final class UserProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -3630,19 +3673,19 @@ public final class UserProto {
     public static final int APPLYUSER_FIELD_NUMBER = 1;
     private com.akaxin.proto.core.UserProto.UserProfile applyUser_;
     /**
-     * <code>optional .core.UserProfile applyUser = 1;</code>
+     * <code>.core.UserProfile applyUser = 1;</code>
      */
     public boolean hasApplyUser() {
       return applyUser_ != null;
     }
     /**
-     * <code>optional .core.UserProfile applyUser = 1;</code>
+     * <code>.core.UserProfile applyUser = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfile getApplyUser() {
       return applyUser_ == null ? com.akaxin.proto.core.UserProto.UserProfile.getDefaultInstance() : applyUser_;
     }
     /**
-     * <code>optional .core.UserProfile applyUser = 1;</code>
+     * <code>.core.UserProfile applyUser = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getApplyUserOrBuilder() {
       return getApplyUser();
@@ -3651,7 +3694,7 @@ public final class UserProto {
     public static final int APPLYREASON_FIELD_NUMBER = 2;
     private volatile java.lang.Object applyReason_;
     /**
-     * <code>optional string applyReason = 2;</code>
+     * <code>string applyReason = 2;</code>
      */
     public java.lang.String getApplyReason() {
       java.lang.Object ref = applyReason_;
@@ -3666,7 +3709,7 @@ public final class UserProto {
       }
     }
     /**
-     * <code>optional string applyReason = 2;</code>
+     * <code>string applyReason = 2;</code>
      */
     public com.google.protobuf.ByteString
         getApplyReasonBytes() {
@@ -3700,6 +3743,7 @@ public final class UserProto {
       if (!getApplyReasonBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applyReason_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -3714,11 +3758,11 @@ public final class UserProto {
       if (!getApplyReasonBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applyReason_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3737,6 +3781,7 @@ public final class UserProto {
       }
       result = result && getApplyReason()
           .equals(other.getApplyReason());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -3746,7 +3791,7 @@ public final class UserProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasApplyUser()) {
         hash = (37 * hash) + APPLYUSER_FIELD_NUMBER;
         hash = (53 * hash) + getApplyUser().hashCode();
@@ -3758,6 +3803,17 @@ public final class UserProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.UserProto.ApplyUserProfile parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.UserProto.ApplyUserProfile parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.UserProto.ApplyUserProfile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3916,7 +3972,7 @@ public final class UserProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3929,12 +3985,12 @@ public final class UserProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3955,6 +4011,7 @@ public final class UserProto {
           applyReason_ = other.applyReason_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -3985,13 +4042,13 @@ public final class UserProto {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.UserProto.UserProfile, com.akaxin.proto.core.UserProto.UserProfile.Builder, com.akaxin.proto.core.UserProto.UserProfileOrBuilder> applyUserBuilder_;
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public boolean hasApplyUser() {
         return applyUserBuilder_ != null || applyUser_ != null;
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile getApplyUser() {
         if (applyUserBuilder_ == null) {
@@ -4001,7 +4058,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public Builder setApplyUser(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (applyUserBuilder_ == null) {
@@ -4017,7 +4074,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public Builder setApplyUser(
           com.akaxin.proto.core.UserProto.UserProfile.Builder builderForValue) {
@@ -4031,7 +4088,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public Builder mergeApplyUser(com.akaxin.proto.core.UserProto.UserProfile value) {
         if (applyUserBuilder_ == null) {
@@ -4049,7 +4106,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public Builder clearApplyUser() {
         if (applyUserBuilder_ == null) {
@@ -4063,7 +4120,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfile.Builder getApplyUserBuilder() {
         
@@ -4071,7 +4128,7 @@ public final class UserProto {
         return getApplyUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.UserProfileOrBuilder getApplyUserOrBuilder() {
         if (applyUserBuilder_ != null) {
@@ -4082,7 +4139,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional .core.UserProfile applyUser = 1;</code>
+       * <code>.core.UserProfile applyUser = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.UserProto.UserProfile, com.akaxin.proto.core.UserProto.UserProfile.Builder, com.akaxin.proto.core.UserProto.UserProfileOrBuilder> 
@@ -4100,7 +4157,7 @@ public final class UserProto {
 
       private java.lang.Object applyReason_ = "";
       /**
-       * <code>optional string applyReason = 2;</code>
+       * <code>string applyReason = 2;</code>
        */
       public java.lang.String getApplyReason() {
         java.lang.Object ref = applyReason_;
@@ -4115,7 +4172,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string applyReason = 2;</code>
+       * <code>string applyReason = 2;</code>
        */
       public com.google.protobuf.ByteString
           getApplyReasonBytes() {
@@ -4131,7 +4188,7 @@ public final class UserProto {
         }
       }
       /**
-       * <code>optional string applyReason = 2;</code>
+       * <code>string applyReason = 2;</code>
        */
       public Builder setApplyReason(
           java.lang.String value) {
@@ -4144,7 +4201,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string applyReason = 2;</code>
+       * <code>string applyReason = 2;</code>
        */
       public Builder clearApplyReason() {
         
@@ -4153,7 +4210,7 @@ public final class UserProto {
         return this;
       }
       /**
-       * <code>optional string applyReason = 2;</code>
+       * <code>string applyReason = 2;</code>
        */
       public Builder setApplyReasonBytes(
           com.google.protobuf.ByteString value) {
@@ -4168,12 +4225,12 @@ public final class UserProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -4224,7 +4281,7 @@ public final class UserProto {
      *用户的个人资料
      * </pre>
      *
-     * <code>optional .core.SimpleUserProfile profile = 1;</code>
+     * <code>.core.SimpleUserProfile profile = 1;</code>
      */
     boolean hasProfile();
     /**
@@ -4232,7 +4289,7 @@ public final class UserProto {
      *用户的个人资料
      * </pre>
      *
-     * <code>optional .core.SimpleUserProfile profile = 1;</code>
+     * <code>.core.SimpleUserProfile profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.SimpleUserProfile getProfile();
     /**
@@ -4240,7 +4297,7 @@ public final class UserProto {
      *用户的个人资料
      * </pre>
      *
-     * <code>optional .core.SimpleUserProfile profile = 1;</code>
+     * <code>.core.SimpleUserProfile profile = 1;</code>
      */
     com.akaxin.proto.core.UserProto.SimpleUserProfileOrBuilder getProfileOrBuilder();
 
@@ -4249,7 +4306,7 @@ public final class UserProto {
      *用户A与B的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     int getRelationValue();
     /**
@@ -4257,7 +4314,7 @@ public final class UserProto {
      *用户A与B的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     com.akaxin.proto.core.UserProto.UserRelation getRelation();
   }
@@ -4268,6 +4325,7 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.UserRelationProfile)
       UserRelationProfileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use UserRelationProfile.newBuilder() to construct.
     private UserRelationProfile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4279,7 +4337,7 @@ public final class UserProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private UserRelationProfile(
         com.google.protobuf.CodedInputStream input,
@@ -4287,6 +4345,8 @@ public final class UserProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4296,7 +4356,8 @@ public final class UserProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -4328,6 +4389,7 @@ public final class UserProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -4350,7 +4412,7 @@ public final class UserProto {
      *用户的个人资料
      * </pre>
      *
-     * <code>optional .core.SimpleUserProfile profile = 1;</code>
+     * <code>.core.SimpleUserProfile profile = 1;</code>
      */
     public boolean hasProfile() {
       return profile_ != null;
@@ -4360,7 +4422,7 @@ public final class UserProto {
      *用户的个人资料
      * </pre>
      *
-     * <code>optional .core.SimpleUserProfile profile = 1;</code>
+     * <code>.core.SimpleUserProfile profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.SimpleUserProfile getProfile() {
       return profile_ == null ? com.akaxin.proto.core.UserProto.SimpleUserProfile.getDefaultInstance() : profile_;
@@ -4370,7 +4432,7 @@ public final class UserProto {
      *用户的个人资料
      * </pre>
      *
-     * <code>optional .core.SimpleUserProfile profile = 1;</code>
+     * <code>.core.SimpleUserProfile profile = 1;</code>
      */
     public com.akaxin.proto.core.UserProto.SimpleUserProfileOrBuilder getProfileOrBuilder() {
       return getProfile();
@@ -4383,7 +4445,7 @@ public final class UserProto {
      *用户A与B的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     public int getRelationValue() {
       return relation_;
@@ -4393,7 +4455,7 @@ public final class UserProto {
      *用户A与B的关系
      * </pre>
      *
-     * <code>optional .core.UserRelation relation = 2;</code>
+     * <code>.core.UserRelation relation = 2;</code>
      */
     public com.akaxin.proto.core.UserProto.UserRelation getRelation() {
       com.akaxin.proto.core.UserProto.UserRelation result = com.akaxin.proto.core.UserProto.UserRelation.valueOf(relation_);
@@ -4418,6 +4480,7 @@ public final class UserProto {
       if (relation_ != com.akaxin.proto.core.UserProto.UserRelation.RELATION_NONE.getNumber()) {
         output.writeEnum(2, relation_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -4433,11 +4496,11 @@ public final class UserProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, relation_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -4455,6 +4518,7 @@ public final class UserProto {
             .equals(other.getProfile());
       }
       result = result && relation_ == other.relation_;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -4464,7 +4528,7 @@ public final class UserProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasProfile()) {
         hash = (37 * hash) + PROFILE_FIELD_NUMBER;
         hash = (53 * hash) + getProfile().hashCode();
@@ -4476,6 +4540,17 @@ public final class UserProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.UserProto.UserRelationProfile parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.UserProto.UserRelationProfile parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.UserProto.UserRelationProfile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4634,7 +4709,7 @@ public final class UserProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4647,12 +4722,12 @@ public final class UserProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4672,6 +4747,7 @@ public final class UserProto {
         if (other.relation_ != 0) {
           setRelationValue(other.getRelationValue());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -4706,7 +4782,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public boolean hasProfile() {
         return profileBuilder_ != null || profile_ != null;
@@ -4716,7 +4792,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.SimpleUserProfile getProfile() {
         if (profileBuilder_ == null) {
@@ -4730,7 +4806,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public Builder setProfile(com.akaxin.proto.core.UserProto.SimpleUserProfile value) {
         if (profileBuilder_ == null) {
@@ -4750,7 +4826,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public Builder setProfile(
           com.akaxin.proto.core.UserProto.SimpleUserProfile.Builder builderForValue) {
@@ -4768,7 +4844,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public Builder mergeProfile(com.akaxin.proto.core.UserProto.SimpleUserProfile value) {
         if (profileBuilder_ == null) {
@@ -4790,7 +4866,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
@@ -4808,7 +4884,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.SimpleUserProfile.Builder getProfileBuilder() {
         
@@ -4820,7 +4896,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       public com.akaxin.proto.core.UserProto.SimpleUserProfileOrBuilder getProfileOrBuilder() {
         if (profileBuilder_ != null) {
@@ -4835,7 +4911,7 @@ public final class UserProto {
        *用户的个人资料
        * </pre>
        *
-       * <code>optional .core.SimpleUserProfile profile = 1;</code>
+       * <code>.core.SimpleUserProfile profile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.UserProto.SimpleUserProfile, com.akaxin.proto.core.UserProto.SimpleUserProfile.Builder, com.akaxin.proto.core.UserProto.SimpleUserProfileOrBuilder> 
@@ -4857,7 +4933,7 @@ public final class UserProto {
        *用户A与B的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public int getRelationValue() {
         return relation_;
@@ -4867,7 +4943,7 @@ public final class UserProto {
        *用户A与B的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public Builder setRelationValue(int value) {
         relation_ = value;
@@ -4879,7 +4955,7 @@ public final class UserProto {
        *用户A与B的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public com.akaxin.proto.core.UserProto.UserRelation getRelation() {
         com.akaxin.proto.core.UserProto.UserRelation result = com.akaxin.proto.core.UserProto.UserRelation.valueOf(relation_);
@@ -4890,7 +4966,7 @@ public final class UserProto {
        *用户A与B的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public Builder setRelation(com.akaxin.proto.core.UserProto.UserRelation value) {
         if (value == null) {
@@ -4906,7 +4982,7 @@ public final class UserProto {
        *用户A与B的关系
        * </pre>
        *
-       * <code>optional .core.UserRelation relation = 2;</code>
+       * <code>.core.UserRelation relation = 2;</code>
        */
       public Builder clearRelation() {
         
@@ -4916,12 +4992,12 @@ public final class UserProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

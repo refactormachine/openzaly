@@ -23,7 +23,7 @@ public final class ApiGroupSettingProto {
      *当前用户获取群组ID的资料信息
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     java.lang.String getGroupId();
     /**
@@ -31,7 +31,7 @@ public final class ApiGroupSettingProto {
      *当前用户获取群组ID的资料信息
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getGroupIdBytes();
@@ -43,6 +43,7 @@ public final class ApiGroupSettingProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiGroupSettingRequest)
       ApiGroupSettingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiGroupSettingRequest.newBuilder() to construct.
     private ApiGroupSettingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -54,14 +55,19 @@ public final class ApiGroupSettingProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiGroupSettingRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -71,7 +77,8 @@ public final class ApiGroupSettingProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -90,6 +97,7 @@ public final class ApiGroupSettingProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -112,7 +120,7 @@ public final class ApiGroupSettingProto {
      *当前用户获取群组ID的资料信息
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public java.lang.String getGroupId() {
       java.lang.Object ref = groupId_;
@@ -131,7 +139,7 @@ public final class ApiGroupSettingProto {
      *当前用户获取群组ID的资料信息
      * </pre>
      *
-     * <code>optional string group_id = 1;</code>
+     * <code>string group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getGroupIdBytes() {
@@ -162,6 +170,7 @@ public final class ApiGroupSettingProto {
       if (!getGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupId_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -172,11 +181,11 @@ public final class ApiGroupSettingProto {
       if (!getGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupId_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -190,6 +199,7 @@ public final class ApiGroupSettingProto {
       boolean result = true;
       result = result && getGroupId()
           .equals(other.getGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -199,7 +209,7 @@ public final class ApiGroupSettingProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -207,6 +217,17 @@ public final class ApiGroupSettingProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiGroupSettingProto.ApiGroupSettingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiGroupSettingProto.ApiGroupSettingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiGroupSettingProto.ApiGroupSettingRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -354,7 +375,7 @@ public final class ApiGroupSettingProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -367,12 +388,12 @@ public final class ApiGroupSettingProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -390,6 +411,7 @@ public final class ApiGroupSettingProto {
           groupId_ = other.groupId_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -422,7 +444,7 @@ public final class ApiGroupSettingProto {
        *当前用户获取群组ID的资料信息
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public java.lang.String getGroupId() {
         java.lang.Object ref = groupId_;
@@ -441,7 +463,7 @@ public final class ApiGroupSettingProto {
        *当前用户获取群组ID的资料信息
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getGroupIdBytes() {
@@ -461,7 +483,7 @@ public final class ApiGroupSettingProto {
        *当前用户获取群组ID的资料信息
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder setGroupId(
           java.lang.String value) {
@@ -478,7 +500,7 @@ public final class ApiGroupSettingProto {
        *当前用户获取群组ID的资料信息
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder clearGroupId() {
         
@@ -491,7 +513,7 @@ public final class ApiGroupSettingProto {
        *当前用户获取群组ID的资料信息
        * </pre>
        *
-       * <code>optional string group_id = 1;</code>
+       * <code>string group_id = 1;</code>
        */
       public Builder setGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -506,12 +528,12 @@ public final class ApiGroupSettingProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -534,7 +556,7 @@ public final class ApiGroupSettingProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiGroupSettingRequest(input, extensionRegistry);
+        return new ApiGroupSettingRequest(input, extensionRegistry);
       }
     };
 
@@ -562,7 +584,7 @@ public final class ApiGroupSettingProto {
      *消息免打扰 mute notifications
      * </pre>
      *
-     * <code>optional bool message_mute = 1;</code>
+     * <code>bool message_mute = 1;</code>
      */
     boolean getMessageMute();
   }
@@ -573,6 +595,7 @@ public final class ApiGroupSettingProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:site.ApiGroupSettingResponse)
       ApiGroupSettingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ApiGroupSettingResponse.newBuilder() to construct.
     private ApiGroupSettingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -584,14 +607,19 @@ public final class ApiGroupSettingProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ApiGroupSettingResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -601,7 +629,8 @@ public final class ApiGroupSettingProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -619,6 +648,7 @@ public final class ApiGroupSettingProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -641,7 +671,7 @@ public final class ApiGroupSettingProto {
      *消息免打扰 mute notifications
      * </pre>
      *
-     * <code>optional bool message_mute = 1;</code>
+     * <code>bool message_mute = 1;</code>
      */
     public boolean getMessageMute() {
       return messageMute_;
@@ -662,6 +692,7 @@ public final class ApiGroupSettingProto {
       if (messageMute_ != false) {
         output.writeBool(1, messageMute_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -673,11 +704,11 @@ public final class ApiGroupSettingProto {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, messageMute_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -691,6 +722,7 @@ public final class ApiGroupSettingProto {
       boolean result = true;
       result = result && (getMessageMute()
           == other.getMessageMute());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -700,7 +732,7 @@ public final class ApiGroupSettingProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_MUTE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getMessageMute());
@@ -709,6 +741,17 @@ public final class ApiGroupSettingProto {
       return hash;
     }
 
+    public static com.akaxin.proto.site.ApiGroupSettingProto.ApiGroupSettingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.site.ApiGroupSettingProto.ApiGroupSettingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.site.ApiGroupSettingProto.ApiGroupSettingResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -856,7 +899,7 @@ public final class ApiGroupSettingProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -869,12 +912,12 @@ public final class ApiGroupSettingProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -891,6 +934,7 @@ public final class ApiGroupSettingProto {
         if (other.getMessageMute() != false) {
           setMessageMute(other.getMessageMute());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -923,7 +967,7 @@ public final class ApiGroupSettingProto {
        *消息免打扰 mute notifications
        * </pre>
        *
-       * <code>optional bool message_mute = 1;</code>
+       * <code>bool message_mute = 1;</code>
        */
       public boolean getMessageMute() {
         return messageMute_;
@@ -933,7 +977,7 @@ public final class ApiGroupSettingProto {
        *消息免打扰 mute notifications
        * </pre>
        *
-       * <code>optional bool message_mute = 1;</code>
+       * <code>bool message_mute = 1;</code>
        */
       public Builder setMessageMute(boolean value) {
         
@@ -946,7 +990,7 @@ public final class ApiGroupSettingProto {
        *消息免打扰 mute notifications
        * </pre>
        *
-       * <code>optional bool message_mute = 1;</code>
+       * <code>bool message_mute = 1;</code>
        */
       public Builder clearMessageMute() {
         
@@ -956,12 +1000,12 @@ public final class ApiGroupSettingProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -984,7 +1028,7 @@ public final class ApiGroupSettingProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ApiGroupSettingResponse(input, extensionRegistry);
+        return new ApiGroupSettingResponse(input, extensionRegistry);
       }
     };
 

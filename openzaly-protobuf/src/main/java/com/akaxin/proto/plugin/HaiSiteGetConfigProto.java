@@ -38,6 +38,7 @@ public final class HaiSiteGetConfigProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiSiteGetConfigRequest)
       HaiSiteGetConfigRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiSiteGetConfigRequest.newBuilder() to construct.
     private HaiSiteGetConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -48,13 +49,15 @@ public final class HaiSiteGetConfigProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiSiteGetConfigRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -64,7 +67,8 @@ public final class HaiSiteGetConfigProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -77,6 +81,7 @@ public final class HaiSiteGetConfigProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -104,6 +109,7 @@ public final class HaiSiteGetConfigProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -111,11 +117,11 @@ public final class HaiSiteGetConfigProto {
       if (size != -1) return size;
 
       size = 0;
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -127,6 +133,7 @@ public final class HaiSiteGetConfigProto {
       com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest other = (com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest) obj;
 
       boolean result = true;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -136,12 +143,23 @@ public final class HaiSiteGetConfigProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -299,7 +317,7 @@ public final class HaiSiteGetConfigProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -312,12 +330,12 @@ public final class HaiSiteGetConfigProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -331,6 +349,7 @@ public final class HaiSiteGetConfigProto {
 
       public Builder mergeFrom(com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest other) {
         if (other == com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -358,12 +377,12 @@ public final class HaiSiteGetConfigProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -414,7 +433,7 @@ public final class HaiSiteGetConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteBackConfig site_config = 1;</code>
+     * <code>.core.SiteBackConfig site_config = 1;</code>
      */
     boolean hasSiteConfig();
     /**
@@ -422,7 +441,7 @@ public final class HaiSiteGetConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteBackConfig site_config = 1;</code>
+     * <code>.core.SiteBackConfig site_config = 1;</code>
      */
     com.akaxin.proto.core.ConfigProto.SiteBackConfig getSiteConfig();
     /**
@@ -430,7 +449,7 @@ public final class HaiSiteGetConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteBackConfig site_config = 1;</code>
+     * <code>.core.SiteBackConfig site_config = 1;</code>
      */
     com.akaxin.proto.core.ConfigProto.SiteBackConfigOrBuilder getSiteConfigOrBuilder();
   }
@@ -441,6 +460,7 @@ public final class HaiSiteGetConfigProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:plugin.HaiSiteGetConfigResponse)
       HaiSiteGetConfigResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use HaiSiteGetConfigResponse.newBuilder() to construct.
     private HaiSiteGetConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -451,7 +471,7 @@ public final class HaiSiteGetConfigProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private HaiSiteGetConfigResponse(
         com.google.protobuf.CodedInputStream input,
@@ -459,6 +479,8 @@ public final class HaiSiteGetConfigProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -468,7 +490,8 @@ public final class HaiSiteGetConfigProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -494,6 +517,7 @@ public final class HaiSiteGetConfigProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -516,7 +540,7 @@ public final class HaiSiteGetConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteBackConfig site_config = 1;</code>
+     * <code>.core.SiteBackConfig site_config = 1;</code>
      */
     public boolean hasSiteConfig() {
       return siteConfig_ != null;
@@ -526,7 +550,7 @@ public final class HaiSiteGetConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteBackConfig site_config = 1;</code>
+     * <code>.core.SiteBackConfig site_config = 1;</code>
      */
     public com.akaxin.proto.core.ConfigProto.SiteBackConfig getSiteConfig() {
       return siteConfig_ == null ? com.akaxin.proto.core.ConfigProto.SiteBackConfig.getDefaultInstance() : siteConfig_;
@@ -536,7 +560,7 @@ public final class HaiSiteGetConfigProto {
      *信息配置，Key为SiteConfigKey
      * </pre>
      *
-     * <code>optional .core.SiteBackConfig site_config = 1;</code>
+     * <code>.core.SiteBackConfig site_config = 1;</code>
      */
     public com.akaxin.proto.core.ConfigProto.SiteBackConfigOrBuilder getSiteConfigOrBuilder() {
       return getSiteConfig();
@@ -557,6 +581,7 @@ public final class HaiSiteGetConfigProto {
       if (siteConfig_ != null) {
         output.writeMessage(1, getSiteConfig());
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -568,11 +593,11 @@ public final class HaiSiteGetConfigProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getSiteConfig());
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -589,6 +614,7 @@ public final class HaiSiteGetConfigProto {
         result = result && getSiteConfig()
             .equals(other.getSiteConfig());
       }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -598,7 +624,7 @@ public final class HaiSiteGetConfigProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasSiteConfig()) {
         hash = (37 * hash) + SITE_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getSiteConfig().hashCode();
@@ -608,6 +634,17 @@ public final class HaiSiteGetConfigProto {
       return hash;
     }
 
+    public static com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.plugin.HaiSiteGetConfigProto.HaiSiteGetConfigResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -763,7 +800,7 @@ public final class HaiSiteGetConfigProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -776,12 +813,12 @@ public final class HaiSiteGetConfigProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -798,6 +835,7 @@ public final class HaiSiteGetConfigProto {
         if (other.hasSiteConfig()) {
           mergeSiteConfig(other.getSiteConfig());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -832,7 +870,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public boolean hasSiteConfig() {
         return siteConfigBuilder_ != null || siteConfig_ != null;
@@ -842,7 +880,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteBackConfig getSiteConfig() {
         if (siteConfigBuilder_ == null) {
@@ -856,7 +894,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public Builder setSiteConfig(com.akaxin.proto.core.ConfigProto.SiteBackConfig value) {
         if (siteConfigBuilder_ == null) {
@@ -876,7 +914,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public Builder setSiteConfig(
           com.akaxin.proto.core.ConfigProto.SiteBackConfig.Builder builderForValue) {
@@ -894,7 +932,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public Builder mergeSiteConfig(com.akaxin.proto.core.ConfigProto.SiteBackConfig value) {
         if (siteConfigBuilder_ == null) {
@@ -916,7 +954,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public Builder clearSiteConfig() {
         if (siteConfigBuilder_ == null) {
@@ -934,7 +972,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteBackConfig.Builder getSiteConfigBuilder() {
         
@@ -946,7 +984,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       public com.akaxin.proto.core.ConfigProto.SiteBackConfigOrBuilder getSiteConfigOrBuilder() {
         if (siteConfigBuilder_ != null) {
@@ -961,7 +999,7 @@ public final class HaiSiteGetConfigProto {
        *信息配置，Key为SiteConfigKey
        * </pre>
        *
-       * <code>optional .core.SiteBackConfig site_config = 1;</code>
+       * <code>.core.SiteBackConfig site_config = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.akaxin.proto.core.ConfigProto.SiteBackConfig, com.akaxin.proto.core.ConfigProto.SiteBackConfig.Builder, com.akaxin.proto.core.ConfigProto.SiteBackConfigOrBuilder> 
@@ -978,12 +1016,12 @@ public final class HaiSiteGetConfigProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

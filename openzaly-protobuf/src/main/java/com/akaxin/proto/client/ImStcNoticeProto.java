@@ -150,11 +150,11 @@ public final class ImStcNoticeProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .client.NoticeType type = 1;</code>
+     * <code>.client.NoticeType type = 1;</code>
      */
     int getTypeValue();
     /**
-     * <code>optional .client.NoticeType type = 1;</code>
+     * <code>.client.NoticeType type = 1;</code>
      */
     com.akaxin.proto.client.ImStcNoticeProto.NoticeType getType();
   }
@@ -165,6 +165,7 @@ public final class ImStcNoticeProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:client.ImStcNoticeRequest)
       ImStcNoticeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ImStcNoticeRequest.newBuilder() to construct.
     private ImStcNoticeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -176,7 +177,7 @@ public final class ImStcNoticeProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private ImStcNoticeRequest(
         com.google.protobuf.CodedInputStream input,
@@ -184,6 +185,8 @@ public final class ImStcNoticeProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -193,7 +196,8 @@ public final class ImStcNoticeProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -212,6 +216,7 @@ public final class ImStcNoticeProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -230,13 +235,13 @@ public final class ImStcNoticeProto {
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
-     * <code>optional .client.NoticeType type = 1;</code>
+     * <code>.client.NoticeType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>optional .client.NoticeType type = 1;</code>
+     * <code>.client.NoticeType type = 1;</code>
      */
     public com.akaxin.proto.client.ImStcNoticeProto.NoticeType getType() {
       com.akaxin.proto.client.ImStcNoticeProto.NoticeType result = com.akaxin.proto.client.ImStcNoticeProto.NoticeType.valueOf(type_);
@@ -258,6 +263,7 @@ public final class ImStcNoticeProto {
       if (type_ != com.akaxin.proto.client.ImStcNoticeProto.NoticeType.OFFLINE.getNumber()) {
         output.writeEnum(1, type_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -269,11 +275,11 @@ public final class ImStcNoticeProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -286,6 +292,7 @@ public final class ImStcNoticeProto {
 
       boolean result = true;
       result = result && type_ == other.type_;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -295,7 +302,7 @@ public final class ImStcNoticeProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
@@ -303,6 +310,17 @@ public final class ImStcNoticeProto {
       return hash;
     }
 
+    public static com.akaxin.proto.client.ImStcNoticeProto.ImStcNoticeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.client.ImStcNoticeProto.ImStcNoticeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.client.ImStcNoticeProto.ImStcNoticeRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -450,7 +468,7 @@ public final class ImStcNoticeProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -463,12 +481,12 @@ public final class ImStcNoticeProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -485,6 +503,7 @@ public final class ImStcNoticeProto {
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -513,13 +532,13 @@ public final class ImStcNoticeProto {
 
       private int type_ = 0;
       /**
-       * <code>optional .client.NoticeType type = 1;</code>
+       * <code>.client.NoticeType type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>optional .client.NoticeType type = 1;</code>
+       * <code>.client.NoticeType type = 1;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -527,14 +546,14 @@ public final class ImStcNoticeProto {
         return this;
       }
       /**
-       * <code>optional .client.NoticeType type = 1;</code>
+       * <code>.client.NoticeType type = 1;</code>
        */
       public com.akaxin.proto.client.ImStcNoticeProto.NoticeType getType() {
         com.akaxin.proto.client.ImStcNoticeProto.NoticeType result = com.akaxin.proto.client.ImStcNoticeProto.NoticeType.valueOf(type_);
         return result == null ? com.akaxin.proto.client.ImStcNoticeProto.NoticeType.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .client.NoticeType type = 1;</code>
+       * <code>.client.NoticeType type = 1;</code>
        */
       public Builder setType(com.akaxin.proto.client.ImStcNoticeProto.NoticeType value) {
         if (value == null) {
@@ -546,7 +565,7 @@ public final class ImStcNoticeProto {
         return this;
       }
       /**
-       * <code>optional .client.NoticeType type = 1;</code>
+       * <code>.client.NoticeType type = 1;</code>
        */
       public Builder clearType() {
         
@@ -556,12 +575,12 @@ public final class ImStcNoticeProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 

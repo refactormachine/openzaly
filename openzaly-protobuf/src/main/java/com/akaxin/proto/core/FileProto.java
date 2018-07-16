@@ -218,26 +218,26 @@ public final class FileProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     java.lang.String getFileId();
     /**
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getFileIdBytes();
 
     /**
-     * <code>optional bytes file_content = 2;</code>
+     * <code>bytes file_content = 2;</code>
      */
     com.google.protobuf.ByteString getFileContent();
 
     /**
-     * <code>optional .core.FileType file_type = 3;</code>
+     * <code>.core.FileType file_type = 3;</code>
      */
     int getFileTypeValue();
     /**
-     * <code>optional .core.FileType file_type = 3;</code>
+     * <code>.core.FileType file_type = 3;</code>
      */
     com.akaxin.proto.core.FileProto.FileType getFileType();
   }
@@ -252,6 +252,7 @@ public final class FileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.File)
       FileOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use File.newBuilder() to construct.
     private File(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -265,7 +266,7 @@ public final class FileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private File(
         com.google.protobuf.CodedInputStream input,
@@ -273,6 +274,8 @@ public final class FileProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -282,7 +285,8 @@ public final class FileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -312,6 +316,7 @@ public final class FileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -330,7 +335,7 @@ public final class FileProto {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object fileId_;
     /**
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     public java.lang.String getFileId() {
       java.lang.Object ref = fileId_;
@@ -345,7 +350,7 @@ public final class FileProto {
       }
     }
     /**
-     * <code>optional string file_id = 1;</code>
+     * <code>string file_id = 1;</code>
      */
     public com.google.protobuf.ByteString
         getFileIdBytes() {
@@ -364,7 +369,7 @@ public final class FileProto {
     public static final int FILE_CONTENT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString fileContent_;
     /**
-     * <code>optional bytes file_content = 2;</code>
+     * <code>bytes file_content = 2;</code>
      */
     public com.google.protobuf.ByteString getFileContent() {
       return fileContent_;
@@ -373,13 +378,13 @@ public final class FileProto {
     public static final int FILE_TYPE_FIELD_NUMBER = 3;
     private int fileType_;
     /**
-     * <code>optional .core.FileType file_type = 3;</code>
+     * <code>.core.FileType file_type = 3;</code>
      */
     public int getFileTypeValue() {
       return fileType_;
     }
     /**
-     * <code>optional .core.FileType file_type = 3;</code>
+     * <code>.core.FileType file_type = 3;</code>
      */
     public com.akaxin.proto.core.FileProto.FileType getFileType() {
       com.akaxin.proto.core.FileProto.FileType result = com.akaxin.proto.core.FileProto.FileType.valueOf(fileType_);
@@ -407,6 +412,7 @@ public final class FileProto {
       if (fileType_ != com.akaxin.proto.core.FileProto.FileType.UNKNOWN_FILE.getNumber()) {
         output.writeEnum(3, fileType_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -425,11 +431,11 @@ public final class FileProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, fileType_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -446,6 +452,7 @@ public final class FileProto {
       result = result && getFileContent()
           .equals(other.getFileContent());
       result = result && fileType_ == other.fileType_;
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -455,7 +462,7 @@ public final class FileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FILE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFileId().hashCode();
       hash = (37 * hash) + FILE_CONTENT_FIELD_NUMBER;
@@ -467,6 +474,17 @@ public final class FileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.FileProto.File parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.FileProto.File parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.FileProto.File parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -624,7 +642,7 @@ public final class FileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -637,12 +655,12 @@ public final class FileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -666,6 +684,7 @@ public final class FileProto {
         if (other.fileType_ != 0) {
           setFileTypeValue(other.getFileTypeValue());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -694,7 +713,7 @@ public final class FileProto {
 
       private java.lang.Object fileId_ = "";
       /**
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public java.lang.String getFileId() {
         java.lang.Object ref = fileId_;
@@ -709,7 +728,7 @@ public final class FileProto {
         }
       }
       /**
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public com.google.protobuf.ByteString
           getFileIdBytes() {
@@ -725,7 +744,7 @@ public final class FileProto {
         }
       }
       /**
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public Builder setFileId(
           java.lang.String value) {
@@ -738,7 +757,7 @@ public final class FileProto {
         return this;
       }
       /**
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public Builder clearFileId() {
         
@@ -747,7 +766,7 @@ public final class FileProto {
         return this;
       }
       /**
-       * <code>optional string file_id = 1;</code>
+       * <code>string file_id = 1;</code>
        */
       public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
@@ -763,13 +782,13 @@ public final class FileProto {
 
       private com.google.protobuf.ByteString fileContent_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>optional bytes file_content = 2;</code>
+       * <code>bytes file_content = 2;</code>
        */
       public com.google.protobuf.ByteString getFileContent() {
         return fileContent_;
       }
       /**
-       * <code>optional bytes file_content = 2;</code>
+       * <code>bytes file_content = 2;</code>
        */
       public Builder setFileContent(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -781,7 +800,7 @@ public final class FileProto {
         return this;
       }
       /**
-       * <code>optional bytes file_content = 2;</code>
+       * <code>bytes file_content = 2;</code>
        */
       public Builder clearFileContent() {
         
@@ -792,13 +811,13 @@ public final class FileProto {
 
       private int fileType_ = 0;
       /**
-       * <code>optional .core.FileType file_type = 3;</code>
+       * <code>.core.FileType file_type = 3;</code>
        */
       public int getFileTypeValue() {
         return fileType_;
       }
       /**
-       * <code>optional .core.FileType file_type = 3;</code>
+       * <code>.core.FileType file_type = 3;</code>
        */
       public Builder setFileTypeValue(int value) {
         fileType_ = value;
@@ -806,14 +825,14 @@ public final class FileProto {
         return this;
       }
       /**
-       * <code>optional .core.FileType file_type = 3;</code>
+       * <code>.core.FileType file_type = 3;</code>
        */
       public com.akaxin.proto.core.FileProto.FileType getFileType() {
         com.akaxin.proto.core.FileProto.FileType result = com.akaxin.proto.core.FileProto.FileType.valueOf(fileType_);
         return result == null ? com.akaxin.proto.core.FileProto.FileType.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .core.FileType file_type = 3;</code>
+       * <code>.core.FileType file_type = 3;</code>
        */
       public Builder setFileType(com.akaxin.proto.core.FileProto.FileType value) {
         if (value == null) {
@@ -825,7 +844,7 @@ public final class FileProto {
         return this;
       }
       /**
-       * <code>optional .core.FileType file_type = 3;</code>
+       * <code>.core.FileType file_type = 3;</code>
        */
       public Builder clearFileType() {
         
@@ -835,12 +854,12 @@ public final class FileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -891,7 +910,7 @@ public final class FileProto {
      *语音的长度
      * </pre>
      *
-     * <code>optional int32 length = 1;</code>
+     * <code>int32 length = 1;</code>
      */
     int getLength();
 
@@ -900,7 +919,7 @@ public final class FileProto {
      *图片的宽
      * </pre>
      *
-     * <code>optional int32 width = 2;</code>
+     * <code>int32 width = 2;</code>
      */
     int getWidth();
 
@@ -909,7 +928,7 @@ public final class FileProto {
      *图片的高
      * </pre>
      *
-     * <code>optional int32 height = 3;</code>
+     * <code>int32 height = 3;</code>
      */
     int getHeight();
 
@@ -918,7 +937,7 @@ public final class FileProto {
      *视频的大小，单位kb
      * </pre>
      *
-     * <code>optional int32 size = 4;</code>
+     * <code>int32 size = 4;</code>
      */
     int getSize();
   }
@@ -933,6 +952,7 @@ public final class FileProto {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:core.FileDesc)
       FileDescOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use FileDesc.newBuilder() to construct.
     private FileDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -947,7 +967,7 @@ public final class FileProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private FileDesc(
         com.google.protobuf.CodedInputStream input,
@@ -955,6 +975,8 @@ public final class FileProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -964,7 +986,8 @@ public final class FileProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -997,6 +1020,7 @@ public final class FileProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -1019,7 +1043,7 @@ public final class FileProto {
      *语音的长度
      * </pre>
      *
-     * <code>optional int32 length = 1;</code>
+     * <code>int32 length = 1;</code>
      */
     public int getLength() {
       return length_;
@@ -1032,7 +1056,7 @@ public final class FileProto {
      *图片的宽
      * </pre>
      *
-     * <code>optional int32 width = 2;</code>
+     * <code>int32 width = 2;</code>
      */
     public int getWidth() {
       return width_;
@@ -1045,7 +1069,7 @@ public final class FileProto {
      *图片的高
      * </pre>
      *
-     * <code>optional int32 height = 3;</code>
+     * <code>int32 height = 3;</code>
      */
     public int getHeight() {
       return height_;
@@ -1058,7 +1082,7 @@ public final class FileProto {
      *视频的大小，单位kb
      * </pre>
      *
-     * <code>optional int32 size = 4;</code>
+     * <code>int32 size = 4;</code>
      */
     public int getSize() {
       return size_;
@@ -1088,6 +1112,7 @@ public final class FileProto {
       if (size_ != 0) {
         output.writeInt32(4, size_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -1111,11 +1136,11 @@ public final class FileProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, size_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1135,6 +1160,7 @@ public final class FileProto {
           == other.getHeight());
       result = result && (getSize()
           == other.getSize());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -1144,7 +1170,7 @@ public final class FileProto {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + LENGTH_FIELD_NUMBER;
       hash = (53 * hash) + getLength();
       hash = (37 * hash) + WIDTH_FIELD_NUMBER;
@@ -1158,6 +1184,17 @@ public final class FileProto {
       return hash;
     }
 
+    public static com.akaxin.proto.core.FileProto.FileDesc parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akaxin.proto.core.FileProto.FileDesc parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static com.akaxin.proto.core.FileProto.FileDesc parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1318,7 +1355,7 @@ public final class FileProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1331,12 +1368,12 @@ public final class FileProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1362,6 +1399,7 @@ public final class FileProto {
         if (other.getSize() != 0) {
           setSize(other.getSize());
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1394,7 +1432,7 @@ public final class FileProto {
        *语音的长度
        * </pre>
        *
-       * <code>optional int32 length = 1;</code>
+       * <code>int32 length = 1;</code>
        */
       public int getLength() {
         return length_;
@@ -1404,7 +1442,7 @@ public final class FileProto {
        *语音的长度
        * </pre>
        *
-       * <code>optional int32 length = 1;</code>
+       * <code>int32 length = 1;</code>
        */
       public Builder setLength(int value) {
         
@@ -1417,7 +1455,7 @@ public final class FileProto {
        *语音的长度
        * </pre>
        *
-       * <code>optional int32 length = 1;</code>
+       * <code>int32 length = 1;</code>
        */
       public Builder clearLength() {
         
@@ -1432,7 +1470,7 @@ public final class FileProto {
        *图片的宽
        * </pre>
        *
-       * <code>optional int32 width = 2;</code>
+       * <code>int32 width = 2;</code>
        */
       public int getWidth() {
         return width_;
@@ -1442,7 +1480,7 @@ public final class FileProto {
        *图片的宽
        * </pre>
        *
-       * <code>optional int32 width = 2;</code>
+       * <code>int32 width = 2;</code>
        */
       public Builder setWidth(int value) {
         
@@ -1455,7 +1493,7 @@ public final class FileProto {
        *图片的宽
        * </pre>
        *
-       * <code>optional int32 width = 2;</code>
+       * <code>int32 width = 2;</code>
        */
       public Builder clearWidth() {
         
@@ -1470,7 +1508,7 @@ public final class FileProto {
        *图片的高
        * </pre>
        *
-       * <code>optional int32 height = 3;</code>
+       * <code>int32 height = 3;</code>
        */
       public int getHeight() {
         return height_;
@@ -1480,7 +1518,7 @@ public final class FileProto {
        *图片的高
        * </pre>
        *
-       * <code>optional int32 height = 3;</code>
+       * <code>int32 height = 3;</code>
        */
       public Builder setHeight(int value) {
         
@@ -1493,7 +1531,7 @@ public final class FileProto {
        *图片的高
        * </pre>
        *
-       * <code>optional int32 height = 3;</code>
+       * <code>int32 height = 3;</code>
        */
       public Builder clearHeight() {
         
@@ -1508,7 +1546,7 @@ public final class FileProto {
        *视频的大小，单位kb
        * </pre>
        *
-       * <code>optional int32 size = 4;</code>
+       * <code>int32 size = 4;</code>
        */
       public int getSize() {
         return size_;
@@ -1518,7 +1556,7 @@ public final class FileProto {
        *视频的大小，单位kb
        * </pre>
        *
-       * <code>optional int32 size = 4;</code>
+       * <code>int32 size = 4;</code>
        */
       public Builder setSize(int value) {
         
@@ -1531,7 +1569,7 @@ public final class FileProto {
        *视频的大小，单位kb
        * </pre>
        *
-       * <code>optional int32 size = 4;</code>
+       * <code>int32 size = 4;</code>
        */
       public Builder clearSize() {
         
@@ -1541,12 +1579,12 @@ public final class FileProto {
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
