@@ -23,13 +23,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.akaxin.proto.core.UserProto;
-import com.akaxin.site.storage.api.IFriendApplyDao;
 import com.akaxin.site.storage.api.IUserFriendDao;
 import com.akaxin.site.storage.bean.ApplyFriendBean;
 import com.akaxin.site.storage.bean.ApplyUserBean;
 import com.akaxin.site.storage.bean.SimpleUserBean;
 import com.akaxin.site.storage.bean.UserFriendBean;
-import com.akaxin.site.storage.service.FriendApplyDaoService;
 import com.akaxin.site.storage.service.UserFriendDaoService;
 
 /**
@@ -41,9 +39,9 @@ import com.akaxin.site.storage.service.UserFriendDaoService;
 public class UserFriendDao {
 	private static final Logger logger = LoggerFactory.getLogger(UserFriendDao.class);
 	private static UserFriendDao instance = new UserFriendDao();
-	private IUserFriendDao userFriendDao = new UserFriendDaoService();
-	private IFriendApplyDao friendApplyDao = new FriendApplyDaoService();
-	private final int RELATION_NUMBERo = 1;
+    private final ExtractedUserFriendDao extractedUserFriendDao = new ExtractedUserFriendDao();
+    private IUserFriendDao userFriendDao = new UserFriendDaoService();
+    private final int RELATION_NUMBERo = 1;
 
 	public static UserFriendDao getInstance() {
 		return instance;
@@ -79,13 +77,8 @@ public class UserFriendDao {
 	}
 
 	public boolean saveFriendApply(String siteUserId, String siteFriendId, String applyReason) {
-		try {
-			return friendApplyDao.saveApply(siteFriendId, siteUserId, applyReason);
-		} catch (SQLException e) {
-			logger.error("friend apply error.", e);
-		}
-		return false;
-	}
+        return extractedUserFriendDao.saveFriendApply(siteUserId, siteFriendId, applyReason);
+    }
 
 	// 查询二者是否为好友
 	public boolean isFriend(String siteUserId, String siteFriendId) throws SQLException {
@@ -115,16 +108,8 @@ public class UserFriendDao {
 	}
 
 	public ApplyFriendBean agreeApplyWithClear(String siteUserId, String siteFriendId, boolean isMaster) {
-		ApplyFriendBean bean = null;
-		try {
-			bean = friendApplyDao.getApplyInfo(siteUserId, siteFriendId, isMaster);
-			friendApplyDao.deleteApply(siteFriendId, siteUserId);
-			friendApplyDao.deleteApply(siteUserId, siteFriendId);
-		} catch (SQLException e) {
-			logger.error("agree apply friend with clear error", e);
-		}
-		return bean;
-	}
+        return extractedUserFriendDao.agreeApplyWithClear(siteUserId, siteFriendId, isMaster);
+    }
 
 	public UserProto.UserRelation getUserRelation(String siteUserId, String siteFriendId) {
 		int relation = 0;
@@ -156,14 +141,8 @@ public class UserFriendDao {
 	 * @return
 	 */
 	public int getApplyCount(String siteUserId, String siteFriendId) {
-		int count = 0;
-		try {
-			count = friendApplyDao.getApplyCount(siteUserId, siteFriendId);
-		} catch (SQLException e) {
-			logger.error("get apply user count error.", e);
-		}
-		return count;
-	}
+        return extractedUserFriendDao.getApplyCount(siteUserId, siteFriendId);
+    }
 
 	/**
 	 * 获取用户当前的好友申请总数
@@ -172,23 +151,12 @@ public class UserFriendDao {
 	 * @return
 	 */
 	public int getApplyCount(String siteUserId) {
-		int count = 0;
-		try {
-			count = friendApplyDao.getApplyCount(siteUserId);
-		} catch (SQLException e) {
-			logger.error("get apply user count error.", e);
-		}
-		return count;
-	}
+        return extractedUserFriendDao.getApplyCount(siteUserId);
+    }
 
 	public List<ApplyUserBean> getApplyUserList(String siteUserId) {
-		try {
-			return friendApplyDao.getApplyUsers(siteUserId);
-		} catch (SQLException e) {
-			logger.error("get apply user list error.", e);
-		}
-		return null;
-	}
+        return extractedUserFriendDao.getApplyUserList(siteUserId);
+    }
 
 	public boolean deleteFriend(String siteUserId, String siteFriendId) {
 		boolean result = false;
