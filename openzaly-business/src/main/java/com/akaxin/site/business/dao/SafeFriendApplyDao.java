@@ -10,18 +10,18 @@ import org.slf4j.LoggerFactory;
 import java.sql.SQLException;
 import java.util.List;
 
-class ExtractedUserFriendDao {
-    private static final Logger logger = LoggerFactory.getLogger(ExtractedUserFriendDao.class);
+class SafeFriendApplyDao {
+    private static final Logger logger = LoggerFactory.getLogger(SafeFriendApplyDao.class);
     private IFriendApplyDao friendApplyDao = new FriendApplyDaoService();
 
-    ExtractedUserFriendDao() {
+    SafeFriendApplyDao() {
     }
 
     boolean saveFriendApply(String siteUserId, String siteFriendId, String applyReason) {
         try {
             return friendApplyDao.saveApply(siteFriendId, siteUserId, applyReason);
         } catch (SQLException e) {
-            ExtractedUserFriendDao.logger.error("friend apply error.", e);
+            SafeFriendApplyDao.logger.error("friend apply error.", e);
         }
         return false;
     }
@@ -33,7 +33,7 @@ class ExtractedUserFriendDao {
             friendApplyDao.deleteApply(siteFriendId, siteUserId);
             friendApplyDao.deleteApply(siteUserId, siteFriendId);
         } catch (SQLException e) {
-            ExtractedUserFriendDao.logger.error("agree apply friend with clear error", e);
+            SafeFriendApplyDao.logger.error("agree apply friend with clear error", e);
         }
         return bean;
     }
@@ -50,7 +50,7 @@ class ExtractedUserFriendDao {
         try {
             count = friendApplyDao.getApplyCount(siteUserId, siteFriendId);
         } catch (SQLException e) {
-            ExtractedUserFriendDao.logger.error("get apply user count error.", e);
+            SafeFriendApplyDao.logger.error("get apply user count error.", e);
         }
         return count;
     }
@@ -66,7 +66,7 @@ class ExtractedUserFriendDao {
         try {
             count = friendApplyDao.getApplyCount(siteUserId);
         } catch (SQLException e) {
-            ExtractedUserFriendDao.logger.error("get apply user count error.", e);
+            SafeFriendApplyDao.logger.error("get apply user count error.", e);
         }
         return count;
     }
@@ -75,7 +75,7 @@ class ExtractedUserFriendDao {
         try {
             return friendApplyDao.getApplyUsers(siteUserId);
         } catch (SQLException e) {
-            ExtractedUserFriendDao.logger.error("get apply user list error.", e);
+            SafeFriendApplyDao.logger.error("get apply user list error.", e);
         }
         return null;
     }

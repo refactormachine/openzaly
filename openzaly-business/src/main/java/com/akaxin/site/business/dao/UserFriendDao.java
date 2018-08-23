@@ -39,7 +39,7 @@ import com.akaxin.site.storage.service.UserFriendDaoService;
 public class UserFriendDao {
 	private static final Logger logger = LoggerFactory.getLogger(UserFriendDao.class);
 	private static UserFriendDao instance = new UserFriendDao();
-    private final ExtractedUserFriendDao extractedUserFriendDao = new ExtractedUserFriendDao();
+    private final SafeFriendApplyDao friendApplyDao = new SafeFriendApplyDao();
     private IUserFriendDao userFriendDao = new UserFriendDaoService();
     private final int RELATION_NUMBERo = 1;
 
@@ -77,7 +77,7 @@ public class UserFriendDao {
 	}
 
 	public boolean saveFriendApply(String siteUserId, String siteFriendId, String applyReason) {
-        return extractedUserFriendDao.saveFriendApply(siteUserId, siteFriendId, applyReason);
+        return friendApplyDao.saveFriendApply(siteUserId, siteFriendId, applyReason);
     }
 
 	// 查询二者是否为好友
@@ -108,7 +108,7 @@ public class UserFriendDao {
 	}
 
 	public ApplyFriendBean agreeApplyWithClear(String siteUserId, String siteFriendId, boolean isMaster) {
-        return extractedUserFriendDao.agreeApplyWithClear(siteUserId, siteFriendId, isMaster);
+        return friendApplyDao.agreeApplyWithClear(siteUserId, siteFriendId, isMaster);
     }
 
 	public UserProto.UserRelation getUserRelation(String siteUserId, String siteFriendId) {
@@ -141,7 +141,7 @@ public class UserFriendDao {
 	 * @return
 	 */
 	public int getApplyCount(String siteUserId, String siteFriendId) {
-        return extractedUserFriendDao.getApplyCount(siteUserId, siteFriendId);
+        return friendApplyDao.getApplyCount(siteUserId, siteFriendId);
     }
 
 	/**
@@ -151,11 +151,11 @@ public class UserFriendDao {
 	 * @return
 	 */
 	public int getApplyCount(String siteUserId) {
-        return extractedUserFriendDao.getApplyCount(siteUserId);
+        return friendApplyDao.getApplyCount(siteUserId);
     }
 
 	public List<ApplyUserBean> getApplyUserList(String siteUserId) {
-        return extractedUserFriendDao.getApplyUserList(siteUserId);
+        return friendApplyDao.getApplyUserList(siteUserId);
     }
 
 	public boolean deleteFriend(String siteUserId, String siteFriendId) {
